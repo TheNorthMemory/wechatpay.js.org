@@ -38,7 +38,7 @@ export default defineConfig({
       level: 'deep',
       label: '页面导航',
     },
-    editLinks: {
+    editLink: {
       pattern: 'https://github.com/TheNorthMemory/wechatpay.js.org/edit/main/:path',
       text: '在 GitHub 上编辑此页面',
     },
