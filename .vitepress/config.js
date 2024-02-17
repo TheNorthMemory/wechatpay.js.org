@@ -12,6 +12,7 @@ export default defineConfig({
       transformerTwoslash()
     ],
   },
+  srcExclude: ['**/README.md'],
   sitemap: {
     hostname: 'https://wechatpay.js.org',
     transformItems(items) {
