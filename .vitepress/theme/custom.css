@@ -1,0 +1,39 @@
+@media (min-width: 768px) {
+  .Layout .VPHome {
+    padding-bottom: 20px;
+  }
+}
+
+.VPHomeHero:not(.has-image) .main .text,
+.VPHomeHero:not(.has-image) .main .tagline {
+  max-width: inherit;
+}
+
+.vp-table {
+  width: 100%;
+  --indent-x: 0;
+}
+
+.vp-table thead th,
+.vp-table tbody tr td:first {
+  white-space: nowrap;
+}
+
+.vp-table .indent {
+  text-indent: calc(var(--indent-x) * .9em);
+}
+
+.vp-table td[class^=req-] {
+  position: relative;
+}
+
+.vp-table td.req-query:before {
+  content: 'Q';
+  position: absolute;
+  right: 0;
+  top: -.5em;
+}
+
+.vp-table td.req-query:hover:before {
+  content: 'query';
+}
