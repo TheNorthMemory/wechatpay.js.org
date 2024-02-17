@@ -12,6 +12,20 @@ export default defineConfig({
       transformerTwoslash()
     ],
   },
+  sitemap: {
+    hostname: 'https://wechatpay.js.org',
+    transformItems(items) {
+      return items.filter((item) => !item.url.includes('README'))
+    },
+  },
+  head: [
+    ['meta', { name: 'theme-color', content: '#5f67ee' }],
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:locale', content: 'zh' }],
+    ['meta', { property: 'og:title', content: 'Promise based and chained WeChatPay OpenAPI SDK for NodeJS' }],
+    ['meta', { property: 'og:site_name', content: 'wechatpay.js.org' }],
+    ['meta', { property: 'og:url', content: 'https://wechatpay.js.org/' }],
+  ],
   themeConfig: {
     returnToTopLabel: '回到顶部',
     sidebarMenuLabel: '菜单',
