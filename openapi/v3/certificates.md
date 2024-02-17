@@ -55,7 +55,7 @@ export var apiv3Key: CipherKey
 // @filename: business.js
 import { wxpay, apiv3Key } from './virtual'
 // ---cut---
-import { Aes } from 'wechatpay-axios-plugin'
+const { Aes } = require('wechatpay-axios-plugin')
 
 wxpay.v3.certificates.get({ params })
 //                    ^^^

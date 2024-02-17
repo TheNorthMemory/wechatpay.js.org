@@ -84,7 +84,7 @@ export var merchantPrivateKeyInstance: BinaryLike
 // @filename: business.js
 import { wxpay, appid, partnerid, merchantPrivateKeyInstance } from './virtual'
 // ---cut---
-import { Formatter, Rsa } from 'wechatpay-axios-plugin'
+const { Formatter, Rsa } = require('wechatpay-axios-plugin')
 
 wxpay.v3.pay.partner.transactions.app.post({
                                     //^^^^
