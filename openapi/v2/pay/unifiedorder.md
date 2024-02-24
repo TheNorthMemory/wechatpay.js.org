@@ -10,7 +10,7 @@ description: 除付款码支付场景以外，商户系统先调用该接口在�
 ```js twoslash
 // @filename: virtual.ts
 /// <reference types="node" />
-import { AxiosRequestConfig, AxiosResponse } from 'axios'
+import { AxiosRequestConfig, AxiosPromise } from 'axios'
 namespace WeChatPay.OpenAPI.V2.Pay.Unifiedorder.PostHttpMethod {
   export interface XmlDataRequest {
     appid: string
@@ -46,12 +46,12 @@ namespace WeChatPay.OpenAPI.V2.Pay {
      * shortland
      * @link https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=9_1
      */
-    (data: Unifiedorder.PostHttpMethod.XmlDataRequest, config?: Unifiedorder.PostHttpMethod.RequestConfig): Promise<AxiosResponse<Unifiedorder.PostHttpMethod.WellformedResponse>>
+    (data: Unifiedorder.PostHttpMethod.XmlDataRequest, config?: Unifiedorder.PostHttpMethod.RequestConfig): AxiosPromise<Unifiedorder.PostHttpMethod.WellformedResponse>
     /**
      * 统一下单
      * @link https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=9_1
      */
-    post(data: Unifiedorder.PostHttpMethod.XmlDataRequest, config?: Unifiedorder.PostHttpMethod.RequestConfig): Promise<AxiosResponse<Unifiedorder.PostHttpMethod.WellformedResponse>>
+    post(data: Unifiedorder.PostHttpMethod.XmlDataRequest, config?: Unifiedorder.PostHttpMethod.RequestConfig): AxiosPromise<Unifiedorder.PostHttpMethod.WellformedResponse>
   }
 }
 namespace WeChatPay.OpenAPI.V2 {

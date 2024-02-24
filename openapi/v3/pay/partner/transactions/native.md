@@ -10,7 +10,7 @@ description: 商户Native支付下单接口，微信后台系统返回链接参�
 ```js twoslash
 // @filename: virtual.ts
 /// <reference types="node" />
-import { AxiosRequestConfig, AxiosResponse } from 'axios'
+import { AxiosRequestConfig, AxiosPromise } from 'axios'
 namespace WeChatPay.OpenAPI.V3.Pay.Partner.Transactions.Native.PostHttpMethod {
   export interface JsonDataRequest {
     sp_appid: string
@@ -40,12 +40,12 @@ namespace WeChatPay.OpenAPI.V3.Pay.Partner.Transactions {
      * shortland
      * @link https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/transactions/chapter3_3.shtml
      */
-    (data: Native.PostHttpMethod.JsonDataRequest, config?: Native.PostHttpMethod.RequestConfig): Promise<AxiosResponse<Native.PostHttpMethod.WellformedResponse>>
+    (data: Native.PostHttpMethod.JsonDataRequest, config?: Native.PostHttpMethod.RequestConfig): AxiosPromise<Native.PostHttpMethod.WellformedResponse>
     /**
      * Native下单API
      * @link https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/transactions/chapter3_3.shtml
      */
-    post(data: Native.PostHttpMethod.JsonDataRequest, config?: Native.PostHttpMethod.RequestConfig): Promise<AxiosResponse<Native.PostHttpMethod.WellformedResponse>>
+    post(data: Native.PostHttpMethod.JsonDataRequest, config?: Native.PostHttpMethod.RequestConfig): AxiosPromise<Native.PostHttpMethod.WellformedResponse>
   }
 }
 namespace WeChatPay.OpenAPI.V3.Pay.Partner {

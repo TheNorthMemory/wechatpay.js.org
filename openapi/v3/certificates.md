@@ -10,7 +10,7 @@ description: 获取商户当前可用的平台证书列表。微信支付提供�
 ```js twoslash
 // @filename: virtual.ts
 /// <reference types="node" />
-import { AxiosRequestConfig, AxiosResponse } from 'axios'
+import { AxiosRequestConfig, AxiosPromise } from 'axios'
 namespace WeChatPay.OpenAPI.V3.Certificates.GetHttpMethod {
   export interface RequestConfig extends AxiosRequestConfig {
     params?: {
@@ -37,7 +37,7 @@ namespace WeChatPay.OpenAPI.V3 {
      * 获取平台证书列表
      * {@link https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/ecommerce/applyments/chapter3_3.shtml}
      */
-    get(config?: Certificates.GetHttpMethod.RequestConfig): Promise<AxiosResponse<Certificates.GetHttpMethod.WellformedResponse>>
+    get(config?: Certificates.GetHttpMethod.RequestConfig): AxiosPromise<Certificates.GetHttpMethod.WellformedResponse>
   }
 }
 namespace WeChatPay.OpenAPI {

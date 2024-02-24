@@ -10,7 +10,7 @@ description: 除付款码支付场景以外，商户系统先调用该接口在�
 ```js twoslash
 // @filename: virtual.ts
 /// <reference types="node" />
-import { AxiosRequestConfig, AxiosResponse } from 'axios'
+import { AxiosRequestConfig, AxiosPromise } from 'axios'
 namespace WeChatPay.OpenAPI.V3.Pay.Transactions.Jsapi.PostHttpMethod {
   export interface JsonDataRequest {
     appid: string
@@ -41,12 +41,12 @@ namespace WeChatPay.OpenAPI.V3.Pay.Transactions {
      * shortland
      * @link https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/transactions/chapter3_2.shtml
      */
-    (data: Jsapi.PostHttpMethod.JsonDataRequest, config?: Jsapi.PostHttpMethod.RequestConfig): Promise<AxiosResponse<Jsapi.PostHttpMethod.WellformedResponse>>
+    (data: Jsapi.PostHttpMethod.JsonDataRequest, config?: Jsapi.PostHttpMethod.RequestConfig): AxiosPromise<Jsapi.PostHttpMethod.WellformedResponse>
     /**
      * APP下单API
      * @link https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/transactions/chapter3_2.shtml
      */
-    post(data: Jsapi.PostHttpMethod.JsonDataRequest, config?: Jsapi.PostHttpMethod.RequestConfig): Promise<AxiosResponse<Jsapi.PostHttpMethod.WellformedResponse>>
+    post(data: Jsapi.PostHttpMethod.JsonDataRequest, config?: Jsapi.PostHttpMethod.RequestConfig): AxiosPromise<Jsapi.PostHttpMethod.WellformedResponse>
   }
 }
 namespace WeChatPay.OpenAPI.V3.Pay {

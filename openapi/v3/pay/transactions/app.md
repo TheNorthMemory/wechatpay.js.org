@@ -10,7 +10,7 @@ description: 商户系统先调用该接口在微信支付服务后台生成预�
 ```js twoslash
 // @filename: virtual.ts
 /// <reference types="node" />
-import { AxiosRequestConfig, AxiosResponse } from 'axios'
+import { AxiosRequestConfig, AxiosPromise } from 'axios'
 namespace WeChatPay.OpenAPI.V3.Pay.Transactions.App.PostHttpMethod {
   export interface JsonDataRequest {
     appid: string
@@ -38,12 +38,12 @@ namespace WeChatPay.OpenAPI.V3.Pay.Transactions {
      * shortland
      * @link https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/transactions/chapter3_1.shtml
      */
-    (data: App.PostHttpMethod.JsonDataRequest, config?: App.PostHttpMethod.RequestConfig): Promise<AxiosResponse<App.PostHttpMethod.WellformedResponse>>
+    (data: App.PostHttpMethod.JsonDataRequest, config?: App.PostHttpMethod.RequestConfig): AxiosPromise<App.PostHttpMethod.WellformedResponse>
     /**
      * APP下单API
      * @link https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/transactions/chapter3_1.shtml
      */
-    post(data: App.PostHttpMethod.JsonDataRequest, config?: App.PostHttpMethod.RequestConfig): Promise<AxiosResponse<App.PostHttpMethod.WellformedResponse>>
+    post(data: App.PostHttpMethod.JsonDataRequest, config?: App.PostHttpMethod.RequestConfig): AxiosPromise<App.PostHttpMethod.WellformedResponse>
   }
 }
 namespace WeChatPay.OpenAPI.V3.Pay {

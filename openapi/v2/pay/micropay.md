@@ -10,7 +10,7 @@ description: 收银员使用扫码设备读取微信用户付款码以后，二�
 ```js twoslash
 // @filename: virtual.ts
 /// <reference types="node" />
-import { AxiosRequestConfig, AxiosResponse } from 'axios'
+import { AxiosRequestConfig, AxiosPromise } from 'axios'
 namespace WeChatPay.OpenAPI.V2.Pay.Micropay.PostHttpMethod {
   export interface XmlDataRequest {
     appid: string
@@ -45,12 +45,12 @@ namespace WeChatPay.OpenAPI.V2.Pay {
      * shortland
      * @link https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=9_1
      */
-    (data: Micropay.PostHttpMethod.XmlDataRequest, config?: Micropay.PostHttpMethod.RequestConfig): Promise<AxiosResponse<Micropay.PostHttpMethod.WellformedResponse>>
+    (data: Micropay.PostHttpMethod.XmlDataRequest, config?: Micropay.PostHttpMethod.RequestConfig): AxiosPromise<Micropay.PostHttpMethod.WellformedResponse>
     /**
      * 统一下单
      * @link https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=9_1
      */
-    post(data: Micropay.PostHttpMethod.XmlDataRequest, config?: Micropay.PostHttpMethod.RequestConfig): Promise<AxiosResponse<Micropay.PostHttpMethod.WellformedResponse>>
+    post(data: Micropay.PostHttpMethod.XmlDataRequest, config?: Micropay.PostHttpMethod.RequestConfig): AxiosPromise<Micropay.PostHttpMethod.WellformedResponse>
   }
 }
 namespace WeChatPay.OpenAPI.V2 {

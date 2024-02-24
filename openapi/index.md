@@ -13,3 +13,7 @@ title: 开放接口概览
 | 平台证书v3 | [获取列表](/openapi/v3/certificates) | [获取列表](/openapi/v3/certificates)
 
 {.vp-table}
+
+<style>
+  .vp-table tbody td:empty {display:none}
+</style>
