@@ -4,6 +4,9 @@ title: 开放接口概览
 
 | 业务标签 | 直连商户模式 | 合作伙伴模式
 | :----: | :------: | :--------:
+| 沙箱环境v2{rowspan=3} | [获取沙箱环境密钥](/openapi/v2/xdc/apiv2getsignkey/sign/getsignkey) | [获取沙箱环境密钥](/openapi/v2/xdc/apiv2getsignkey/sign/getsignkey)
+| [沙箱付款码支付](/openapi/v2/xdc/apiv2sandbox/pay/micropay) | [沙箱付款码支付](/openapi/v2/xdc/apiv2sandbox/pay/micropay)
+| [沙箱订单查询](/openapi/v2/xdc/apiv2sandbox/pay/orderquery) | [沙箱订单查询](/openapi/v2/xdc/apiv2sandbox/pay/orderquery)
 | 基础支付v2{rowspan=2} | [付款码支付](/openapi/v2/pay/micropay) | [付款码支付](/openapi/v2/pay/micropay)
 |[统一下单](/openapi/v2/pay/unifiedorder) | [统一下单](/openapi/v2/pay/unifiedorder)
 | 基础支付v3{rowspan=4} | [APP下单](/openapi/v3/pay/transactions/app) | [APP下单](/openapi/v3/pay/partner/transactions/app)

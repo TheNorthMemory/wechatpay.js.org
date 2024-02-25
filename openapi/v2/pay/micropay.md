@@ -43,12 +43,12 @@ namespace WeChatPay.OpenAPI.V2.Pay {
   export interface Micropay {
     /**
      * shortland
-     * @link https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=9_1
+     * @link https://pay.weixin.qq.com/wiki/doc/api/micropay.php?chapter=9_10&index=1
      */
     (data: Micropay.PostHttpMethod.XmlDataRequest, config?: Micropay.PostHttpMethod.RequestConfig): AxiosPromise<Micropay.PostHttpMethod.WellformedResponse>
     /**
-     * 统一下单
-     * @link https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=9_1
+     * 付款码支付
+     * @link https://pay.weixin.qq.com/wiki/doc/api/micropay.php?chapter=9_10&index=1
      */
     post(data: Micropay.PostHttpMethod.XmlDataRequest, config?: Micropay.PostHttpMethod.RequestConfig): AxiosPromise<Micropay.PostHttpMethod.WellformedResponse>
   }

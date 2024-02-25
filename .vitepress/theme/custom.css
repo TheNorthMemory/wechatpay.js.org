@@ -9,6 +9,10 @@
   max-width: inherit;
 }
 
+.vp-doc table.vp-table {
+  display: table;
+}
+
 .vp-table {
   width: 100%;
   --indent-x: 0;

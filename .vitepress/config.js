@@ -119,6 +119,24 @@ function openapiSidebar() {
       collapsed: true,
       items: [
         {
+          text: '沙箱环境',
+          collapsed: true,
+          items: [
+            {
+              text: '获取沙箱密钥',
+              link: '/openapi/v2/xdc/apiv2getsignkey/sign/getsignkey'
+            },
+            {
+              text: '沙箱付款码支付',
+              link: '/openapi/v2/xdc/apiv2sandbox/pay/micropay'
+            },
+            {
+              text: '沙箱订单查询',
+              link: '/openapi/v2/xdc/apiv2sandbox/pay/orderquery'
+            },
+          ],
+        },
+        {
           text: '基础支付',
           collapsed: true,
           items: [

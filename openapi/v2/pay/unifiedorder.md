@@ -45,11 +45,19 @@ namespace WeChatPay.OpenAPI.V2.Pay {
     /**
      * shortland
      * @link https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=9_1
+     * @link https://pay.weixin.qq.com/wiki/doc/api/native.php?chapter=9_1
+     * @link https://pay.weixin.qq.com/wiki/doc/api/app/app.php?chapter=9_1
+     * @link https://pay.weixin.qq.com/wiki/doc/api/H5.php?chapter=9_20&index=1
+     * @link https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=9_1
      */
     (data: Unifiedorder.PostHttpMethod.XmlDataRequest, config?: Unifiedorder.PostHttpMethod.RequestConfig): AxiosPromise<Unifiedorder.PostHttpMethod.WellformedResponse>
     /**
      * 统一下单
      * @link https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=9_1
+     * @link https://pay.weixin.qq.com/wiki/doc/api/native.php?chapter=9_1
+     * @link https://pay.weixin.qq.com/wiki/doc/api/app/app.php?chapter=9_1
+     * @link https://pay.weixin.qq.com/wiki/doc/api/H5.php?chapter=9_20&index=1
+     * @link https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=9_1
      */
     post(data: Unifiedorder.PostHttpMethod.XmlDataRequest, config?: Unifiedorder.PostHttpMethod.RequestConfig): AxiosPromise<Unifiedorder.PostHttpMethod.WellformedResponse>
   }
