@@ -19,15 +19,15 @@ namespace WeChatPay.OpenAPI.V3.Certificates.GetHttpMethod {
   }
   export interface WellformedResponse {
     data: {
-      serial_no: string,
-      effective_time: string,
-      expire_time: string,
+      serial_no: string
+      effective_time: string
+      expire_time: string
       encrypt_certificate: {
-        algorithm: string,
-        nonce: string,
-        associated_data: string,
-        ciphertext: string,
-      },
+        algorithm: string
+        nonce: string
+        associated_data: string
+        ciphertext: string
+      }
     }[]
   }
 }
