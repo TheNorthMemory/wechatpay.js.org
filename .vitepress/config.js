@@ -148,6 +148,14 @@ function openapiSidebar() {
               text: '统一下单',
               link: '/openapi/v2/pay/unifiedorder'
             },
+            {
+              text: '查询订单',
+              link: '/openapi/v2/pay/orderquery'
+            },
+            {
+              text: '关闭订单',
+              link: '/openapi/v2/pay/closeorder'
+            },
           ],
         },
       ],
@@ -180,6 +188,18 @@ function openapiSidebar() {
                   text: 'Native下单',
                   link: '/openapi/v3/pay/transactions/native'
                 },
+                {
+                  text: '按微信支付订单号查单',
+                  link: '/openapi/v3/pay/transactions/id/{transaction_id}'
+                },
+                {
+                  text: '按商户订单号查单',
+                  link: '/openapi/v3/pay/transactions/out-trade-no/{out_trade_no}'
+                },
+                {
+                  text: '关闭订单',
+                  link: '/openapi/v3/pay/transactions/out-trade-no/{out_trade_no}/close'
+                },
               ],
             },
             {
@@ -201,6 +221,18 @@ function openapiSidebar() {
                 {
                   text: 'Native下单',
                   link: '/openapi/v3/pay/partner/transactions/native'
+                },
+                {
+                  text: '按微信支付订单号查单',
+                  link: '/openapi/v3/pay/partner/transactions/id/{transaction_id}'
+                },
+                {
+                  text: '按商户订单号查单',
+                  link: '/openapi/v3/pay/partner/transactions/out-trade-no/{out_trade_no}'
+                },
+                {
+                  text: '关闭订单',
+                  link: '/openapi/v3/pay/partner/transactions/out-trade-no/{out_trade_no}/close'
                 },
               ]
             },
