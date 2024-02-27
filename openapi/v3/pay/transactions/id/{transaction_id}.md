@@ -74,6 +74,8 @@ namespace WeChatPay.OpenAPI.V3.Pay.Transactions.Id {
 namespace WeChatPay.OpenAPI.V3.Pay.Transactions {
   export interface Id {
     _transaction_id_: Id._transaction_id_
+    $transaction_id$: Id._transaction_id_
+    '{transaction_id}': Id._transaction_id_
   }
 }
 namespace WeChatPay.OpenAPI.V3.Pay {
@@ -104,7 +106,44 @@ import { wxpay } from './virtual'
 wxpay.v3.pay.transactions.id._transaction_id_.get({
   transaction_id,
   params: { mchid }
-}).then(({ data }) => data)
+})
+.then(({ data: {
+  transaction_id,
+  trade_type,
+  trade_state,
+  trade_state_desc,
+  bank_type,
+  success_time,
+  appid,
+  mchid,
+  description,
+  attach,
+  out_trade_no,
+  amount,
+  time_expire,
+  notify_url,
+  goods_tag,
+  limit_pay,
+  support_fapiao,
+  detail,
+  scene_info,
+} }) => ({
+  out_trade_no,
+  trade_state,
+  amount,
+}))
+
+// 或者
+wxpay.v3.pay.transactions.id.$transaction_id$.get({
+  transaction_id,
+  params: { mchid }
+})
+
+// 或者
+wxpay.v3.pay.transactions.id['{transaction_id}'].get({
+  transaction_id,
+  params: { mchid }
+})
 ```
 
 > [!IMPORTANT] 需要调用查询接口的情况：

@@ -77,6 +77,8 @@ namespace WeChatPay.OpenAPI.V3.Pay.Transactions.OutTradeNo {
 namespace WeChatPay.OpenAPI.V3.Pay.Transactions {
   export interface OutTradeNo {
     _out_trade_no_: OutTradeNo._out_trade_no_
+    $out_trade_no$: OutTradeNo._out_trade_no_
+    '{out_trade_no}': OutTradeNo._out_trade_no_
   }
 }
 namespace WeChatPay.OpenAPI.V3.Pay {
@@ -107,7 +109,44 @@ import { wxpay } from './virtual'
 wxpay.v3.pay.transactions.outTradeNo._out_trade_no_.get({
   out_trade_no,
   params: { mchid }
-}).then(({ data }) => data)
+})
+.then(({ data: {
+  transaction_id,
+  trade_type,
+  trade_state,
+  trade_state_desc,
+  bank_type,
+  success_time,
+  appid,
+  mchid,
+  description,
+  attach,
+  out_trade_no,
+  amount,
+  time_expire,
+  notify_url,
+  goods_tag,
+  limit_pay,
+  support_fapiao,
+  detail,
+  scene_info,
+} }) => ({
+  out_trade_no,
+  trade_state,
+  amount,
+}))
+
+// 或者
+wxpay.v3.pay.transactions.outTradeNo.$out_trade_no$.get({
+  out_trade_no,
+  params: { mchid }
+})
+
+// 或者
+wxpay.v3.pay.transactions.outTradeNo['{out_trade_no}'].get({
+  out_trade_no,
+  params: { mchid }
+})
 ```
 
 > [!IMPORTANT] 需要调用查询接口的情况：
