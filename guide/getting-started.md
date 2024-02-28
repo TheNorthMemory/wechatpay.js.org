@@ -58,6 +58,7 @@ const platformCertificateFilePath = '/path/to/wechatpay/cert.pem';
 const platformCertificateInstance = readFileSync(platformCertificateFilePath);
 
 const wxpay = new Wechatpay({
+  //              ^?
   mchid: merchantId,
   serial: merchantCertificateSerial,
   privateKey: merchantPrivateKeyInstance,
@@ -86,26 +87,23 @@ wxpay.v3.pay.transactions.native.post({})
 
 ### 查询订单
 
-```js
-wxpay.v3.pay.transactions.id._transaction_id_ // _placeholder_ 语法糖会转换成 '{placeholder}' 格式
-  .get({
-    params: {
-      mchid: '1230000109'
-    },
-    transaction_id: '1217752501201407033233368018'
-  })
+```js twoslash
+// _placeholder_ 语法糖会转换成 '{placeholder}' 格式
+wxpay.v3.pay.transactions.id._transaction_id_.get({})
+//                           ^^^^^^^^^^^^^^^^
 ```
+
+详细见[这里](/openapi/v3/pay/transactions/id/{transaction_id})
 
 ### 关闭订单
 
-```js
-wxpay.v3.pay.transactions.outTradeNo.$transaction_id$.close // $placeholder$ 语法糖会转换成 '{placeholder}' 格式
-  .post({
-    mchid: '1230000109'
-  }, {
-    transaction_id: '1217752501201407033233368018'
-  })
+```js twoslash
+// $placeholder$ 语法糖会转换成 '{placeholder}' 格式
+wxpay.v3.pay.transactions.outTradeNo.$out_trade_no$.close.post({})
+//                                   ^^^^^^^^^^^^^^
 ```
+
+详细见[这里](/openapi/v3/pay/transactions/out-trade-no/{out_trade_no}/close)
 
 ### 发起单笔退款
 
