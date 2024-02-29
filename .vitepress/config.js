@@ -145,6 +145,10 @@ function openapiSidebar() {
               link: '/openapi/v2/pay/micropay'
             },
             {
+              text: '撤销订单',
+              link: '/openapi/v2/secapi/pay/reverse'
+            },
+            {
               text: '统一下单',
               link: '/openapi/v2/pay/unifiedorder'
             },
