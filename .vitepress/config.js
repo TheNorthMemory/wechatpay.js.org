@@ -160,6 +160,22 @@ function openapiSidebar() {
               text: '关闭订单',
               link: '/openapi/v2/pay/closeorder'
             },
+            {
+              text: '申请退款',
+              link: '/openapi/v2/secapi/pay/refund'
+            },
+            {
+              text: '申请退款(单品优惠)',
+              link: '/openapi/v2/secapi/pay/refundv2'
+            },
+            {
+              text: '查询退款',
+              link: '/openapi/v2/pay/refundquery'
+            },
+            {
+              text: '查询退款(单品优惠)',
+              link: '/openapi/v2/pay/refundqueryv2'
+            },
           ],
         },
       ],

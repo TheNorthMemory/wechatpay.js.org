@@ -12,7 +12,7 @@ description: 支付交易返回失败或支付系统超时，调用该接口撤�
 /// <reference types="node" />
 import { AxiosRequestConfig, AxiosPromise } from 'axios'
 namespace WeChatPay.OpenAPI.V2.Secapi.Pay.Reverse.PostHttpMethod {
-  export interface JsonDataRequest {
+  export interface XmlDataRequest {
     appid: string
     sub_appid?: string
     mch_id: string
@@ -23,7 +23,7 @@ namespace WeChatPay.OpenAPI.V2.Secapi.Pay.Reverse.PostHttpMethod {
     sign_type?: 'MD5' | 'HMAC-SHA256'
   }
   export interface RequestConfig extends AxiosRequestConfig {
-    data?: JsonDataRequest
+    data?: XmlDataRequest
     security: true
   }
   export interface WellformedResponse {
@@ -47,12 +47,12 @@ namespace WeChatPay.OpenAPI.V2.Secapi.Pay {
      * shortland
      * @link https://pay.weixin.qq.com/wiki/doc/api/micropay.php?chapter=9_11&index=3
      */
-    (data: Reverse.PostHttpMethod.JsonDataRequest, config: Reverse.PostHttpMethod.RequestConfig): AxiosPromise<Reverse.PostHttpMethod.WellformedResponse>
+    (data: Reverse.PostHttpMethod.XmlDataRequest, config: Reverse.PostHttpMethod.RequestConfig): AxiosPromise<Reverse.PostHttpMethod.WellformedResponse>
     /**
      * 撤销订单
      * @link https://pay.weixin.qq.com/wiki/doc/api/micropay.php?chapter=9_11&index=3
      */
-    post(data: Reverse.PostHttpMethod.JsonDataRequest, config: Reverse.PostHttpMethod.RequestConfig): AxiosPromise<Reverse.PostHttpMethod.WellformedResponse>
+    post(data: Reverse.PostHttpMethod.XmlDataRequest, config: Reverse.PostHttpMethod.RequestConfig): AxiosPromise<Reverse.PostHttpMethod.WellformedResponse>
   }
 }
 namespace WeChatPay.OpenAPI.V2.Secapi {

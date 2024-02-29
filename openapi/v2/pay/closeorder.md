@@ -12,7 +12,7 @@ description: 以下情况需要调用关单接口：商户订单支付失败需�
 /// <reference types="node" />
 import { AxiosRequestConfig, AxiosPromise } from 'axios'
 namespace WeChatPay.OpenAPI.V2.Pay.Closeorder.PostHttpMethod {
-  export interface JsonDataRequest {
+  export interface XmlDataRequest {
     appid: string
     mch_id: string
     out_trade_no: string
@@ -20,7 +20,7 @@ namespace WeChatPay.OpenAPI.V2.Pay.Closeorder.PostHttpMethod {
     sign_type?: 'MD5' | 'HMAC-SHA256'
   }
   export interface RequestConfig extends AxiosRequestConfig {
-    data?: JsonDataRequest
+    data?: XmlDataRequest
   }
   export interface WellformedResponse {
     return_code: 'SUCCESS' | 'FAIL'
@@ -44,7 +44,7 @@ namespace WeChatPay.OpenAPI.V2.Pay {
      * @link https://pay.weixin.qq.com/wiki/doc/api/H5.php?chapter=9_3&index=3
      * @link https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=9_3
      */
-    (data: Closeorder.PostHttpMethod.JsonDataRequest, config?: Closeorder.PostHttpMethod.RequestConfig): AxiosPromise<Closeorder.PostHttpMethod.WellformedResponse>
+    (data: Closeorder.PostHttpMethod.XmlDataRequest, config?: Closeorder.PostHttpMethod.RequestConfig): AxiosPromise<Closeorder.PostHttpMethod.WellformedResponse>
     /**
      * 关闭订单
      * @link https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=9_3
@@ -53,7 +53,7 @@ namespace WeChatPay.OpenAPI.V2.Pay {
      * @link https://pay.weixin.qq.com/wiki/doc/api/H5.php?chapter=9_3&index=3
      * @link https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=9_3
      */
-    post(data: Closeorder.PostHttpMethod.JsonDataRequest, config?: Closeorder.PostHttpMethod.RequestConfig): AxiosPromise<Closeorder.PostHttpMethod.WellformedResponse>
+    post(data: Closeorder.PostHttpMethod.XmlDataRequest, config?: Closeorder.PostHttpMethod.RequestConfig): AxiosPromise<Closeorder.PostHttpMethod.WellformedResponse>
   }
 }
 namespace WeChatPay.OpenAPI.V2 {
