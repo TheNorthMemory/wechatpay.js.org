@@ -26,6 +26,8 @@ export default defineConfig({
     ['meta', { property: 'og:title', content: 'Promise based and chained WeChatPay OpenAPI client SDK for NodeJS' }],
     ['meta', { property: 'og:site_name', content: 'wechatpay.js.org' }],
     ['meta', { property: 'og:url', content: 'https://wechatpay.js.org/' }],
+    ['script', { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-8NRT7Z8PN5' }],
+    ['script', {}, `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);}; gtag('js', new Date()); gtag('config', 'G-8NRT7Z8PN5');`],
   ],
   themeConfig: {
     returnToTopLabel: '回到顶部',
