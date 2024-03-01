@@ -220,18 +220,6 @@ function openapiSidebar() {
                   text: '关闭订单',
                   link: '/openapi/v3/pay/transactions/out-trade-no/{out_trade_no}/close'
                 },
-                {
-                  text: '申请退款',
-                  link: '/openapi/v3/refund/domestic/refunds'
-                },
-                {
-                  text: '查询单笔退款',
-                  link: '/openapi/v3/refund/domestic/refunds/{out_refund_no}'
-                },
-                {
-                  text: '发起异常退款',
-                  link: '/openapi/v3/refund/domestic/refunds/{refund_id}/apply-abnormal-refund'
-                },
               ],
             },
             {
@@ -266,6 +254,12 @@ function openapiSidebar() {
                   text: '关闭订单',
                   link: '/openapi/v3/pay/partner/transactions/out-trade-no/{out_trade_no}/close'
                 },
+              ]
+            },
+            {
+              text: '退款业务',
+              collapsed: true,
+              items: [
                 {
                   text: '申请退款',
                   link: '/openapi/v3/refund/domestic/refunds'
@@ -278,7 +272,7 @@ function openapiSidebar() {
                   text: '发起异常退款',
                   link: '/openapi/v3/refund/domestic/refunds/{refund_id}/apply-abnormal-refund'
                 },
-              ]
+              ],
             },
           ]
         },
