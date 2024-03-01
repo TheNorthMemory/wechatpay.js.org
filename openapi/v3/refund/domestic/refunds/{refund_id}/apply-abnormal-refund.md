@@ -10,6 +10,7 @@ description: 提交退款申请后，查询退款确认状态为退款异常，�
 ```js twoslash
 // @filename: virtual.ts
 /// <reference types="node" />
+import { BinaryLike } from 'crypto'
 import { AxiosRequestConfig, AxiosPromise } from 'axios'
 namespace WeChatPay.OpenAPI.V3.Refund.Domestic.Refunds._refund_id_.ApplyAbnormalRefund.PostHttpMethod {
   export interface JsonDataRequest {
@@ -24,7 +25,7 @@ namespace WeChatPay.OpenAPI.V3.Refund.Domestic.Refunds._refund_id_.ApplyAbnormal
     data?: JsonDataRequest
     refund_id: string
     headers: {
-      'Wechatpay-Serial': string
+      'Wechatpay-Serial': typeof platformCertificateSerial
     }
   }
   export interface WellformedResponse {
@@ -115,21 +116,25 @@ export interface Wechatpay {
   v3: WeChatPay.OpenAPI.V3
 }
 export var wxpay: Wechatpay
+export var platformCertificateSerial: string
+export var platformCertificateInstance: BinaryLike
 
 // @filename: business.js
-import { wxpay } from './virtual'
+import { wxpay, platformCertificateSerial, platformCertificateInstance } from './virtual'
 // ---cut---
+const { Rsa } = require('wechatpay-axios-plugin')
+
 wxpay.v3.refund.domestic.refunds._refund_id_.applyAbnormalRefund.post({
 //                                                               ^^^^
   sub_mchid,
   out_refund_no,
   type,
   bank_type,
-  bank_account,
-  real_name,
+  bank_account: Rsa.encrypt('6225880103000000', platformCertificateInstance),
+  real_name: Rsa.encrypt('张三', platformCertificateInstance),
 }, { refund_id, headers, })
 .then(
-  ({ // [!code hl:15]
+  ({ // [!code hl:16]
     data: {
       refund_id,
       out_refund_no,

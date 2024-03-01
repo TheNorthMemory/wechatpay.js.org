@@ -105,8 +105,20 @@ wxpay.v3.pay.transactions.outTradeNo.$out_trade_no$.close.post({})
 
 详细见[这里](/openapi/v3/pay/transactions/out-trade-no/{out_trade_no}/close)
 
-### 发起单笔退款
+### 申请退款
 
 ```js
 wxpay.v3.refund.domestic.refunds.post({})
 ```
+
+详细见[这里](/openapi/v3/refund/domestic/refunds)
+
+### 查询单笔退款
+
+```js twoslash
+// _placeholder_ 语法糖会转换成 '{placeholder}' 格式
+wxpay.v3.refund.domestic.refunds._out_refund_no_.get({})
+//                               ^^^^^^^^^^^^^^^
+```
+
+详细见[这里](/openapi/v3/refund/domestic/refunds/{out_refund_no})
