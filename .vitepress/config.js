@@ -4,7 +4,7 @@ import { transformerTwoslash } from '@shikijs/vitepress-twoslash'
 export default defineConfig({
   lang: 'zh-CN',
   title: 'wechatpay.js.org',
-  description: 'Promise based and chained WeChatPay OpenAPI SDK for NodeJS',
+  description: 'Promise based and chained WeChatPay OpenAPI client SDK for NodeJS',
   lastUpdated: true,
   cleanUrls: true,
   markdown: {
@@ -23,7 +23,7 @@ export default defineConfig({
     ['meta', { name: 'theme-color', content: '#5f67ee' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:locale', content: 'zh' }],
-    ['meta', { property: 'og:title', content: 'Promise based and chained WeChatPay OpenAPI SDK for NodeJS' }],
+    ['meta', { property: 'og:title', content: 'Promise based and chained WeChatPay OpenAPI client SDK for NodeJS' }],
     ['meta', { property: 'og:site_name', content: 'wechatpay.js.org' }],
     ['meta', { property: 'og:url', content: 'https://wechatpay.js.org/' }],
   ],
@@ -59,7 +59,7 @@ export default defineConfig({
     },
     nav: [
       {
-        text: 'v0.8.10',
+        text: 'v0.8.11',
         items: [
           {
             text: '变更历史',
@@ -220,6 +220,18 @@ function openapiSidebar() {
                   text: '关闭订单',
                   link: '/openapi/v3/pay/transactions/out-trade-no/{out_trade_no}/close'
                 },
+                {
+                  text: '申请退款',
+                  link: '/openapi/v3/refund/domestic/refunds'
+                },
+                {
+                  text: '查询单笔退款',
+                  link: '/openapi/v3/refund/domestic/refunds/{out_refund_no}'
+                },
+                {
+                  text: '发起异常退款',
+                  link: '/openapi/v3/refund/domestic/refunds/{refund_id}/apply-abnormal-refund'
+                },
               ],
             },
             {
@@ -253,6 +265,18 @@ function openapiSidebar() {
                 {
                   text: '关闭订单',
                   link: '/openapi/v3/pay/partner/transactions/out-trade-no/{out_trade_no}/close'
+                },
+                {
+                  text: '申请退款',
+                  link: '/openapi/v3/refund/domestic/refunds'
+                },
+                {
+                  text: '查询单笔退款',
+                  link: '/openapi/v3/refund/domestic/refunds/{out_refund_no}'
+                },
+                {
+                  text: '发起异常退款',
+                  link: '/openapi/v3/refund/domestic/refunds/{refund_id}/apply-abnormal-refund'
                 },
               ]
             },

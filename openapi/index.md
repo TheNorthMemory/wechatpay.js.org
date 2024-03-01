@@ -16,13 +16,16 @@ title: 开放接口概览
 | [申请退款(单品优惠)](/openapi/v2/secapi/pay/refundv2) | [申请退款(单品优惠)](/openapi/v2/secapi/pay/refundv2)
 | [查询退款](/openapi/v2/pay/refundquery) | [查询退款](/openapi/v2/pay/refundquery)
 | [查询退款(单品优惠)](/openapi/v2/pay/refundqueryv2) | [查询退款(单品优惠)](/openapi/v2/pay/refundqueryv2)
-| 基础支付v3{rowspan=7} | [APP下单](/openapi/v3/pay/transactions/app) | [APP下单](/openapi/v3/pay/partner/transactions/app)
+| 基础支付v3{rowspan=10} | [APP下单](/openapi/v3/pay/transactions/app) | [APP下单](/openapi/v3/pay/partner/transactions/app)
 | [H5下单](/openapi/v3/pay/transactions/h5) | [H5下单](/openapi/v3/pay/partner/transactions/h5)
 | [JSAPI下单](/openapi/v3/pay/transactions/jsapi) | [JSAPI下单](/openapi/v3/pay/partner/transactions/jsapi)
 | [Native下单](/openapi/v3/pay/transactions/native) | [Native下单](/openapi/v3/pay/partner/transactions/native)
 | [按微信支付订单号查单](/openapi/v3/pay/transactions/id/{transaction_id}) | [按微信支付订单号查单](/openapi/v3/pay/partner/transactions/id/{transaction_id})
 | [按商户订单号查单](/openapi/v3/pay/transactions/out-trade-no/{out_trade_no}) | [按商户订单号查单](/openapi/v3/pay/partner/transactions/out-trade-no/{out_trade_no})
 | [关闭订单](/openapi/v3/pay/transactions/out-trade-no/{out_trade_no}/close) | [关闭订单](/openapi/v3/pay/partner/transactions/out-trade-no/{out_trade_no}/close)
+| [申请退款](/openapi/v3/refund/domestic/refunds) | [申请退款](/openapi/v3/refund/domestic/refunds)
+| [查询单笔退款](/openapi/v3/refund/domestic/refunds/{out_refund_no}) | [查询单笔退款](/openapi/v3/refund/domestic/refunds/{out_refund_no})
+| [发起异常退款](/openapi/v3/refund/domestic/refunds/{refund_id}/apply-abnormal-refund) | [发起异常退款](/openapi/v3/refund/domestic/refunds/{refund_id}/apply-abnormal-refund)
 | 平台证书v3 | [获取列表](/openapi/v3/certificates) | [获取列表](/openapi/v3/certificates)
 
 {.vp-table}

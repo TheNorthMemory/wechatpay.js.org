@@ -85,11 +85,12 @@ interface Wechatpay {
 export var wxpay: Wechatpay
 export var previousSignType: WeChatPay.OpenAPI.V2.Pay.Unifiedorder.PostHttpMethod.XmlDataRequest['sign_type']
 export var appid:  WeChatPay.OpenAPI.V2.Pay.Unifiedorder.PostHttpMethod.XmlDataRequest['appid']
+export var appId: typeof appid
 export var partnerid:  WeChatPay.OpenAPI.V2.Pay.Unifiedorder.PostHttpMethod.XmlDataRequest['mch_id']
 export var apiv2Secret: CipherKey
 
 // @filename: business.js
-import { wxpay, previousSignType, appid, partnerid, apiv2Secret } from './virtual'
+import { wxpay, previousSignType, appid, appId, partnerid, apiv2Secret } from './virtual'
 // ---cut---
 const { Formatter, Hash } = require('wechatpay-axios-plugin')
 
