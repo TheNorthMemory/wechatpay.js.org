@@ -15,11 +15,10 @@ namespace WeChatPay.OpenAPI.V2.Pay.Refundquery.PostHttpMethod {
   export interface XmlDataRequest {
     appid: string
     mch_id: string
-    sub_appid: string
-    sub_mch_id: string
-    nonce_str: string
-    sign: string
-    sign_type: string
+    sub_appid?: string
+    sub_mch_id?: string
+    nonce_str?: string
+    sign_type?: 'MD5' | 'HMAC-SHA256'
     transaction_id: string
     offset: number
   }

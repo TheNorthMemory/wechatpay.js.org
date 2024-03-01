@@ -15,11 +15,10 @@ namespace WeChatPay.OpenAPI.V2.Secapi.Pay.Refundv2.PostHttpMethod {
   export interface XmlDataRequest {
     detail: string
     appid: string
-    sub_appid: string
+    sub_appid?: string
     mch_id: string
-    sub_mch_id: string
+    sub_mch_id?: string
     nonce_str: string
-    sign: string
     sign_type: string
     transaction_id: string
     out_refund_no: string
@@ -42,8 +41,8 @@ namespace WeChatPay.OpenAPI.V2.Secapi.Pay.Refundv2.PostHttpMethod {
     err_code_des: string
     appid: string
     mch_id: string
-    sub_appid: string
-    sub_mch_id: string
+    sub_appid?: string
+    sub_mch_id?: string
     nonce_str: string
     sign: string
     transaction_id: string
@@ -124,7 +123,7 @@ wxpay.v2.secapi.pay.refundv2.post({
   refund_desc,
   refund_account,
   notify_url,
-})
+}, { security })
 .then(
   ({ // [!code hl:33]
     data: {
@@ -164,8 +163,10 @@ wxpay.v2.secapi.pay.refundv2.post({
 
 > [!IMPORTANT] 注意：
 > 1. *wxpay* 构造实例化时，需要显式初始化 **secret**、 **merchant.key** 以及 **merchant.cert** 字段，此*HTTPS*请求为私有**TLS**加密协议，需要双向证书；
+> 1. 请求第二型参 **security** 需要显式传 **true**，即告诉SDK此请求需要使用商户私钥及证书进行通信；
 > 1. 交易时间超过一年的订单无法提交退款；
 > 1. 微信支付退款支持单笔交易分多次退款，多次退款需要提交原支付订单的商户订单号和设置不同的退款单号。申请退款总金额不能超过订单金额。 一笔退款失败后重新提交，请不要更换退款单号，请使用原商户退款单号。
 > 1. 请求频率限制：150qps，即每秒钟正常的申请退款请求次数不超过150次；
 > 1. 每个支付订单的部分退款次数不能超过50次；
 > 1. 本接口支持单品优惠订单全额退款和单品优惠订单部分退款；
+> 1. **$n** 为下标，从 **0** 开始编号，真实数据并不会返回 **$n** 字样；

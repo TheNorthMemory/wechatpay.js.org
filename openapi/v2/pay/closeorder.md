@@ -17,7 +17,6 @@ namespace WeChatPay.OpenAPI.V2.Pay.Closeorder.PostHttpMethod {
     mch_id: string
     out_trade_no: string
     nonce_str?: string
-    sign_type?: 'MD5' | 'HMAC-SHA256'
   }
   export interface RequestConfig extends AxiosRequestConfig {
     data?: XmlDataRequest
@@ -83,7 +82,6 @@ wxpay.v2.pay.closeorder.post({
   mch_id,
   out_trade_no,
   nonce_str,
-  sign_type,
 })
 .then(
   ({ // [!code hl:13]

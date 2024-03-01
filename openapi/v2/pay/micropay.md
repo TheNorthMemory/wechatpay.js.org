@@ -23,6 +23,7 @@ namespace WeChatPay.OpenAPI.V2.Pay.Micropay.PostHttpMethod {
     spbill_create_ip: string
     total_fee: string
     fee_type?: 'CNY'
+    sign_type?: 'MD5' | 'HMAC-SHA256'
   }
   export interface RequestConfig extends AxiosRequestConfig {
     data?: XmlDataRequest
