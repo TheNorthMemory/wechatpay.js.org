@@ -37,7 +37,6 @@ jobs:
           npm run build
           touch .vitepress/dist/.nojekyll
           cp CNAME .vitepress/dist/
-          echo '160050704028068325' > .vitepress/dist/tencent2661257279576018767.txt
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -49,7 +48,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     needs: build
     runs-on: ubuntu-latest
-    name: Deploy
+    name: deploy
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
