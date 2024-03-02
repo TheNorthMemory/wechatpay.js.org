@@ -182,6 +182,24 @@ function openapiSidebar() {
             },
           ],
         },
+        {
+          text: '合单支付',
+          collapsed: true,
+          items: [
+            {
+              text: '合单下单',
+              link: '/openapi/v2/pay/combinedorder'
+            },
+            {
+              text: '合单查单',
+              link: '/openapi/v2/pay/querycombinedorder'
+            },
+            {
+              text: '合单关单',
+              link: '/openapi/v2/pay/closecombinedorder'
+            },
+          ]
+        },
       ],
     },
     {
@@ -277,6 +295,36 @@ function openapiSidebar() {
                   link: '/openapi/v3/refund/domestic/refunds/{refund_id}/apply-abnormal-refund'
                 },
               ],
+            },
+          ]
+        },
+        {
+          text: '合单支付',
+          collapsed: true,
+          items: [
+            {
+              text: '合单APP下单',
+              link: '/openapi/v3/combine-transactions/app'
+            },
+            {
+              text: '合单H5下单',
+              link: '/openapi/v3/combine-transactions/h5'
+            },
+            {
+              text: '合单JSAPI下单',
+              link: '/openapi/v3/combine-transactions/jsapi'
+            },
+            {
+              text: '合单Native下单',
+              link: '/openapi/v3/combine-transactions/native'
+            },
+            {
+              text: '合单查单',
+              link: '/openapi/v3/combine-transactions/out-trade-no/{combine_out_trade_no}'
+            },
+            {
+              text: '合单关单',
+              link: '/openapi/v3/combine-transactions/out-trade-no/{combine_out_trade_no}/close'
             },
           ]
         },

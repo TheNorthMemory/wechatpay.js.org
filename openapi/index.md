@@ -16,6 +16,9 @@ title: 开放接口概览
 | [申请退款(单品优惠)](/openapi/v2/secapi/pay/refundv2) | [申请退款(单品优惠)](/openapi/v2/secapi/pay/refundv2)
 | [查询退款](/openapi/v2/pay/refundquery) | [查询退款](/openapi/v2/pay/refundquery)
 | [查询退款(单品优惠)](/openapi/v2/pay/refundqueryv2) | [查询退款(单品优惠)](/openapi/v2/pay/refundqueryv2)
+| 合单支付v2{rowspan=3} | [合单下单](/openapi/v2/pay/combinedorder) | [合单下单](/openapi/v2/pay/combinedorder)
+| [合单查单](/openapi/v2/pay/querycombinedorder) | [合单查单](/openapi/v2/pay/querycombinedorder)
+| [合单关单](/openapi/v2/pay/closecombinedorder) | [合单关单](/openapi/v2/pay/closecombinedorder)
 | 基础支付v3{rowspan=10} | [APP下单](/openapi/v3/pay/transactions/app) | [APP下单](/openapi/v3/pay/partner/transactions/app)
 | [H5下单](/openapi/v3/pay/transactions/h5) | [H5下单](/openapi/v3/pay/partner/transactions/h5)
 | [JSAPI下单](/openapi/v3/pay/transactions/jsapi) | [JSAPI下单](/openapi/v3/pay/partner/transactions/jsapi)
@@ -26,6 +29,12 @@ title: 开放接口概览
 | [申请退款](/openapi/v3/refund/domestic/refunds) | [申请退款](/openapi/v3/refund/domestic/refunds)
 | [查询单笔退款](/openapi/v3/refund/domestic/refunds/{out_refund_no}) | [查询单笔退款](/openapi/v3/refund/domestic/refunds/{out_refund_no})
 | [发起异常退款](/openapi/v3/refund/domestic/refunds/{refund_id}/apply-abnormal-refund) | [发起异常退款](/openapi/v3/refund/domestic/refunds/{refund_id}/apply-abnormal-refund)
+| 合单支付v3{rowspan=6} | [合单APP下单](/openapi/v3/combine-transactions/app) | [合单APP下单](/openapi/v3/combine-transactions/app)
+| [合单H5下单](/openapi/v3/combine-transactions/h5) | [合单H5下单](/openapi/v3/combine-transactions/h5)
+| [合单JSAPI下单](/openapi/v3/combine-transactions/jsapi) | [合单JSAPI下单](/openapi/v3/combine-transactions/jsapi)
+| [合单Native下单](/openapi/v3/combine-transactions/native) | [合单Native下单](/openapi/v3/combine-transactions/native)
+| [合单查单](/openapi/v3/combine-transactions/out-trade-no/{combine_out_trade_no}) | [合单查单](/openapi/v3/combine-transactions/out-trade-no/{combine_out_trade_no})
+| [合单关单](/openapi/v3/combine-transactions/out-trade-no/{combine_out_trade_no}/close) | [合单关单](/openapi/v3/combine-transactions/out-trade-no/{combine_out_trade_no}/close)
 | 平台证书v3 | [获取列表](/openapi/v3/certificates) | [获取列表](/openapi/v3/certificates)
 
 {.vp-table}
