@@ -108,7 +108,7 @@ wxpay.v3.pay.partner.transactions.app.post({
     timestamp,
     package: 'Sign=WXPay',
     sign: Rsa.sign(
-      Formatter.joinedByLineFeed(appid, noncestr, partnerid, prepayid),
+      Formatter.joinedByLineFeed(appid, timestamp, noncestr, prepayid),
       merchantPrivateKeyInstance
     )
   }

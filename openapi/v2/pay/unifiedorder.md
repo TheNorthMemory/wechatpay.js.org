@@ -179,6 +179,7 @@ wxpay.v2.pay.unifiedorder.post({
   const noncestr = Formatter.nonce();
   const timestamp = '' + Formatter.timestamp();
   const packageStr = 'Sign=WXPay';
+  const signType = previousSignType || 'MD5';
   return { // [!code hl:13]
     appid,
     partnerid,
@@ -187,7 +188,7 @@ wxpay.v2.pay.unifiedorder.post({
     timestamp,
     noncestr,
     sign: Hash.sign(
-      previousSignType,
+      signType,
       { appid, partnerid, prepayid, package: packageStr, timestamp, noncestr },
       apiv2Secret
     )

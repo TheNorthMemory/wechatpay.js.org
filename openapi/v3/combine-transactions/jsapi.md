@@ -10,6 +10,7 @@ description: 使用合单支付接口，用户只输入一次密码，即可完�
 ```js twoslash
 // @filename: virtual.ts
 /// <reference types="node" />
+import { BinaryLike } from 'crypto'
 import { AxiosRequestConfig, AxiosPromise } from 'axios'
 namespace WeChatPay.OpenAPI.V3.CombineTransactions.Jsapi.PostHttpMethod {
   export interface JsonDataRequest {
@@ -83,10 +84,14 @@ export interface Wechatpay {
   v3: WeChatPay.OpenAPI.V3
 }
 export var wxpay: Wechatpay
+export var appId: WeChatPay.OpenAPI.V3.CombineTransactions.Jsapi.PostHttpMethod.JsonDataRequest['combine_appid']
+export var merchantPrivateKeyInstance: BinaryLike
 
 // @filename: business.js
-import { wxpay } from './virtual'
+import { wxpay, appId, merchantPrivateKeyInstance } from './virtual'
 // ---cut---
+const { Formatter, Rsa } = require('wechatpay-axios-plugin')
+
 wxpay.v3.combineTransactions.jsapi.post({
 //                                 ^^^^
   combine_appid,
@@ -99,13 +104,20 @@ wxpay.v3.combineTransactions.jsapi.post({
   time_expire,
   notify_url,
 })
-.then(
-  ({ // [!code hl:7]
-    data: {
-      prepay_id,
-    },
-  }) => ({
-    prepay_id,
-  })
-)
+.then(({ data: { prepay_id } }) => {
+  const nonceStr = Formatter.nonce();
+  const timeStamp = '' + Formatter.timestamp();
+  const packageStr = 'prepay_id=' + prepay_id;
+  return { // [!code hl:11]
+    appId,
+    timeStamp,
+    nonceStr,
+    package: packageStr,
+    signType: 'RSA',
+    paySign: Rsa.sign(
+      Formatter.joinedByLineFeed(appId, timeStamp, nonceStr, packageStr),
+      merchantPrivateKeyInstance
+    )
+  }
+})
 ```
