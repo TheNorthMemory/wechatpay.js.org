@@ -142,7 +142,7 @@ function openapiSidebar() {
         },
         {
           text: '基础支付',
-          collapsed: true,
+          collapsed: false,
           items: [
             {
               text: '付款码支付',
@@ -219,6 +219,24 @@ function openapiSidebar() {
             {
               text: '下载资金账单',
               link: '/openapi/v2/pay/downloadfundflow'
+            },
+          ],
+        },
+        {
+          text: '现金红包',
+          collapsed: false,
+          items: [
+            {
+              text: '发放普通红包',
+              link: '/openapi/v2/mmpaymkttransfers/sendredpack'
+            },
+            {
+              text: '发放裂变红包',
+              link: '/openapi/v2/mmpaymkttransfers/sendgroupredpack'
+            },
+            {
+              text: '查询红包记录',
+              link: '/openapi/v2/mmpaymkttransfers/gethbinfo'
             },
           ],
         },

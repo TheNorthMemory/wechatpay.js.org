@@ -23,6 +23,9 @@ title: 开放接口概览
 | [合单关单](/openapi/v2/pay/closecombinedorder) {colspan=2}
 | 平台账单v2{rowspan=2} | [下载交易账单](/openapi/v2/pay/downloadbill) {colspan=2}
 | [下载资金账单](/openapi/v2/pay/downloadfundflow) {colspan=2}
+| 现金红包v2{rowspan=3} | [发放普通红包](/openapi/v2/mmpaymkttransfers/sendredpack) {colspan=2}
+| [发放裂变红包](/openapi/v2/mmpaymkttransfers/sendgroupredpack) {colspan=2}
+| [查询红包记录](/openapi/v2/mmpaymkttransfers/gethbinfo) {colspan=2}
 | 基础支付v3{rowspan=10} | [APP下单](/openapi/v3/pay/transactions/app) | [APP下单](/openapi/v3/pay/partner/transactions/app)
 | [H5下单](/openapi/v3/pay/transactions/h5) | [H5下单](/openapi/v3/pay/partner/transactions/h5)
 | [JSAPI下单](/openapi/v3/pay/transactions/jsapi) | [JSAPI下单](/openapi/v3/pay/partner/transactions/jsapi)
