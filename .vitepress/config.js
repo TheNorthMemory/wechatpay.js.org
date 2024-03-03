@@ -196,6 +196,10 @@ function openapiSidebar() {
               text: '查询退款(单品优惠)',
               link: '/openapi/v2/pay/refundqueryv2'
             },
+            {
+              text: '交易保障',
+              link: '/openapi/v2/payitil/report'
+            },
           ],
         },
         {

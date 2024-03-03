@@ -7,7 +7,7 @@ title: 开放接口概览
 | 沙箱环境v2 {rowspan=3} | [获取沙箱环境密钥](/openapi/v2/xdc/apiv2getsignkey/sign/getsignkey) {colspan=2}
 | [沙箱付款码支付](/openapi/v2/xdc/apiv2sandbox/pay/micropay) {colspan=2}
 | [沙箱订单查询](/openapi/v2/xdc/apiv2sandbox/pay/orderquery) {colspan=2}
-| 基础支付v2 {rowspan=11} | [付款码支付](/openapi/v2/pay/micropay) {colspan=2}
+| 基础支付v2 {rowspan=12} | [付款码支付](/openapi/v2/pay/micropay) {colspan=2}
 | [撤销订单](/openapi/v2/secapi/pay/reverse) {colspan=2}
 | [授权码查询openid](/openapi/v2/tools/authcodetoopenid) {colspan=2}
 | [统一下单](/openapi/v2/pay/unifiedorder) {colspan=2}
@@ -18,6 +18,7 @@ title: 开放接口概览
 | [申请退款(单品优惠)](/openapi/v2/secapi/pay/refundv2) {colspan=2}
 | [查询退款](/openapi/v2/pay/refundquery) {colspan=2}
 | [查询退款(单品优惠)](/openapi/v2/pay/refundqueryv2) {colspan=2}
+| [交易保障](/openapi/v2/payitil/report) {colspan=2}
 | 合单支付v2{rowspan=3} | [合单下单](/openapi/v2/pay/combinedorder) {colspan=2}
 | [合单查单](/openapi/v2/pay/querycombinedorder) {colspan=2}
 | [合单关单](/openapi/v2/pay/closecombinedorder) {colspan=2}
