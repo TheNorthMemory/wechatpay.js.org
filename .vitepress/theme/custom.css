@@ -22,7 +22,7 @@
   margin: 0;
 }
 
-.vp-doc._openapi_ .vp-table tbody td:last-child:empty {
+.vp-doc._openapi_ .vp-table tbody td:nth-last-child(-n + 2):empty {
   display: none;
 }
 

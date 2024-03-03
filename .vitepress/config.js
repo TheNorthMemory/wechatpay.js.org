@@ -226,15 +226,15 @@ function openapiSidebar() {
     },
     {
       text: 'APIv3',
-      collapsed: true,
+      collapsed: false,
       items: [
         {
           text: '基础支付',
-          collapsed: true,
+          collapsed: false,
           items: [
             {
               text: '直连商户模式',
-              collapsed: true,
+              collapsed: false,
               items: [
                 {
                   text: 'APP下单',
@@ -302,7 +302,7 @@ function openapiSidebar() {
             },
             {
               text: '退款业务',
-              collapsed: true,
+              collapsed: false,
               items: [
                 {
                   text: '申请退款',
