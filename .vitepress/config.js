@@ -31,6 +31,11 @@ export default defineConfig({
       ['script', {}, `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);}; gtag('js', new Date()); gtag('config', 'G-8NRT7Z8PN5');`],
     ]),
   ],
+  transformPageData(pageData) {
+    const href = `https://wechatpay.js.org/${pageData.relativePath}`.replace(/(?:index)?\.md$/, '')
+    pageData.frontmatter.head ??= []
+    pageData.frontmatter.head?.push([ 'link', { rel: 'canonical', href, }])
+  },
   themeConfig: {
     returnToTopLabel: '回到顶部',
     sidebarMenuLabel: '菜单',
@@ -57,9 +62,12 @@ export default defineConfig({
     lastUpdated: {
       text: '最后更新于',
       formatOptions: {
-        dateStyle: 'short',
-        timeStyle: 'medium'
-      }
+        dateStyle: 'medium',
+        timeStyle: 'short',
+        hourCycle: 'h23',
+        timeZone: 'Asia/Shanghai',
+        forceLocale: false,
+      },
     },
     nav: [
       {
