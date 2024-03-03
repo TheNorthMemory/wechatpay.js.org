@@ -252,6 +252,24 @@ function openapiSidebar() {
               text: '查询红包记录',
               link: '/openapi/v2/mmpaymkttransfers/gethbinfo'
             },
+            {
+              text: '发放小程序红包',
+              link: '/openapi/v2/mmpaymkttransfers/sendminiprogramhb'
+            },
+          ],
+        },
+        {
+          text: '付款到零钱',
+          collapsed: true,
+          items: [
+            {
+              text: '发起付款',
+              link: '/openapi/v2/mmpaymkttransfers/promottion/transfers'
+            },
+            {
+              text: '查询付款',
+              link: '/openapi/v2/mmpaymkttransfers/gettransferinfo'
+            },
           ],
         },
       ],
