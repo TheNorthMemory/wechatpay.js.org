@@ -149,12 +149,20 @@ function openapiSidebar() {
               link: '/openapi/v2/pay/micropay'
             },
             {
+              text: '授权码查询openid',
+              link: '/openapi/v2/tools/authcodetoopenid'
+            },
+            {
               text: '撤销订单',
               link: '/openapi/v2/secapi/pay/reverse'
             },
             {
               text: '统一下单',
               link: '/openapi/v2/pay/unifiedorder'
+            },
+            {
+              text: '转换短链接',
+              link: '/openapi/v2/tools/shorturl'
             },
             {
               text: '查询订单',
@@ -200,6 +208,20 @@ function openapiSidebar() {
             },
           ]
         },
+        {
+          text: '平台账单',
+          collapsed: true,
+          items: [
+            {
+              text: '下载交易账单',
+              link: '/openapi/v2/pay/downloadbill'
+            },
+            {
+              text: '下载资金账单',
+              link: '/openapi/v2/pay/downloadfundflow'
+            },
+          ],
+        },
       ],
     },
     {
@@ -231,11 +253,11 @@ function openapiSidebar() {
                   link: '/openapi/v3/pay/transactions/native'
                 },
                 {
-                  text: '按微信支付订单号查单',
+                  text: '按平台单号查单',
                   link: '/openapi/v3/pay/transactions/id/{transaction_id}'
                 },
                 {
-                  text: '按商户订单号查单',
+                  text: '按商户单号查单',
                   link: '/openapi/v3/pay/transactions/out-trade-no/{out_trade_no}'
                 },
                 {
@@ -265,11 +287,11 @@ function openapiSidebar() {
                   link: '/openapi/v3/pay/partner/transactions/native'
                 },
                 {
-                  text: '按微信支付订单号查单',
+                  text: '按平台单号查单',
                   link: '/openapi/v3/pay/partner/transactions/id/{transaction_id}'
                 },
                 {
-                  text: '按商户订单号查单',
+                  text: '按商户单号查单',
                   link: '/openapi/v3/pay/partner/transactions/out-trade-no/{out_trade_no}'
                 },
                 {
@@ -327,6 +349,28 @@ function openapiSidebar() {
               link: '/openapi/v3/combine-transactions/out-trade-no/{combine_out_trade_no}/close'
             },
           ]
+        },
+        {
+          text: '平台账单',
+          collapsed: true,
+          items: [
+            {
+              text: '申请交易账单',
+              link: '/openapi/v3/bill/tradebill'
+            },
+            {
+              text: '申请资金账单',
+              link: '/openapi/v3/bill/fundflowbill'
+            },
+            {
+              text: '申请子商户资金账单',
+              link: '/openapi/v3/bill/sub-merchant-fundflowbill'
+            },
+            {
+              text: '下载账单文件',
+              link: '/openapi/v3/billdownload/file'
+            },
+          ],
         },
         {
           text: '获取平台证书列表',

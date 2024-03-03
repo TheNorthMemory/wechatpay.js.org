@@ -18,8 +18,16 @@
   --indent-x: 0;
 }
 
+.vp-doc._openapi_ table {
+  margin: 0;
+}
+
+.vp-doc._openapi_ .vp-table tbody td:last-child:empty {
+  display: none;
+}
+
 .vp-table thead th,
-.vp-table tbody tr td:first {
+.vp-table tbody tr td:first-child {
   white-space: nowrap;
 }
 
