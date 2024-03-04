@@ -272,6 +272,24 @@ function openapiSidebar() {
             },
           ],
         },
+        {
+          text: '付款到银行卡',
+          collapsed: true,
+          items: [
+            {
+              text: '获取加密公钥',
+              link: '/openapi/v2/risk/getpublickey'
+            },
+            {
+              text: '发起付款',
+              link: '/openapi/v2/mmpaysptrans/pay_bank'
+            },
+            {
+              text: '查询付款',
+              link: '/openapi/v2/mmpaymkttransfers/query_bank'
+            },
+          ],
+        },
       ],
     },
     {
@@ -419,6 +437,84 @@ function openapiSidebar() {
             {
               text: '下载账单文件',
               link: '/openapi/v3/billdownload/file'
+            },
+          ],
+        },
+        {
+          text: '商家转账',
+          collapsed: true,
+          items: [
+            {
+              text: '直连商户模式',
+              collapsed: true,
+              items: [
+                {
+                  text: '发起商家转账',
+                  link: '/openapi/v3/transfer/batches'
+                },
+                {
+                  text: '查询批次单(平台批次单号)',
+                  link: '/openapi/v3/transfer/batches/batch-id/{batch_id}'
+                },
+                {
+                  text: '查询批次单(商家批次单号)',
+                  link: '/openapi/v3/transfer/batches/out-batch-no/{out_batch_no}'
+                },
+                {
+                  text: '查询明细单(平台批次单号)',
+                  link: '/openapi/v3/transfer/batches/batch-id/{batch_id}/details/detail-id/{detail_id}'
+                },
+                {
+                  text: '查询明细单(商家批次单号)',
+                  link: '/openapi/v3/transfer/batches/out-batch-no/{out_batch_no}/details/out-detail-no/{out_detail_no}'
+                },
+              ],
+            },
+            {
+              text: '合作伙伴模式',
+              collapsed: true,
+              items: [
+                {
+                  text: '发起商家转账',
+                  link: '/openapi/v3/partner-transfer/batches'
+                },
+                {
+                  text: '查询批次单(平台批次单号)',
+                  link: '/openapi/v3/partner-transfer/batches/batch-id/{batch_id}'
+                },
+                {
+                  text: '查询批次单(商家批次单号)',
+                  link: '/openapi/v3/partner-transfer/batches/out-batch-no/{out_batch_no}'
+                },
+                {
+                  text: '查询明细单(平台批次单号)',
+                  link: '/openapi/v3/partner-transfer/batches/batch-id/{batch_id}/details/detail-id/{detail_id}'
+                },
+                {
+                  text: '查询明细单(商家批次单号)',
+                  link: '/openapi/v3/partner-transfer/batches/out-batch-no/{out_batch_no}/details/out-detail-no/{out_detail_no}'
+                },
+              ],
+            },
+            {
+              text: '申请转账账单电子回单',
+              link: '/openapi/v3/transfer/bill-receipt'
+            },
+            {
+              text: '查询账单回单受理结果',
+              link: '/openapi/v3/transfer/bill-receipt/{out_batch_no}'
+            },
+            {
+              text: '申请转账明细电子回单',
+              link: '/openapi/v3/transfer-detail/electronic-receipts#post'
+            },
+            {
+              text: '查询明细回单受理结果',
+              link: '/openapi/v3/transfer-detail/electronic-receipts#get'
+            },
+            {
+              text: '下载电子回单文件',
+              link: '/openapi/v3/transferdownload/signfile'
             },
           ],
         },
