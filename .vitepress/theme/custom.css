@@ -31,7 +31,7 @@
 }
 
 .vp-table thead th,
-.vp-table tbody tr td:first-child {
+.vp-table tbody tr td[rowspan]:first-child {
   white-space: nowrap;
 }
 

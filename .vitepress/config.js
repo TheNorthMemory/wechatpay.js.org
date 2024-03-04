@@ -369,22 +369,16 @@ function openapiSidebar() {
               ]
             },
             {
-              text: '退款业务',
-              collapsed: false,
-              items: [
-                {
-                  text: '申请退款',
-                  link: '/openapi/v3/refund/domestic/refunds'
-                },
-                {
-                  text: '查询单笔退款',
-                  link: '/openapi/v3/refund/domestic/refunds/{out_refund_no}'
-                },
-                {
-                  text: '发起异常退款',
-                  link: '/openapi/v3/refund/domestic/refunds/{refund_id}/apply-abnormal-refund'
-                },
-              ],
+              text: '发起退款',
+              link: '/openapi/v3/refund/domestic/refunds'
+            },
+            {
+              text: '查询单笔退款',
+              link: '/openapi/v3/refund/domestic/refunds/{out_refund_no}'
+            },
+            {
+              text: '发起异常退款',
+              link: '/openapi/v3/refund/domestic/refunds/{refund_id}/apply-abnormal-refund'
             },
           ]
         },
