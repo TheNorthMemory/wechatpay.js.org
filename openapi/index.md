@@ -63,6 +63,37 @@ title: 开放接口概览
 | [申请转账明细电子回单](/openapi/v3/transfer-detail/electronic-receipts#post) {colspan=2}
 | [查询明细回单受理结果](/openapi/v3/transfer-detail/electronic-receipts#get) {colspan=2}
 | [下载电子回单文件](/openapi/v3/transferdownload/signfile) {colspan=2}
+| 平台收付通v3{rowspan=28} | &nbsp; | [二级商户进件](/openapi/v3/ecommerce/applyments/)
+| | [查询进件状态(平台申请单号)](/openapi/v3/ecommerce/applyments/{applyment_id})
+| | [查询进件状态(业务申请编号)](/openapi/v3/ecommerce/applyments/out-request-no/{out_request_no})
+| | [请求补差](/openapi/v3/ecommerce/subsidies/create)
+| | [取消补差](/openapi/v3/ecommerce/subsidies/cancel)
+| | [请求补差回退](/openapi/v3/ecommerce/subsidies/return)
+| | [添加分账接收方](/openapi/v3/ecommerce/profitsharing/receivers/add)
+| | [删除分账接收方](/openapi/v3/ecommerce/profitsharing/receivers/delete)
+| | [请求分账](/openapi/v3/ecommerce/profitsharing/orders#post)
+| | [查询分账结果](/openapi/v3/ecommerce/profitsharing/orders#get)
+| | [查询剩余待分金额](/openapi/v3/ecommerce/profitsharing/orders/{transaction_id}/amounts)
+| | [完结分账](/openapi/v3/ecommerce/profitsharing/finish-order)
+| | [请求分账回退](/openapi/v3/ecommerce/profitsharing/returnorders#post)
+| | [查询分账回退结果](/openapi/v3/ecommerce/profitsharing/returnorders#get)
+| | [发起退款申请](/openapi/v3/ecommerce/refunds/apply)
+| | [查询退款(商户退款单号)](/openapi/v3/ecommerce/refunds/out-refund-no/{out_refund_no})
+| | [查询退款(平台退款单号)](/openapi/v3/ecommerce/refunds/id/{refund_id})
+| | [垫付退款回补](/openapi/v3/ecommerce/refunds/{refund_id}/return-advance#post)
+| | [查询退款回补结果](/openapi/v3/ecommerce/refunds/{refund_id}/return-advance#get)
+| | [注销申请图片上传](/openapi/v3/ecommerce/account/cancel-applications/media)
+| | [提交注销申请单](/openapi/v3/ecommerce/account/cancel-applications)
+| | [查询注销单状态](/openapi/v3/ecommerce/account/cancel-applications/out-apply-no/{out_apply_no})
+| | [二级商户账户余额提现](/openapi/v3/ecommerce/fund/withdraw)
+| | [查询提现结果(商户提现单号)](/openapi/v3/ecommerce/fund/withdraw/out-request-no/{out_request_no})
+| | [查询提现结果(平台提现单号)](/openapi/v3/ecommerce/fund/withdraw/{withdraw_id})
+| | [查询二级商户账户实时余额](/openapi/v3/ecommerce/fund/balance/{sub_mchid})
+| | [查询二级商户账户日终余额](/openapi/v3/ecommerce/fund/enddaybalance/{sub_mchid})
+| | [申请二级商户资金账单](/openapi/v3/ecommerce/bill/fundflowbill)
+| 结算账户v3{rowspan=3} | &nbsp; | [查询结算账户](/openapi/v3/apply4sub/sub_merchants/{sub_mchid}/settlement)
+| | [修改结算账户](/openapi/v3/apply4sub/sub_merchants/{sub_mchid}/modify-settlement)
+| | [查询结算账户修改状态](/openapi/v3/apply4sub/sub_merchants/{sub_mchid}/application/{application_no})
 | 平台证书v3 | [获取列表](/openapi/v3/certificates) {colspan=2}
 
 {.vp-table}

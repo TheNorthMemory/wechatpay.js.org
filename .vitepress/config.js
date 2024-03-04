@@ -152,7 +152,7 @@ function openapiSidebar() {
         },
         {
           text: '基础支付',
-          collapsed: false,
+          collapsed: true,
           items: [
             {
               text: '付款码支付',
@@ -238,7 +238,7 @@ function openapiSidebar() {
         },
         {
           text: '现金红包',
-          collapsed: false,
+          collapsed: true,
           items: [
             {
               text: '发放普通红包',
@@ -298,11 +298,11 @@ function openapiSidebar() {
       items: [
         {
           text: '基础支付',
-          collapsed: false,
+          collapsed: true,
           items: [
             {
               text: '直连商户模式',
-              collapsed: false,
+              collapsed: true,
               items: [
                 {
                   text: 'APP下单',
@@ -509,6 +509,166 @@ function openapiSidebar() {
             {
               text: '下载电子回单文件',
               link: '/openapi/v3/transferdownload/signfile'
+            },
+          ],
+        },
+        {
+          text: '平台收付通',
+          collapsed: true,
+          items: [
+            {
+              text: '二级商户进件',
+              link: '/openapi/v3/ecommerce/applyments/',
+            },
+            {
+              text: '查询进件状态(平台申请单号)',
+              link: '/openapi/v3/ecommerce/applyments/{applyment_id}',
+            },
+            {
+              text: '查询进件状态(业务申请编号)',
+              link: '/openapi/v3/ecommerce/applyments/out-request-no/{out_request_no}',
+            },
+            {
+              text: '补差',
+              collapsed: true,
+              items: [
+                {
+                  text: '请求补差',
+                  link: '/openapi/v3/ecommerce/subsidies/create',
+                },
+                {
+                  text: '取消补差',
+                  link: '/openapi/v3/ecommerce/subsidies/cancel',
+                },
+                {
+                  text: '请求补差回退',
+                  link: '/openapi/v3/ecommerce/subsidies/return',
+                },
+              ],
+            },
+            {
+              text: '分账',
+              collapsed: true,
+              items: [
+                {
+                  text: '添加分账接收方',
+                  link: '/openapi/v3/ecommerce/profitsharing/receivers/add',
+                },
+                {
+                  text: '删除分账接收方',
+                  link: '/openapi/v3/ecommerce/profitsharing/receivers/delete',
+                },
+                {
+                  text: '请求分账',
+                  link: '/openapi/v3/ecommerce/profitsharing/orders#post',
+                },
+                {
+                  text: '查询分账结果',
+                  link: '/openapi/v3/ecommerce/profitsharing/orders#get',
+                },
+                {
+                  text: '查询剩余待分金额',
+                  link: '/openapi/v3/ecommerce/profitsharing/orders/{transaction_id}/amounts',
+                },
+                {
+                  text: '完结分账',
+                  link: '/openapi/v3/ecommerce/profitsharing/finish-order',
+                },
+                {
+                  text: '请求分账回退',
+                  link: '/openapi/v3/ecommerce/profitsharing/returnorders#post',
+                },
+                {
+                  text: '查询分账回退结果',
+                  link: '/openapi/v3/ecommerce/profitsharing/returnorders#get',
+                },
+              ],
+            },
+            {
+              text: '退款',
+              collapsed: true,
+              items: [
+                {
+                  text: '发起退款申请',
+                  link: '/openapi/v3/ecommerce/refunds/apply',
+                },
+                {
+                  text: '查询退款(商户退款单号)',
+                  link: '/openapi/v3/ecommerce/refunds/out-refund-no/{out_refund_no}',
+                },
+                {
+                  text: '查询退款(平台退款单号)',
+                  link: '/openapi/v3/ecommerce/refunds/id/{refund_id}',
+                },
+                {
+                  text: '垫付退款回补',
+                  link: '/openapi/v3/ecommerce/refunds/{refund_id}/return-advance#post',
+                },
+                {
+                  text: '查询退款回补结果',
+                  link: '/openapi/v3/ecommerce/refunds/{refund_id}/return-advance#get',
+                },
+              ],
+            },
+            {
+              text: '销户',
+              collapsed: true,
+              items: [
+                {
+                  text: '注销申请图片上传',
+                  link: '/openapi/v3/ecommerce/account/cancel-applications/media',
+                },
+                {
+                  text: '提交注销申请单',
+                  link: '/openapi/v3/ecommerce/account/cancel-applications',
+                },
+                {
+                  text: '查询注销单状态',
+                  link: '/openapi/v3/ecommerce/account/cancel-applications/out-apply-no/{out_apply_no}',
+                },
+              ],
+            },
+            {
+              text: '二级商户账户余额提现',
+              link: '/openapi/v3/ecommerce/fund/withdraw',
+            },
+            {
+              text: '查询提现结果(商户提现单号)',
+              link: '/openapi/v3/ecommerce/fund/withdraw/out-request-no/{out_request_no}',
+            },
+            {
+              text: '查询提现结果(平台提现单号)',
+              link: '/openapi/v3/ecommerce/fund/withdraw/{withdraw_id}',
+            },
+            {
+              text: '查询二级商户账户实时余额',
+              link: '/openapi/v3/ecommerce/fund/balance/{sub_mchid}',
+            },
+            {
+              text: '查询二级商户账户日终余额',
+              link: '/openapi/v3/ecommerce/fund/enddaybalance/{sub_mchid}',
+            },
+            {
+              text: '申请二级商户资金账单',
+              link: '/openapi/v3/ecommerce/bill/fundflowbill',
+            },
+          ],
+        },
+        {
+          text: '结算账户',
+          collapsed: true,
+          items: [
+            {
+              text: '查询结算账户',
+              link: '/openapi/v3/apply4sub/sub_merchants/{sub_mchid}/settlement',
+            },
+            {
+              text: '修改结算账户',
+              link: '/openapi/v3/apply4sub/sub_merchants/{sub_mchid}/modify-settlement',
+            },
+            {
+              text: '查询结算账户修改状态',
+              link: '/openapi/v3/apply4sub/sub_merchants/{sub_mchid}/application/{application_no}',
             },
           ],
         },
