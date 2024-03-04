@@ -92,12 +92,12 @@ export default defineConfig({
     ],
     socialLinks: [
       {
-        icon: 'npm',
-        link: 'https://www.npmjs.com/package/wechatpay-axios-plugin',
-      },
-      {
         icon: 'gitee',
         link: 'https://gitee.com/TheNorthMemory/wechatpay-axios-plugin',
+      },
+      {
+        icon: 'npm',
+        link: 'https://www.npmjs.com/package/wechatpay-axios-plugin',
       },
       {
         icon: 'github',
@@ -369,7 +369,7 @@ function openapiSidebar() {
               ]
             },
             {
-              text: '发起退款',
+              text: '发起退款申请',
               link: '/openapi/v3/refund/domestic/refunds'
             },
             {
