@@ -3,7 +3,7 @@ title: 申请交易账单
 description: 微信支付按天提供交易账单文件，商户可以通过该接口获取账单文件的下载地址。文件内包含交易相关的金额、时间、营销等信息，供商户核对订单、退款、银行到账等情况。
 ---
 
-# {{ $frontmatter.title }}
+# {{ $frontmatter.title }} {#get}
 
 {{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter7_9_1.shtml)
 

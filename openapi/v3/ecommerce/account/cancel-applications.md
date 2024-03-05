@@ -3,7 +3,7 @@ title: 提交注销申请单(平台收付通)
 description: 电商子商户需注销商户号时，由其所属电商平台服务商调用本接口发起注销申请。
 ---
 
-# {{ $frontmatter.title }}
+# {{ $frontmatter.title }} {#post}
 
 {{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/partner/apis/ecommerce-cancel/cancel-applications/create-cancel-application.html)
 

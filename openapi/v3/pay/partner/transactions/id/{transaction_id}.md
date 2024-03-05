@@ -3,7 +3,7 @@ title: 按微信支付订单号查单(合作伙伴模式)
 description: 通过微信支付订单号查询订单状态
 ---
 
-# {{ $frontmatter.title }}
+# {{ $frontmatter.title }} {#get}
 
 {{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/transactions/chapter5_5.shtml)
 

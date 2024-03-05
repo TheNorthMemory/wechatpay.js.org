@@ -3,7 +3,7 @@ title: 查询企业向微信用户个人付款
 description: 付款操作进行结果查询，返回付款操作详细结果。查询企业付款API只支持查询30天内的订单，30天之前的订单请登录商户平台查询。
 ---
 
-# {{ $frontmatter.title }}
+# {{ $frontmatter.title }} {#post}
 
 {{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/api/tools/mch_pay.php?chapter=14_3)
 

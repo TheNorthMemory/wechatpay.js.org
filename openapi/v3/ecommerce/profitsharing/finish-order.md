@@ -3,7 +3,7 @@ title: 完结分账(平台收付通)
 description: 不需要进行分账的订单，可直接调用本接口将订单的金额全部解冻给二级商户。
 ---
 
-# {{ $frontmatter.title }}
+# {{ $frontmatter.title }} {#post}
 
 {{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/ecommerce/profitsharing/chapter3_5.shtml)
 

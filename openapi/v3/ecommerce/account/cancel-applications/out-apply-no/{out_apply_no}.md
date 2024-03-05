@@ -3,7 +3,7 @@ title: 查询注销单状态(平台收付通)
 description: 电商平台服务商发起注销申请后，通过本接口查询注销状态、进展。
 ---
 
-# {{ $frontmatter.title }}
+# {{ $frontmatter.title }} {#get}
 
 {{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/partner/apis/ecommerce-cancel/cancel-applications/get-cancel-application.html)
 

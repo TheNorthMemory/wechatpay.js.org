@@ -3,7 +3,7 @@ title: 发起批量转账
 description: 商户可以通过该接口同时向多个用户微信零钱进行转账操作。
 ---
 
-# {{ $frontmatter.title }}
+# {{ $frontmatter.title }} {#post}
 
 {{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/transfer/chapter3_1.shtml)
 

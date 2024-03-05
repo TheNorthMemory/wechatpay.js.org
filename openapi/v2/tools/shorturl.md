@@ -3,7 +3,7 @@ title: 转换短链接
 description: 超长的链接在生成二维码时，码密度比较大，不容易被识别，此接口提供超长的链接转成短链接(weixin://wxpay/s/XXXXXX)能力，减小二维码数据量，提升扫描速度和精确度。
 ---
 
-# {{ $frontmatter.title }}
+# {{ $frontmatter.title }} {#post}
 
 {{ $frontmatter.description }} [官方NATIVE文档](https://pay.weixin.qq.com/wiki/doc/api/native.php?chapter=9_9&index=10) [官方服务商NATIVE文档](https://pay.weixin.qq.com/wiki/doc/api/native_sl.php?chapter=9_9)
 

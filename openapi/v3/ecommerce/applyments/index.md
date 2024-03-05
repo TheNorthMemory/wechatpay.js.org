@@ -3,7 +3,7 @@ title: 商户进件(平台收付通)
 description: 电商平台通过提交二级商户资料，完成二级商户入驻，入驻成为微信支付商户。
 ---
 
-# {{ $frontmatter.title }}
+# {{ $frontmatter.title }} {#post}
 
 {{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter7_1_1.shtml)
 

@@ -3,7 +3,7 @@ title: 查询订单剩余待分金额(平台收付通)
 description: 可调用此接口查询订单剩余待分金额
 ---
 
-# {{ $frontmatter.title }}
+# {{ $frontmatter.title }} {#get}
 
 {{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter7_4_9.shtml)
 

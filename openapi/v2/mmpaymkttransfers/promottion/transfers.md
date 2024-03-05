@@ -3,7 +3,7 @@ title: 向微信用户个人付款
 description: 该产品为付款至用户零钱的能力，支持通过API接口付款。目前支持向指定微信用户的openid付款。使用条件 1、商户号已入驻90日且截止今日回推30天商户号保持连续不间断的交易。 2、登录微信支付商户平台-产品中心，开通付款到零钱。
 ---
 
-# {{ $frontmatter.title }}
+# {{ $frontmatter.title }} {#post}
 
 {{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/api/tools/mch_pay.php?chapter=14_2)
 

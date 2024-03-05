@@ -3,7 +3,7 @@ title: 添加分账接收方(平台收付通)
 description: 电商平台可通过此接口添加分账接收方，建立分账接收方列表。
 ---
 
-# {{ $frontmatter.title }}
+# {{ $frontmatter.title }} {#post}
 
 {{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/ecommerce/profitsharing/chapter3_7.shtml)
 

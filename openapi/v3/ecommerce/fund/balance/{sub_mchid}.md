@@ -3,7 +3,7 @@ title: 查询二级商户账户实时余额(平台收付通)
 description: 服务商通过此接口可以查询特约商户账户余额信息。
 ---
 
-# {{ $frontmatter.title }}
+# {{ $frontmatter.title }} {#get}
 
 {{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter4_1_19.shtml) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/ecommerce/amount/chapter3_1.shtml)
 

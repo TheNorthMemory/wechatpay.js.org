@@ -3,7 +3,7 @@ title: 查询结算账户修改申请状态
 description: 服务商/电商平台（不包括支付机构、银行），可使用本接口，查询其进件且已签约特约商户/二级商户的结算账户的修改申请单信息和审核结果。
 ---
 
-# {{ $frontmatter.title }}
+# {{ $frontmatter.title }} {#get}
 
 {{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/partner/apis/modify-settlement/sub-merchants/get-application.html)
 

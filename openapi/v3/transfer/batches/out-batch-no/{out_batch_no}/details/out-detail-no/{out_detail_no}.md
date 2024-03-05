@@ -3,7 +3,7 @@ title: 商家明细单号查询明细单
 description: 商户可以通过该接口查询单笔转账明细单。
 ---
 
-# {{ $frontmatter.title }}
+# {{ $frontmatter.title }} {#get}
 
 {{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/transfer/chapter3_5.shtml)
 

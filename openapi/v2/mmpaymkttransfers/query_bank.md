@@ -3,7 +3,7 @@ title: 查询企业付款银行卡
 description: 用于对商户企业付款到银行卡操作进行结果查询，返回付款操作详细结果。
 ---
 
-# {{ $frontmatter.title }}
+# {{ $frontmatter.title }} {#post}
 
 {{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/api/tools/mch_pay.php?chapter=24_3)
 

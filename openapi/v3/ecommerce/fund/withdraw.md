@@ -3,7 +3,7 @@ title: 账户余额提现(平台收付通)
 description: 电商平台通过余额提现API帮助二级商户发起账户余额提现申请，完成账户余额提现。
 ---
 
-# {{ $frontmatter.title }}
+# {{ $frontmatter.title }} {#post}
 
 {{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter4_1_22.shtml) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/ecommerce/fund/chapter3_2.shtml)
 

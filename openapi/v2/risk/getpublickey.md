@@ -3,7 +3,7 @@ title: 获取RSA加密公钥
 description: 提交付款到银行卡时，收款方银行卡号&收款方用户名 需要通过RSA-OAEP加密，加密所需的公钥由微信支付提供，向微信支付传输用户姓名和账号标识信息已合法征得用户授权。接口默认输出PKCS#1格式的公钥，商户需根据自己开发的语言选择公钥格式。
 ---
 
-# {{ $frontmatter.title }}
+# {{ $frontmatter.title }} {#post}
 
 {{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/api/tools/mch_pay_yhk.php?chapter=24_7&index=4)
 

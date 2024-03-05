@@ -3,7 +3,7 @@ title: 请求补差回退(平台收付通)
 description: 订单发送退款的时候，可以对补贴成功的补差单发起回退。
 ---
 
-# {{ $frontmatter.title }}
+# {{ $frontmatter.title }} {#post}
 
 {{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/ecommerce/subsidies/chapter3_2.shtml)
 

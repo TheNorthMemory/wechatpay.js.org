@@ -3,7 +3,7 @@ title: 关闭合单订单
 description: 合单支付订单只能使用此合单关单api完成关单。
 ---
 
-# {{ $frontmatter.title }}
+# {{ $frontmatter.title }} {#post}
 
 {{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/combine/chapter3_4.shtml)
 

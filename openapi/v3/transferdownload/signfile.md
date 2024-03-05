@@ -3,7 +3,7 @@ title: 下载电子回单
 description: 下载电子回单API为通用接口，商家转账等业务电子回单均可通过该接口进行下载。
 ---
 
-# {{ $frontmatter.title }}
+# {{ $frontmatter.title }} {#get}
 
 {{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter4_1_15.shtml)
 

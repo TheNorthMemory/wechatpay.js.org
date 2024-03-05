@@ -3,7 +3,7 @@ title: 发起异常退款
 description: 提交退款申请后，查询退款确认状态为退款异常，可调用此接口发起异常退款处理。支持退款至用户、退款至交易商户银行账户两种处理方式。
 ---
 
-# {{ $frontmatter.title }}
+# {{ $frontmatter.title }} {#post}
 
 {{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/refund/refunds/create-abnormal-refund.html) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/refund/refunds/create-abnormal-refund.html)
 

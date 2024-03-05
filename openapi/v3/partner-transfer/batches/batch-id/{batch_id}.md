@@ -3,7 +3,7 @@ title: 微信支付批次单号查询批次单(合作伙伴模式)
 description: 服务商可以通过该接口查询转账批次单以及指定状态的转账明细单。
 ---
 
-# {{ $frontmatter.title }}
+# {{ $frontmatter.title }} {#get}
 
 {{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter4_1_7.shtml) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/transfer_partner/chapter3_2.shtml)
 

@@ -3,7 +3,7 @@ title: 下载账单
 description: 下载账单API为通用接口，交易/资金账单都可以通过该接口获取到对应的账单。
 ---
 
-# {{ $frontmatter.title }}
+# {{ $frontmatter.title }} {#get}
 
 {{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/bill/chapter3_3.shtml)
 

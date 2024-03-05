@@ -28,7 +28,7 @@ namespace WeChatPay.OpenAPI.V3.Ecommerce.Refunds._refund_id_.ReturnAdvance.PostH
     payee_mchid: string
     payee_account: string
     result: string
-    success_time: string
+    success_time?: string
   }
 }
 namespace WeChatPay.OpenAPI.V3.Ecommerce.Refunds._refund_id_ {
@@ -130,7 +130,7 @@ namespace WeChatPay.OpenAPI.V3.Ecommerce.Refunds._refund_id_.ReturnAdvance.GetHt
     payee_mchid: string
     payee_account: string
     result: string
-    success_time: string
+    success_time?: string
   }
 }
 namespace WeChatPay.OpenAPI.V3.Ecommerce.Refunds._refund_id_ {

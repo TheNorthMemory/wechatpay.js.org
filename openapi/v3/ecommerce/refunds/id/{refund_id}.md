@@ -3,7 +3,7 @@ title: 通过微信支付退款单号查询退款(平台收付通)
 description: 提交退款申请后，通过调用该接口查询退款状态。
 ---
 
-# {{ $frontmatter.title }}
+# {{ $frontmatter.title }} {#get}
 
 {{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/ecommerce/refunds/chapter3_2.shtml)
 

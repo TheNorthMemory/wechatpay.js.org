@@ -3,7 +3,7 @@ title: 通过申请单ID查询申请状态(平台收付通)
 description: 电商平台通过查询申请状态API查询二级商户入驻申请结果。
 ---
 
-# {{ $frontmatter.title }}
+# {{ $frontmatter.title }} {#get}
 
 {{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/ecommerce/applyments/chapter3_2.shtml)
 

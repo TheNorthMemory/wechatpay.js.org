@@ -3,7 +3,7 @@ title: 下载资金账单
 description: 商户可以通过该接口下载自2017年6月1日起 的历史资金流水账单。
 ---
 
-# {{ $frontmatter.title }}
+# {{ $frontmatter.title }} {#post}
 
 {{ $frontmatter.description }} [官方付款码文档](https://pay.weixin.qq.com/wiki/doc/api/micropay.php?chapter=9_18&index=7) [官方JSAPI文档](https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=9_18&index=7) [官方NATIVE文档](https://pay.weixin.qq.com/wiki/doc/api/native.php?chapter=9_18&index=7) [官方APP文档](https://pay.weixin.qq.com/wiki/doc/api/app/app.php?chapter=9_18&index=9) [官方H5文档](https://pay.weixin.qq.com/wiki/doc/api/H5.php?chapter=9_18&index=7) [官方小程序支付文档](https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=9_18&index=7)
 

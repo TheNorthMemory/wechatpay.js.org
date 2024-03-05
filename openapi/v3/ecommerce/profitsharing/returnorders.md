@@ -14,8 +14,8 @@ import { AxiosRequestConfig, AxiosPromise } from 'axios'
 namespace WeChatPay.OpenAPI.V3.Ecommerce.Profitsharing.Returnorders.PostHttpMethod {
   export interface JsonDataRequest {
     sub_mchid: string
-    order_id: string
-    out_order_no: string
+    order_id?: string
+    out_order_no?: string
     out_return_no: string
     return_mchid: string
     amount: number
@@ -33,7 +33,7 @@ namespace WeChatPay.OpenAPI.V3.Ecommerce.Profitsharing.Returnorders.PostHttpMeth
     amount: number
     return_no: string
     result: string
-    fail_reason: string
+    fail_reason?: string
     finish_time: string | Date
   }
 }
@@ -127,8 +127,8 @@ namespace WeChatPay.OpenAPI.V3.Ecommerce.Profitsharing.Returnorders.GetHttpMetho
   export interface RequestConfig extends AxiosRequestConfig {
     sub_mchid: string
     params: {
-      order_id: string
-      out_order_no: string
+      order_id?: string
+      out_order_no?: string
       out_return_no: string
     }
   }
@@ -141,7 +141,7 @@ namespace WeChatPay.OpenAPI.V3.Ecommerce.Profitsharing.Returnorders.GetHttpMetho
     amount: number
     return_no: string
     result: string
-    fail_reason: string
+    fail_reason?: string
     finish_time: string | Date
   }
 }

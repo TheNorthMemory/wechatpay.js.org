@@ -3,7 +3,7 @@ title: 查询退款
 description: 提交退款申请后，通过调用该接口查询退款状态。退款有一定延时，用零钱支付的退款20分钟内到账，银行卡支付的退款3个工作日后重新查询退款状态。
 ---
 
-# {{ $frontmatter.title }}
+# {{ $frontmatter.title }} {#post}
 
 {{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/api/micropay.php?chapter=9_5) [官方JSAPI文档](https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=9_5) [官方NATIVE文档](https://pay.weixin.qq.com/wiki/doc/api/native.php?chapter=9_5) [官方APP文档](https://pay.weixin.qq.com/wiki/doc/api/app/app.php?chapter=9_5&index=7) [官方H5文档](https://pay.weixin.qq.com/wiki/doc/api/H5.php?chapter=9_5&index=5) [官方小程序支付文档](https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=9_5) [官方人脸支付文档](https://share.weiyun.com/5dxUgCw)
 

@@ -3,7 +3,7 @@ title: 合单查单
 description: 电商平台通过合单查询订单API查询订单状态，完成下一步的业务逻辑。
 ---
 
-# {{ $frontmatter.title }}
+# {{ $frontmatter.title }} {#get}
 
 {{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/combine/chapter3_3.shtml)
 

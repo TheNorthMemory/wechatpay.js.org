@@ -3,7 +3,7 @@ title: 发放小程序红包
 description: 红包金额大于200或者小于1元时，请求参数scene_id必传，参数说明见下文。◆ 根据监管要求，新申请商户号使用小程序红包需要满足两个条件：1、入驻时间超过90天 2、连续正常交易30天。◆ 移动应用的appid无法使用红包接口。
 ---
 
-# {{ $frontmatter.title }}
+# {{ $frontmatter.title }} {#post}
 
 {{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/api/tools/cash_coupon_xcx.php?chapter=18_2&index=3) [官方文档](https://pay.weixin.qq.com/wiki/doc/api/tools/cash_coupon_sl.php?chapter=18_2&index=3)
 

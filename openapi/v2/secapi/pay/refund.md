@@ -3,7 +3,7 @@ title: 申请退款
 description: 当交易发生之后一段时间内，由于买家或者卖家的原因需要退款时，卖家可以通过退款接口将支付款退还给买家，微信支付将在收到退款请求并且验证成功之后，按照退款规则将支付款按原路退到买家账号上。
 ---
 
-# {{ $frontmatter.title }}
+# {{ $frontmatter.title }} {#post}
 
 {{ $frontmatter.description }} [官方付款码文档](https://pay.weixin.qq.com/wiki/doc/api/micropay.php?chapter=9_4) [官方JSAPI文档](https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=9_4) [官方NATIVE文档](https://pay.weixin.qq.com/wiki/doc/api/native.php?chapter=9_4) [官方APP文档](https://pay.weixin.qq.com/wiki/doc/api/app/app.php?chapter=9_4&index=6) [官方H5文档](https://pay.weixin.qq.com/wiki/doc/api/H5.php?chapter=9_4&index=4) [官方小程序支付文档](https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=9_4) [官方刷脸支付文档](https://share.weiyun.com/5dxUgCw)
 

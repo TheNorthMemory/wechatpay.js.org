@@ -22,11 +22,13 @@ namespace WeChatPay.OpenAPI.V3.Ecommerce.Profitsharing.Orders.PostHttpMethod {
       receiver_account: string
       amount: number
       description: string
+      receiver_name?: string
     }[]
     finish: boolean
   }
   export interface RequestConfig extends AxiosRequestConfig {
     data?: JsonDataRequest
+    'Wechatpay-Serial'?: string
   }
   export interface WellformedResponse {
     sub_mchid: string

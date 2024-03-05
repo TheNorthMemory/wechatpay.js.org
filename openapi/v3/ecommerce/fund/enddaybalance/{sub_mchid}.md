@@ -3,7 +3,7 @@ title: 查询二级商户账户日终余额(平台收付通)
 description: 电商服务商通过该接口可以查询二级商户指定日期当天24点的账户余额。
 ---
 
-# {{ $frontmatter.title }}
+# {{ $frontmatter.title }} {#get}
 
 {{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/ecommerce/amount/chapter3_2.shtml)
 

@@ -5,11 +5,11 @@ aside: true
 
 # 快速开始
 
-## 安装
+## 安装 {#install}
 
 `$ npm install wechatpay-axios-plugin`
 
-## 下载平台证书
+## 下载平台证书 {#cli}
 
 执行以下命令行，需额外安装依赖 `$ npm install --no-save yargs`
 
@@ -32,9 +32,9 @@ You may confirm the above infos again even if this library already did(by Rsa.ve
     openssl x509 -in wechatpay_HEXADECIAL.pem -noout -serial -dates
 ```
 
-## 应用代码
+## 应用代码 {#sample}
 
-### 初始化
+### 初始化 {#init}
 
 ```js twoslash
 const { Wechatpay } = require('wechatpay-axios-plugin');
@@ -77,7 +77,7 @@ const wxpay = new Wechatpay({
 });
 ```
 
-### Native下单
+### Native下单 {#v3.pay.transactions.native.post}
 
 ```js
 wxpay.v3.pay.transactions.native.post({})
@@ -85,7 +85,7 @@ wxpay.v3.pay.transactions.native.post({})
 
 详细见[这里](/openapi/v3/pay/transactions/native)
 
-### 查询订单
+### 查询订单 {#v3.pay.transactions.id.$transaction_id$.get}
 
 ```js twoslash
 // _placeholder_ 语法糖会转换成 '{placeholder}' 格式
@@ -95,7 +95,7 @@ wxpay.v3.pay.transactions.id._transaction_id_.get({})
 
 详细见[这里](/openapi/v3/pay/transactions/id/{transaction_id})
 
-### 关闭订单
+### 关闭订单 {#v3.pay.transactions.outTradeNo.$out_trade_no$.close.post}
 
 ```js twoslash
 // $placeholder$ 语法糖会转换成 '{placeholder}' 格式
@@ -105,7 +105,7 @@ wxpay.v3.pay.transactions.outTradeNo.$out_trade_no$.close.post({})
 
 详细见[这里](/openapi/v3/pay/transactions/out-trade-no/{out_trade_no}/close)
 
-### 申请退款
+### 申请退款 {#v3.refund.domestic.refunds.post}
 
 ```js
 wxpay.v3.refund.domestic.refunds.post({})
@@ -113,7 +113,7 @@ wxpay.v3.refund.domestic.refunds.post({})
 
 详细见[这里](/openapi/v3/refund/domestic/refunds)
 
-### 查询单笔退款
+### 查询单笔退款 {#v3.refund.domestic.refunds.$out_refund_no$.get}
 
 ```js twoslash
 // _placeholder_ 语法糖会转换成 '{placeholder}' 格式
