@@ -4,6 +4,16 @@
   }
 }
 
+@media (max-width: 639px) {
+  .actions {
+    justify-content:space-around;
+  }
+
+  .VPButton.brand {
+    width: calc(100vw - 48px);
+  }
+}
+
 .VPHomeHero:not(.has-image) .main .text,
 .VPHomeHero:not(.has-image) .main .tagline {
   max-width: inherit;

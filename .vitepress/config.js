@@ -59,6 +59,12 @@ export default defineConfig({
       prev: '上一页',
       next: '下一页'
     },
+    notFound: {
+      title: '未找到',
+      quote: '您所访问的页面未找到，或者已失效',
+      linkLabel: '返回首页',
+      linkText: '返回首页',
+    },
     lastUpdated: {
       text: '最后更新于',
       formatOptions: {
