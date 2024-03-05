@@ -130,7 +130,7 @@ function openapiSidebar() {
   return [
     {
       text: 'APIv2',
-      collapsed: true,
+      collapsed: false,
       items: [
         {
           text: '沙箱环境',
@@ -669,6 +669,20 @@ function openapiSidebar() {
             {
               text: '查询结算账户修改状态',
               link: '/openapi/v3/apply4sub/sub_merchants/{sub_mchid}/application/{application_no}',
+            },
+          ],
+        },
+        {
+          text: '文件上传',
+          collapsed: true,
+          items: [
+            {
+              text: '商户图片文件上传',
+              link: '/openapi/v3/merchant/media/upload',
+            },
+            {
+              text: '商户视频文件上传',
+              link: '/openapi/v3/merchant/media/video_upload',
             },
           ],
         },

@@ -3,7 +3,7 @@ title: 注销申请图片上传(平台收付通)
 description: 电商平台服务商调用注销申请接口时，需要先调用本接口上传相关的资料图片，获取图片ID后，再填写到注销申请请求中。
 ---
 
-# {{ $frontmatter.title }}
+# {{ $frontmatter.title }} {#post}
 
 {{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/partner/apis/ecommerce-cancel/media/upload-media.html)
 
@@ -67,8 +67,17 @@ export var wxpay: Wechatpay
 import { wxpay } from './virtual'
 // ---cut---
 const { Multipart } = require('wechatpay-axios-plugin')
+const { createReadStream } = require('fs')
+const { basename } = require('path');
 
+let localFilePath = '/path/to/merchant-certificate-file.jpg'
+const stream = createReadStream(localFilePath)
 const media = new Multipart()
+  .append('file', stream, basename(localFilePath))
+  .append('meta', JSON.stringify({
+    filename: basename(localFilePath),
+    sha256: 'from upstream or local calculated',
+  }))
 
 wxpay.v3.ecommerce.account.cancelApplications.media.post(media)
 //                                                  ^^^^

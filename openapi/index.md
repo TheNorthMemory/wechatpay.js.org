@@ -94,6 +94,8 @@ title: 开放接口概览
 | 结算账户v3{rowspan=3} | &nbsp; | [查询结算账户](/openapi/v3/apply4sub/sub_merchants/{sub_mchid}/settlement)
 | | [修改结算账户](/openapi/v3/apply4sub/sub_merchants/{sub_mchid}/modify-settlement)
 | | [查询结算账户修改状态](/openapi/v3/apply4sub/sub_merchants/{sub_mchid}/application/{application_no})
+| 文件上传v3{rowspan=2} | &nbsp; | [商户图片文件上传](/openapi/v3/merchant/media/upload)
+| | [商户视频文件上传](/openapi/v3/merchant/media/video_upload)
 | 平台证书v3 | [获取列表](/openapi/v3/certificates) {colspan=2}
 
 {.vp-table}
