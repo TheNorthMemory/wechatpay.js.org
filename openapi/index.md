@@ -96,6 +96,26 @@ title: 开放接口概览
 | | [查询结算账户修改状态](/openapi/v3/apply4sub/sub_merchants/{sub_mchid}/application/{application_no})
 | 文件上传v3{rowspan=2} | &nbsp; | [商户图片文件上传](/openapi/v3/merchant/media/upload)
 | | [商户视频文件上传](/openapi/v3/merchant/media/video_upload)
+| 微信支付分v3{rowspan=20} | [创建支付分订单](/openapi/v3/payscore/serviceorder#post) | [创建支付分订单](/openapi/v3/payscore/partner/serviceorder#post)
+| [查询支付分订单](/openapi/v3/payscore/serviceorder#get) | [查询支付分订单](/openapi/v3/payscore/partner/serviceorder#get)
+| [取消支付分订单](/openapi/v3/payscore/serviceorder/{out_order_no}/cancel) | | [取消支付分订单](/openapi/v3/payscore/partner/serviceorder/{out_order_no}/cancel)
+| [修改支付分金额](/openapi/v3/payscore/serviceorder/{out_order_no}/modify) | [修改支付分金额](/openapi/v3/payscore/partner/serviceorder/{out_order_no}/modify)
+| [完结支付分订单](/openapi/v3/payscore/serviceorder/{out_order_no}/complete) | [完结支付分订单](/openapi/v3/payscore/partner/serviceorder/{out_order_no}/complete)
+| [同步支付分订单](/openapi/v3/payscore/serviceorder/{out_order_no}/sync) | [同步支付分订单](/openapi/v3/payscore/partner/serviceorder/{out_order_no}/sync)
+| [请求支付分催收](/openapi/v3/payscore/serviceorder/{out_order_no}/pay) | [请求支付分催收](/openapi/v3/payscore/partner/serviceorder/{out_order_no}/pay)
+| [创建先用后付订单](/openapi/v3/payscore/servicepayondeliveryorder) | [创建先用后付订单](/openapi/v3/payscore/partner/servicepayondeliveryorder)
+| [商户预授权(免确认)](/openapi/v3/payscore/permissions) | [商户预授权(免确认)](/openapi/v3/payscore/partner/permissions)
+| [查询授权状态(CODE)(免确认)](/openapi/v3/payscore/permissions/authorization-code/{authorization_code}) | [查询授权状态(CODE)(免确认)](/openapi/v3/payscore/partner/permissions/authorization-code/{authorization_code})
+| [查询授权状态(OPENID)(免确认)](/openapi/v3/payscore/permissions/openid/{openid}) | [查询授权状态(OPENID)(免确认)](/openapi/v3/payscore/partner/permissions/search)
+| [查询授权状态](/openapi/v3/payscore/user-service-state) | &nbsp;
+| [解除用户授权(CODE)(免确认)](/openapi/v3/payscore/permissions/authorization-code/{authorization_code}/terminate)| [解除用户授权(CODE)(免确认)](/openapi/v3/payscore/partner/permissions/authorization-code/{authorization_code}/terminate)
+| [解除用户授权(OPENID)(免确认)](/openapi/v3/payscore/permissions/openid/{openid}/terminate) | [解除用户授权(OPENID)(免确认)](/openapi/v3/payscore/partner/permissions/terminate)
+| [解除用户授权](/openapi/v3/payscore/users/{openid}/permissions/{service_id}/terminate) | &nbsp;
+| [创单结单合并(免确认)](/openapi/v3/payscore/serviceorder/direct-complete) | [创单结单合并(免确认)](/openapi/v3/payscore/partner/serviceorder/direct-complete)
+| | [查询先享金额分层](/openapi/v3/payscore/partner/servicequotas/service-id/{service_id})
+| | [申请绑定支付分服务](/openapi/v3/payscore/partner/service-account-applications)
+| | [查询支付分绑定结果](/openapi/v3/payscore/partner/service-account-applications/{out_apply_no})
+| [申请对账单](/openapi/v3/payscore/merchant-bill) {colspan=2}
 | 平台证书v3 | [获取列表](/openapi/v3/certificates) {colspan=2}
 
 {.vp-table}

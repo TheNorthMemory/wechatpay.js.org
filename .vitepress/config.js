@@ -693,6 +693,172 @@ function openapiSidebar() {
           ],
         },
         {
+          text: '微信支付分',
+          collapsed: true,
+          items: [
+            {
+              text: '直连商户模式',
+              collapsed: true,
+              items: [
+                {
+                  text: '创建订单',
+                  link: '/openapi/v3/payscore/serviceorder#post',
+                },
+                {
+                  text: '查询订单',
+                  link: '/openapi/v3/payscore/serviceorder#get',
+                },
+                {
+                  text: '取消订单',
+                  link: '/openapi/v3/payscore/serviceorder/{out_order_no}/cancel',
+                },
+                {
+                  text: '修改金额',
+                  link: '/openapi/v3/payscore/serviceorder/{out_order_no}/modify',
+                },
+                {
+                  text: '完结订单',
+                  link: '/openapi/v3/payscore/serviceorder/{out_order_no}/complete',
+                },
+                {
+                  text: '同步订单',
+                  link: '/openapi/v3/payscore/serviceorder/{out_order_no}/sync',
+                },
+                {
+                  text: '请求催收',
+                  link: '/openapi/v3/payscore/serviceorder/{out_order_no}/pay',
+                },
+                {
+                  text: '免确认',
+                  collapsed: true,
+                  items: [
+                    {
+                      text: '商户预授权',
+                      link: '/openapi/v3/payscore/permissions'
+                    },
+                    {
+                      text: '查询授权状态(CODE)',
+                      link: '/openapi/v3/payscore/permissions/authorization-code/{authorization_code}',
+                    },
+                    {
+                      text: '查询授权状态(OPENID)',
+                      link: '/openapi/v3/payscore/permissions/openid/{openid}',
+                    },
+                    {
+                      text: '查询授权状态',
+                      link: '/openapi/v3/payscore/user-service-state',
+                    },
+                    {
+                      text: '解除用户授权(CODE)',
+                      link: '/openapi/v3/payscore/permissions/authorization-code/{authorization_code}/terminate',
+                    },
+                    {
+                      text: '解除用户授权(OPENID)',
+                      link: '/openapi/v3/payscore/permissions/openid/{openid}/terminate',
+                    },
+                    {
+                      text: '解除用户授权',
+                      link: '/openapi/v3/payscore/users/{openid}/permissions/{service_id}/terminate',
+                    },
+                  ],
+                },
+                {
+                  text: '创建先用后付订单',
+                  link: '/openapi/v3/payscore/servicepayondeliveryorder',
+                },
+                {
+                  text: '创单结单合并',
+                  link: '/openapi/v3/payscore/serviceorder/direct-complete',
+                },
+              ],
+            },
+            {
+              text: '合作伙伴模式',
+              collapsed: true,
+              items: [
+                {
+                  text: '创建订单',
+                  link: '/openapi/v3/payscore/partner/serviceorder#post',
+                },
+                {
+                  text: '查询订单',
+                  link: '/openapi/v3/payscore/partner/serviceorder#get',
+                },
+                {
+                  text: '取消订单',
+                  link: '/openapi/v3/payscore/partner/serviceorder/{out_order_no}/cancel',
+                },
+                {
+                  text: '修改金额',
+                  link: '/openapi/v3/payscore/partner/serviceorder/{out_order_no}/modify',
+                },
+                {
+                  text: '完结订单',
+                  link: '/openapi/v3/payscore/partner/serviceorder/{out_order_no}/complete',
+                },
+                {
+                  text: '同步订单',
+                  link: '/openapi/v3/payscore/partner/serviceorder/{out_order_no}/sync',
+                },
+                {
+                  text: '请求催收',
+                  link: '/openapi/v3/payscore/partner/serviceorder/{out_order_no}/pay',
+                },
+                {
+                  text: '免确认',
+                  collapsed: true,
+                  items: [
+                    {
+                      text: '商户预授权',
+                      link: '/openapi/v3/payscore/partner/permissions'
+                    },
+                    {
+                      text: '查询授权状态(CODE)',
+                      link: '/openapi/v3/payscore/partner/permissions/authorization-code/{authorization_code}',
+                    },
+                    {
+                      text: '查询授权状态(OPENID)',
+                      link: '/openapi/v3/payscore/partner/permissions/search',
+                    },
+                    {
+                      text: '解除用户授权(CODE)',
+                      link: '/openapi/v3/payscore/partner/permissions/authorization-code/{authorization_code}/terminate',
+                    },
+                    {
+                      text: '解除用户授权(OPENID)',
+                      link: '/openapi/v3/payscore/partner/permissions/terminate',
+                    },
+                  ],
+                },
+                {
+                  text: '申请绑定服务',
+                  link: '/openapi/v3/payscore/partner/service-account-applications',
+                },
+                {
+                  text: '查询绑定结果',
+                  link: '/openapi/v3/payscore/partner/service-account-applications/{out_apply_no}',
+                },
+                {
+                  text: '查询先享金额分层',
+                  link: '/openapi/v3/payscore/partner/servicequotas/service-id/{service_id}',
+                },
+                {
+                  text: '创建先用后付订单',
+                  link: '/openapi/v3/payscore/partner/servicepayondeliveryorder',
+                },
+                {
+                  text: '创单结单合并',
+                  link: '/openapi/v3/payscore/partner/serviceorder/direct-complete',
+                },
+              ],
+            },
+            {
+              text: '申请对账单',
+              link: '/openapi/v3/payscore/merchant-bill',
+            },
+          ],
+        },
+        {
           text: '获取平台证书列表',
           link: '/openapi/v3/certificates',
         },
