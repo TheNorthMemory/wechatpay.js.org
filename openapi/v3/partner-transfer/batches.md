@@ -14,8 +14,8 @@ import { AxiosRequestConfig, AxiosPromise } from 'axios'
 namespace WeChatPay.OpenAPI.V3.PartnerTransfer.Batches.PostHttpMethod {
   export interface JsonDataRequest {
     sub_mchid: string
-    sub_appid: string
-    authorization_type: string
+    sub_appid?: string
+    authorization_type: 'INFORMATION_AUTHORIZATION_TYPE' | 'FUND_AUTHORIZATION_TYPE' | 'INFORMATION_AND_FUND_AUTHORIZATION_TYPE'
     out_batch_no: string
     batch_name: string
     batch_remark: string
@@ -26,16 +26,16 @@ namespace WeChatPay.OpenAPI.V3.PartnerTransfer.Batches.PostHttpMethod {
       transfer_amount: number
       transfer_remark: string
       openid: string
-      user_name: string
-      user_id_card: string
+      user_name?: string
+      user_id_card?: string
     }[]
-    sp_appid: string
-    transfer_purpose: string
-    transfer_scene: string
+    sp_appid?: string
+    transfer_purpose?: 'GOODSPAYMENT' | 'COMMISSION' | 'REFUND' | 'REIMBURSEMENT' | 'FREIGHT' | 'OTHERS'
+    transfer_scene?: string
   }
   export interface RequestConfig extends AxiosRequestConfig {
     data?: JsonDataRequest
-    headers: {
+    headers?: {
       'Wechatpay-Serial': string
     }
   }

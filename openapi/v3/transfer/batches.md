@@ -24,14 +24,13 @@ namespace WeChatPay.OpenAPI.V3.Transfer.Batches.PostHttpMethod {
       transfer_amount: number
       transfer_remark: string
       openid: string
-      user_name: string
-      user_id_card: string
+      user_name?: string
     }[]
-    transfer_scene_id: string
+    transfer_scene_id?: string
   }
   export interface RequestConfig extends AxiosRequestConfig {
     data?: JsonDataRequest
-    headers: {
+    headers?: {
       'Wechatpay-Serial': string
     }
   }
@@ -86,7 +85,7 @@ wxpay.v3.transfer.batches.post({
   total_num,
   transfer_detail_list,
   transfer_scene_id,
-})
+}, { headers, })
 .then(
   ({ // [!code hl:11]
     data: {
