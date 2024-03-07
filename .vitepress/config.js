@@ -632,6 +632,18 @@ function openapiSidebar() {
                   text: '查询注销单状态',
                   link: '/openapi/v3/ecommerce/account/cancel-applications/out-apply-no/{out_apply_no}',
                 },
+                {
+                  text: '申请销户号余额提现',
+                  link: '/openapi/v3/mch_operate/risk/withdrawl-apply',
+                },
+                {
+                  text: '查询提现状态(商户单号)',
+                  link: '/openapi/v3/mch_operate/risk/withdrawl-apply/out-request-no/{out_request_no}',
+                },
+                {
+                  text: '查询提现状态(平台单号)',
+                  link: '/openapi/v3/mch_operate/risk/withdrawl-apply/applyment-id/{applyment_id}',
+                },
               ],
             },
             {
@@ -657,6 +669,28 @@ function openapiSidebar() {
             {
               text: '申请二级商户资金账单',
               link: '/openapi/v3/ecommerce/bill/fundflowbill',
+            },
+            {
+              text: '跨境付款',
+              collapsed: true,
+              items: [
+                {
+                  text: '查询订单剩余可出境余额',
+                  link: '/openapi/v3/funds-to-oversea/transactions/{transaction_id}/available_abroad_amounts',
+                },
+                {
+                  text: '申请资金出境',
+                  link: '/openapi/v3/funds-to-oversea/orders',
+                },
+                {
+                  text: '查询出境结果',
+                  link: '/openapi/v3/funds-to-oversea/orders/{out_order_id}',
+                },
+                {
+                  text: '获取购付汇账单',
+                  link: '/openapi/v3/funds-to-oversea/bill-download-url',
+                },
+              ],
             },
           ],
         },

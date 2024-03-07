@@ -63,7 +63,7 @@ title: 开放接口概览
 | [申请转账明细电子回单](/openapi/v3/transfer-detail/electronic-receipts#post) {colspan=2}
 | [查询明细回单受理结果](/openapi/v3/transfer-detail/electronic-receipts#get) {colspan=2}
 | [下载电子回单文件](/openapi/v3/transferdownload/signfile) {colspan=2}
-| 平台收付通v3{rowspan=28} | &nbsp; | [二级商户进件](/openapi/v3/ecommerce/applyments/)
+| 平台收付通v3{rowspan=35} | &nbsp; | [二级商户进件](/openapi/v3/ecommerce/applyments/)
 | | [查询进件状态(平台申请单号)](/openapi/v3/ecommerce/applyments/{applyment_id})
 | | [查询进件状态(业务申请编号)](/openapi/v3/ecommerce/applyments/out-request-no/{out_request_no})
 | | [请求补差](/openapi/v3/ecommerce/subsidies/create)
@@ -85,12 +85,19 @@ title: 开放接口概览
 | | [注销申请图片上传](/openapi/v3/ecommerce/account/cancel-applications/media)
 | | [提交注销申请单](/openapi/v3/ecommerce/account/cancel-applications)
 | | [查询注销单状态](/openapi/v3/ecommerce/account/cancel-applications/out-apply-no/{out_apply_no})
+| | [申请销户号余额提现](/openapi/v3/mch_operate/risk/withdrawl-apply)
+| | [查询销户号余额提现状态(商户提现单号)](/openapi/v3/mch_operate/risk/withdrawl-apply/out-request-no/{out_request_no})
+| | [查询销户号余额提现状态(平台提现单号)](/openapi/v3/mch_operate/risk/withdrawl-apply/applyment-id/{applyment_id})
 | | [二级商户账户余额提现](/openapi/v3/ecommerce/fund/withdraw)
 | | [查询提现结果(商户提现单号)](/openapi/v3/ecommerce/fund/withdraw/out-request-no/{out_request_no})
 | | [查询提现结果(平台提现单号)](/openapi/v3/ecommerce/fund/withdraw/{withdraw_id})
 | | [查询二级商户账户实时余额](/openapi/v3/ecommerce/fund/balance/{sub_mchid})
 | | [查询二级商户账户日终余额](/openapi/v3/ecommerce/fund/enddaybalance/{sub_mchid})
 | | [申请二级商户资金账单](/openapi/v3/ecommerce/bill/fundflowbill)
+| | [查询订单剩余可出境余额](/openapi/v3/funds-to-oversea/transactions/{transaction_id}/available_abroad_amounts)
+| | [申请资金出境](/openapi/v3/funds-to-oversea/orders)
+| | [查询出境结果](/openapi/v3/funds-to-oversea/orders/{out_order_id})
+| | [获取购付汇账单](/openapi/v3/funds-to-oversea/bill-download-url)
 | 结算账户v3{rowspan=3} | &nbsp; | [查询结算账户](/openapi/v3/apply4sub/sub_merchants/{sub_mchid}/settlement)
 | | [修改结算账户](/openapi/v3/apply4sub/sub_merchants/{sub_mchid}/modify-settlement)
 | | [查询结算账户修改状态](/openapi/v3/apply4sub/sub_merchants/{sub_mchid}/application/{application_no})
