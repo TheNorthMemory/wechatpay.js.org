@@ -214,22 +214,23 @@ wxpay.v2.pay.combinedorder.post({
       err_code,
       err_code_des,
       trade_type,
-      prepay_id,
+      prepay_id: prepayid,
     },
   }) => {
-    const nonceStr = Formatter.nonce();
-    const timeStamp = '' + Formatter.timestamp();
-    const packageStr = 'prepay_id=' + prepay_id;
-    const signType = previousSignType;
-    return { // [!code hl:12]
-      appId,
-      timeStamp,
-      nonceStr,
+    const noncestr = Formatter.nonce();
+    const timestamp = '' + Formatter.timestamp();
+    const packageStr = 'Sign=WXPay';
+    const signType = previousSignType || 'MD5';
+    return { // [!code hl:13]
+      appid,
+      partnerid,
+      prepayid,
       package: packageStr,
-      signType,
-      paySign: Hash.sign(
+      timestamp,
+      noncestr,
+      sign: Hash.sign(
         signType,
-        { appId, timeStamp, nonceStr, package: packageStr, signType },
+        { appid, partnerid, prepayid, package: packageStr, timestamp, noncestr },
         apiv2Secret
       )
     }
