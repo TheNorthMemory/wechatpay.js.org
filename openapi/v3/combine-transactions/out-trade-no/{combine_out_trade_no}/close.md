@@ -78,9 +78,5 @@ wxpay.v3.combineTransactions.outTradeNo._combine_out_trade_no_.close.post({
   combine_appid,
   sub_orders,
 }, { combine_out_trade_no })
-.then(
-  ({ // [!code hl:3]
-    data,
-  }) => data
-)
+.then(({ status, }) => status === 204) // [!code hl]
 ```
