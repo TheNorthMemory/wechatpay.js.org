@@ -160,6 +160,22 @@ title: 开放接口概览
 | | [申请绑定支付分服务](/openapi/v3/payscore/partner/service-account-applications)
 | | [查询支付分绑定结果](/openapi/v3/payscore/partner/service-account-applications/{out_apply_no})
 | [申请对账单](/openapi/v3/payscore/merchant-bill) {colspan=2}
-| 平台证书v3 | [获取列表](/openapi/v3/certificates) {colspan=2}
+| 消费者投诉v3{rowspan=16} | [创建投诉通知回调](/openapi/v3/merchant-service/complaint-notifications#post) {colspan=2}
+| [查询投诉通知回调](/openapi/v3/merchant-service/complaint-notifications#get) {colspan=2}
+| [修改投诉通知回调](/openapi/v3/merchant-service/complaint-notifications#put) {colspan=2}
+| [删除投诉通知回调](/openapi/v3/merchant-service/complaint-notifications#delete) {colspan=2}
+| [查询投诉单列表](/openapi/v3/merchant-service/complaints-v2) {colspan=2}
+| [查询投诉单详情](/openapi/v3/merchant-service/complaints-v2/{complaint_id}) {colspan=2}
+| [查询投诉单协商历史](/openapi/v3/merchant-service/complaints-v2/{complaint_id}/negotiation-historys) {colspan=2}
+| [回复用户](/openapi/v3/merchant-service/complaints-v2/{complaint_id}/response) {colspan=2}
+| [反馈处理完成](/openapi/v3/merchant-service/complaints-v2/{complaint_id}/complete) {colspan=2}
+| [更新退款审批结果](/openapi/v3/merchant-service/complaints-v2/{complaint_id}/update-refund-progress) {colspan=2}
+| [上传商户反馈图片文件](/openapi/v3/merchant-service/images/upload) {colspan=2}
+| [投诉单详情图片文件下载](/openapi/v3/merchant-service/images/{media_id}) {colspan=2}
+| :thumbsdown:[~~查询投诉信息列表~~](/openapi/v3/merchant-service/complaints) {colspan=2}
+| :thumbsdown:[~~查询投诉详情详情~~](/openapi/v3/merchant-service/complaints/{transaction_id}) {colspan=2}
+| :thumbsdown:[~~查询投诉单协商历史~~](/openapi/v3/merchant-service/complaints/{transaction_id}/negotiation-historys) {colspan=2}
+| :thumbsdown:[~~商户反馈~~](/openapi/v3/merchant-service/feedbacks) {colspan=2}
+| 平台证书v3 | [获取平台证书列表](/openapi/v3/certificates) {colspan=2}
 
 {.vp-table}

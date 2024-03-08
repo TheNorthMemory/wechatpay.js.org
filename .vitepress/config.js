@@ -1071,6 +1071,76 @@ function openapiSidebar() {
           ],
         },
         {
+          text: '消费者投诉',
+          collapsed: true,
+          items: [
+            {
+              text: ' 维护接收投诉通知的URL',
+              link: '/openapi/v3/merchant-service/complaint-notifications',
+            },
+            {
+              text: ' 2.0',
+              collapsed: true,
+              items: [
+                {
+                  text: '查询投诉单列表',
+                  link: '/openapi/v3/merchant-service/complaints-v2',
+                },
+                {
+                  text: '查询投诉单详情',
+                  link: '/openapi/v3/merchant-service/complaints-v2/{complaint_id}',
+                },
+                {
+                  text: '查询投诉单协商历史',
+                  link: '/openapi/v3/merchant-service/complaints-v2/{complaint_id}/negotiation-historys',
+                },
+                {
+                  text: '回复用户',
+                  link: '/openapi/v3/merchant-service/complaints-v2/{complaint_id}/response',
+                },
+                {
+                  text: '反馈处理完成',
+                  link: '/openapi/v3/merchant-service/complaints-v2/{complaint_id}/complete',
+                },
+                {
+                  text: '更新退款审批结果',
+                  link: '/openapi/v3/merchant-service/complaints-v2/{complaint_id}/update-refund-progress',
+                },
+              ],
+            },
+            {
+              text: ' 1.0',
+              collapsed: true,
+              items: [
+                {
+                  text: '查询投诉信息列表',
+                  link: '/openapi/v3/merchant-service/complaints',
+                },
+                {
+                  text: '查询投诉详情详情',
+                  link: '/openapi/v3/merchant-service/complaints/{transaction_id}',
+                },
+                {
+                  text: '查询投诉单协商历史',
+                  link: '/openapi/v3/merchant-service/complaints/{transaction_id}/negotiation-historys',
+                },
+                {
+                  text: '商户反馈',
+                  link: '/openapi/v3/merchant-service/feedbacks',
+                },
+              ],
+            },
+            {
+              text: '上传商户反馈图片文件',
+              link: '/openapi/v3/merchant-service/images/upload',
+            },
+            {
+              text: '投诉单详情图片文件下载',
+              link: '/openapi/v3/merchant-service/images/{media_id}',
+            },
+          ],
+        },
+        {
           text: '获取平台证书列表',
           link: '/openapi/v3/certificates',
         },
