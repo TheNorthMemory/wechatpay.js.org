@@ -22,6 +22,16 @@ title: 开放接口概览
 | 合单支付v2{rowspan=3} | [合单下单](/openapi/v2/pay/combinedorder) {colspan=2}
 | [合单查单](/openapi/v2/pay/querycombinedorder) {colspan=2}
 | [合单关单](/openapi/v2/pay/closecombinedorder) {colspan=2}
+| 分账v2{rowspan=10} | &nbsp; | [查询最大分账比例](/openapi/v2/pay/profitsharingmerchantratioquery)
+| [添加分账接收方](/openapi/v2/pay/profitsharingaddreceiver) {colspan=2}
+| [删除分账接收方](/openapi/v2/pay/profitsharingremovereceiver) {colspan=2}
+| [请求单次分账](/openapi/v2/secapi/pay/profitsharing) {colspan=2}
+| [请求多次分账](/openapi/v2/secapi/pay/multiprofitsharing) {colspan=2}
+| [查询分账结果](/openapi/v2/pay/profitsharingquery) {colspan=2}
+| [查询订单待分账金额](/openapi/v2/pay/profitsharingorderamountquery) {colspan=2}
+| [完结分账](/openapi/v2/secapi/pay/profitsharingfinish) {colspan=2}
+| [分账回退](/openapi/v2/secapi/pay/profitsharingreturn) {colspan=2}
+| [回退结果查询](/openapi/v2/pay/profitsharingreturnquery) {colspan=2}
 | 平台账单v2{rowspan=2} | [下载交易账单](/openapi/v2/pay/downloadbill) {colspan=2}
 | [下载资金账单](/openapi/v2/pay/downloadfundflow) {colspan=2}
 | 现金红包v2{rowspan=4} | [发放普通红包](/openapi/v2/mmpaymkttransfers/sendredpack) {colspan=2}
@@ -49,6 +59,25 @@ title: 开放接口概览
 | [合单Native下单](/openapi/v3/combine-transactions/native) {colspan=2}
 | [合单查单](/openapi/v3/combine-transactions/out-trade-no/{combine_out_trade_no}) {colspan=2}
 | [合单关单](/openapi/v3/combine-transactions/out-trade-no/{combine_out_trade_no}/close) {colspan=2}
+| 分账v3{rowspan=10} | &nbsp; | [查询最大分账比例](/openapi/v3/profitsharing/merchant-configs/{sub_mchid})
+| | [添加分账接收方](/openapi/v3/profitsharing/receivers/add)
+| | [删除分账接收方](/openapi/v3/profitsharing/receivers/delete)
+| | [请求分账](/openapi/v3/profitsharing/orders)
+| | [查询分账结果](/openapi/v3/profitsharing/orders/{out_order_no})
+| | [查询剩余待分金额](/openapi/v3/profitsharing/transactions/{transaction_id}/amounts)
+| | [解冻剩余资金](/openapi/v3/profitsharing/orders/unfreeze)
+| | [请求分账回退](/openapi/v3/profitsharing/return-orders)
+| | [查询分账回退结果](/openapi/v3/profitsharing/return-orders/{out_return_no})
+| | [申请分账账单](/openapi/v3/profitsharing/bills)
+| 连锁品牌分账v3{rowspan=9} | &nbsp; | [查询最大分账比例](/openapi/v3/brand/profitsharing/brand-configs/{brand_mchid})
+| | [添加分账接收方](/openapi/v3/brand/profitsharing/receivers/add)
+| | [删除分账接收方](/openapi/v3/brand/profitsharing/receivers/delete)
+| | [请求分账](/openapi/v3/brand/profitsharing/orders#post)
+| | [查询分账结果](/openapi/v3/brand/profitsharing/orders#get)
+| | [查询剩余待分金额](/openapi/v3/brand/profitsharing/orders/{transaction_id}/amounts)
+| | [完结分账](/openapi/v3/brand/profitsharing/finish-order)
+| | [请求分账回退](/openapi/v3/brand/profitsharing/returnorders#post)
+| | [查询分账回退结果](/openapi/v3/brand/profitsharing/returnorders#get)
 | 平台账单v3{rowspan=4} | [申请交易账单](/openapi/v3/bill/tradebill) {colspan=2}
 | [申请资金账单](/openapi/v3/bill/fundflowbill) {colspan=2}
 | | [申请子商户资金账单](/openapi/v3/bill/sub-merchant-fundflowbill)

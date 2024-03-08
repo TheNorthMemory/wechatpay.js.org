@@ -229,6 +229,52 @@ function openapiSidebar() {
           ]
         },
         {
+          text: '分账',
+          collapsed: true,
+          items: [
+            {
+              text: '查询最大分账比例',
+              link: '/openapi/v2/pay/profitsharingmerchantratioquery',
+            },
+            {
+              text: '添加分账接收方',
+              link: '/openapi/v2/pay/profitsharingaddreceiver',
+            },
+            {
+              text: '删除分账接收方',
+              link: '/openapi/v2/pay/profitsharingremovereceiver',
+            },
+            {
+              text: '请求单次分账',
+              link: '/openapi/v2/secapi/pay/profitsharing',
+            },
+            {
+              text: '请求多次分账',
+              link: '/openapi/v2/secapi/pay/multiprofitsharing',
+            },
+            {
+              text: '查询分账结果',
+              link: '/openapi/v2/pay/profitsharingquery',
+            },
+            {
+              text: '查询订单待分账金额',
+              link: '/openapi/v2/pay/profitsharingorderamountquery',
+            },
+            {
+              text: '完结分账',
+              link: '/openapi/v2/secapi/pay/profitsharingfinish',
+            },
+            {
+              text: '分账回退',
+              link: '/openapi/v2/secapi/pay/profitsharingreturn',
+            },
+            {
+              text: '回退结果查询',
+              link: '/openapi/v2/pay/profitsharingreturnquery',
+            },
+          ],
+        },
+        {
           text: '平台账单',
           collapsed: true,
           items: [
@@ -417,6 +463,94 @@ function openapiSidebar() {
               link: '/openapi/v3/combine-transactions/out-trade-no/{combine_out_trade_no}/close'
             },
           ]
+        },
+        {
+          text: '分账',
+          collapsed: true,
+          items: [
+            {
+              text: '查询最大分账比例',
+              link: '/openapi/v3/profitsharing/merchant-configs/{sub_mchid}',
+            },
+            {
+              text: '添加分账接收方',
+              link: '/openapi/v3/profitsharing/receivers/add',
+            },
+            {
+              text: '删除分账接收方',
+              link: '/openapi/v3/profitsharing/receivers/delete',
+            },
+            {
+              text: '请求分账',
+              link: '/openapi/v3/profitsharing/orders',
+            },
+            {
+              text: '查询分账结果',
+              link: '/openapi/v3/profitsharing/orders/{out_order_no}',
+            },
+            {
+              text: '查询剩余待分金额',
+              link: '/openapi/v3/profitsharing/transactions/{transaction_id}/amounts',
+            },
+            {
+              text: '解冻剩余资金',
+              link: '/openapi/v3/profitsharing/orders/unfreeze',
+            },
+            {
+              text: '请求分账回退',
+              link: '/openapi/v3/profitsharing/return-orders',
+            },
+            {
+              text: '查询分账回退结果',
+              link: '/openapi/v3/profitsharing/return-orders/{out_return_no}',
+            },
+            {
+              text: '申请分账账单',
+              link: '/openapi/v3/profitsharing/bills',
+            },
+          ],
+        },
+        {
+          text: '连锁品牌分账',
+          collapsed: true,
+          items: [
+            {
+              text: '查询最大分账比例',
+              link: '/openapi/v3/brand/profitsharing/brand-configs/{brand_mchid}',
+            },
+            {
+              text: '添加分账接收方',
+              link: '/openapi/v3/brand/profitsharing/receivers/add',
+            },
+            {
+              text: '删除分账接收方',
+              link: '/openapi/v3/brand/profitsharing/receivers/delete',
+            },
+            {
+              text: '请求分账',
+              link: '/openapi/v3/brand/profitsharing/orders#post',
+            },
+            {
+              text: '查询分账结果',
+              link: '/openapi/v3/brand/profitsharing/orders#get',
+            },
+            {
+              text: '查询剩余待分金额',
+              link: '/openapi/v3/brand/profitsharing/orders/{transaction_id}/amounts',
+            },
+            {
+              text: '完结分账',
+              link: '/openapi/v3/brand/profitsharing/finish-order',
+            },
+            {
+              text: '请求分账回退',
+              link: '/openapi/v3/brand/profitsharing/returnorders#post',
+            },
+            {
+              text: '查询分账回退结果',
+              link: '/openapi/v3/brand/profitsharing/returnorders#get',
+            },
+          ],
         },
         {
           text: '平台账单',
