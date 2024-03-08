@@ -95,5 +95,5 @@ wxpay.v3.payscore.partner.serviceorder._out_order_no_.modify.post({
   total_amount,
   reason,
 }, { out_order_no })
-.then(({ data, }) => data) // [!code hl:1]
+.then(({ status, }) => status === 204) // [!code hl]
 ```

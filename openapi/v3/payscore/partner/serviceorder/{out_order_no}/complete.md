@@ -111,5 +111,5 @@ wxpay.v3.payscore.partner.serviceorder._out_order_no_.complete.post({
   complete_time,
   goods_tag,
 }, { out_order_no })
-.then(({ data, }) => data) // [!code hl:1]
+.then(({ status, }) => status === 204) // [!code hl]
 ```

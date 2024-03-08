@@ -695,6 +695,24 @@ function openapiSidebar() {
           ],
         },
         {
+          text: '商户进件',
+          collapsed: true,
+          items: [
+            {
+              text: '提交进件申请单',
+              link: '/openapi/v3/applyment4sub/applyment/',
+            },
+            {
+              text: '查询进件状态(申请单号)',
+              link: '/openapi/v3/applyment4sub/applyment/applyment_id/{applyment_id}',
+            },
+            {
+              text: '查询进件状态(业务申请编号)',
+              link: '/openapi/v3/applyment4sub/applyment/business_code/{business_code}',
+            },
+          ],
+        },
+        {
           text: '结算账户',
           collapsed: true,
           items: [
@@ -709,6 +727,32 @@ function openapiSidebar() {
             {
               text: '查询结算账户修改状态',
               link: '/openapi/v3/apply4sub/sub_merchants/{sub_mchid}/application/{application_no}',
+            },
+          ],
+        },
+        {
+          text: '确认开户意愿',
+          collapsed: true,
+          items: [
+            {
+              text: '查询商户确认状态',
+              link: '/openapi/v3/apply4subject/applyment/merchants/{sub_mchid}/state',
+            },
+            {
+              text: '提交商户申请单',
+              link: '/openapi/v3/apply4subject/applyment#post',
+            },
+            {
+              text: '查询申请单审核结果',
+              link: '/openapi/v3/apply4subject/applyment#get',
+            },
+            {
+              text: '撤销申请单(申请单编号)',
+              link: '/openapi/v3/apply4subject/applyment/{applyment_id}/cancel',
+            },
+            {
+              text: '撤销申请单(业务申请编号)',
+              link: '/openapi/v3/apply4subject/applyment/{business_code}/cancel',
             },
           ],
         },

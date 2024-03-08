@@ -81,7 +81,8 @@ import { wxpay } from './virtual'
 wxpay.v3.pay.partner.transactions.outTradeNo._out_trade_no_.close.post({
   sp_mchid,
   sub_mchid,
-}, { out_trade_no }).then(({ data }) => data)
+}, { out_trade_no })
+.then(({ status, }) => status === 204) // [!code hl]
 ```
 
 > [!IMPORTANT] 注意：

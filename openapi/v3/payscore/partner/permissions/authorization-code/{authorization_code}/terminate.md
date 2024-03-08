@@ -84,5 +84,5 @@ wxpay.v3.payscore.partner.permissions.authorizationCode._authorization_code_.ter
   sub_mchid,
   reason,
 }, { authorization_code })
-.then(({ data, }) => data) // [!code hl:1]
+.then(({ status, }) => status === 204) // [!code hl]
 ```

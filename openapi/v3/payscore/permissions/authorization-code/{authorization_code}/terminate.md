@@ -77,5 +77,5 @@ wxpay.v3.payscore.permissions.authorizationCode._authorization_code_.terminate.p
   service_id,
   reason,
 }, { authorization_code })
-.then(({ data, }) => data) // [!code hl:1]
+.then(({ status, }) => status === 204) // [!code hl]
 ```

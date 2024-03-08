@@ -77,5 +77,5 @@ wxpay.v3.payscore.partner.serviceorder._out_order_no_.pay.post({
   service_id,
   sub_mchid,
 }, { out_order_no })
-.then(({ data, }) => data) // [!code hl:1]
+.then(({ status, }) => status === 204) // [!code hl]
 ```

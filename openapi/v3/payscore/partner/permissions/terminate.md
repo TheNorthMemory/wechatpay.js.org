@@ -81,5 +81,5 @@ wxpay.v3.payscore.partner.permissions.terminate.post({
   sub_mchid,
   reason,
 })
-.then(({ data, }) => data) // [!code hl:1]
+.then(({ status, }) => status === 204) // [!code hl]
 ```

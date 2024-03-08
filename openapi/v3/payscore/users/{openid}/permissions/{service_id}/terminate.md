@@ -85,5 +85,5 @@ wxpay.v3.payscore.users._openid_.permissions._service_id_.terminate.post({
   appid,
   reason,
 }, { openid, service_id })
-.then(({ data, }) => data) // [!code hl:1]
+.then(({ status, }) => status === 204) // [!code hl]
 ```

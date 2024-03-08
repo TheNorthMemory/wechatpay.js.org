@@ -117,5 +117,5 @@ wxpay.v3.payscore.partner.serviceorder.directComplete.post({
   notify_url,
   openid,
 }, { out_order_no })
-.then(({ data, }) => data) // [!code hl:1]
+.then(({ status, }) => status === 204) // [!code hl]
 ```
