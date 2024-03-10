@@ -5,8 +5,8 @@ description: 同样的通知可能会多次发送给商户系统。商户系统�
 
 | 通知格式 | 直连商户模式 | 合作伙伴模式 |
 | :------: | :----------: | :----------: |
-| XML {rowspan=3} | [普通支付通知](/webhook/v2/transation-success) {colspan=2}
-| [合单支付通知](/webhook/v2/combine-transation-success) {colspan=2}
+| XML {rowspan=3} | [普通支付通知](/webhook/v2/transaction-success) {colspan=2}
+| [合单支付通知](/webhook/v2/combined-transactions-success) {colspan=2}
 | [退款结果通知](/webhook/v2/refund-processed) {colspan=2}
 | JSON {rowspan=3} | [普通支付通知](/webhook/v3/TRANSACTION.SUCCESS) {colspan=2}
 | [服务商支付通知](/webhook/v3/TRANSACTION.SUCCESS) {colspan=2}
