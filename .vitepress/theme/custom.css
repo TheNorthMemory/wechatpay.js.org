@@ -38,10 +38,12 @@
   --indent-x: 0;
 }
 
+.vp-doc._webhook_ table,
 .vp-doc._openapi_ table {
   margin: 0;
 }
 
+.vp-doc._webhook_ .vp-table tbody td:nth-last-child(-n + 2):empty,
 .vp-doc._openapi_ .vp-table tbody td:nth-last-child(-n + 2):empty {
   display: none;
 }

@@ -95,6 +95,11 @@ export default defineConfig({
         link: '/openapi/',
         activeMatch: '^/openapi/'
       },
+      {
+        text: '回调通知',
+        link: '/webhook/',
+        activeMatch: '^/webhook/'
+      },
     ],
     socialLinks: [
       {
@@ -113,6 +118,7 @@ export default defineConfig({
     sidebar: {
       '/guide/': guideSidebar(),
       '/openapi/': openapiSidebar(),
+      '/webhook/': webhookSidebar(),
     }
   }
 })
@@ -135,6 +141,11 @@ function guideSidebar() {
     },
   ];
 }
+
+/**
+ * @param {string[]} param0
+ */
+function transArrayItem([ text, link ]) { return { text, link }; }
 
 function openapiSidebar() {
   return [
@@ -1166,39 +1177,63 @@ function openapiSidebar() {
               text: ' 1.0',
               collapsed: true,
               items: [
-                {
-                  text: '查询投诉信息列表',
-                  link: '/openapi/v3/merchant-service/complaints',
-                },
-                {
-                  text: '查询投诉详情详情',
-                  link: '/openapi/v3/merchant-service/complaints/{transaction_id}',
-                },
-                {
-                  text: '查询投诉单协商历史',
-                  link: '/openapi/v3/merchant-service/complaints/{transaction_id}/negotiation-historys',
-                },
-                {
-                  text: '商户反馈',
-                  link: '/openapi/v3/merchant-service/feedbacks',
-                },
-              ],
+                ['查询投诉信息列表', '/openapi/v3/merchant-service/complaints'],
+                ['查询投诉详情详情', '/openapi/v3/merchant-service/complaints/{transaction_id}'],
+                ['查询投诉单协商历史', '/openapi/v3/merchant-service/complaints/{transaction_id}/negotiation-historys'],
+                ['商户反馈', '/openapi/v3/merchant-service/feedbacks'],
+              ].map(transArrayItem),
             },
-            {
-              text: '上传商户反馈图片文件',
-              link: '/openapi/v3/merchant-service/images/upload',
-            },
-            {
-              text: '投诉单详情图片文件下载',
-              link: '/openapi/v3/merchant-service/images/{media_id}',
-            },
+            transArrayItem(
+              ['上传商户反馈图片文件', '/openapi/v3/merchant-service/images/upload'],
+              ['投诉单详情图片文件下载', '/openapi/v3/merchant-service/images/{media_id}'],
+            ),
           ],
         },
-        {
-          text: '获取平台证书列表',
-          link: '/openapi/v3/certificates',
-        },
+        transArrayItem(
+          ['获取平台证书列表', '/openapi/v3/certificates'],
+        ),
       ]
+    },
+  ];
+}
+
+function webhookSidebar() {
+  return [
+    {
+      text: 'XML格式报文',
+      items: [
+        ['普通支付通知', '/webhook/v2/transaction-success'],
+        ['合单支付通知', '/webhook/v2/combined-transactions-success'],
+        ['退款结果通知', '/webhook/v2/refund-processed'],
+      ].map(transArrayItem),
+    },
+    {
+      text: 'JSON格式报文',
+      items: [
+        {
+          text: '支付',
+          items: [
+            ['普通支付通知', '/webhook/v3/TRANSACTION.SUCCESS'],
+            ['服务商支付通知', '/webhook/v3/TRANSACTION.SUCCESS'],
+            ['合单支付通知', '/webhook/v3/TRANSACTION.SUCCESS'],
+          ].map(transArrayItem),
+        },
+        {
+          text: '退款',
+          items: [
+            ['退款成功通知', '/webhook/v3/REFUND.SUCCESS'],
+            ['退款异常通知', '/webhook/v3/REFUND.ABNORMAL'],
+            ['退款关闭通知', '/webhook/v3/REFUND.CLOSED'],
+          ].map(transArrayItem),
+        },
+        {
+          text: '分账',
+          items: [
+            ['分账成功通知', '/webhook/v3/PROFITSHARING.SUCCESS'],
+            ['分账回退通知', '/webhook/v3/PROFITSHARING.RETURN'],
+          ].map(transArrayItem),
+        },
+      ],
     },
   ];
 }
