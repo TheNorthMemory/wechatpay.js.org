@@ -785,28 +785,34 @@ function openapiSidebar() {
               ],
             },
             {
-              text: '二级商户账户余额提现',
-              link: '/openapi/v3/ecommerce/fund/withdraw',
-            },
-            {
-              text: '查询提现结果(商户提现单号)',
-              link: '/openapi/v3/ecommerce/fund/withdraw/out-request-no/{out_request_no}',
-            },
-            {
-              text: '查询提现结果(平台提现单号)',
-              link: '/openapi/v3/ecommerce/fund/withdraw/{withdraw_id}',
-            },
-            {
-              text: '查询二级商户账户实时余额',
-              link: '/openapi/v3/ecommerce/fund/balance/{sub_mchid}',
-            },
-            {
-              text: '查询二级商户账户日终余额',
-              link: '/openapi/v3/ecommerce/fund/enddaybalance/{sub_mchid}',
-            },
-            {
-              text: '申请二级商户资金账单',
-              link: '/openapi/v3/ecommerce/bill/fundflowbill',
+              text: '二级商户提现',
+              collapsed: true,
+              items: [
+                {
+                  text: '预约提现',
+                  link: '/openapi/v3/ecommerce/fund/withdraw',
+                },
+                {
+                  text: '查询提现结果(商户单号)',
+                  link: '/openapi/v3/ecommerce/fund/withdraw/out-request-no/{out_request_no}',
+                },
+                {
+                  text: '查询提现结果(平台单号)',
+                  link: '/openapi/v3/ecommerce/fund/withdraw/{withdraw_id}',
+                },
+                {
+                  text: '查询账户实时余额',
+                  link: '/openapi/v3/ecommerce/fund/balance/{sub_mchid}',
+                },
+                {
+                  text: '查询账户日终余额',
+                  link: '/openapi/v3/ecommerce/fund/enddaybalance/{sub_mchid}',
+                },
+                {
+                  text: '申请资金账单',
+                  link: '/openapi/v3/ecommerce/bill/fundflowbill',
+                },
+              ],
             },
             {
               text: '跨境付款',
@@ -829,6 +835,36 @@ function openapiSidebar() {
                   link: '/openapi/v3/funds-to-oversea/bill-download-url',
                 },
               ],
+            },
+          ],
+        },
+        {
+          text: '商户提现',
+          collapsed: true,
+          items: [
+            {
+              text: '预约提现',
+              link: '/openapi/v3/merchant/fund/withdraw',
+            },
+            {
+              text: '查询预约提现状态(商户单号)',
+              link: '/openapi/v3/merchant/fund/withdraw/out-request-no/{out_request_no}',
+            },
+            {
+              text: '查询预约提现状态(平台单号)',
+              link: '/openapi/v3/merchant/fund/withdraw/withdraw-id/{withdraw_id}',
+            },
+            {
+              text: '查询账户实时余额',
+              link: '/openapi/v3/merchant/fund/balance/{account_type}',
+            },
+            {
+              text: '查询账户日终余额',
+              link: '/openapi/v3/merchant/fund/dayendbalance/{account_type}',
+            },
+            {
+              text: '按日下载提现异常文件',
+              link: '/openapi/v3/merchant/fund/withdraw/bill-type/{bill_type}',
             },
           ],
         },
