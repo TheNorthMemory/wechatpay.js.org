@@ -1,5 +1,6 @@
 ---
 title: 开放接口概览
+description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的OpenAPI接口地址。
 ---
 
 | 业务标签 | 直连商户模式 | 合作伙伴模式
@@ -176,6 +177,6 @@ title: 开放接口概览
 | :thumbsdown:[~~查询投诉详情详情~~](/openapi/v3/merchant-service/complaints/{transaction_id}) {colspan=2}
 | :thumbsdown:[~~查询投诉单协商历史~~](/openapi/v3/merchant-service/complaints/{transaction_id}/negotiation-historys) {colspan=2}
 | :thumbsdown:[~~商户反馈~~](/openapi/v3/merchant-service/feedbacks) {colspan=2}
-| 平台证书v3 | [获取平台证书列表](/openapi/v3/certificates) {colspan=2}
+| 平台证书v3{rowspan=1} | [获取平台证书列表](/openapi/v3/certificates) {colspan=2}
 
 {.vp-table}
