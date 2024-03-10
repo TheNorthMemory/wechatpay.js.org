@@ -11,7 +11,7 @@ aside: true
 
 ## 下载平台证书 {#cli}
 
-执行以下命令行，需额外安装依赖 `$ npm install --no-save yargs`
+下载命令行需额外安装依赖 `$ npm install --no-save yargs`，然后执行如下命令：
 
 ```bash
 $ ./node_modules/.bin/wxpay crt \
@@ -22,15 +22,19 @@ $ ./node_modules/.bin/wxpay crt \
 -o .
 ```
 
-```
-The WeChatPay Platform Certificate#0
-  serial=HEXADECIAL
+提供正确的`商户号`、`商户API证书序列号`、`商户API私钥文件地址`、`APIv3密钥`，执行后，屏幕输出样例：
+
+```ansi
+The WeChatPay Platform Certificate[1;31m#0[0m
+  serial=[1;32m7132d72a03e93cddf8c03bbd1f37eedf********[0m
   notBefore=Wed, 22 Apr 2020 01:43:19 GMT
   notAfter=Mon, 21 Apr 2025 01:43:19 GMT
-  Saved to: wechatpay_HEXADECIAL.pem
+  Saved to: [1;32m./wechatpay_7132d72a03e93cddf8c03bbd1f37eedf********.pem[0m
 You may confirm the above infos again even if this library already did(by Rsa.verify):
-    openssl x509 -in wechatpay_HEXADECIAL.pem -noout -serial -dates
+	[1;32mopenssl x509 -in ./wechatpay_7132d72a03e93cddf8c03bbd1f37eedf********.pem -noout -serial -dates[0m
 ```
+
+`./wechatpay_7132d72a03e93cddf8c03bbd1f37eedf********.pem` 即为 `微信支付平台证书` 文件。
 
 ## 应用代码 {#sample}
 
