@@ -13,7 +13,7 @@ description: 通过此接口可以查询本商户号指定日期当天24点的�
 import { AxiosRequestConfig, AxiosPromise } from 'axios'
 namespace WeChatPay.OpenAPI.V3.Merchant.Fund.Dayendbalance._account_type_.GetHttpMethod {
   export interface RequestConfig extends AxiosRequestConfig {
-    account_type: string
+    account_type: 'BASIC' | 'OPERATION' | 'FEES'
     params: {
       bill_date: string
     }

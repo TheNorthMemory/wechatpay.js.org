@@ -25,7 +25,7 @@ namespace WeChatPay.OpenAPI.V3.Merchant.Fund.Withdraw.WithdrawId._withdraw_id_.G
     reason: string
     remark: string
     bank_memo: string
-    account_type: string
+    account_type: 'BASIC' | 'OPERATION' | 'FEES'
     solution: string
   }
 }

@@ -134,6 +134,8 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | | [查询账户实时余额](/openapi/v3/merchant/fund/balance/{account_type})
 | | [查询账户日终余额](/openapi/v3/merchant/fund/dayendbalance/{account_type})
 | | [按日下载提现异常文件](/openapi/v3/merchant/fund/withdraw/bill-type/{bill_type})
+| 来账识别v3{rowspan=2} | &nbsp; | [合作伙伴银行来账查询](/openapi/v3/merchantfund/merchant/income-records)
+| | | [二级商户银行来账查询](/openapi/v3/merchantfund/partner/income-records)
 | 商户进件v3{rowspan=3} | &nbsp; | [提交进件申请单](/openapi/v3/applyment4sub/applyment/)
 | | [查询进件状态(申请单号)](/openapi/v3/applyment4sub/applyment/applyment_id/{applyment_id})
 | | [查询进件状态(业务申请编号)](/openapi/v3/applyment4sub/applyment/business_code/{business_code})

@@ -13,8 +13,8 @@ description: 电商服务商按日查询并下载提现状态为异常的提现�
 import { AxiosRequestConfig, AxiosPromise } from 'axios'
 namespace WeChatPay.OpenAPI.V3.Merchant.Fund.Withdraw.BillType._bill_type_.GetHttpMethod {
   export interface RequestConfig extends AxiosRequestConfig {
+    bill_type: 'NO_SUCC'
     params: {
-      bill_type: string
       bill_date: string
       tar_type: string
     }
@@ -71,6 +71,7 @@ import { wxpay } from './virtual'
 // ---cut---
 wxpay.v3.merchant.fund.withdraw.billType._bill_type_.get({
 //                                                   ^^^
+  bill_type,
   params,
 })
 .then(

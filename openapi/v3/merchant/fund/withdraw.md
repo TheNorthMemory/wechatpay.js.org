@@ -17,7 +17,7 @@ namespace WeChatPay.OpenAPI.V3.Merchant.Fund.Withdraw.PostHttpMethod {
     amount: number
     remark: string
     bank_memo: string
-    account_type: string
+    account_type: 'BASIC' | 'OPERATION' | 'FEES'
   }
   export interface RequestConfig extends AxiosRequestConfig {
     data?: JsonDataRequest

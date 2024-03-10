@@ -13,7 +13,7 @@ description: 商户通过此接口可以查询本商户号的账号余额情况�
 import { AxiosRequestConfig, AxiosPromise } from 'axios'
 namespace WeChatPay.OpenAPI.V3.Merchant.Fund.Balance._account_type_.GetHttpMethod {
   export interface RequestConfig extends AxiosRequestConfig {
-    account_type: string
+    account_type: 'BASIC' | 'OPERATION' | 'FEES'
   }
   export interface WellformedResponse {
     available_amount: number

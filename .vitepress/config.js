@@ -869,6 +869,20 @@ function openapiSidebar() {
           ],
         },
         {
+          text: '来账识别',
+          collapsed: true,
+          items: [
+            {
+              text: '合作伙伴银行来账查询',
+              link: '/openapi/v3/merchantfund/merchant/income-records',
+            },
+            {
+              text: '二级商户银行来账查询',
+              link: '/openapi/v3/merchantfund/partner/income-records',
+            },
+          ]
+        },
+        {
           text: '商户进件',
           collapsed: true,
           items: [
