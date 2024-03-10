@@ -88,8 +88,10 @@ wxpay.v3.pay.transactions.native.post({})
 ### 查询订单 {#v3.pay.transactions.id.$transaction_id$.get}
 
 ```js twoslash
+var transaction_id = ''
+//---cut---
 // _placeholder_ 语法糖会转换成 '{placeholder}' 格式
-wxpay.v3.pay.transactions.id._transaction_id_.get({})
+wxpay.v3.pay.transactions.id._transaction_id_.get({ transaction_id })
 //                           ^^^^^^^^^^^^^^^^
 ```
 
@@ -98,8 +100,10 @@ wxpay.v3.pay.transactions.id._transaction_id_.get({})
 ### 关闭订单 {#v3.pay.transactions.outTradeNo.$out_trade_no$.close.post}
 
 ```js twoslash
+var out_trade_no = ''
+//---cut---
 // $placeholder$ 语法糖会转换成 '{placeholder}' 格式
-wxpay.v3.pay.transactions.outTradeNo.$out_trade_no$.close.post({})
+wxpay.v3.pay.transactions.outTradeNo.$out_trade_no$.close.post({}, { out_trade_no })
 //                                   ^^^^^^^^^^^^^^
 ```
 
@@ -116,8 +120,10 @@ wxpay.v3.refund.domestic.refunds.post({})
 ### 查询单笔退款 {#v3.refund.domestic.refunds.$out_refund_no$.get}
 
 ```js twoslash
+var out_refund_no = ''
+//---cut---
 // _placeholder_ 语法糖会转换成 '{placeholder}' 格式
-wxpay.v3.refund.domestic.refunds._out_refund_no_.get({})
+wxpay.v3.refund.domestic.refunds._out_refund_no_.get({ out_refund_no })
 //                               ^^^^^^^^^^^^^^^
 ```
 

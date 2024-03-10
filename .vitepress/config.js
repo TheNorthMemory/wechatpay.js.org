@@ -20,9 +20,9 @@ export default defineConfig({
     },
   },
   head: [
-    ['meta', { name: 'theme-color', content: '#5f67ee' }],
+    ['meta', { name: 'theme-color', content: '#00c250' }],
     ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:locale', content: 'zh' }],
+    ['meta', { property: 'og:locale', content: 'zh_CN' }],
     ['meta', { property: 'og:title', content: 'Promise based and chained WeChatPay OpenAPI client SDK for NodeJS' }],
     ['meta', { property: 'og:site_name', content: 'wechatpay.js.org' }],
     ['meta', { property: 'og:url', content: 'https://wechatpay.js.org/' }],
@@ -128,6 +128,10 @@ function guideSidebar() {
           link: '/guide/getting-started'
         },
       ],
+    },
+    {
+      text: '开放接口参考',
+      link: '/openapi/',
     },
   ];
 }
