@@ -1216,6 +1216,7 @@ function webhookSidebar() {
       items: [
         {
           text: '支付',
+          collapsed: true,
           items: [
             ['普通支付通知', '/webhook/v3/TRANSACTION.SUCCESS'],
             ['服务商支付通知', '/webhook/v3/TRANSACTION.SUCCESS'],
@@ -1224,6 +1225,7 @@ function webhookSidebar() {
         },
         {
           text: '退款',
+          collapsed: true,
           items: [
             ['退款成功通知', '/webhook/v3/REFUND.SUCCESS'],
             ['退款异常通知', '/webhook/v3/REFUND.ABNORMAL'],
@@ -1232,9 +1234,38 @@ function webhookSidebar() {
         },
         {
           text: '分账',
+          collapsed: true,
           items: [
             ['分账成功通知', '/webhook/v3/PROFITSHARING.SUCCESS'],
             ['分账回退通知', '/webhook/v3/PROFITSHARING.RETURN'],
+          ].map(transArrayItem),
+        },
+        {
+          text: '投诉',
+          collapsed: true,
+          items: [
+            ['产生新投诉通知', '/webhook/v3/COMPLAINT.CREATE'],
+            ['投诉状态变化通知', '/webhook/v3/COMPLAINT.STATE_CHANGE'],
+          ].map(transArrayItem),
+        },
+        {
+          text: '支付分',
+          collapsed: true,
+          items: [
+            ['用户授权成功通知', '/webhook/v3/PAYSCORE.USER_OPEN_SERVICE'],
+            ['用户解除授权通知', '/webhook/v3/PAYSCORE.USER_CLOSE_SERVICE'],
+            ['用户确认成功通知', '/webhook/v3/PAYSCORE.USER_CONFIRM'],
+            ['用户支付成功通知', '/webhook/v3/PAYSCORE.USER_PAID'],
+            ['账户绑定结果通知', '/webhook/v3/PAYSCORE.BIND_SERVICE_ACCOUNT']
+          ].map(transArrayItem),
+        },
+        {
+          text: '违规',
+          collapsed: true,
+          items: [
+            ['处罚二级商户通知', '/webhook/v3/VIOLATION.PUNISH'],
+            ['拦截二级商户通知', '/webhook/v3/VIOLATION.INTERCEPT'],
+            ['二级商户申诉通知', '/webhook/v3/VIOLATION.APPEAL'],
           ].map(transArrayItem),
         },
       ],

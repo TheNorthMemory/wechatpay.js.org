@@ -16,5 +16,15 @@ description: 同样的通知可能会多次发送给商户系统。商户系统�
 | [退款关闭通知](/webhook/v3/REFUND.CLOSED) {colspan=2}
 | JSON {rowspan=2} | [分账成功通知](/webhook/v3/PROFITSHARING.SUCCESS) {colspan=2}
 | [分账回退通知](/webhook/v3/PROFITSHARING.RETURN) {colspan=2}
+| JSON {rowspan=2} | [产生新投诉通知](/webhook/v3/COMPLAINT.CREATE) {colspan=2}
+| [投诉状态变化通知](/webhook/v3/COMPLAINT.STATE_CHANGE) {colspan=2}
+| JSON {rowspan=5} | [支付分服务用户授权成功通知](/webhook/v3/PAYSCORE.USER_OPEN_SERVICE) {colspan=2}
+| [支付分服务用户解除授权通知](/webhook/v3/PAYSCORE.USER_CLOSE_SERVICE) {colspan=2}
+| [支付分服务用户确认成功通知](/webhook/v3/PAYSCORE.USER_CONFIRM) {colspan=2}
+| [支付分服务用户支付成功通知](/webhook/v3/PAYSCORE.USER_PAID) {colspan=2}
+| | [支付分服务账户绑定结果通知](/webhook/v3/PAYSCORE.BIND_SERVICE_ACCOUNT)
+| JSON {rowspan=3} | &nbsp; | [处罚二级商户通知](/webhook/v3/VIOLATION.PUNISH)
+| | [拦截二级商户通知](/webhook/v3/VIOLATION.INTERCEPT)
+| | [二级商户申诉通知](/webhook/v3/VIOLATION.APPEAL)
 
 {.vp-table}
