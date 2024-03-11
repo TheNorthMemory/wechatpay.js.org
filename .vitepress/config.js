@@ -141,7 +141,7 @@ function guideSidebar() {
     },
     {
       text: '回调通知参考',
-      link: '/openapi/',
+      link: '/webhook/',
     },
   ];
 }
