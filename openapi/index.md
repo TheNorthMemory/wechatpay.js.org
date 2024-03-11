@@ -185,7 +185,10 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | :thumbsdown:[~~查询投诉详情详情~~](/openapi/v3/merchant-service/complaints/{transaction_id}) {colspan=2}
 | :thumbsdown:[~~查询投诉单协商历史~~](/openapi/v3/merchant-service/complaints/{transaction_id}/negotiation-historys) {colspan=2}
 | :thumbsdown:[~~商户反馈~~](/openapi/v3/merchant-service/feedbacks) {colspan=2}
-| 商户风险管理v3{rowspan=4} | [维护接收违规通知的URL](/openapi/v3/merchant-risk-manage/violation-notifications) {colspan=2}
+| 商户风险管理v3{rowspan=7} | [创建接收违规通知的URL](/openapi/v3/merchant-risk-manage/violation-notifications#post) {colspan=2}
+| [查询接收违规通知的URL](/openapi/v3/merchant-risk-manage/violation-notifications#get) {colspan=2}
+| [修改接收违规通知的URL](/openapi/v3/merchant-risk-manage/violation-notifications#put) {colspan=2}
+| [删除接收违规通知的URL](/openapi/v3/merchant-risk-manage/violation-notifications#delete) {colspan=2}
 | [上报订单关联信息](/openapi/v3/merchant-risk-manage/report-trade-union-information) {colspan=2}
 | [处置结果回传](/openapi/v3/merchant-risk-manage/trade-risk-result) {colspan=2}
 | [查询风险信息](/openapi/v3/merchant-risk-manage/trade-risk-information) {colspan=2}
