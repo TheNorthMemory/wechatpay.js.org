@@ -620,6 +620,16 @@ function openapiSidebar() {
             ].map(transArrayItem),
           ],
         },
+        {
+          text: '商户风险管理',
+          collapsed: true,
+          items: [
+            ['维护接收违规通知的URL', '/openapi/v3/merchant-risk-manage/violation-notifications'],
+            ['上报订单关联信息', '/openapi/v3/merchant-risk-manage/report-trade-union-information'],
+            ['查询风险信息', '/openapi/v3/merchant-risk-manage/trade-risk-information'],
+            ['处置结果回传', '/openapi/v3/merchant-risk-manage/trade-risk-result'],
+          ].map(transArrayItem),
+        },
         transArrayItem(
           ['获取平台证书列表', '/openapi/v3/certificates'],
         ),
