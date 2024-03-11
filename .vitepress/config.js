@@ -161,205 +161,88 @@ function openapiSidebar() {
           text: '沙箱环境',
           collapsed: true,
           items: [
-            {
-              text: '获取沙箱密钥',
-              link: '/openapi/v2/xdc/apiv2getsignkey/sign/getsignkey'
-            },
-            {
-              text: '沙箱付款码支付',
-              link: '/openapi/v2/xdc/apiv2sandbox/pay/micropay'
-            },
-            {
-              text: '沙箱订单查询',
-              link: '/openapi/v2/xdc/apiv2sandbox/pay/orderquery'
-            },
-          ],
+            ['获取沙箱密钥', '/openapi/v2/xdc/apiv2getsignkey/sign/getsignkey'],
+            ['沙箱付款码支付', '/openapi/v2/xdc/apiv2sandbox/pay/micropay'],
+            ['沙箱订单查询', '/openapi/v2/xdc/apiv2sandbox/pay/orderquery'],
+          ].map(transArrayItem),
         },
         {
           text: '基础支付',
           collapsed: true,
           items: [
-            {
-              text: '付款码支付',
-              link: '/openapi/v2/pay/micropay'
-            },
-            {
-              text: '授权码查询openid',
-              link: '/openapi/v2/tools/authcodetoopenid'
-            },
-            {
-              text: '撤销订单',
-              link: '/openapi/v2/secapi/pay/reverse'
-            },
-            {
-              text: '统一下单',
-              link: '/openapi/v2/pay/unifiedorder'
-            },
-            {
-              text: '转换短链接',
-              link: '/openapi/v2/tools/shorturl'
-            },
-            {
-              text: '查询订单',
-              link: '/openapi/v2/pay/orderquery'
-            },
-            {
-              text: '关闭订单',
-              link: '/openapi/v2/pay/closeorder'
-            },
-            {
-              text: '申请退款',
-              link: '/openapi/v2/secapi/pay/refund'
-            },
-            {
-              text: '申请退款(单品优惠)',
-              link: '/openapi/v2/secapi/pay/refundv2'
-            },
-            {
-              text: '查询退款',
-              link: '/openapi/v2/pay/refundquery'
-            },
-            {
-              text: '查询退款(单品优惠)',
-              link: '/openapi/v2/pay/refundqueryv2'
-            },
-            {
-              text: '交易保障',
-              link: '/openapi/v2/payitil/report'
-            },
-          ],
+            ['付款码支付', '/openapi/v2/pay/micropay'],
+            ['授权码查询openid', '/openapi/v2/tools/authcodetoopenid'],
+            ['撤销订单', '/openapi/v2/secapi/pay/reverse'],
+            ['统一下单', '/openapi/v2/pay/unifiedorder'],
+            ['转换短链接', '/openapi/v2/tools/shorturl'],
+            ['查询订单', '/openapi/v2/pay/orderquery'],
+            ['关闭订单', '/openapi/v2/pay/closeorder'],
+            ['申请退款', '/openapi/v2/secapi/pay/refund'],
+            ['申请退款(单品优惠)', '/openapi/v2/secapi/pay/refundv2'],
+            ['查询退款', '/openapi/v2/pay/refundquery'],
+            ['查询退款(单品优惠)', '/openapi/v2/pay/refundqueryv2'],
+            ['交易保障', '/openapi/v2/payitil/report'],
+          ].map(transArrayItem),
         },
         {
           text: '合单支付',
           collapsed: true,
           items: [
-            {
-              text: '合单下单',
-              link: '/openapi/v2/pay/combinedorder'
-            },
-            {
-              text: '合单查单',
-              link: '/openapi/v2/pay/querycombinedorder'
-            },
-            {
-              text: '合单关单',
-              link: '/openapi/v2/pay/closecombinedorder'
-            },
-          ]
+            ['合单下单', '/openapi/v2/pay/combinedorder'],
+            ['合单查单', '/openapi/v2/pay/querycombinedorder'],
+            ['合单关单', '/openapi/v2/pay/closecombinedorder'],
+          ].map(transArrayItem),
         },
         {
           text: '分账',
           collapsed: true,
           items: [
-            {
-              text: '查询最大分账比例',
-              link: '/openapi/v2/pay/profitsharingmerchantratioquery',
-            },
-            {
-              text: '添加分账接收方',
-              link: '/openapi/v2/pay/profitsharingaddreceiver',
-            },
-            {
-              text: '删除分账接收方',
-              link: '/openapi/v2/pay/profitsharingremovereceiver',
-            },
-            {
-              text: '请求单次分账',
-              link: '/openapi/v2/secapi/pay/profitsharing',
-            },
-            {
-              text: '请求多次分账',
-              link: '/openapi/v2/secapi/pay/multiprofitsharing',
-            },
-            {
-              text: '查询分账结果',
-              link: '/openapi/v2/pay/profitsharingquery',
-            },
-            {
-              text: '查询订单待分账金额',
-              link: '/openapi/v2/pay/profitsharingorderamountquery',
-            },
-            {
-              text: '完结分账',
-              link: '/openapi/v2/secapi/pay/profitsharingfinish',
-            },
-            {
-              text: '分账回退',
-              link: '/openapi/v2/secapi/pay/profitsharingreturn',
-            },
-            {
-              text: '回退结果查询',
-              link: '/openapi/v2/pay/profitsharingreturnquery',
-            },
-          ],
+            ['查询最大分账比例', '/openapi/v2/pay/profitsharingmerchantratioquery'],
+            ['添加分账接收方', '/openapi/v2/pay/profitsharingaddreceiver'],
+            ['删除分账接收方', '/openapi/v2/pay/profitsharingremovereceiver'],
+            ['请求单次分账', '/openapi/v2/secapi/pay/profitsharing'],
+            ['请求多次分账', '/openapi/v2/secapi/pay/multiprofitsharing'],
+            ['查询分账结果', '/openapi/v2/pay/profitsharingquery'],
+            ['查询订单待分账金额', '/openapi/v2/pay/profitsharingorderamountquery'],
+            ['完结分账', '/openapi/v2/secapi/pay/profitsharingfinish'],
+            ['分账回退', '/openapi/v2/secapi/pay/profitsharingreturn'],
+            ['回退结果查询', '/openapi/v2/pay/profitsharingreturnquery'],
+          ].map(transArrayItem),
         },
         {
           text: '平台账单',
           collapsed: true,
           items: [
-            {
-              text: '下载交易账单',
-              link: '/openapi/v2/pay/downloadbill'
-            },
-            {
-              text: '下载资金账单',
-              link: '/openapi/v2/pay/downloadfundflow'
-            },
-          ],
+            ['下载交易账单', '/openapi/v2/pay/downloadbill'],
+            ['下载资金账单', '/openapi/v2/pay/downloadfundflow'],
+          ].map(transArrayItem),
         },
         {
           text: '现金红包',
           collapsed: true,
           items: [
-            {
-              text: '发放普通红包',
-              link: '/openapi/v2/mmpaymkttransfers/sendredpack'
-            },
-            {
-              text: '发放裂变红包',
-              link: '/openapi/v2/mmpaymkttransfers/sendgroupredpack'
-            },
-            {
-              text: '查询红包记录',
-              link: '/openapi/v2/mmpaymkttransfers/gethbinfo'
-            },
-            {
-              text: '发放小程序红包',
-              link: '/openapi/v2/mmpaymkttransfers/sendminiprogramhb'
-            },
-          ],
+            ['发放普通红包', '/openapi/v2/mmpaymkttransfers/sendredpack'],
+            ['发放裂变红包', '/openapi/v2/mmpaymkttransfers/sendgroupredpack'],
+            ['查询红包记录', '/openapi/v2/mmpaymkttransfers/gethbinfo'],
+            ['发放小程序红包', '/openapi/v2/mmpaymkttransfers/sendminiprogramhb'],
+          ].map(transArrayItem),
         },
         {
           text: '付款到零钱',
           collapsed: true,
           items: [
-            {
-              text: '发起付款',
-              link: '/openapi/v2/mmpaymkttransfers/promottion/transfers'
-            },
-            {
-              text: '查询付款',
-              link: '/openapi/v2/mmpaymkttransfers/gettransferinfo'
-            },
-          ],
+            ['发起付款', '/openapi/v2/mmpaymkttransfers/promottion/transfers'],
+            ['查询付款', '/openapi/v2/mmpaymkttransfers/gettransferinfo'],
+          ].map(transArrayItem),
         },
         {
           text: '付款到银行卡',
           collapsed: true,
           items: [
-            {
-              text: '获取加密公钥',
-              link: '/openapi/v2/risk/getpublickey'
-            },
-            {
-              text: '发起付款',
-              link: '/openapi/v2/mmpaysptrans/pay_bank'
-            },
-            {
-              text: '查询付款',
-              link: '/openapi/v2/mmpaymkttransfers/query_bank'
-            },
-          ],
+            ['获取加密公钥', '/openapi/v2/risk/getpublickey'],
+            ['发起付款', '/openapi/v2/mmpaysptrans/pay_bank'],
+            ['查询付款', '/openapi/v2/mmpaymkttransfers/query_bank'],
+          ].map(transArrayItem),
         },
       ],
     },
@@ -375,223 +258,87 @@ function openapiSidebar() {
               text: '直连商户模式',
               collapsed: true,
               items: [
-                {
-                  text: 'APP下单',
-                  link: '/openapi/v3/pay/transactions/app'
-                },
-                {
-                  text: 'H5下单',
-                  link: '/openapi/v3/pay/transactions/h5'
-                },
-                {
-                  text: 'JSAPI下单',
-                  link: '/openapi/v3/pay/transactions/jsapi'
-                },
-                {
-                  text: 'Native下单',
-                  link: '/openapi/v3/pay/transactions/native'
-                },
-                {
-                  text: '按平台单号查单',
-                  link: '/openapi/v3/pay/transactions/id/{transaction_id}'
-                },
-                {
-                  text: '按商户单号查单',
-                  link: '/openapi/v3/pay/transactions/out-trade-no/{out_trade_no}'
-                },
-                {
-                  text: '关闭订单',
-                  link: '/openapi/v3/pay/transactions/out-trade-no/{out_trade_no}/close'
-                },
-              ],
+                ['APP下单', '/openapi/v3/pay/transactions/app'],
+                ['H5下单', '/openapi/v3/pay/transactions/h5'],
+                ['JSAPI下单', '/openapi/v3/pay/transactions/jsapi'],
+                ['Native下单', '/openapi/v3/pay/transactions/native'],
+                ['按平台单号查单', '/openapi/v3/pay/transactions/id/{transaction_id}'],
+                ['按商户单号查单', '/openapi/v3/pay/transactions/out-trade-no/{out_trade_no}'],
+                ['关闭订单', '/openapi/v3/pay/transactions/out-trade-no/{out_trade_no}/close'],
+              ].map(transArrayItem),
             },
             {
               text: '合作伙伴模式',
               collapsed: true,
               items: [
-                {
-                  text: 'APP下单',
-                  link: '/openapi/v3/pay/partner/transactions/app'
-                },
-                {
-                  text: 'H5下单',
-                  link: '/openapi/v3/pay/partner/transactions/h5'
-                },
-                {
-                  text: 'JSAPI下单',
-                  link: '/openapi/v3/pay/partner/transactions/jsapi'
-                },
-                {
-                  text: 'Native下单',
-                  link: '/openapi/v3/pay/partner/transactions/native'
-                },
-                {
-                  text: '按平台单号查单',
-                  link: '/openapi/v3/pay/partner/transactions/id/{transaction_id}'
-                },
-                {
-                  text: '按商户单号查单',
-                  link: '/openapi/v3/pay/partner/transactions/out-trade-no/{out_trade_no}'
-                },
-                {
-                  text: '关闭订单',
-                  link: '/openapi/v3/pay/partner/transactions/out-trade-no/{out_trade_no}/close'
-                },
-              ]
+                ['APP下单', '/openapi/v3/pay/partner/transactions/app'],
+                ['H5下单', '/openapi/v3/pay/partner/transactions/h5'],
+                ['JSAPI下单', '/openapi/v3/pay/partner/transactions/jsapi'],
+                ['Native下单', '/openapi/v3/pay/partner/transactions/native'],
+                ['按平台单号查单', '/openapi/v3/pay/partner/transactions/id/{transaction_id}'],
+                ['按商户单号查单', '/openapi/v3/pay/partner/transactions/out-trade-no/{out_trade_no}'],
+                ['关闭订单', '/openapi/v3/pay/partner/transactions/out-trade-no/{out_trade_no}/close'],
+              ].map(transArrayItem),
             },
-            {
-              text: '发起退款申请',
-              link: '/openapi/v3/refund/domestic/refunds'
-            },
-            {
-              text: '查询单笔退款',
-              link: '/openapi/v3/refund/domestic/refunds/{out_refund_no}'
-            },
-            {
-              text: '发起异常退款',
-              link: '/openapi/v3/refund/domestic/refunds/{refund_id}/apply-abnormal-refund'
-            },
+            ...[
+              ['发起退款申请', '/openapi/v3/refund/domestic/refunds'],
+              ['查询单笔退款', '/openapi/v3/refund/domestic/refunds/{out_refund_no}'],
+              ['发起异常退款', '/openapi/v3/refund/domestic/refunds/{refund_id}/apply-abnormal-refund'],
+            ].map(transArrayItem),
           ]
         },
         {
           text: '合单支付',
           collapsed: true,
           items: [
-            {
-              text: '合单APP下单',
-              link: '/openapi/v3/combine-transactions/app'
-            },
-            {
-              text: '合单H5下单',
-              link: '/openapi/v3/combine-transactions/h5'
-            },
-            {
-              text: '合单JSAPI下单',
-              link: '/openapi/v3/combine-transactions/jsapi'
-            },
-            {
-              text: '合单Native下单',
-              link: '/openapi/v3/combine-transactions/native'
-            },
-            {
-              text: '合单查单',
-              link: '/openapi/v3/combine-transactions/out-trade-no/{combine_out_trade_no}'
-            },
-            {
-              text: '合单关单',
-              link: '/openapi/v3/combine-transactions/out-trade-no/{combine_out_trade_no}/close'
-            },
-          ]
+            ['合单APP下单', '/openapi/v3/combine-transactions/app'],
+            ['合单H5下单', '/openapi/v3/combine-transactions/h5'],
+            ['合单JSAPI下单', '/openapi/v3/combine-transactions/jsapi'],
+            ['合单Native下单', '/openapi/v3/combine-transactions/native'],
+            ['合单查单', '/openapi/v3/combine-transactions/out-trade-no/{combine_out_trade_no}'],
+            ['合单关单', '/openapi/v3/combine-transactions/out-trade-no/{combine_out_trade_no}/close'],
+          ].map(transArrayItem),
         },
         {
           text: '分账',
           collapsed: true,
           items: [
-            {
-              text: '查询最大分账比例',
-              link: '/openapi/v3/profitsharing/merchant-configs/{sub_mchid}',
-            },
-            {
-              text: '添加分账接收方',
-              link: '/openapi/v3/profitsharing/receivers/add',
-            },
-            {
-              text: '删除分账接收方',
-              link: '/openapi/v3/profitsharing/receivers/delete',
-            },
-            {
-              text: '请求分账',
-              link: '/openapi/v3/profitsharing/orders',
-            },
-            {
-              text: '查询分账结果',
-              link: '/openapi/v3/profitsharing/orders/{out_order_no}',
-            },
-            {
-              text: '查询剩余待分金额',
-              link: '/openapi/v3/profitsharing/transactions/{transaction_id}/amounts',
-            },
-            {
-              text: '解冻剩余资金',
-              link: '/openapi/v3/profitsharing/orders/unfreeze',
-            },
-            {
-              text: '请求分账回退',
-              link: '/openapi/v3/profitsharing/return-orders',
-            },
-            {
-              text: '查询分账回退结果',
-              link: '/openapi/v3/profitsharing/return-orders/{out_return_no}',
-            },
-            {
-              text: '申请分账账单',
-              link: '/openapi/v3/profitsharing/bills',
-            },
-          ],
+            ['查询最大分账比例', '/openapi/v3/profitsharing/merchant-configs/{sub_mchid}'],
+            ['添加分账接收方', '/openapi/v3/profitsharing/receivers/add'],
+            ['删除分账接收方', '/openapi/v3/profitsharing/receivers/delete'],
+            ['请求分账', '/openapi/v3/profitsharing/orders'],
+            ['查询分账结果', '/openapi/v3/profitsharing/orders/{out_order_no}'],
+            ['查询剩余待分金额', '/openapi/v3/profitsharing/transactions/{transaction_id}/amounts'],
+            ['解冻剩余资金', '/openapi/v3/profitsharing/orders/unfreeze'],
+            ['请求分账回退', '/openapi/v3/profitsharing/return-orders'],
+            ['查询分账回退结果', '/openapi/v3/profitsharing/return-orders/{out_return_no}'],
+            ['申请分账账单', '/openapi/v3/profitsharing/bills'],
+          ].map(transArrayItem),
         },
         {
           text: '连锁品牌分账',
           collapsed: true,
           items: [
-            {
-              text: '查询最大分账比例',
-              link: '/openapi/v3/brand/profitsharing/brand-configs/{brand_mchid}',
-            },
-            {
-              text: '添加分账接收方',
-              link: '/openapi/v3/brand/profitsharing/receivers/add',
-            },
-            {
-              text: '删除分账接收方',
-              link: '/openapi/v3/brand/profitsharing/receivers/delete',
-            },
-            {
-              text: '请求分账',
-              link: '/openapi/v3/brand/profitsharing/orders#post',
-            },
-            {
-              text: '查询分账结果',
-              link: '/openapi/v3/brand/profitsharing/orders#get',
-            },
-            {
-              text: '查询剩余待分金额',
-              link: '/openapi/v3/brand/profitsharing/orders/{transaction_id}/amounts',
-            },
-            {
-              text: '完结分账',
-              link: '/openapi/v3/brand/profitsharing/finish-order',
-            },
-            {
-              text: '请求分账回退',
-              link: '/openapi/v3/brand/profitsharing/returnorders#post',
-            },
-            {
-              text: '查询分账回退结果',
-              link: '/openapi/v3/brand/profitsharing/returnorders#get',
-            },
-          ],
+            ['查询最大分账比例', '/openapi/v3/brand/profitsharing/brand-configs/{brand_mchid}'],
+            ['添加分账接收方', '/openapi/v3/brand/profitsharing/receivers/add'],
+            ['删除分账接收方', '/openapi/v3/brand/profitsharing/receivers/delete'],
+            ['请求分账', '/openapi/v3/brand/profitsharing/orders#post'],
+            ['查询分账结果', '/openapi/v3/brand/profitsharing/orders#get'],
+            ['查询剩余待分金额', '/openapi/v3/brand/profitsharing/orders/{transaction_id}/amounts'],
+            ['完结分账', '/openapi/v3/brand/profitsharing/finish-order'],
+            ['请求分账回退', '/openapi/v3/brand/profitsharing/returnorders#post'],
+            ['查询分账回退结果', '/openapi/v3/brand/profitsharing/returnorders#get'],
+          ].map(transArrayItem),
         },
         {
           text: '平台账单',
           collapsed: true,
           items: [
-            {
-              text: '申请交易账单',
-              link: '/openapi/v3/bill/tradebill'
-            },
-            {
-              text: '申请资金账单',
-              link: '/openapi/v3/bill/fundflowbill'
-            },
-            {
-              text: '申请子商户资金账单',
-              link: '/openapi/v3/bill/sub-merchant-fundflowbill'
-            },
-            {
-              text: '下载账单文件',
-              link: '/openapi/v3/billdownload/file'
-            },
-          ],
+            ['申请交易账单', '/openapi/v3/bill/tradebill'],
+            ['申请资金账单', '/openapi/v3/bill/fundflowbill'],
+            ['申请子商户资金账单', '/openapi/v3/bill/sub-merchant-fundflowbill'],
+            ['下载账单文件', '/openapi/v3/billdownload/file'],
+          ].map(transArrayItem),
         },
         {
           text: '商家转账',
@@ -601,255 +348,109 @@ function openapiSidebar() {
               text: '直连商户模式',
               collapsed: true,
               items: [
-                {
-                  text: '发起商家转账',
-                  link: '/openapi/v3/transfer/batches'
-                },
-                {
-                  text: '查询批次单(平台批次单号)',
-                  link: '/openapi/v3/transfer/batches/batch-id/{batch_id}'
-                },
-                {
-                  text: '查询批次单(商家批次单号)',
-                  link: '/openapi/v3/transfer/batches/out-batch-no/{out_batch_no}'
-                },
-                {
-                  text: '查询明细单(平台批次单号)',
-                  link: '/openapi/v3/transfer/batches/batch-id/{batch_id}/details/detail-id/{detail_id}'
-                },
-                {
-                  text: '查询明细单(商家批次单号)',
-                  link: '/openapi/v3/transfer/batches/out-batch-no/{out_batch_no}/details/out-detail-no/{out_detail_no}'
-                },
-              ],
+                ['发起商家转账', '/openapi/v3/transfer/batches'],
+                ['查询批次单(平台批次单号)', '/openapi/v3/transfer/batches/batch-id/{batch_id}'],
+                ['查询批次单(商家批次单号)', '/openapi/v3/transfer/batches/out-batch-no/{out_batch_no}'],
+                ['查询明细单(平台批次单号)', '/openapi/v3/transfer/batches/batch-id/{batch_id}/details/detail-id/{detail_id}'],
+                ['查询明细单(商家批次单号)', '/openapi/v3/transfer/batches/out-batch-no/{out_batch_no}/details/out-detail-no/{out_detail_no}'],
+              ].map(transArrayItem),
             },
             {
               text: '合作伙伴模式',
               collapsed: true,
               items: [
-                {
-                  text: '发起商家转账',
-                  link: '/openapi/v3/partner-transfer/batches'
-                },
-                {
-                  text: '查询批次单(平台批次单号)',
-                  link: '/openapi/v3/partner-transfer/batches/batch-id/{batch_id}'
-                },
-                {
-                  text: '查询批次单(商家批次单号)',
-                  link: '/openapi/v3/partner-transfer/batches/out-batch-no/{out_batch_no}'
-                },
-                {
-                  text: '查询明细单(平台批次单号)',
-                  link: '/openapi/v3/partner-transfer/batches/batch-id/{batch_id}/details/detail-id/{detail_id}'
-                },
-                {
-                  text: '查询明细单(商家批次单号)',
-                  link: '/openapi/v3/partner-transfer/batches/out-batch-no/{out_batch_no}/details/out-detail-no/{out_detail_no}'
-                },
-              ],
+                ['发起商家转账', '/openapi/v3/partner-transfer/batches'],
+                ['查询批次单(平台批次单号)', '/openapi/v3/partner-transfer/batches/batch-id/{batch_id}'],
+                ['查询批次单(商家批次单号)', '/openapi/v3/partner-transfer/batches/out-batch-no/{out_batch_no}'],
+                ['查询明细单(平台批次单号)', '/openapi/v3/partner-transfer/batches/batch-id/{batch_id}/details/detail-id/{detail_id}'],
+                ['查询明细单(商家批次单号)', '/openapi/v3/partner-transfer/batches/out-batch-no/{out_batch_no}/details/out-detail-no/{out_detail_no}'],
+              ].map(transArrayItem),
             },
-            {
-              text: '申请转账账单电子回单',
-              link: '/openapi/v3/transfer/bill-receipt'
-            },
-            {
-              text: '查询账单回单受理结果',
-              link: '/openapi/v3/transfer/bill-receipt/{out_batch_no}'
-            },
-            {
-              text: '申请转账明细电子回单',
-              link: '/openapi/v3/transfer-detail/electronic-receipts#post'
-            },
-            {
-              text: '查询明细回单受理结果',
-              link: '/openapi/v3/transfer-detail/electronic-receipts#get'
-            },
-            {
-              text: '下载电子回单文件',
-              link: '/openapi/v3/transferdownload/signfile'
-            },
+            [
+              ['申请转账账单电子回单', '/openapi/v3/transfer/bill-receipt'],
+              ['查询账单回单受理结果', '/openapi/v3/transfer/bill-receipt/{out_batch_no}'],
+              ['申请转账明细电子回单', '/openapi/v3/transfer-detail/electronic-receipts#post'],
+              ['查询明细回单受理结果', '/openapi/v3/transfer-detail/electronic-receipts#get'],
+              ['下载电子回单文件', '/openapi/v3/transferdownload/signfile'],
+            ].map(transArrayItem),
           ],
         },
         {
           text: '平台收付通',
           collapsed: true,
           items: [
-            {
-              text: '二级商户进件',
-              link: '/openapi/v3/ecommerce/applyments/',
-            },
-            {
-              text: '查询进件状态(平台申请单号)',
-              link: '/openapi/v3/ecommerce/applyments/{applyment_id}',
-            },
-            {
-              text: '查询进件状态(业务申请编号)',
-              link: '/openapi/v3/ecommerce/applyments/out-request-no/{out_request_no}',
-            },
+            ...[
+              ['二级商户进件', '/openapi/v3/ecommerce/applyments/'],
+              ['查询进件状态(平台申请单号)', '/openapi/v3/ecommerce/applyments/{applyment_id}'],
+              ['查询进件状态(业务申请编号)', '/openapi/v3/ecommerce/applyments/out-request-no/{out_request_no}'],
+            ].map(transArrayItem),
             {
               text: '补差',
               collapsed: true,
               items: [
-                {
-                  text: '请求补差',
-                  link: '/openapi/v3/ecommerce/subsidies/create',
-                },
-                {
-                  text: '取消补差',
-                  link: '/openapi/v3/ecommerce/subsidies/cancel',
-                },
-                {
-                  text: '请求补差回退',
-                  link: '/openapi/v3/ecommerce/subsidies/return',
-                },
-              ],
+                ['请求补差', '/openapi/v3/ecommerce/subsidies/create'],
+                ['取消补差', '/openapi/v3/ecommerce/subsidies/cancel'],
+                ['请求补差回退', '/openapi/v3/ecommerce/subsidies/return'],
+              ].map(transArrayItem),
             },
             {
               text: '分账',
               collapsed: true,
               items: [
-                {
-                  text: '添加分账接收方',
-                  link: '/openapi/v3/ecommerce/profitsharing/receivers/add',
-                },
-                {
-                  text: '删除分账接收方',
-                  link: '/openapi/v3/ecommerce/profitsharing/receivers/delete',
-                },
-                {
-                  text: '请求分账',
-                  link: '/openapi/v3/ecommerce/profitsharing/orders#post',
-                },
-                {
-                  text: '查询分账结果',
-                  link: '/openapi/v3/ecommerce/profitsharing/orders#get',
-                },
-                {
-                  text: '查询剩余待分金额',
-                  link: '/openapi/v3/ecommerce/profitsharing/orders/{transaction_id}/amounts',
-                },
-                {
-                  text: '完结分账',
-                  link: '/openapi/v3/ecommerce/profitsharing/finish-order',
-                },
-                {
-                  text: '请求分账回退',
-                  link: '/openapi/v3/ecommerce/profitsharing/returnorders#post',
-                },
-                {
-                  text: '查询分账回退结果',
-                  link: '/openapi/v3/ecommerce/profitsharing/returnorders#get',
-                },
-              ],
+                ['添加分账接收方', '/openapi/v3/ecommerce/profitsharing/receivers/add'],
+                ['删除分账接收方', '/openapi/v3/ecommerce/profitsharing/receivers/delete'],
+                ['请求分账', '/openapi/v3/ecommerce/profitsharing/orders#post'],
+                ['查询分账结果', '/openapi/v3/ecommerce/profitsharing/orders#get'],
+                ['查询剩余待分金额', '/openapi/v3/ecommerce/profitsharing/orders/{transaction_id}/amounts'],
+                ['完结分账', '/openapi/v3/ecommerce/profitsharing/finish-order'],
+                ['请求分账回退', '/openapi/v3/ecommerce/profitsharing/returnorders#post'],
+                ['查询分账回退结果', '/openapi/v3/ecommerce/profitsharing/returnorders#get'],
+              ].map(transArrayItem),
             },
             {
               text: '退款',
               collapsed: true,
               items: [
-                {
-                  text: '发起退款申请',
-                  link: '/openapi/v3/ecommerce/refunds/apply',
-                },
-                {
-                  text: '查询退款(商户退款单号)',
-                  link: '/openapi/v3/ecommerce/refunds/out-refund-no/{out_refund_no}',
-                },
-                {
-                  text: '查询退款(平台退款单号)',
-                  link: '/openapi/v3/ecommerce/refunds/id/{refund_id}',
-                },
-                {
-                  text: '垫付退款回补',
-                  link: '/openapi/v3/ecommerce/refunds/{refund_id}/return-advance#post',
-                },
-                {
-                  text: '查询退款回补结果',
-                  link: '/openapi/v3/ecommerce/refunds/{refund_id}/return-advance#get',
-                },
-              ],
+                ['发起退款申请', '/openapi/v3/ecommerce/refunds/apply'],
+                ['查询退款(商户退款单号)', '/openapi/v3/ecommerce/refunds/out-refund-no/{out_refund_no}'],
+                ['查询退款(平台退款单号)', '/openapi/v3/ecommerce/refunds/id/{refund_id}'],
+                ['垫付退款回补', '/openapi/v3/ecommerce/refunds/{refund_id}/return-advance#post'],
+                ['查询退款回补结果', '/openapi/v3/ecommerce/refunds/{refund_id}/return-advance#get'],
+              ].map(transArrayItem),
             },
             {
               text: '销户',
               collapsed: true,
               items: [
-                {
-                  text: '注销申请图片上传',
-                  link: '/openapi/v3/ecommerce/account/cancel-applications/media',
-                },
-                {
-                  text: '提交注销申请单',
-                  link: '/openapi/v3/ecommerce/account/cancel-applications',
-                },
-                {
-                  text: '查询注销单状态',
-                  link: '/openapi/v3/ecommerce/account/cancel-applications/out-apply-no/{out_apply_no}',
-                },
-                {
-                  text: '申请销户号余额提现',
-                  link: '/openapi/v3/mch_operate/risk/withdrawl-apply',
-                },
-                {
-                  text: '查询提现状态(商户单号)',
-                  link: '/openapi/v3/mch_operate/risk/withdrawl-apply/out-request-no/{out_request_no}',
-                },
-                {
-                  text: '查询提现状态(平台单号)',
-                  link: '/openapi/v3/mch_operate/risk/withdrawl-apply/applyment-id/{applyment_id}',
-                },
-              ],
+                ['注销申请图片上传', '/openapi/v3/ecommerce/account/cancel-applications/media'],
+                ['提交注销申请单', '/openapi/v3/ecommerce/account/cancel-applications'],
+                ['查询注销单状态', '/openapi/v3/ecommerce/account/cancel-applications/out-apply-no/{out_apply_no}'],
+                ['申请销户号余额提现', '/openapi/v3/mch_operate/risk/withdrawl-apply'],
+                ['查询提现状态(商户单号)', '/openapi/v3/mch_operate/risk/withdrawl-apply/out-request-no/{out_request_no}'],
+                ['查询提现状态(平台单号)', '/openapi/v3/mch_operate/risk/withdrawl-apply/applyment-id/{applyment_id}'],
+              ].map(transArrayItem),
             },
             {
               text: '二级商户提现',
               collapsed: true,
               items: [
-                {
-                  text: '预约提现',
-                  link: '/openapi/v3/ecommerce/fund/withdraw',
-                },
-                {
-                  text: '查询提现结果(商户单号)',
-                  link: '/openapi/v3/ecommerce/fund/withdraw/out-request-no/{out_request_no}',
-                },
-                {
-                  text: '查询提现结果(平台单号)',
-                  link: '/openapi/v3/ecommerce/fund/withdraw/{withdraw_id}',
-                },
-                {
-                  text: '查询账户实时余额',
-                  link: '/openapi/v3/ecommerce/fund/balance/{sub_mchid}',
-                },
-                {
-                  text: '查询账户日终余额',
-                  link: '/openapi/v3/ecommerce/fund/enddaybalance/{sub_mchid}',
-                },
-                {
-                  text: '申请资金账单',
-                  link: '/openapi/v3/ecommerce/bill/fundflowbill',
-                },
-              ],
+                ['预约提现', '/openapi/v3/ecommerce/fund/withdraw'],
+                ['查询提现结果(商户单号)', '/openapi/v3/ecommerce/fund/withdraw/out-request-no/{out_request_no}'],
+                ['查询提现结果(平台单号)', '/openapi/v3/ecommerce/fund/withdraw/{withdraw_id}'],
+                ['查询账户实时余额', '/openapi/v3/ecommerce/fund/balance/{sub_mchid}'],
+                ['查询账户日终余额', '/openapi/v3/ecommerce/fund/enddaybalance/{sub_mchid}'],
+                ['申请资金账单', '/openapi/v3/ecommerce/bill/fundflowbill'],
+              ].map(transArrayItem),
             },
             {
               text: '跨境付款',
               collapsed: true,
               items: [
-                {
-                  text: '查询订单剩余可出境余额',
-                  link: '/openapi/v3/funds-to-oversea/transactions/{transaction_id}/available_abroad_amounts',
-                },
-                {
-                  text: '申请资金出境',
-                  link: '/openapi/v3/funds-to-oversea/orders',
-                },
-                {
-                  text: '查询出境结果',
-                  link: '/openapi/v3/funds-to-oversea/orders/{out_order_id}',
-                },
-                {
-                  text: '获取购付汇账单',
-                  link: '/openapi/v3/funds-to-oversea/bill-download-url',
-                },
-              ],
+                ['查询订单剩余可出境余额', '/openapi/v3/funds-to-oversea/transactions/{transaction_id}/available_abroad_amounts'],
+                ['申请资金出境', '/openapi/v3/funds-to-oversea/orders'],
+                ['查询出境结果', '/openapi/v3/funds-to-oversea/orders/{out_order_id}'],
+                ['获取购付汇账单', '/openapi/v3/funds-to-oversea/bill-download-url'],
+              ].map(transArrayItem),
             },
           ],
         },
@@ -857,121 +458,58 @@ function openapiSidebar() {
           text: '商户提现',
           collapsed: true,
           items: [
-            {
-              text: '预约提现',
-              link: '/openapi/v3/merchant/fund/withdraw',
-            },
-            {
-              text: '查询预约提现状态(商户单号)',
-              link: '/openapi/v3/merchant/fund/withdraw/out-request-no/{out_request_no}',
-            },
-            {
-              text: '查询预约提现状态(平台单号)',
-              link: '/openapi/v3/merchant/fund/withdraw/withdraw-id/{withdraw_id}',
-            },
-            {
-              text: '查询账户实时余额',
-              link: '/openapi/v3/merchant/fund/balance/{account_type}',
-            },
-            {
-              text: '查询账户日终余额',
-              link: '/openapi/v3/merchant/fund/dayendbalance/{account_type}',
-            },
-            {
-              text: '按日下载提现异常文件',
-              link: '/openapi/v3/merchant/fund/withdraw/bill-type/{bill_type}',
-            },
-          ],
+            ['预约提现', '/openapi/v3/merchant/fund/withdraw'],
+            ['查询预约提现状态(商户单号)', '/openapi/v3/merchant/fund/withdraw/out-request-no/{out_request_no}'],
+            ['查询预约提现状态(平台单号)', '/openapi/v3/merchant/fund/withdraw/withdraw-id/{withdraw_id}'],
+            ['查询账户实时余额', '/openapi/v3/merchant/fund/balance/{account_type}'],
+            ['查询账户日终余额', '/openapi/v3/merchant/fund/dayendbalance/{account_type}'],
+            ['按日下载提现异常文件', '/openapi/v3/merchant/fund/withdraw/bill-type/{bill_type}'],
+          ].map(transArrayItem),
         },
         {
           text: '来账识别',
           collapsed: true,
           items: [
-            {
-              text: '合作伙伴银行来账查询',
-              link: '/openapi/v3/merchantfund/merchant/income-records',
-            },
-            {
-              text: '二级商户银行来账查询',
-              link: '/openapi/v3/merchantfund/partner/income-records',
-            },
-          ]
+            ['合作伙伴银行来账查询', '/openapi/v3/merchantfund/merchant/income-records'],
+            ['二级商户银行来账查询', '/openapi/v3/merchantfund/partner/income-records'],
+          ].map(transArrayItem),
         },
         {
           text: '商户进件',
           collapsed: true,
           items: [
-            {
-              text: '提交进件申请单',
-              link: '/openapi/v3/applyment4sub/applyment/',
-            },
-            {
-              text: '查询进件状态(申请单号)',
-              link: '/openapi/v3/applyment4sub/applyment/applyment_id/{applyment_id}',
-            },
-            {
-              text: '查询进件状态(业务申请编号)',
-              link: '/openapi/v3/applyment4sub/applyment/business_code/{business_code}',
-            },
-          ],
+            ['提交进件申请单', '/openapi/v3/applyment4sub/applyment/'],
+            ['查询进件状态(申请单号)', '/openapi/v3/applyment4sub/applyment/applyment_id/{applyment_id}'],
+            ['查询进件状态(业务申请编号)', '/openapi/v3/applyment4sub/applyment/business_code/{business_code}'],
+          ].map(transArrayItem),
         },
         {
           text: '结算账户',
           collapsed: true,
           items: [
-            {
-              text: '查询结算账户',
-              link: '/openapi/v3/apply4sub/sub_merchants/{sub_mchid}/settlement',
-            },
-            {
-              text: '修改结算账户',
-              link: '/openapi/v3/apply4sub/sub_merchants/{sub_mchid}/modify-settlement',
-            },
-            {
-              text: '查询结算账户修改状态',
-              link: '/openapi/v3/apply4sub/sub_merchants/{sub_mchid}/application/{application_no}',
-            },
-          ],
+            ['查询结算账户', '/openapi/v3/apply4sub/sub_merchants/{sub_mchid}/settlement'],
+            ['修改结算账户', '/openapi/v3/apply4sub/sub_merchants/{sub_mchid}/modify-settlement'],
+            ['查询结算账户修改状态', '/openapi/v3/apply4sub/sub_merchants/{sub_mchid}/application/{application_no}'],
+          ].map(transArrayItem),
         },
         {
           text: '确认开户意愿',
           collapsed: true,
           items: [
-            {
-              text: '查询商户确认状态',
-              link: '/openapi/v3/apply4subject/applyment/merchants/{sub_mchid}/state',
-            },
-            {
-              text: '提交商户申请单',
-              link: '/openapi/v3/apply4subject/applyment#post',
-            },
-            {
-              text: '查询申请单审核结果',
-              link: '/openapi/v3/apply4subject/applyment#get',
-            },
-            {
-              text: '撤销申请单(申请单编号)',
-              link: '/openapi/v3/apply4subject/applyment/{applyment_id}/cancel',
-            },
-            {
-              text: '撤销申请单(业务申请编号)',
-              link: '/openapi/v3/apply4subject/applyment/{business_code}/cancel',
-            },
-          ],
+            ['查询商户确认状态', '/openapi/v3/apply4subject/applyment/merchants/{sub_mchid}/state'],
+            ['提交商户申请单', '/openapi/v3/apply4subject/applyment#post'],
+            ['查询申请单审核结果', '/openapi/v3/apply4subject/applyment#get'],
+            ['撤销申请单(申请单编号)', '/openapi/v3/apply4subject/applyment/{applyment_id}/cancel'],
+            ['撤销申请单(业务申请编号)', '/openapi/v3/apply4subject/applyment/{business_code}/cancel'],
+          ].map(transArrayItem),
         },
         {
           text: '文件上传',
           collapsed: true,
           items: [
-            {
-              text: '商户图片文件上传',
-              link: '/openapi/v3/merchant/media/upload',
-            },
-            {
-              text: '商户视频文件上传',
-              link: '/openapi/v3/merchant/media/video_upload',
-            },
-          ],
+            ['商户图片文件上传', '/openapi/v3/merchant/media/upload'],
+            ['商户视频文件上传', '/openapi/v3/merchant/media/video_upload'],
+          ].map(transArrayItem),
         },
         {
           text: '微信支付分',
@@ -981,201 +519,90 @@ function openapiSidebar() {
               text: '直连商户模式',
               collapsed: true,
               items: [
-                {
-                  text: '创建订单',
-                  link: '/openapi/v3/payscore/serviceorder#post',
-                },
-                {
-                  text: '查询订单',
-                  link: '/openapi/v3/payscore/serviceorder#get',
-                },
-                {
-                  text: '取消订单',
-                  link: '/openapi/v3/payscore/serviceorder/{out_order_no}/cancel',
-                },
-                {
-                  text: '修改金额',
-                  link: '/openapi/v3/payscore/serviceorder/{out_order_no}/modify',
-                },
-                {
-                  text: '完结订单',
-                  link: '/openapi/v3/payscore/serviceorder/{out_order_no}/complete',
-                },
-                {
-                  text: '同步订单',
-                  link: '/openapi/v3/payscore/serviceorder/{out_order_no}/sync',
-                },
-                {
-                  text: '请求催收',
-                  link: '/openapi/v3/payscore/serviceorder/{out_order_no}/pay',
-                },
+                ...[
+                  ['创建订单', '/openapi/v3/payscore/serviceorder#post'],
+                  ['查询订单', '/openapi/v3/payscore/serviceorder#get'],
+                  ['取消订单', '/openapi/v3/payscore/serviceorder/{out_order_no}/cancel'],
+                  ['修改金额', '/openapi/v3/payscore/serviceorder/{out_order_no}/modify'],
+                  ['完结订单', '/openapi/v3/payscore/serviceorder/{out_order_no}/complete'],
+                  ['同步订单', '/openapi/v3/payscore/serviceorder/{out_order_no}/sync'],
+                  ['请求催收', '/openapi/v3/payscore/serviceorder/{out_order_no}/pay'],
+                ].map(transArrayItem),
                 {
                   text: '免确认',
                   collapsed: true,
                   items: [
-                    {
-                      text: '商户预授权',
-                      link: '/openapi/v3/payscore/permissions'
-                    },
-                    {
-                      text: '查询授权状态(CODE)',
-                      link: '/openapi/v3/payscore/permissions/authorization-code/{authorization_code}',
-                    },
-                    {
-                      text: '查询授权状态(OPENID)',
-                      link: '/openapi/v3/payscore/permissions/openid/{openid}',
-                    },
-                    {
-                      text: '查询授权状态',
-                      link: '/openapi/v3/payscore/user-service-state',
-                    },
-                    {
-                      text: '解除用户授权(CODE)',
-                      link: '/openapi/v3/payscore/permissions/authorization-code/{authorization_code}/terminate',
-                    },
-                    {
-                      text: '解除用户授权(OPENID)',
-                      link: '/openapi/v3/payscore/permissions/openid/{openid}/terminate',
-                    },
-                    {
-                      text: '解除用户授权',
-                      link: '/openapi/v3/payscore/users/{openid}/permissions/{service_id}/terminate',
-                    },
-                  ],
+                    ['商户预授权', '/openapi/v3/payscore/permissions'],
+                    ['查询授权状态(CODE)', '/openapi/v3/payscore/permissions/authorization-code/{authorization_code}'],
+                    ['查询授权状态(OPENID)', '/openapi/v3/payscore/permissions/openid/{openid}'],
+                    ['查询授权状态', '/openapi/v3/payscore/user-service-state'],
+                    ['解除用户授权(CODE)', '/openapi/v3/payscore/permissions/authorization-code/{authorization_code}/terminate'],
+                    ['解除用户授权(OPENID)', '/openapi/v3/payscore/permissions/openid/{openid}/terminate'],
+                    ['解除用户授权', '/openapi/v3/payscore/users/{openid}/permissions/{service_id}/terminate'],
+                  ].map(transArrayItem),
                 },
-                {
-                  text: '创建先用后付订单',
-                  link: '/openapi/v3/payscore/servicepayondeliveryorder',
-                },
-                {
-                  text: '创单结单合并',
-                  link: '/openapi/v3/payscore/serviceorder/direct-complete',
-                },
+                ...[
+                  ['创建先用后付订单', '/openapi/v3/payscore/servicepayondeliveryorder'],
+                  ['创单结单合并', '/openapi/v3/payscore/serviceorder/direct-complete'],
+                ].map(transArrayItem),
               ],
             },
             {
               text: '合作伙伴模式',
               collapsed: true,
               items: [
-                {
-                  text: '创建订单',
-                  link: '/openapi/v3/payscore/partner/serviceorder#post',
-                },
-                {
-                  text: '查询订单',
-                  link: '/openapi/v3/payscore/partner/serviceorder#get',
-                },
-                {
-                  text: '取消订单',
-                  link: '/openapi/v3/payscore/partner/serviceorder/{out_order_no}/cancel',
-                },
-                {
-                  text: '修改金额',
-                  link: '/openapi/v3/payscore/partner/serviceorder/{out_order_no}/modify',
-                },
-                {
-                  text: '完结订单',
-                  link: '/openapi/v3/payscore/partner/serviceorder/{out_order_no}/complete',
-                },
-                {
-                  text: '同步订单',
-                  link: '/openapi/v3/payscore/partner/serviceorder/{out_order_no}/sync',
-                },
-                {
-                  text: '请求催收',
-                  link: '/openapi/v3/payscore/partner/serviceorder/{out_order_no}/pay',
-                },
+                ...[
+                  ['创建订单', '/openapi/v3/payscore/partner/serviceorder#post'],
+                  ['查询订单', '/openapi/v3/payscore/partner/serviceorder#get'],
+                  ['取消订单', '/openapi/v3/payscore/partner/serviceorder/{out_order_no}/cancel'],
+                  ['修改金额', '/openapi/v3/payscore/partner/serviceorder/{out_order_no}/modify'],
+                  ['完结订单', '/openapi/v3/payscore/partner/serviceorder/{out_order_no}/complete'],
+                  ['同步订单', '/openapi/v3/payscore/partner/serviceorder/{out_order_no}/sync'],
+                  ['请求催收', '/openapi/v3/payscore/partner/serviceorder/{out_order_no}/pay'],
+                ].map(transArrayItem),
                 {
                   text: '免确认',
                   collapsed: true,
                   items: [
-                    {
-                      text: '商户预授权',
-                      link: '/openapi/v3/payscore/partner/permissions'
-                    },
-                    {
-                      text: '查询授权状态(CODE)',
-                      link: '/openapi/v3/payscore/partner/permissions/authorization-code/{authorization_code}',
-                    },
-                    {
-                      text: '查询授权状态(OPENID)',
-                      link: '/openapi/v3/payscore/partner/permissions/search',
-                    },
-                    {
-                      text: '解除用户授权(CODE)',
-                      link: '/openapi/v3/payscore/partner/permissions/authorization-code/{authorization_code}/terminate',
-                    },
-                    {
-                      text: '解除用户授权(OPENID)',
-                      link: '/openapi/v3/payscore/partner/permissions/terminate',
-                    },
-                  ],
+                    ['商户预授权', '/openapi/v3/payscore/partner/permissions'],
+                    ['查询授权状态(CODE)', '/openapi/v3/payscore/partner/permissions/authorization-code/{authorization_code}'],
+                    ['查询授权状态(OPENID)', '/openapi/v3/payscore/partner/permissions/search'],
+                    ['解除用户授权(CODE)', '/openapi/v3/payscore/partner/permissions/authorization-code/{authorization_code}/terminate'],
+                    ['解除用户授权(OPENID)', '/openapi/v3/payscore/partner/permissions/terminate'],
+                  ].map(transArrayItem),
                 },
-                {
-                  text: '申请绑定服务',
-                  link: '/openapi/v3/payscore/partner/service-account-applications',
-                },
-                {
-                  text: '查询绑定结果',
-                  link: '/openapi/v3/payscore/partner/service-account-applications/{out_apply_no}',
-                },
-                {
-                  text: '查询先享金额分层',
-                  link: '/openapi/v3/payscore/partner/servicequotas/service-id/{service_id}',
-                },
-                {
-                  text: '创建先用后付订单',
-                  link: '/openapi/v3/payscore/partner/servicepayondeliveryorder',
-                },
-                {
-                  text: '创单结单合并',
-                  link: '/openapi/v3/payscore/partner/serviceorder/direct-complete',
-                },
+                ...[
+                  ['申请绑定服务', '/openapi/v3/payscore/partner/service-account-applications'],
+                  ['查询绑定结果', '/openapi/v3/payscore/partner/service-account-applications/{out_apply_no}'],
+                  ['查询先享金额分层', '/openapi/v3/payscore/partner/servicequotas/service-id/{service_id}'],
+                  ['创建先用后付订单', '/openapi/v3/payscore/partner/servicepayondeliveryorder'],
+                  ['创单结单合并', '/openapi/v3/payscore/partner/serviceorder/direct-complete'],
+                ].map(transArrayItem),
               ],
             },
-            {
-              text: '申请对账单',
-              link: '/openapi/v3/payscore/merchant-bill',
-            },
+            transArrayItem(
+              ['申请对账单', '/openapi/v3/payscore/merchant-bill']
+            ),
           ],
         },
         {
           text: '消费者投诉',
           collapsed: true,
           items: [
-            {
-              text: ' 维护接收投诉通知的URL',
-              link: '/openapi/v3/merchant-service/complaint-notifications',
-            },
+            transArrayItem(
+              [' 维护接收投诉通知的URL', '/openapi/v3/merchant-service/complaint-notifications']
+            ),
             {
               text: ' 2.0',
               collapsed: true,
               items: [
-                {
-                  text: '查询投诉单列表',
-                  link: '/openapi/v3/merchant-service/complaints-v2',
-                },
-                {
-                  text: '查询投诉单详情',
-                  link: '/openapi/v3/merchant-service/complaints-v2/{complaint_id}',
-                },
-                {
-                  text: '查询投诉单协商历史',
-                  link: '/openapi/v3/merchant-service/complaints-v2/{complaint_id}/negotiation-historys',
-                },
-                {
-                  text: '回复用户',
-                  link: '/openapi/v3/merchant-service/complaints-v2/{complaint_id}/response',
-                },
-                {
-                  text: '反馈处理完成',
-                  link: '/openapi/v3/merchant-service/complaints-v2/{complaint_id}/complete',
-                },
-                {
-                  text: '更新退款审批结果',
-                  link: '/openapi/v3/merchant-service/complaints-v2/{complaint_id}/update-refund-progress',
-                },
-              ],
+                ['查询投诉单列表', '/openapi/v3/merchant-service/complaints-v2'],
+                ['查询投诉单详情', '/openapi/v3/merchant-service/complaints-v2/{complaint_id}'],
+                ['查询投诉单协商历史', '/openapi/v3/merchant-service/complaints-v2/{complaint_id}/negotiation-historys'],
+                ['回复用户', '/openapi/v3/merchant-service/complaints-v2/{complaint_id}/response'],
+                ['反馈处理完成', '/openapi/v3/merchant-service/complaints-v2/{complaint_id}/complete'],
+                ['更新退款审批结果', '/openapi/v3/merchant-service/complaints-v2/{complaint_id}/update-refund-progress'],
+              ].map(transArrayItem),
             },
             {
               text: ' 1.0',
@@ -1187,10 +614,10 @@ function openapiSidebar() {
                 ['商户反馈', '/openapi/v3/merchant-service/feedbacks'],
               ].map(transArrayItem),
             },
-            transArrayItem(
+            ...[
               ['上传商户反馈图片文件', '/openapi/v3/merchant-service/images/upload'],
               ['投诉单详情图片文件下载', '/openapi/v3/merchant-service/images/{media_id}'],
-            ),
+            ].map(transArrayItem),
           ],
         },
         transArrayItem(
