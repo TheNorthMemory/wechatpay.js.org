@@ -5,17 +5,9 @@ description: 退款状态改变后，微信会把相关退款结果发送给商�
 
 # {{ $frontmatter.title }} {#post}
 
-> [!IMPORTANT] 注意：
-> - 同样的通知可能会多次发送给商户系统。商户系统必须能够正确处理重复的通知。 推荐的做法是，当商户系统收到通知进行处理时，先检查对应业务数据的状态，并判断该通知是否已经处理。如果未处理，则再进行处理；如果已处理，则直接返回结果成功。在对业务数据进行状态检查和处理之前，要采用数据锁进行并发控制，以避免函数重入造成的数据混乱。
-> - 如果在所有通知频率后没有收到微信侧回调，商户应调用查询订单接口确认订单状态。
-> - 特别提醒：商户系统对于开启结果通知的内容一定要做签名验证，并校验通知的信息是否与商户侧的信息一致，防止数据泄露导致出现“假通知”，造成资金损失。
-> - 商户退款完成后，微信会把相关退款结果和用户信息发送给清算机构，清算机构需要接收处理后返回应答成功，然后继续给异步通知到下游从业机构。
-> - 对后台通知交互时，如果微信收到商户的应答不符合规范或超时，微信认为通知失败，微信会通过一定的策略定期重新发起通知，尽可能提高通知的成功率，但微信不保证通知最终能成功。（通知频率为15s/15s/30s/3m/10m/20m/30m/30m/30m/60m/3h/3h/3h/6h/6h - 总计 24h4m）
+{{ $frontmatter.description }} [退款结果通知](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/ecommerce/refunds/chapter3_3.shtml)
 
-
-## 请求 {#req}
-
-### 头(headers) {#req.headers}
+## 请求头(headers) {#req.headers}
 
 ```ansi
 Wechatpay-Nonce: 3d980fb850fdce97f6bfb3d248597f16
@@ -26,7 +18,7 @@ Wechatpay-Timestamp: 1710048759
 Request-ID: 08F78BB5AF0610D302189F99DD5C20BA56F89845-0
 ```
 
-### 报文(body) {#req.body}
+## 请求报文(body) {#req.body}
 
 ```json
 {
@@ -52,7 +44,7 @@ Request-ID: 08F78BB5AF0610D302189F99DD5C20BA56F89845-0
   "out_trade_no": "20150806125346",
   "refund_id": "50200207182018070300011301001",
   "out_refund_no": "7752501201407033233368018",
-  "refund_status": "SUCCESS",
+  "refund_status": "CLOSED",
   "success_time": "2018-06-08T10:34:56+08:00",
   "user_received_account": "招商银行信用卡0403",
   "amount" : {
@@ -80,33 +72,30 @@ Request-ID: 08F78BB5AF0610D302189F99DD5C20BA56F89845-0
  * @prop {string} id
  * @prop {string} create_time
  * @prop {string} resource_type
- * @prop {string} event_type
+ * @prop {'REFUND.CLOSED'} event_type
  * @prop {{algorithm: string, ciphertext: string, nonce: string, associated_data: string}} resource
  * @typedef PlainObject
- * @prop {string} transaction_id
- * @prop {string} amount
  * @prop {string} mchid
- * @prop {string} trade_state
- * @prop {string} bank_type
- * @prop {string} promotion_detail
- * @prop {string} success_time
- * @prop {{openid:string}} payer
+ * @prop {string} transaction_id
  * @prop {string} out_trade_no
- * @prop {string} appid
- * @prop {string} trade_state_desc
- * @prop {string} trade_type
- * @prop {string} attach
- * @prop {string} scene_info
+ * @prop {string} trade_state
+ * @prop {string} refund_id
+ * @prop {string} out_refund_no
+ * @prop {'CLOSED'} refund_status
+ * @prop {string} success_time
+ * @prop {string} user_received_account
+ * @prop {{total: number, refund: number, payer_total: number, payer_refund: number}} amount
  */
-
-/** @type {string} the raw HTTP POST body */
+/** @type {string} 原始HTTP POST的文本 */
 var json;
-/** @type {import('crypto').CipherKey} the APIv2 secret key */
+/** @type {import('crypto').CipherKey} APIv3密钥 */
 var apiv3Key;
 /** @type {RequestHeader} */
 var headers;
-/** @type {{[k: string]: import('crypto').BinaryLike}} the platform certificate map */
+/** @type {{[k: string]: import('crypto').BinaryLike}} 微信支付平台证书{序列号:实例}键值对 */
 var platformCertificates;
+/** @type {300} 推荐的时间偏移量 */
+var MAXIMUM_CLOCK_OFFSET = 300;
 // ---cut---
 const { Formatter, Rsa, Aes } = require('wechatpay-axios-plugin')
 
@@ -119,9 +108,14 @@ const {
 
 let code = 'SUCCESS', message = undefined
 
-if (Math.abs(Formatter.timestamp() - wechatpayTimestamp) > 300) {
+if (Math.abs(Formatter.timestamp() - wechatpayTimestamp) > MAXIMUM_CLOCK_OFFSET) {
   code = 'FAIL'
-  message = 'Clock offset'
+  message = 'Over clock offset'
+}
+else
+if (!Object.hasOwn(platformCertificates, wechatpaySerial)) {
+  code = 'FAIL'
+  message = 'platform certificate not exists'
 }
 else
 if (!Rsa.verify(json, wechatpaySignature, platformCertificates[wechatpaySerial])) {
@@ -166,18 +160,23 @@ const {
 const response = { code, message }
 ```
 
-## 应答 {#resp}
-
-### 头(headers) {#resp.headers}
+## 正常应答头(headers) {#resp.headers}
 
 ```ansi
 Status: 200
 ```
 
-### 报文(body) {#resp.body}
+## 正常应答报文(body) {#resp.body}
 
 ```json
 {
   "code": "SUCCESS"
 }
 ```
+
+> [!IMPORTANT] 注意：
+> - 同样的通知可能会多次发送给商户系统。商户系统必须能够正确处理重复的通知。 推荐的做法是，当商户系统收到通知进行处理时，先检查对应业务数据的状态，并判断该通知是否已经处理。如果未处理，则再进行处理；如果已处理，则直接返回结果成功。在对业务数据进行状态检查和处理之前，要采用数据锁进行并发控制，以避免函数重入造成的数据混乱。
+> - 如果在所有通知频率后没有收到微信侧回调，商户应调用查询订单接口确认订单状态。
+> - 特别提醒：商户系统对于开启结果通知的内容一定要做签名验证，并校验通知的信息是否与商户侧的信息一致，防止数据泄露导致出现“假通知”，造成资金损失。
+> - 商户退款完成后，微信会把相关退款结果和用户信息发送给清算机构，清算机构需要接收处理后返回应答成功，然后继续给异步通知到下游从业机构。
+> - 对后台通知交互时，如果微信收到商户的应答不符合规范或超时，微信认为通知失败，微信会通过一定的策略定期重新发起通知，尽可能提高通知的成功率，但微信不保证通知最终能成功。（通知频率为15s/15s/30s/3m/10m/20m/30m/30m/30m/60m/3h/3h/3h/6h/6h - 总计 24h4m）

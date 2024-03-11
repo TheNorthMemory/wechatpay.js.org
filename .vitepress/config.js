@@ -139,6 +139,10 @@ function guideSidebar() {
       text: '开放接口参考',
       link: '/openapi/',
     },
+    {
+      text: '回调通知参考',
+      link: '/openapi/',
+    },
   ];
 }
 
