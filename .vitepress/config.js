@@ -136,12 +136,14 @@ function guideSidebar() {
       ],
     },
     {
-      text: '开放接口参考',
+      text: '开放接口概览',
       link: '/openapi/',
+      items: [],
     },
     {
-      text: '回调通知参考',
+      text: '回调通知概览',
       link: '/webhook/',
+      items: [],
     },
   ];
 }
@@ -655,9 +657,7 @@ function webhookSidebar() {
           text: '支付',
           collapsed: true,
           items: [
-            ['普通支付通知', '/webhook/v3/TRANSACTION.SUCCESS'],
-            ['服务商支付通知', '/webhook/v3/TRANSACTION.SUCCESS'],
-            ['合单支付通知', '/webhook/v3/TRANSACTION.SUCCESS'],
+            ['支付成功通知', '/webhook/v3/TRANSACTION.SUCCESS'],
           ].map(transArrayItem),
         },
         {
