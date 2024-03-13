@@ -129,11 +129,9 @@ function guideSidebar() {
       text: '指南',
       link: '/guide/',
       items: [
-        {
-          text: '快速开始',
-          link: '/guide/getting-started'
-        },
-      ],
+        ['快速开始', '/guide/getting-started'],
+        ['数据签名', '/guide/digital-signature'],
+      ].map(transArrayItem),
     },
     {
       text: '开放接口概览',
