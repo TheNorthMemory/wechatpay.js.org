@@ -414,7 +414,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 > /** @type {import('crypto').BinaryLike} */
 > var merchantPrivateKeyInstance;
 > //---cut---
-> const { Formatter, Hash, Transformer } = require('wechatpay-axios-plugin')
+> const { Formatter, Rsa } = require('wechatpay-axios-plugin')
 >
 > const noncestr = Formatter.nonce();
 > const timestamp = '' + Formatter.timestamp();
