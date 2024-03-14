@@ -88,7 +88,12 @@ export default defineConfig({
       {
       	text: '指南',
       	link: '/guide/',
-      	activeMatch: '^/guide/'
+        activeMatch: '^/guide/(?!digital)'
+      },
+      {
+        text: '数据签名',
+        link: '/guide/digital-signature',
+        activeMatch: '^/guide/digital-signature'
       },
       {
         text: '开放接口',

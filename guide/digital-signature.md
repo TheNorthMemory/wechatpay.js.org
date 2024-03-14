@@ -35,7 +35,7 @@ aside: true
 
 微信支付API接口协议中包含字段**nonce_str**，主要保证签名不可预测。微信支付官方推荐生成随机数算法如下：**调用随机数函数生成，将得到的值转换为字符串**。
 
-以[官方文档](https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=4_3)的举的例子，用NodeJS实现：
+以[官方文档](https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=4_3)举的例子，用NodeJS实现：
 
 ### 后台数据交换 {#symmetric.backend}
 
