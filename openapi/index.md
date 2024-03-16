@@ -79,6 +79,11 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | | [完结分账](/openapi/v3/brand/profitsharing/finish-order)
 | | [请求分账回退](/openapi/v3/brand/profitsharing/returnorders#post)
 | | [查询分账回退结果](/openapi/v3/brand/profitsharing/returnorders#get)
+| 连锁品牌门店v3{rowspan=5} | [创建门店](/openapi/v3/merchant-store/stores) {colspan=2}
+| [查询门店](/openapi/v3/merchant-store/stores/{store_id}#get) {colspan=2}
+| [修改门店](/openapi/v3/merchant-store/stores/{store_id}#patch) {colspan=2}
+| [给门店绑定收款商户号](/openapi/v3/merchant-store/stores/{store_id}/recipients/bind) {colspan=2}
+| [解绑门店无效的收款商户号](/openapi/v3/merchant-store/stores/{store_id}/recipients/unbind) {colspan=2}
 | 平台账单v3{rowspan=4} | [申请交易账单](/openapi/v3/bill/tradebill) {colspan=2}
 | [申请资金账单](/openapi/v3/bill/fundflowbill) {colspan=2}
 | | [申请子商户资金账单](/openapi/v3/bill/sub-merchant-fundflowbill)
