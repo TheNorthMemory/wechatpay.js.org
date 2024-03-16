@@ -15,9 +15,7 @@ export default defineConfig({
   srcExclude: ['**/README.md'],
   sitemap: {
     hostname: 'https://wechatpay.js.org',
-    transformItems(items) {
-      return items.filter((item) => !item.url.includes('README'))
-    },
+    xslUrl: 'https://wechatpay.js.org/sitemap.xsl',
   },
   head: [
     ['meta', { name: 'theme-color', content: '#00c250' }],
@@ -52,7 +50,7 @@ export default defineConfig({
       text: '在 GitHub 上编辑此页面',
     },
     footer: {
-      message: 'Released under the MIT License.',
+      message: 'Released under the MIT License. (<a href="https://wechatpay.js.org/sitemap.xml">SITEMAP</a>)',
       copyright: 'Copyright © 2020-present James ZHANG(TheNorthMemory)'
     },
     docFooter: {

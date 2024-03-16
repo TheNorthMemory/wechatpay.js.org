@@ -181,10 +181,10 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | [更新退款审批结果](/openapi/v3/merchant-service/complaints-v2/{complaint_id}/update-refund-progress) {colspan=2}
 | [上传商户反馈图片文件](/openapi/v3/merchant-service/images/upload) {colspan=2}
 | [投诉单详情图片文件下载](/openapi/v3/merchant-service/images/{media_id}) {colspan=2}
-| :thumbsdown:[~~查询投诉信息列表~~](/openapi/v3/merchant-service/complaints) {colspan=2}
-| :thumbsdown:[~~查询投诉详情详情~~](/openapi/v3/merchant-service/complaints/{transaction_id}) {colspan=2}
-| :thumbsdown:[~~查询投诉单协商历史~~](/openapi/v3/merchant-service/complaints/{transaction_id}/negotiation-historys) {colspan=2}
-| :thumbsdown:[~~商户反馈~~](/openapi/v3/merchant-service/feedbacks) {colspan=2}
+| [~~查询投诉信息列表~~](/openapi/v3/merchant-service/complaints):thumbsdown: {colspan=2}
+| [~~查询投诉详情详情~~](/openapi/v3/merchant-service/complaints/{transaction_id}):thumbsdown: {colspan=2}
+| [~~查询投诉单协商历史~~](/openapi/v3/merchant-service/complaints/{transaction_id}/negotiation-historys):thumbsdown: {colspan=2}
+| [~~商户反馈~~](/openapi/v3/merchant-service/feedbacks):thumbsdown: {colspan=2}
 | 商户风险管理v3{rowspan=7} | [创建接收违规通知的URL](/openapi/v3/merchant-risk-manage/violation-notifications#post) {colspan=2}
 | [查询接收违规通知的URL](/openapi/v3/merchant-risk-manage/violation-notifications#get) {colspan=2}
 | [修改接收违规通知的URL](/openapi/v3/merchant-risk-manage/violation-notifications#put) {colspan=2}
