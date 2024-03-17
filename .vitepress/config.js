@@ -117,6 +117,10 @@ export default defineConfig({
         icon: 'github',
         link: 'https://github.com/TheNorthMemory/wechatpay-axios-plugin',
       },
+      {
+        icon: 'devtools',
+        link: 'https://www.devtools.cn/',
+      },
     ],
     sidebar: {
       '/guide/': guideSidebar(),

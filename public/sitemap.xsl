@@ -34,7 +34,7 @@
           @media screen and (prefers-color-scheme: dark) { :root {--vp-c-green-soft: rgba(16, 185, 129, .16);--vp-c-brand-1: #a8b1ff;--vp-c-brand-2: #5c73e7;--vp-c-bg-soft: #202127;} }
           ol {padding-bottom: 50px}
           ol li {padding: 8px 16px}
-          ol li:nth-child(2n) { background-color: var(--vp-c-bg-soft); }
+          ol li:nth-child(odd) { background-color: var(--vp-c-bg-soft); }
           ol li:hover { background-color: var(--vp-c-green-soft); }
           ol li a {color: var(--vp-c-brand-1);text-decoration: underline;text-underline-offset: 6px;transition: color .25s,opacity .25s}
           ol li a:hover {color: var(--vp-c-brand-2)}
