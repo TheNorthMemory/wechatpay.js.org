@@ -4,6 +4,8 @@ description: 此开发包承载了三部分内容，1、CLI：用符合官方开
 aside: true
 ---
 
+# 使用指南
+
 {{ $frontmatter.description }}
 
 ## CLI 模式 {#cli}
@@ -76,7 +78,7 @@ Options:
 >
 > **查询平台收付通进件审核状态**
 >
-> ::: details ./my-cli.sh v3.ecommerce.applyments.2000004250058765 -m get
+> ::: details ./my-cli.sh v3.ecommerce.applyments&#8203;.2000004250058765 -m get
 > ```js
 > {
 >   config: {
@@ -156,7 +158,15 @@ Options:
 - 相对路径(**pathname**): `v3/certificates`
 - 查询参数(**querystring**): `algorithm_type=RSA`
 
-本类库在初始化阶段，内置了默认的接入点(**endpoint**)，然后在构造请求链时，是把 相对路径(**pathname**) 以`/`做切分，取出 `segments` 映射成实例对象属性，**HTTP METHOD**作为驱动执行函数，发起HTTP请求。
+当前已知的接入点(**endpoint**)有，在不同的使用场景下，会:
+
+- `https://api.mch.weixin.qq.com/` 默认
+- `https://api2.mch.weixin.qq.com/`
+- `https://fraud.mch.weixin.qq.com/`
+- `https://payapp.mch.weixin.qq.com/`
+- `https://apihk.mch.weixin.qq.com/`
+
+本开发包在初始化阶段，内置了默认的接入点(**endpoint**)，在构造请求链时，把 相对路径(**pathname**) 以`/`做切分，取出 `segments` 映射成实例对象属性，接口支持的**HTTP METHOD**作为末尾驱动执行函数，发起HTTP请求。
 
 编码书写方式有如下约定：
 
@@ -236,7 +246,7 @@ Transformer.toXml
 const { Rsa, Formatter } = require('wechatpay-axios-plugin')
 //---cut---
 //对请求报文做算法格式化
-Formatter.response
+Formatter.joinedByLineFeed
 //格式化后的内容做公钥验签
 Rsa.verify
 ```

@@ -25,7 +25,7 @@ Request-ID: 08F78BB5AF0610D302189F99DD5C20BA56F89845-0
   "id":"EV-2018022511223320873",
   "create_time":"2015-05-20T13:29:35+08:00",
   "resource_type":"encrypt-resource",
-  "event_type":"COMPLAINT.CREATE",
+  "event_type":"COMPLAINT.STATE_CHANGE",
   "resource" : {
     "algorithm":"AEAD_AES_256_GCM",
     "ciphertext": "...",
@@ -60,7 +60,7 @@ Request-ID: 08F78BB5AF0610D302189F99DD5C20BA56F89845-0
  * @prop {string} id
  * @prop {string} create_time
  * @prop {string} resource_type
- * @prop {'COMPLAINT.CREATE'} event_type
+ * @prop {'COMPLAINT.STATE_CHANGE'} event_type
  * @prop {{algorithm: string, ciphertext: string, nonce: string, associated_data: string}} resource
  * @typedef PlainObject
  * @prop {string} complaint_id
@@ -98,10 +98,18 @@ if (!Object.hasOwn(platformCertificates, wechatpaySerial)) {
   message = 'platform certificate not exists'
 }
 else
-if (!Rsa.verify(json, wechatpaySignature, platformCertificates[wechatpaySerial])) {
+if (!Rsa.verify(
+  Formatter.joinedByLineFeed(wechatpayTimestamp, wechatpayNonce, json),
+  wechatpaySignature,
+  platformCertificates[wechatpaySerial]
+)) {
   code = 'FAIL'
   message = 'sign mismatched'
 }
+
+// do your business
+// ...
+// ...
 
 // ---cut-start---
 /** @type {RequestJsonData} */

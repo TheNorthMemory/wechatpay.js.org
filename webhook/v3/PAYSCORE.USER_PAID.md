@@ -193,10 +193,18 @@ if (!Object.hasOwn(platformCertificates, wechatpaySerial)) {
   message = 'platform certificate not exists'
 }
 else
-if (!Rsa.verify(json, wechatpaySignature, platformCertificates[wechatpaySerial])) {
+if (!Rsa.verify(
+  Formatter.joinedByLineFeed(wechatpayTimestamp, wechatpayNonce, json),
+  wechatpaySignature,
+  platformCertificates[wechatpaySerial]
+)) {
   code = 'FAIL'
   message = 'sign mismatched'
 }
+
+// do your business
+// ...
+// ...
 
 // ---cut-start---
 /** @type {RequestJsonData} */
