@@ -158,7 +158,7 @@ Options:
 - 相对路径(**pathname**): `v3/certificates`
 - 查询参数(**querystring**): `algorithm_type=RSA`
 
-当前已知的接入点(**endpoint**)有，在不同的使用场景下，会:
+当前已知的接入点(**endpoint**)有:
 
 - `https://api.mch.weixin.qq.com/` 默认
 - `https://api2.mch.weixin.qq.com/`
@@ -166,7 +166,8 @@ Options:
 - `https://payapp.mch.weixin.qq.com/`
 - `https://apihk.mch.weixin.qq.com/`
 
-本开发包在初始化阶段，内置了默认的接入点(**endpoint**)，在构造请求链时，把 相对路径(**pathname**) 以`/`做切分，取出 `segments` 映射成实例对象属性，接口支持的**HTTP METHOD**作为末尾驱动执行函数，发起HTTP请求。
+本开发包在初始化阶段，内置了默认的接入点(**endpoint**)，在特殊接口，如[付款到银行卡获取加密敏感信息的RSA公钥](/openapi/v2/risk/getpublickey)，就需要显式声明所对应的接入点(**endpoint**)；
+在构造请求链时，把 相对路径(**pathname**) 以`/`做切分，取出 `segments` 映射成实例对象属性，接口支持的**HTTP METHOD**即作为末尾驱动执行函数，按需代入 查询参数(**querystring**)，发起HTTP请求。
 
 编码书写方式有如下约定：
 
@@ -182,7 +183,7 @@ Options:
 
 6. 如果 `segments` 以 `v2` 开始，其特殊标识为`APIv2`级联对象开始位，之后串接其他`segments`，如源 `pay/micropay` 即串接成 `v2.pay.micropay` 即以XML形式请求远端接口；
 
-[开放接口](/openapi/)包含了大量的使用示例代码，按需请具体参阅使用。
+[开放接口](/openapi/)包含了大量的使用示例代码，请按需参阅使用。
 
 ## SERVER 模式 {#server}
 
