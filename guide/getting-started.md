@@ -65,11 +65,14 @@ const platformCertificateFilePath = '/path/to/wechatpay/cert.pem';
 const platformCertificateInstance = readFileSync(platformCertificateFilePath);
 
 const wxpay = new Wechatpay({
-  //              ^?
   mchid: merchantId,
   serial: merchantCertificateSerial,
   privateKey: merchantPrivateKeyInstance,
-  certs: { [platformCertificateSerial]: platformCertificateInstance, },
+  certs: {
+    // 这里设计成Key/Value结构，是为了支持多「微信支付平台证书」
+    // 尤其是在「新旧平台证书交替灰度时」需要把新旧证书都配上。
+    [platformCertificateSerial]: platformCertificateInstance,
+  },
   // 使用APIv2时，需要至少设置 `secret`字段，示例代码未开启
   // APIv2密钥(32字节)
   // secret: 'your_merchant_secret_key_string',
