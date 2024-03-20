@@ -389,7 +389,7 @@ function openapiSidebar() {
                 ['查询明细单(商家批次单号)', '/openapi/v3/partner-transfer/batches/out-batch-no/{out_batch_no}/details/out-detail-no/{out_detail_no}'],
               ].map(transArrayItem),
             },
-            [
+            ...[
               ['申请转账账单电子回单', '/openapi/v3/transfer/bill-receipt'],
               ['查询账单回单受理结果', '/openapi/v3/transfer/bill-receipt/{out_batch_no}'],
               ['申请转账明细电子回单', '/openapi/v3/transfer-detail/electronic-receipts#post'],

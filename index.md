@@ -2,7 +2,7 @@
 layout: home
 title: 一个nodejs的微信支付开发包
 hero:
-  text: 一个nodejs的微信支付开发包
+  text: 一个<i>nodejs的</i>微信支付开发包
   tagline: Promise based and chained WeChatPay OpenAPI client SDK for NodeJS
   actions:
     - theme: brand

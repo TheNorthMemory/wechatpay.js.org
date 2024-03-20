@@ -146,9 +146,9 @@ Options:
 
 ## CLIENT 模式 {#client}
 
-一个[URL](https://developer.mozilla.org/docs/Web/API/URL)的构成，本开发包按如下分为三部分：
+大体上来说，一个[URL](https://developer.mozilla.org/docs/Web/API/URL)可分为如下三部分：
 
-```ansi
+```ansi vp-copy-ignore
 [1;32mhttps://api.mch.weixin.qq.com/[0m[1;94mv3/certificates[0m?[1;31malgorithm_type=RSA[0m
 [1;32m└──────────────┬─────────────┴[0m[1;94m───────┬──────┘[0m [1;31m└────────┬───────┘[0m
            [1;32mendpoint[0m               [1;94mpathname[0m        [1;31mquerystring[0m
@@ -158,7 +158,7 @@ Options:
 - 相对路径(**pathname**): `v3/certificates`
 - 查询参数(**querystring**): `algorithm_type=RSA`
 
-当前已知的接入点(**endpoint**)有:
+微信支付当前已知的OpenAPI接入点(**endpoint**)有:
 
 - `https://api.mch.weixin.qq.com/` 默认
 - `https://api2.mch.weixin.qq.com/`
@@ -181,7 +181,7 @@ Options:
 
 5. 每个 `segments` 中，若有动态参数，例如 `business_code/{business_code}` 可写成 `business_code.$business_code$` 或者字面量属性风格，如 `business_code['{business_code}']`;
 
-6. 如果 `segments` 以 `v2` 开始，其特殊标识为`APIv2`级联对象开始位，之后串接其他`segments`，如源 `pay/micropay` 即串接成 `v2.pay.micropay` 即以XML形式请求远端接口；
+6. 以 `v2` 开头的`segment`，其特殊标识为`APIv2`级联对象开始位，之后串接其他`segments`，如源 `pay/micropay` 即串接成 `v2.pay.micropay` 即以XML形式请求远端接口；
 
 [开放接口](/openapi/)包含了大量的使用示例代码，请按需参阅使用。
 
