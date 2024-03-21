@@ -16,6 +16,8 @@ description: 后台通知交互时，如果微信收到商户的应答不符合�
 | [退款关闭通知](/webhook/v3/REFUND.CLOSED) {colspan=2}
 | JSON {rowspan=2} | [分账成功通知](/webhook/v3/PROFITSHARING.SUCCESS) {colspan=2}
 | [分账回退通知](/webhook/v3/PROFITSHARING.RETURN) {colspan=2}
+| JSON {rowspan=2} | [商家转账批次完成通知](/webhook/v3/MCHTRANSFER.BATCH.FINISHED) {colspan=2}
+| [商家转账批次关闭通知](/webhook/v3/MCHTRANSFER.BATCH.CLOSED) {colspan=2}
 | JSON {rowspan=2} | [产生新投诉通知](/webhook/v3/COMPLAINT.CREATE) {colspan=2}
 | [投诉状态变化通知](/webhook/v3/COMPLAINT.STATE_CHANGE) {colspan=2}
 | JSON {rowspan=5} | [支付分服务用户授权成功通知](/webhook/v3/PAYSCORE.USER_OPEN_SERVICE) {colspan=2}
