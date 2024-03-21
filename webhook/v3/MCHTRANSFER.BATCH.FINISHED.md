@@ -5,7 +5,7 @@ description: 商家转账批次单据到终态后（批次完成，对应批次�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [商户平台处置记录回调通知](https://pay.weixin.qq.com/docs/merchant/apis/batch-transfer-to-balance/transfer-batch-callback-notice.html)
+{{ $frontmatter.description }} [商家转账回调通知](https://pay.weixin.qq.com/docs/merchant/apis/batch-transfer-to-balance/transfer-batch-callback-notice.html)
 
 ## 请求头(headers) {#req.headers}
 
