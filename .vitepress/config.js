@@ -699,6 +699,14 @@ function webhookSidebar() {
           ].map(transArrayItem),
         },
         {
+          text: '转账',
+          collapsed: true,
+          items: [
+            ['转账批次完成通知', '/webhook/v3/MCHTRANSFER.BATCH.FINISHED'],
+            ['转账批次关闭通知', '/webhook/v3/MCHTRANSFER.BATCH.CLOSED'],
+          ].map(transArrayItem),
+        },
+        {
           text: '投诉',
           collapsed: true,
           items: [
