@@ -119,16 +119,21 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 > Transformer.toXml({
 >   ...M,
 >   // 数据签名并把值大写
->   sign: Hash.sign(
->     // 签名方式
->     signType,
+>   sign: Hash.md5(
 >     // URL风格拼接数据
 >     Formatter.queryStringLike(
 >       // 按参数名字典序排列
 >       Formatter.ksort(M)
 >     ),
 >     key
->   )
+>   ).toUpperCase()
+> })
+>
+> // 或者使用封装的`Hash.sign`方法简化如下
+> Transformer.toXml({
+>   ...M,
+>   // 对集合M按参数名字典序排列 -> URL风格拼接数据 -> 数据签名并把值大写
+>   sign: Hash.sign(signType, M, key)
 > })
 > ```
 
@@ -153,17 +158,10 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 > const packageStr = 'prepay_id=' + prepay_id;
 > // previousSignType 即后台调用 unifiedorder 接口时的签名方法
 > const signType = previousSignType || 'MD5';
+> const M = { appId, timeStamp, nonceStr, package: packageStr, signType };
 > const data = {
->   appId,
->   timeStamp,
->   nonceStr,
->   package: packageStr,
->   signType,
->   paySign: Hash.sign( // [!code hl:5]
->     signType,
->     { appId, timeStamp, nonceStr, package: packageStr, signType },
->     apiv2Secret
->   )
+>   ...M,
+>   paySign: Hash.sign(signType, M, apiv2Secret) // [!code hl]
 > }
 > ```
 > [官方文档](https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=7_7&index=6) [官方文档](https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=7_7&index=5)
@@ -183,18 +181,10 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 > const packageStr = 'Sign=WXPay';
 > // previousSignType 即后台调用 unifiedorder 接口时的签名方法
 > const signType = previousSignType || 'MD5';
+> const M = { appid, partnerid, prepayid, package: packageStr, timestamp, noncestr };
 > const data = {
->   appid,
->   partnerid,
->   prepayid,
->   package: packageStr,
->   timestamp,
->   noncestr,
->   sign: Hash.sign( // [!code hl:5]
->     signType,
->     { appid, partnerid, prepayid, package: packageStr, timestamp, noncestr },
->     apiv2Secret
->   )
+>   ...M,
+>   sign: Hash.sign(signType, M, apiv2Secret) // [!code hl]
 > }
 > ```
 > [官方文档](https://pay.weixin.qq.com/wiki/doc/api/app/app.php?chapter=9_12&index=2)
