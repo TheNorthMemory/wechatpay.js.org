@@ -251,6 +251,32 @@ function openapiSidebar() {
             ['查询付款', '/openapi/v2/mmpaymkttransfers/query_bank'],
           ].map(transArrayItem),
         },
+        {
+          text: '微信车主服务',
+          collapsed: true,
+          items: [
+            {
+              text: '直连商户模式',
+              collapsed: true,
+              items: [
+                ['用户入场通知', '/openapi/v2/vehicle/pay/notification'],
+                ['用户状态查询', '/openapi/v2/vehicle/pay/querystate'],
+                ['申请代扣', '/openapi/v2/vehicle/pay/payapply'],
+                ['查询订单', '/openapi/v2/transit/queryorder'],
+              ].map(transArrayItem),
+            },
+            {
+              text: '合作伙伴模式',
+              collapsed: true,
+              items: [
+                ['用户入场通知', '/openapi/v2/vehicle/partnerpay/notification'],
+                ['用户状态查询', '/openapi/v2/vehicle/partnerpay/querystate'],
+                ['申请代扣', '/openapi/v2/vehicle/partnerpay/payapply'],
+                ['查询订单', '/openapi/v2/transit/partnerpay/queryorder'],
+              ].map(transArrayItem),
+            },
+          ],
+        },
       ],
     },
     {
@@ -606,6 +632,16 @@ function openapiSidebar() {
             transArrayItem(
               ['申请对账单', '/openapi/v3/payscore/merchant-bill']
             ),
+            {
+              text: '停车服务',
+              collapsed: true,
+              items: [
+                ['查询车牌服务开通信息', '/openapi/v3/vehicle/parking/services/find'],
+                ['创建停车入场', '/openapi/v3/vehicle/parking/parkings'],
+                ['扣费受理', '/openapi/v3/vehicle/transactions/parking'],
+                ['查询订单', '/openapi/v3/vehicle/transactions/out-trade-no/{out_trade_no}'],
+              ].map(transArrayItem),
+            }
           ],
         },
         {
@@ -669,6 +705,7 @@ function webhookSidebar() {
         ['普通支付通知', '/webhook/v2/transaction-success'],
         ['合单支付通知', '/webhook/v2/combined-transactions-success'],
         ['退款结果通知', '/webhook/v2/refund-processed'],
+        ['车牌状态变更通知', '/webhook/v2/vehicle-state-changed-for-parking'],
       ].map(transArrayItem),
     },
     {
@@ -678,7 +715,7 @@ function webhookSidebar() {
           text: '支付',
           collapsed: true,
           items: [
-            ['支付成功通知', '/webhook/v3/TRANSACTION.SUCCESS'],
+            ['支付成功通知', '/webhook/v3/TRANSACTION.SUCCESS#BASIC'],
           ].map(transArrayItem),
         },
         {
@@ -723,7 +760,16 @@ function webhookSidebar() {
             ['用户确认成功通知', '/webhook/v3/PAYSCORE.USER_CONFIRM'],
             ['用户支付成功通知', '/webhook/v3/PAYSCORE.USER_PAID'],
             ['账户绑定结果通知', '/webhook/v3/PAYSCORE.BIND_SERVICE_ACCOUNT']
-          ].map(transArrayItem),
+          ].map(transArrayItem).concat({
+            text: '停车服务',
+            collapsed: true,
+            items: [
+              ['停车入场状态变更通知', '/webhook/v3/VEHICLE.ENTRANCE_STATE_CHANGE'],
+              ['订单支付成功通知', '/webhook/v3/TRANSACTION.SUCCESS#PARKING'],
+              ['订单支付失败通知', '/webhook/v3/TRANSACTION.FAIL'],
+              ['用户还款通知', '/webhook/v3/TRANSACTION.PAY_BACK'],
+            ].map(transArrayItem),
+          }),
         },
         {
           text: '违规',

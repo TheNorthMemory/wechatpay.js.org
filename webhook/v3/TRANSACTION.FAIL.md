@@ -1,11 +1,11 @@
 ---
-title: 支付成功通知(JSON)
-description: 微信支付通过支付通知接口将用户支付成功消息通知给商户
+title: 停车服务扣费失败通知(JSON)
+description: 商户请求微信支付分停车服务扣费受理接口，会完成订单受理。订单实际支付完成后，微信支付会把订单支付结果信息发送给商户，商户需要接收处理，并返回应答。
 ---
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [普通支付通知](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/transactions/chapter3_11.shtml) [服务商支付通知](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/transactions/chapter5_11.shtml) [合单支付通知](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/combine/chapter3_7.shtml) [停车服务扣费成功通知](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter8_8_6.shtml) [服务商停车服务扣费成功通知](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter8_8_6.shtml)
+{{ $frontmatter.description }} [停车服务扣费受理通知](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter8_8_6.shtml) [服务商停车服务扣费受理通知](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter8_8_6.shtml)
 
 ## 请求头(headers) {#req.headers}
 
@@ -25,7 +25,7 @@ Request-ID: 08F78BB5AF0610D302189F99DD5C20BA56F89845-0
   "id":"EV-2018022511223320873",
   "create_time":"2015-05-20T13:29:35+08:00",
   "resource_type":"encrypt-resource",
-  "event_type":"TRANSACTION.SUCCESS",
+  "event_type":"TRANSACTION.FAIL",
   "resource" : {
     "algorithm":"AEAD_AES_256_GCM",
     "ciphertext": "...",
@@ -38,107 +38,55 @@ Request-ID: 08F78BB5AF0610D302189F99DD5C20BA56F89845-0
 ::: details resource.ciphertext 解密后的明文格式
 ```json
 {
-    "transaction_id":"1217752501201407033233368018",
-    "amount":{
-        "payer_total":100,
-        "total":100,
-        "currency":"CNY",
-        "payer_currency":"CNY"
-    },
-    "mchid":"1230000109",
-    "trade_state":"SUCCESS",
-    "bank_type":"CMC",
-    "user_repaid": "Y",
-    "trade_scene":"PARKING",
-    "parking_info":{
-        "parking_id":"5K8264ILTKCH16CQ250",
-        "plate_number":"粤B88888",
-        "plate_color":"BLUE",
-        "start_time":"2017-08-26T10:43:39+08:00",
-        "end_time":"2017-08-26T10:43:39+08:00",
-        "parking_name":"欢乐海岸停车场",
-        "charging_duration":3600,
-        "device_id":"12321"
-    },
-    "promotion_detail":[
-        {
-            "amount":100,
-            "wechatpay_contribute":0,
-            "coupon_id":"109519",
-            "scope":"GLOBAL",
-            "merchant_contribute":0,
-            "name":"单品惠-6",
-            "other_contribute":0,
-            "currency":"CNY",
-            "stock_id":"931386",
-            "goods_detail":[
-                {
-                    "goods_remark":"商品备注信息",
-                    "quantity":1,
-                    "discount_amount":1,
-                    "goods_id":"M1006",
-                    "unit_price":100
-                },
-                {
-                    "goods_remark":"商品备注信息",
-                    "quantity":1,
-                    "discount_amount":1,
-                    "goods_id":"M1006",
-                    "unit_price":100
-                }
-            ]
-        },
-        {
-            "amount":100,
-            "wechatpay_contribute":0,
-            "coupon_id":"109519",
-            "scope":"GLOBAL",
-            "merchant_contribute":0,
-            "name":"单品惠-6",
-            "other_contribute":0,
-            "currency":"CNY",
-            "stock_id":"931386",
-            "goods_detail":[
-                {
-                    "goods_remark":"商品备注信息",
-                    "quantity":1,
-                    "discount_amount":1,
-                    "goods_id":"M1006",
-                    "unit_price":100
-                },
-                {
-                    "goods_remark":"商品备注信息",
-                    "quantity":1,
-                    "discount_amount":1,
-                    "goods_id":"M1006",
-                    "unit_price":100
-                }
-            ]
-        }
-    ],
-    "success_time":"2018-06-08T10:34:56+08:00",
-    "payer":{
-        "openid":"oUpF8uMuAJO_M2pxb1Q9zNjWeS6o"
-    },
-    "out_trade_no":"1217752501201407033233368018",
-    "appid":"wxd678efh567hg6787",
-    "trade_state_desc":"支付成功",
-    "trade_type":"MICROPAY",
-    "attach":"自定义数据",
-    "scene_info":{
-        "device_id":"013467007045764"
+  "appid": "wx2421b1c4370ec43b",
+  "sp_mchid": "10000100",
+  "sub_appid": "wxd678efh567hg6797",
+  "sub_mchid": "10000109",
+  "out_trade_no": "20150806125346",
+  "trade_state": "FAIL",
+  "trade_state_description": "扣款失败",
+  "bank_type": "BPA",
+  "attach": "支付测试",
+  "success_time": "2017-08-26T10:43:39+08:00",
+  "create_time": "2017-08-26T10:43:39+08:00",
+  "user_repaid": "Y",
+  "description": "停车场扣费",
+  "trade_scene":"PARKING",
+  "payer": {
+    "openid": "oUpF8uN95-Ptaags6E_roPHg7AG0"
+  },
+  "amount" : {
+    "total": 528800,
+    "discount_total" : 1,
+    "payer_total": 518799,
+    "currency": "CNY",
+  },
+  "parking_info":{
+    "parking_id":"5K8264ILTKCH16CQ250",
+    "plate_number":"粤B88888",
+    "plate_color":"BLUE",
+    "start_time":"2017-08-26T10:43:39+08:00",
+    "end_time":"2017-08-26T10:43:39+08:00",
+    "parking_name":"欢乐海岸停车场",
+    "charging_duration":3600,
+    "device_id":"12321"
+  },
+  "promotion_detail":[
+    {
+      "promotion_id":"109519",
+      "name":"单品惠-6",
+      "scope":"SINGLE",
+      "type":"DISCOUNT",
+      "amount":1,
+      "activity_id":"931386",
+      "wechatpay_contribute":1,
+      "merchant_contribute":0,
+      "other_contribute":0
     }
+  ]
 }
 ```
 :::
-
-1. 普通支付只有支付成功(**trade_state=SUCCESS**)才有通知 {#BASIC}
-
-1. 服务商支付成功会带上(**sp_mchid及sub_mchid**)字段 {#PARTNER}
-
-1. 合单支付成功会带上(**combine_mchid**)字段 {#COMBINE}
-
-1. 停车服务(**trade_scene**)为固定值"**PARKING**" {#PARKING}
 
 ## 处理程序 {#app}
 
@@ -155,7 +103,7 @@ Request-ID: 08F78BB5AF0610D302189F99DD5C20BA56F89845-0
  * @prop {string} id
  * @prop {string} create_time
  * @prop {string} resource_type
- * @prop {'TRANSACTION.SUCCESS'} event_type
+ * @prop {'TRANSACTION.FAIL'} event_type
  * @prop {{algorithm: string, ciphertext: string, nonce: string, associated_data: string}} resource
  * @typedef PlainObject
  * @prop {string} transaction_id
@@ -163,13 +111,7 @@ Request-ID: 08F78BB5AF0610D302189F99DD5C20BA56F89845-0
  * @prop {string} mchid
  * @prop {string} trade_state
  * @prop {string} bank_type
- * @prop {string=} sp_mchid
- * @prop {string=} sub_mchid
- * @prop {string=} combine_mchid
- * @prop {string=} user_repaid
- * @prop {'PARKING'=} trade_scene
- * @prop {{parking_id:string}=} parking_info
- * @prop {{amount:number}[]=} promotion_detail
+ * @prop {string} promotion_detail
  * @prop {string} success_time
  * @prop {{openid:string}} payer
  * @prop {string} out_trade_no
@@ -177,7 +119,7 @@ Request-ID: 08F78BB5AF0610D302189F99DD5C20BA56F89845-0
  * @prop {string} trade_state_desc
  * @prop {string} trade_type
  * @prop {string} attach
- * @prop {{device_id:string}=} scene_info
+ * @prop {string} scene_info
  */
 /** @type {string} 原始HTTP POST的文本 */
 var json;
@@ -254,14 +196,6 @@ const {
   trade_state_desc,
   trade_type,
   attach,
-  scene_info,
-  sp_mchid,
-  sub_mchid,
-  combine_mchid,
-  user_repaid,
-  trade_scene,
-  parking_info,
-  promotion_detail,
 } = JSON.parse(Aes.AesGcm.decrypt(nonce, apiv3Key, ciphertext, associated_data))
 
 // do your business

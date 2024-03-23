@@ -44,6 +44,10 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | 付款到银行卡v2{rowspan=3} | [获取加密公钥](/openapi/v2/risk/getpublickey) | &nbsp;
 | [发起付款](/openapi/v2/mmpaysptrans/pay_bank) | &nbsp;
 | [查询付款](/openapi/v2/mmpaymkttransfers/query_bank) | &nbsp;
+| 微信车主服务v2{rowspan=4} | [用户入场通知](/openapi/v2/vehicle/pay/notification) | [用户入场通知](/openapi/v2/vehicle/partnerpay/notification)
+| [用户状态查询](/openapi/v2/vehicle/pay/querystate) | [用户状态查询](/openapi/v2/vehicle/partnerpay/querystate)
+| [申请代扣](/openapi/v2/vehicle/pay/payapply) | [申请代扣](/openapi/v2/vehicle/partnerpay/payapply)
+| [查询订单](/openapi/v2/transit/queryorder) | [查询订单](/openapi/v2/transit/partnerpay/queryorder)
 | 基础支付v3{rowspan=10} | [APP下单](/openapi/v3/pay/transactions/app) | [APP下单](/openapi/v3/pay/partner/transactions/app)
 | [H5下单](/openapi/v3/pay/transactions/h5) | [H5下单](/openapi/v3/pay/partner/transactions/h5)
 | [JSAPI下单](/openapi/v3/pay/transactions/jsapi) | [JSAPI下单](/openapi/v3/pay/partner/transactions/jsapi)
@@ -174,6 +178,10 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | | [申请绑定支付分服务](/openapi/v3/payscore/partner/service-account-applications)
 | | [查询支付分绑定结果](/openapi/v3/payscore/partner/service-account-applications/{out_apply_no})
 | [申请对账单](/openapi/v3/payscore/merchant-bill) {colspan=2}
+| 停车服务v3{rowspan=4} | [查询车牌服务开通信息](/openapi/v3/vehicle/parking/services/find) {colspan=2}
+| [创建停车入场](/openapi/v3/vehicle/parking/parkings) {colspan=2}
+| [扣费受理](/openapi/v3/vehicle/transactions/parking) {colspan=2}
+| [查询订单](/openapi/v3/vehicle/transactions/out-trade-no/{out_trade_no}) {colspan=2}
 | 消费者投诉v3{rowspan=16} | [创建投诉通知回调](/openapi/v3/merchant-service/complaint-notifications#post) {colspan=2}
 | [查询投诉通知回调](/openapi/v3/merchant-service/complaint-notifications#get) {colspan=2}
 | [修改投诉通知回调](/openapi/v3/merchant-service/complaint-notifications#put) {colspan=2}
