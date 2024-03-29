@@ -17,8 +17,9 @@ description: 后台通知交互时，如果微信收到商户的应答不符合�
 | [退款关闭通知](/webhook/v3/REFUND.CLOSED) {colspan=2}
 | JSON {rowspan=2} | [分账成功通知](/webhook/v3/PROFITSHARING.SUCCESS) {colspan=2}
 | [分账回退通知](/webhook/v3/PROFITSHARING.RETURN) {colspan=2}
-| JSON {rowspan=2} | [商家转账批次完成通知](/webhook/v3/MCHTRANSFER.BATCH.FINISHED) {colspan=2}
-| [商家转账批次关闭通知](/webhook/v3/MCHTRANSFER.BATCH.CLOSED) {colspan=2}
+| JSON {rowspan=3} | [商家转账批次完成通知](/webhook/v3/MCHTRANSFER.BATCH.FINISHED) | &nbsp;
+| [商家转账批次关闭通知](/webhook/v3/MCHTRANSFER.BATCH.CLOSED) | &nbsp;
+| [商家转账单据终态通知](/webhook/v3/MCHTRANSFER.BILL.FINISHED) | &nbsp;
 | JSON {rowspan=2} | [产生新投诉通知](/webhook/v3/COMPLAINT.CREATE) {colspan=2}
 | [投诉状态变化通知](/webhook/v3/COMPLAINT.STATE_CHANGE) {colspan=2}
 | JSON {rowspan=5} | [支付分服务用户授权成功通知](/webhook/v3/PAYSCORE.USER_OPEN_SERVICE) {colspan=2}
@@ -26,6 +27,8 @@ description: 后台通知交互时，如果微信收到商户的应答不符合�
 | [支付分服务用户确认成功通知](/webhook/v3/PAYSCORE.USER_CONFIRM) {colspan=2}
 | [支付分服务用户支付成功通知](/webhook/v3/PAYSCORE.USER_PAID) {colspan=2}
 | | [支付分服务账户绑定结果通知](/webhook/v3/PAYSCORE.BIND_SERVICE_ACCOUNT)
+| JSON {rowspan=2} | [用户签约计划成功通知](/webhook/v3/PAYSCORE.USER_SIGN_PLAN) {colspan=2}
+| [用户取消已签约的计划通知](/webhook/v3/PAYSCORE.USER_CANCEL_SIGN_PLAN) {colspan=2}
 | JSON {rowspan=4} | [停车入场状态变更通知](/webhook/v3/VEHICLE.ENTRANCE_STATE_CHANGE) {colspan=2}
 | [停车服务订单支付成功通知](/webhook/v3/TRANSACTION.SUCCESS#PARKING) {colspan=2}
 | [停车服务订单支付失败通知](/webhook/v3/TRANSACTION.FAIL) {colspan=2}

@@ -633,6 +633,38 @@ function openapiSidebar() {
               ['申请对账单', '/openapi/v3/payscore/merchant-bill']
             ),
             {
+              text: '签约计划',
+              collapsed: true,
+              items: [
+                {
+                  text: '直连商户模式',
+                  collapsed: true,
+                  items: [
+                    ['创建支付分计划', '/openapi/v3/payscore/plan/payscore-plans'],
+                    ['查询支付分计划', '/openapi/v3/payscore/plan/payscore-plans/merchant-plan-no/{merchant_plan_no}'],
+                    ['停止支付分计划', '/openapi/v3/payscore/plan/payscore-plans/merchant-plan-no/{merchant_plan_no}/stop'],
+                    ['创建用户的签约计划', '/openapi/v3/payscore/sign-plan/user-sign-plans'],
+                    ['查询用户的签约计划', '/openapi/v3/payscore/sign-plan/user-sign-plans/merchant-sign-plan-no/{merchant_sign_plan_no}'],
+                    ['取消用户的签约计划', '/openapi/v3/payscore/sign-plan/user-sign-plans/merchant-sign-plan-no/{merchant_sign_plan_no}/stop'],
+                    ['创建签约计划服务单', '/openapi/v3/payscore/sign-plan/serviceorder'],
+                  ].map(transArrayItem),
+                },
+                {
+                  text: '合作伙伴模式',
+                  collapsed: true,
+                  items: [
+                    ['创建支付分计划', '/openapi/v3/payscore/plan/partner/payscore-plans'],
+                    ['查询支付分计划', '/openapi/v3/payscore/plan/partner/payscore-plans/merchant-plan-no/{merchant_plan_no}'],
+                    ['停止支付分计划', '/openapi/v3/payscore/plan/partner/payscore-plans/merchant-plan-no/{merchant_plan_no}/stop'],
+                    ['创建用户的签约计划', '/openapi/v3/payscore/sign-plan/partner/user-sign-plans'],
+                    ['查询用户的签约计划', '/openapi/v3/payscore/sign-plan/partner/user-sign-plans/merchant-sign-plan-no/{merchant_sign_plan_no}'],
+                    ['取消用户的签约计划', '/openapi/v3/payscore/sign-plan/partner/user-sign-plans/merchant-sign-plan-no/{merchant_sign_plan_no}/stop'],
+                    ['创建签约计划服务单', '/openapi/v3/payscore/sign-plan/partner/serviceorder'],
+                  ].map(transArrayItem),
+                },
+              ],
+            },
+            {
               text: '停车服务',
               collapsed: true,
               items: [
@@ -668,7 +700,7 @@ function openapiSidebar() {
               collapsed: true,
               items: [
                 ['查询投诉信息列表', '/openapi/v3/merchant-service/complaints'],
-                ['查询投诉详情详情', '/openapi/v3/merchant-service/complaints/{transaction_id}'],
+                ['查询投诉信息详情', '/openapi/v3/merchant-service/complaints/{transaction_id}'],
                 ['查询投诉单协商历史', '/openapi/v3/merchant-service/complaints/{transaction_id}/negotiation-historys'],
                 ['商户反馈', '/openapi/v3/merchant-service/feedbacks'],
               ].map(transArrayItem),
@@ -741,6 +773,7 @@ function webhookSidebar() {
           items: [
             ['转账批次完成通知', '/webhook/v3/MCHTRANSFER.BATCH.FINISHED'],
             ['转账批次关闭通知', '/webhook/v3/MCHTRANSFER.BATCH.CLOSED'],
+            ['转账单据终态通知', '/webhook/v3/MCHTRANSFER.BILL.FINISHED'],
           ].map(transArrayItem),
         },
         {
@@ -761,6 +794,13 @@ function webhookSidebar() {
             ['用户支付成功通知', '/webhook/v3/PAYSCORE.USER_PAID'],
             ['账户绑定结果通知', '/webhook/v3/PAYSCORE.BIND_SERVICE_ACCOUNT']
           ].map(transArrayItem).concat({
+            text: '签约计划',
+            collapsed: true,
+            items: [
+              ['用户签约计划成功通知', '/webhook/v3/PAYSCORE.USER_SIGN_PLAN'],
+              ['用户取消已签约的计划通知', '/webhook/v3/PAYSCORE.USER_CANCEL_SIGN_PLAN'],
+            ].map(transArrayItem),
+          }).concat({
             text: '停车服务',
             collapsed: true,
             items: [

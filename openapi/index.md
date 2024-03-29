@@ -178,6 +178,13 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | | [申请绑定支付分服务](/openapi/v3/payscore/partner/service-account-applications)
 | | [查询支付分绑定结果](/openapi/v3/payscore/partner/service-account-applications/{out_apply_no})
 | [申请对账单](/openapi/v3/payscore/merchant-bill) {colspan=2}
+| 支付分签约计划v3{rowspan=7}|[创建支付分计划](/openapi/v3/payscore/plan/payscore-plans) | [创建支付分计划](/openapi/v3/payscore/plan/partner/payscore-plans)
+| [查询支付分计划](/openapi/v3/payscore/plan/payscore-plans/merchant-plan-no/{merchant_plan_no}) | [查询支付分计划](/openapi/v3/payscore/plan/partner/payscore-plans/merchant-plan-no/{merchant_plan_no})
+| [停止支付分计划](/openapi/v3/payscore/plan/payscore-plans/merchant-plan-no/{merchant_plan_no}/stop) | [停止支付分计划](/openapi/v3/payscore/plan/partner/payscore-plans/merchant-plan-no/{merchant_plan_no}/stop)
+| [创建用户的签约计划](/openapi/v3/payscore/sign-plan/user-sign-plans) | [创建用户的签约计划](/openapi/v3/payscore/sign-plan/partner/user-sign-plans)
+| [查询用户的签约计划](/openapi/v3/payscore/sign-plan/user-sign-plans/merchant-sign-plan-no/{merchant_sign_plan_no}) | [查询用户的签约计划](/openapi/v3/payscore/sign-plan/partner/user-sign-plans/merchant-sign-plan-no/{merchant_sign_plan_no})
+| [取消用户的签约计划](/openapi/v3/payscore/sign-plan/user-sign-plans/merchant-sign-plan-no/{merchant_sign_plan_no}/stop) | [取消用户的签约计划](/openapi/v3/payscore/sign-plan/partner/user-sign-plans/merchant-sign-plan-no/{merchant_sign_plan_no}/stop)
+| [创建用户签约计划的服务单](/openapi/v3/payscore/sign-plan/serviceorder) | [创建用户签约计划的服务单](/openapi/v3/payscore/sign-plan/partner/serviceorder)
 | 停车服务v3{rowspan=4} | [查询车牌服务开通信息](/openapi/v3/vehicle/parking/services/find) {colspan=2}
 | [创建停车入场](/openapi/v3/vehicle/parking/parkings) {colspan=2}
 | [扣费受理](/openapi/v3/vehicle/transactions/parking) {colspan=2}
