@@ -524,41 +524,104 @@ function openapiSidebar() {
           ].map(transArrayItem),
         },
         {
-          text: '商户进件',
+          text: '商户管理',
           collapsed: true,
           items: [
-            ['提交进件申请单', '/openapi/v3/applyment4sub/applyment/'],
-            ['查询进件状态(申请单号)', '/openapi/v3/applyment4sub/applyment/applyment_id/{applyment_id}'],
-            ['查询进件状态(业务申请编号)', '/openapi/v3/applyment4sub/applyment/business_code/{business_code}'],
-          ].map(transArrayItem),
+            {
+              text: '商户进件',
+              collapsed: true,
+              items: [
+                ['提交进件申请单', '/openapi/v3/applyment4sub/applyment/'],
+                ['查询进件状态(申请单号)', '/openapi/v3/applyment4sub/applyment/applyment_id/{applyment_id}'],
+                ['查询进件状态(业务单号)', '/openapi/v3/applyment4sub/applyment/business_code/{business_code}'],
+              ].map(transArrayItem),
+            },
+            {
+              text: '特约商户结算账户',
+              collapsed: true,
+              items: [
+                ['查询结算账户', '/openapi/v3/apply4sub/sub_merchants/{sub_mchid}/settlement'],
+                ['修改结算账户', '/openapi/v3/apply4sub/sub_merchants/{sub_mchid}/modify-settlement'],
+                ['查询结算账户修改状态', '/openapi/v3/apply4sub/sub_merchants/{sub_mchid}/application/{application_no}'],
+              ].map(transArrayItem),
+            },
+            {
+              text: '确认商户开户意愿',
+              collapsed: true,
+              items: [
+                ['查询商户确认状态', '/openapi/v3/apply4subject/applyment/merchants/{sub_mchid}/state'],
+                ['提交商户申请单', '/openapi/v3/apply4subject/applyment#post'],
+                ['查询申请单审核结果', '/openapi/v3/apply4subject/applyment#get'],
+                ['撤销申请单(申请单编号)', '/openapi/v3/apply4subject/applyment/{applyment_id}/cancel'],
+                ['撤销申请单(业务申请编号)', '/openapi/v3/apply4subject/applyment/{business_code}/cancel'],
+              ].map(transArrayItem),
+            },
+            {
+              text: '不活跃商户身份核实',
+              collapsed: true,
+              items: [
+                ['发起不活跃商户身份核实', '/openapi/v3/compliance/inactive-merchant-identity-verification/merchants'],
+                ['查询商户身份核实结果', '/openapi/v3/compliance/inactive-merchant-identity-verification/merchants/{sub_mchid}/verifications/{verification_id}'],
+              ].map(transArrayItem),
+            },
+            ...[
+              ['商户图片文件上传', '/openapi/v3/merchant/media/upload'],
+              ['商户视频文件上传', '/openapi/v3/merchant/media/video_upload'],
+            ].map(transArrayItem),
+            {
+              text: '商户风险管理',
+              collapsed: true,
+              items: [
+                ['维护接收违规通知的URL', '/openapi/v3/merchant-risk-manage/violation-notifications'],
+                ['上报订单关联信息', '/openapi/v3/merchant-risk-manage/report-trade-union-information'],
+                ['查询风险信息', '/openapi/v3/merchant-risk-manage/trade-risk-information'],
+                ['处置结果回传', '/openapi/v3/merchant-risk-manage/trade-risk-result'],
+              ].map(transArrayItem),
+            },
+            ...[
+              ['查询省份列表', '/openapi/v3/capital/capitallhh/areas/provinces'],
+              ['查询城市列表', '/openapi/v3/capital/capitallhh/areas/provinces/{province_code}/cities'],
+              ['查询支行列表', '/openapi/v3/capital/capitallhh/banks/{bank_alias_code}/branches'],
+              ['查询支持对公业务的银行列表', '/openapi/v3/capital/capitallhh/banks/corporate-banking'],
+              ['查询支持个人业务的银行列表', '/openapi/v3/capital/capitallhh/banks/personal-banking'],
+              ['获取对私银行卡号开户银行', '/openapi/v3/capital/capitallhh/banks/search-banks-by-bank-account'],
+            ].map(transArrayItem),
+          ],
         },
         {
-          text: '结算账户',
+          text: '消费者投诉',
           collapsed: true,
           items: [
-            ['查询结算账户', '/openapi/v3/apply4sub/sub_merchants/{sub_mchid}/settlement'],
-            ['修改结算账户', '/openapi/v3/apply4sub/sub_merchants/{sub_mchid}/modify-settlement'],
-            ['查询结算账户修改状态', '/openapi/v3/apply4sub/sub_merchants/{sub_mchid}/application/{application_no}'],
-          ].map(transArrayItem),
-        },
-        {
-          text: '确认开户意愿',
-          collapsed: true,
-          items: [
-            ['查询商户确认状态', '/openapi/v3/apply4subject/applyment/merchants/{sub_mchid}/state'],
-            ['提交商户申请单', '/openapi/v3/apply4subject/applyment#post'],
-            ['查询申请单审核结果', '/openapi/v3/apply4subject/applyment#get'],
-            ['撤销申请单(申请单编号)', '/openapi/v3/apply4subject/applyment/{applyment_id}/cancel'],
-            ['撤销申请单(业务申请编号)', '/openapi/v3/apply4subject/applyment/{business_code}/cancel'],
-          ].map(transArrayItem),
-        },
-        {
-          text: '文件上传',
-          collapsed: true,
-          items: [
-            ['商户图片文件上传', '/openapi/v3/merchant/media/upload'],
-            ['商户视频文件上传', '/openapi/v3/merchant/media/video_upload'],
-          ].map(transArrayItem),
+            transArrayItem(
+              [' 维护接收投诉通知的URL', '/openapi/v3/merchant-service/complaint-notifications']
+            ),
+            {
+              text: ' 2.0',
+              collapsed: true,
+              items: [
+                ['查询投诉单列表', '/openapi/v3/merchant-service/complaints-v2'],
+                ['查询投诉单详情', '/openapi/v3/merchant-service/complaints-v2/{complaint_id}'],
+                ['查询投诉单协商历史', '/openapi/v3/merchant-service/complaints-v2/{complaint_id}/negotiation-historys'],
+                ['回复用户', '/openapi/v3/merchant-service/complaints-v2/{complaint_id}/response'],
+                ['反馈处理完成', '/openapi/v3/merchant-service/complaints-v2/{complaint_id}/complete'],
+                ['更新退款审批结果', '/openapi/v3/merchant-service/complaints-v2/{complaint_id}/update-refund-progress'],
+              ].map(transArrayItem),
+            },
+            {
+              text: ' 1.0',
+              collapsed: true,
+              items: [
+                ['查询投诉信息列表', '/openapi/v3/merchant-service/complaints'],
+                ['查询投诉信息详情', '/openapi/v3/merchant-service/complaints/{transaction_id}'],
+                ['查询投诉单协商历史', '/openapi/v3/merchant-service/complaints/{transaction_id}/negotiation-historys'],
+                ['商户反馈', '/openapi/v3/merchant-service/feedbacks'],
+              ].map(transArrayItem),
+            },
+            ...[
+              ['上传商户反馈图片文件', '/openapi/v3/merchant-service/images/upload'],
+              ['投诉单详情图片文件下载', '/openapi/v3/merchant-service/images/{media_id}'],
+            ].map(transArrayItem),
+          ],
         },
         {
           text: '微信支付分',
@@ -675,51 +738,6 @@ function openapiSidebar() {
               ].map(transArrayItem),
             }
           ],
-        },
-        {
-          text: '消费者投诉',
-          collapsed: true,
-          items: [
-            transArrayItem(
-              [' 维护接收投诉通知的URL', '/openapi/v3/merchant-service/complaint-notifications']
-            ),
-            {
-              text: ' 2.0',
-              collapsed: true,
-              items: [
-                ['查询投诉单列表', '/openapi/v3/merchant-service/complaints-v2'],
-                ['查询投诉单详情', '/openapi/v3/merchant-service/complaints-v2/{complaint_id}'],
-                ['查询投诉单协商历史', '/openapi/v3/merchant-service/complaints-v2/{complaint_id}/negotiation-historys'],
-                ['回复用户', '/openapi/v3/merchant-service/complaints-v2/{complaint_id}/response'],
-                ['反馈处理完成', '/openapi/v3/merchant-service/complaints-v2/{complaint_id}/complete'],
-                ['更新退款审批结果', '/openapi/v3/merchant-service/complaints-v2/{complaint_id}/update-refund-progress'],
-              ].map(transArrayItem),
-            },
-            {
-              text: ' 1.0',
-              collapsed: true,
-              items: [
-                ['查询投诉信息列表', '/openapi/v3/merchant-service/complaints'],
-                ['查询投诉信息详情', '/openapi/v3/merchant-service/complaints/{transaction_id}'],
-                ['查询投诉单协商历史', '/openapi/v3/merchant-service/complaints/{transaction_id}/negotiation-historys'],
-                ['商户反馈', '/openapi/v3/merchant-service/feedbacks'],
-              ].map(transArrayItem),
-            },
-            ...[
-              ['上传商户反馈图片文件', '/openapi/v3/merchant-service/images/upload'],
-              ['投诉单详情图片文件下载', '/openapi/v3/merchant-service/images/{media_id}'],
-            ].map(transArrayItem),
-          ],
-        },
-        {
-          text: '商户风险管理',
-          collapsed: true,
-          items: [
-            ['维护接收违规通知的URL', '/openapi/v3/merchant-risk-manage/violation-notifications'],
-            ['上报订单关联信息', '/openapi/v3/merchant-risk-manage/report-trade-union-information'],
-            ['查询风险信息', '/openapi/v3/merchant-risk-manage/trade-risk-information'],
-            ['处置结果回传', '/openapi/v3/merchant-risk-manage/trade-risk-result'],
-          ].map(transArrayItem),
         },
         transArrayItem(
           ['获取平台证书列表', '/openapi/v3/certificates'],

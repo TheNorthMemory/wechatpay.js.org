@@ -158,6 +158,37 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | | [撤销申请单(业务申请编号)](/openapi/v3/apply4subject/applyment/{business_code}/cancel)
 | 文件上传v3{rowspan=2} | &nbsp; | [商户图片文件上传](/openapi/v3/merchant/media/upload)
 | | [商户视频文件上传](/openapi/v3/merchant/media/video_upload)
+| 商户风险管理v3{rowspan=7} | [创建接收违规通知的URL](/openapi/v3/merchant-risk-manage/violation-notifications#post) {colspan=2}
+| [查询接收违规通知的URL](/openapi/v3/merchant-risk-manage/violation-notifications#get) {colspan=2}
+| [修改接收违规通知的URL](/openapi/v3/merchant-risk-manage/violation-notifications#put) {colspan=2}
+| [删除接收违规通知的URL](/openapi/v3/merchant-risk-manage/violation-notifications#delete) {colspan=2}
+| [上报订单关联信息](/openapi/v3/merchant-risk-manage/report-trade-union-information) {colspan=2}
+| [处置结果回传](/openapi/v3/merchant-risk-manage/trade-risk-result) {colspan=2}
+| [查询风险信息](/openapi/v3/merchant-risk-manage/trade-risk-information) {colspan=2}
+| 商户身份核实v3{rowspan=2} | &nbsp; | [发起不活跃商户身份核实](/openapi/v3/compliance/inactive-merchant-identity-verification/merchants)
+| &nbsp; | [查询不活跃商户身份核实结果](/openapi/v3/compliance/inactive-merchant-identity-verification/merchants/{sub_mchid}/verifications/{verification_id})
+| 银行组件v3{rowspan=6} | &nbsp; | [查询省份列表](/openapi/v3/capital/capitallhh/areas/provinces)
+| &nbsp; | [查询城市列表](/openapi/v3/capital/capitallhh/areas/provinces/{province_code}/cities)
+| &nbsp; | [查询支行列表](/openapi/v3/capital/capitallhh/banks/{bank_alias_code}/branches)
+| &nbsp; | [查询支持对公业务的银行列表](/openapi/v3/capital/capitallhh/banks/corporate-banking)
+| &nbsp; | [查询支持个人业务的银行列表](/openapi/v3/capital/capitallhh/banks/personal-banking)
+| &nbsp; | [获取对私银行卡号开户银行](/openapi/v3/capital/capitallhh/banks/search-banks-by-bank-account)
+| 消费者投诉v3{rowspan=16} | [创建投诉通知回调](/openapi/v3/merchant-service/complaint-notifications#post) {colspan=2}
+| [查询投诉通知回调](/openapi/v3/merchant-service/complaint-notifications#get) {colspan=2}
+| [修改投诉通知回调](/openapi/v3/merchant-service/complaint-notifications#put) {colspan=2}
+| [删除投诉通知回调](/openapi/v3/merchant-service/complaint-notifications#delete) {colspan=2}
+| [查询投诉单列表](/openapi/v3/merchant-service/complaints-v2) {colspan=2}
+| [查询投诉单详情](/openapi/v3/merchant-service/complaints-v2/{complaint_id}) {colspan=2}
+| [查询投诉单协商历史](/openapi/v3/merchant-service/complaints-v2/{complaint_id}/negotiation-historys) {colspan=2}
+| [回复用户](/openapi/v3/merchant-service/complaints-v2/{complaint_id}/response) {colspan=2}
+| [反馈处理完成](/openapi/v3/merchant-service/complaints-v2/{complaint_id}/complete) {colspan=2}
+| [更新退款审批结果](/openapi/v3/merchant-service/complaints-v2/{complaint_id}/update-refund-progress) {colspan=2}
+| [上传商户反馈图片文件](/openapi/v3/merchant-service/images/upload) {colspan=2}
+| [投诉单详情图片文件下载](/openapi/v3/merchant-service/images/{media_id}) {colspan=2}
+| [~~查询投诉信息列表~~](/openapi/v3/merchant-service/complaints):thumbsdown: {colspan=2}
+| [~~查询投诉详情详情~~](/openapi/v3/merchant-service/complaints/{transaction_id}):thumbsdown: {colspan=2}
+| [~~查询投诉单协商历史~~](/openapi/v3/merchant-service/complaints/{transaction_id}/negotiation-historys):thumbsdown: {colspan=2}
+| [~~商户反馈~~](/openapi/v3/merchant-service/feedbacks):thumbsdown: {colspan=2}
 | 微信支付分v3{rowspan=20} | [创建支付分订单](/openapi/v3/payscore/serviceorder#post) | [创建支付分订单](/openapi/v3/payscore/partner/serviceorder#post)
 | [查询支付分订单](/openapi/v3/payscore/serviceorder#get) | [查询支付分订单](/openapi/v3/payscore/partner/serviceorder#get)
 | [取消支付分订单](/openapi/v3/payscore/serviceorder/{out_order_no}/cancel) | | [取消支付分订单](/openapi/v3/payscore/partner/serviceorder/{out_order_no}/cancel)
@@ -189,29 +220,6 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | [创建停车入场](/openapi/v3/vehicle/parking/parkings) {colspan=2}
 | [扣费受理](/openapi/v3/vehicle/transactions/parking) {colspan=2}
 | [查询订单](/openapi/v3/vehicle/transactions/out-trade-no/{out_trade_no}) {colspan=2}
-| 消费者投诉v3{rowspan=16} | [创建投诉通知回调](/openapi/v3/merchant-service/complaint-notifications#post) {colspan=2}
-| [查询投诉通知回调](/openapi/v3/merchant-service/complaint-notifications#get) {colspan=2}
-| [修改投诉通知回调](/openapi/v3/merchant-service/complaint-notifications#put) {colspan=2}
-| [删除投诉通知回调](/openapi/v3/merchant-service/complaint-notifications#delete) {colspan=2}
-| [查询投诉单列表](/openapi/v3/merchant-service/complaints-v2) {colspan=2}
-| [查询投诉单详情](/openapi/v3/merchant-service/complaints-v2/{complaint_id}) {colspan=2}
-| [查询投诉单协商历史](/openapi/v3/merchant-service/complaints-v2/{complaint_id}/negotiation-historys) {colspan=2}
-| [回复用户](/openapi/v3/merchant-service/complaints-v2/{complaint_id}/response) {colspan=2}
-| [反馈处理完成](/openapi/v3/merchant-service/complaints-v2/{complaint_id}/complete) {colspan=2}
-| [更新退款审批结果](/openapi/v3/merchant-service/complaints-v2/{complaint_id}/update-refund-progress) {colspan=2}
-| [上传商户反馈图片文件](/openapi/v3/merchant-service/images/upload) {colspan=2}
-| [投诉单详情图片文件下载](/openapi/v3/merchant-service/images/{media_id}) {colspan=2}
-| [~~查询投诉信息列表~~](/openapi/v3/merchant-service/complaints):thumbsdown: {colspan=2}
-| [~~查询投诉详情详情~~](/openapi/v3/merchant-service/complaints/{transaction_id}):thumbsdown: {colspan=2}
-| [~~查询投诉单协商历史~~](/openapi/v3/merchant-service/complaints/{transaction_id}/negotiation-historys):thumbsdown: {colspan=2}
-| [~~商户反馈~~](/openapi/v3/merchant-service/feedbacks):thumbsdown: {colspan=2}
-| 商户风险管理v3{rowspan=7} | [创建接收违规通知的URL](/openapi/v3/merchant-risk-manage/violation-notifications#post) {colspan=2}
-| [查询接收违规通知的URL](/openapi/v3/merchant-risk-manage/violation-notifications#get) {colspan=2}
-| [修改接收违规通知的URL](/openapi/v3/merchant-risk-manage/violation-notifications#put) {colspan=2}
-| [删除接收违规通知的URL](/openapi/v3/merchant-risk-manage/violation-notifications#delete) {colspan=2}
-| [上报订单关联信息](/openapi/v3/merchant-risk-manage/report-trade-union-information) {colspan=2}
-| [处置结果回传](/openapi/v3/merchant-risk-manage/trade-risk-result) {colspan=2}
-| [查询风险信息](/openapi/v3/merchant-risk-manage/trade-risk-information) {colspan=2}
 | 平台证书v3{rowspan=1} | [获取平台证书列表](/openapi/v3/certificates) {colspan=2}
 
 {.vp-table}
