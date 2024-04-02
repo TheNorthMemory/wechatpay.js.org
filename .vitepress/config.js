@@ -736,7 +736,21 @@ function openapiSidebar() {
                 ['扣费受理', '/openapi/v3/vehicle/transactions/parking'],
                 ['查询订单', '/openapi/v3/vehicle/transactions/out-trade-no/{out_trade_no}'],
               ].map(transArrayItem),
-            }
+            },
+            {
+              text: '校园轻松付',
+              collapsed: true,
+              items: [
+                ['查询用户签约列表', '/openapi/v3/eduschoolpay/users/{openid}/contracts'],
+                ['提交预签约', '/openapi/v3/eduschoolpay/contracts/presign'],
+                ['商户主动解约', '/openapi/v3/eduschoolpay/contracts/{contract_id}/terminate'],
+                ['通过协议号查询签约信息', '/openapi/v3/eduschoolpay/contracts/{contract_id}'],
+                ['使用签约协议号发起扣款', '/openapi/v3/eduschoolpay/transactions'],
+                ['通过商户订单号查单', '/openapi/v3/eduschoolpay/transactions/out-trade-no/{out_trade_no}'],
+                ['通过微信支付订单号查单', '/openapi/v3/eduschoolpay/transactions/id/{transaction_id}'],
+                ['查询用户欠款状态', '/openapi/v3/eduschoolpay/users/{openid}/debt-state'],
+              ].map(transArrayItem),
+            },
           ],
         },
         transArrayItem(
@@ -825,7 +839,18 @@ function webhookSidebar() {
               ['停车入场状态变更通知', '/webhook/v3/VEHICLE.ENTRANCE_STATE_CHANGE'],
               ['订单支付成功通知', '/webhook/v3/TRANSACTION.SUCCESS#PARKING'],
               ['订单支付失败通知', '/webhook/v3/TRANSACTION.FAIL'],
-              ['用户还款通知', '/webhook/v3/TRANSACTION.PAY_BACK'],
+              ['用户还款通知', '/webhook/v3/TRANSACTION.PAY_BACK#PARKING'],
+            ].map(transArrayItem),
+          }).concat({
+            text: '校园轻松付',
+            collapsed: true,
+            items: [
+              ['用户签约成功通知', '/webhook/v3/PAYSCORE.USER_OPEN_SERVICE#EDUSCHOOLPAY'],
+              ['用户解约成功通知', '/webhook/v3/PAYSCORE.USER_CLOSE_SERVICE#EDUSCHOOLPAY'],
+              ['用户订单支付成功通知', '/webhook/v3/TRANSACTION.INDUSTRY_SUCCESS'],
+              ['用户订单支付失败通知', '/webhook/v3/TRANSACTION.INDUSTRY_FAILED'],
+              ['用户欠款状态变化通知', '/webhook/v3/EDU_SCHOOL_PAY.USER_DEBT_STATE_UPDATE'],
+              ['用户还款通知', '/webhook/v3/TRANSACTION.PAY_BACK#EDUSCHOOLPAY'],
             ].map(transArrayItem),
           }),
         },

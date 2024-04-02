@@ -220,6 +220,14 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | [创建停车入场](/openapi/v3/vehicle/parking/parkings) {colspan=2}
 | [扣费受理](/openapi/v3/vehicle/transactions/parking) {colspan=2}
 | [查询订单](/openapi/v3/vehicle/transactions/out-trade-no/{out_trade_no}) {colspan=2}
+|校园轻松付v3{rowspan=8} | &nbsp; | [查询用户签约列表](/openapi/v3/eduschoolpay/users/{openid}/contracts)
+| | [预签约](/openapi/v3/eduschoolpay/contracts/presign)
+| | [商户主动解约](/openapi/v3/eduschoolpay/contracts/{contract_id}/terminate)
+| | [通过协议号查询签约信息](/openapi/v3/eduschoolpay/contracts/{contract_id})
+| | [使用签约协议号发起扣款](/openapi/v3/eduschoolpay/transactions)
+| | [通过商户订单号查单](/openapi/v3/eduschoolpay/transactions/out-trade-no/{out_trade_no})
+| | [通过微信支付订单号查单](/openapi/v3/eduschoolpay/transactions/id/{transaction_id})
+| | [查询用户欠款状态](/openapi/v3/eduschoolpay/users/{openid}/debt-state)
 | 平台证书v3{rowspan=1} | [获取平台证书列表](/openapi/v3/certificates) {colspan=2}
 
 {.vp-table}

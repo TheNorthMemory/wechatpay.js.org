@@ -5,7 +5,7 @@ description: 微信支付分通过解除授权服务通知接口将用户解除�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [授权/解除授权服务回调通知](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter6_2_23.shtml)
+{{ $frontmatter.description }} [授权/解除授权服务回调通知](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter6_2_23.shtml) [校园轻松付签约结果通知](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter5_3_10.shtml)
 
 ## 请求头(headers) {#req.headers}
 
@@ -51,6 +51,8 @@ Request-ID: 08F78BB5AF0610D302189F99DD5C20BA56F89845-0
 }
 ```
 :::
+
+1. 校园轻松付会返回(**contract_id**、**plan_id**、**contract_status**、**out_contract_code**)字段 {#EDUSCHOOLPAY}
 
 ## 处理程序 {#app}
 

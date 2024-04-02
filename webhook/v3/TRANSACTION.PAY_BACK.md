@@ -5,7 +5,7 @@ description: 商户请求微信支付分停车服务扣费受理接口，会完�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [停车服务扣费受理通知](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter8_8_6.shtml) [服务商停车服务扣费受理通知](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter8_8_6.shtml)
+{{ $frontmatter.description }} [停车服务扣费受理通知](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter8_8_6.shtml) [服务商停车服务扣费受理通知](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter8_8_6.shtml) [校园轻松付订单还款通知](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter5_3_12.shtml)
 
 ## 请求头(headers) {#req.headers}
 
@@ -88,6 +88,10 @@ Request-ID: 08F78BB5AF0610D302189F99DD5C20BA56F89845-0
 ```
 :::
 
+1. 停车服务会返回(**trade_scene=PARKING**)字段 {#PARKING}
+
+1. 校园轻松付交易类型，订单已受理，但未完成扣款时不返回(**trade_type=AUTH**)字段 {#EDUSCHOOLPAY}
+
 ## 处理程序 {#app}
 
 ```js twoslash
@@ -103,7 +107,7 @@ Request-ID: 08F78BB5AF0610D302189F99DD5C20BA56F89845-0
  * @prop {string} id
  * @prop {string} create_time
  * @prop {string} resource_type
- * @prop {'TRANSACTION.FAIL'} event_type
+ * @prop {'TRANSACTION.PAY_BACK'} event_type
  * @prop {{algorithm: string, ciphertext: string, nonce: string, associated_data: string}} resource
  * @typedef PlainObject
  * @prop {string} transaction_id
@@ -113,11 +117,12 @@ Request-ID: 08F78BB5AF0610D302189F99DD5C20BA56F89845-0
  * @prop {string} bank_type
  * @prop {string} promotion_detail
  * @prop {string} success_time
+ * @prop {'PARKING'} trade_scene
  * @prop {{openid:string}} payer
  * @prop {string} out_trade_no
  * @prop {string} appid
  * @prop {string} trade_state_desc
- * @prop {string} trade_type
+ * @prop {'AUTH'=} trade_type
  * @prop {string} attach
  * @prop {string} scene_info
  */
@@ -195,6 +200,7 @@ const {
   appid,
   trade_state_desc,
   trade_type,
+  trade_scene,
   attach,
 } = JSON.parse(Aes.AesGcm.decrypt(nonce, apiv3Key, ciphertext, associated_data))
 

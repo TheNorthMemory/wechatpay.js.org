@@ -32,7 +32,13 @@ description: 后台通知交互时，如果微信收到商户的应答不符合�
 | JSON {rowspan=4} | [停车入场状态变更通知](/webhook/v3/VEHICLE.ENTRANCE_STATE_CHANGE) {colspan=2}
 | [停车服务订单支付成功通知](/webhook/v3/TRANSACTION.SUCCESS#PARKING) {colspan=2}
 | [停车服务订单支付失败通知](/webhook/v3/TRANSACTION.FAIL) {colspan=2}
-| [停车服务用户还款通知](/webhook/v3/TRANSACTION.PAY_BACK) {colspan=2}
+| [停车服务用户还款通知](/webhook/v3/TRANSACTION.PAY_BACK#PARKING) {colspan=2}
+| JSON {rowspan=6} | &nbsp; | [校园轻松付用户签约成功通知](/webhook/v3/PAYSCORE.USER_OPEN_SERVICE#EDUSCHOOLPAY)
+| | [校园轻松付用户解约成功通知](/webhook/v3/PAYSCORE.USER_CLOSE_SERVICE#EDUSCHOOLPAY)
+| | [校园轻松付订单支付成功通知](/webhook/v3/TRANSACTION.INDUSTRY_SUCCESS)
+| | [校园轻松付订单支付失败通知](/webhook/v3/TRANSACTION.INDUSTRY_FAILED)
+| | [校园轻松付用户欠款状态变化通知](/webhook/v3/EDU_SCHOOL_PAY.USER_DEBT_STATE_UPDATE)
+| | [校园轻松付用户还款通知](/webhook/v3/TRANSACTION.PAY_BACK#EDUSCHOOLPAY)
 | JSON {rowspan=3} | &nbsp; | [处罚二级商户通知](/webhook/v3/VIOLATION.PUNISH)
 | | [拦截二级商户通知](/webhook/v3/VIOLATION.INTERCEPT)
 | | [二级商户申诉通知](/webhook/v3/VIOLATION.APPEAL)
