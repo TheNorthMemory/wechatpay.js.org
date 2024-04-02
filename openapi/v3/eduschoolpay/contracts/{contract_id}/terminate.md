@@ -1,6 +1,6 @@
 ---
 title: 商户主动解约
-description: 商户通过调用该接口可主动解除与用户的签约关系。
+description: 商户通过调用该接口可主动解除与用户的签约关系。注意：解约后商户和用户依旧可以查询到已经解除的合约。
 ---
 
 # {{ $frontmatter.title }} {#post}
@@ -13,10 +13,10 @@ description: 商户通过调用该接口可主动解除与用户的签约关系�
 import { AxiosRequestConfig, AxiosPromise } from 'axios'
 namespace WeChatPay.OpenAPI.V3.Eduschoolpay.Contracts._contract_id_.Terminate.PostHttpMethod {
   export interface JsonDataRequest {
-    contract_id: string
   }
   export interface RequestConfig extends AxiosRequestConfig {
     data?: JsonDataRequest
+    contract_id: string
   }
   export interface WellformedResponse {
   }
@@ -65,17 +65,9 @@ export var wxpay: Wechatpay
 // @filename: business.js
 import { wxpay } from './virtual'
 // ---cut---
-wxpay.v3.eduschoolpay.contracts._contract_id_.terminate.post({
+wxpay.v3.eduschoolpay.contracts._contract_id_.terminate.post({}, {
 //                                                      ^^^^
   contract_id,
 })
-.then(
-  ({ // [!code hl:5]
-    data: {
-
-    },
-  }) => ({
-
-  })
-)
+.then(({ status, }) => status === 204) // [!code hl]
 ```
