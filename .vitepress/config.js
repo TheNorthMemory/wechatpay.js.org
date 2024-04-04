@@ -751,6 +751,27 @@ function openapiSidebar() {
                 ['查询用户欠款状态', '/openapi/v3/eduschoolpay/users/{openid}/debt-state'],
               ].map(transArrayItem),
             },
+            {
+              text: '智慧零售',
+              collapsed: true,
+              items: [
+                ['创建订单', '/openapi/v3/payscore/smartretail-orders#post'],
+                ['查询订单', '/openapi/v3/payscore/smartretail-orders#get'],
+                ['撤销订单', '/openapi/v3/payscore/smartretail-orders/{out_order_no}/cancel'],
+                ['完结订单', '/openapi/v3/payscore/smartretail-orders/{out_order_no}/complete'],
+              ].map(transArrayItem),
+            },
+            {
+              text: '先享后付',
+              collapsed: true,
+              items: [
+                ['创建订单', '/openapi/v3/payscore/payafter-orders#post'],
+                ['查询订单', '/openapi/v3/payscore/payafter-orders#get'],
+                ['撤销订单', '/openapi/v3/payscore/payafter-orders/{out_order_no}/cancel'],
+                ['完结订单', '/openapi/v3/payscore/payafter-orders/{out_order_no}/complete'],
+                ['同步订单', '/openapi/v3/payscore/smartretail-orders/{out_order_no}/sync'],
+              ].map(transArrayItem),
+            },
           ],
         },
         transArrayItem(
@@ -852,7 +873,9 @@ function webhookSidebar() {
               ['用户欠款状态变化通知', '/webhook/v3/EDU_SCHOOL_PAY.USER_DEBT_STATE_UPDATE'],
               ['用户还款通知', '/webhook/v3/TRANSACTION.PAY_BACK#EDUSCHOOLPAY'],
             ].map(transArrayItem),
-          }),
+          }).concat(transArrayItem(
+            ['智慧零售/先享后付订单确认', '/webhook/v3/PAYSCORE.USER_ACCEPTED']
+          )),
         },
         {
           text: '违规',

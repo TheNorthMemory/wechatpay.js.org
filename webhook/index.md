@@ -39,6 +39,7 @@ description: 后台通知交互时，如果微信收到商户的应答不符合�
 | | [校园轻松付订单支付失败通知](/webhook/v3/TRANSACTION.INDUSTRY_FAILED)
 | | [校园轻松付用户欠款状态变化通知](/webhook/v3/EDU_SCHOOL_PAY.USER_DEBT_STATE_UPDATE)
 | | [校园轻松付用户还款通知](/webhook/v3/TRANSACTION.PAY_BACK#EDUSCHOOLPAY)
+| JSON {rowspan=1} | [智慧零售/先享后付确认订单通知](/webhook/v3/PAYSCORE.USER_ACCEPTED) | &nbsp;
 | JSON {rowspan=3} | &nbsp; | [处罚二级商户通知](/webhook/v3/VIOLATION.PUNISH)
 | | [拦截二级商户通知](/webhook/v3/VIOLATION.INTERCEPT)
 | | [二级商户申诉通知](/webhook/v3/VIOLATION.APPEAL)

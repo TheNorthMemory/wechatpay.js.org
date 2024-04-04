@@ -166,13 +166,13 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | [处置结果回传](/openapi/v3/merchant-risk-manage/trade-risk-result) {colspan=2}
 | [查询风险信息](/openapi/v3/merchant-risk-manage/trade-risk-information) {colspan=2}
 | 商户身份核实v3{rowspan=2} | &nbsp; | [发起不活跃商户身份核实](/openapi/v3/compliance/inactive-merchant-identity-verification/merchants)
-| &nbsp; | [查询不活跃商户身份核实结果](/openapi/v3/compliance/inactive-merchant-identity-verification/merchants/{sub_mchid}/verifications/{verification_id})
+| | [查询不活跃商户身份核实结果](/openapi/v3/compliance/inactive-merchant-identity-verification/merchants/{sub_mchid}/verifications/{verification_id})
 | 银行组件v3{rowspan=6} | &nbsp; | [查询省份列表](/openapi/v3/capital/capitallhh/areas/provinces)
-| &nbsp; | [查询城市列表](/openapi/v3/capital/capitallhh/areas/provinces/{province_code}/cities)
-| &nbsp; | [查询支行列表](/openapi/v3/capital/capitallhh/banks/{bank_alias_code}/branches)
-| &nbsp; | [查询支持对公业务的银行列表](/openapi/v3/capital/capitallhh/banks/corporate-banking)
-| &nbsp; | [查询支持个人业务的银行列表](/openapi/v3/capital/capitallhh/banks/personal-banking)
-| &nbsp; | [获取对私银行卡号开户银行](/openapi/v3/capital/capitallhh/banks/search-banks-by-bank-account)
+| | [查询城市列表](/openapi/v3/capital/capitallhh/areas/provinces/{province_code}/cities)
+| | [查询支行列表](/openapi/v3/capital/capitallhh/banks/{bank_alias_code}/branches)
+| | [查询支持对公业务的银行列表](/openapi/v3/capital/capitallhh/banks/corporate-banking)
+| | [查询支持个人业务的银行列表](/openapi/v3/capital/capitallhh/banks/personal-banking)
+| | [获取对私银行卡号开户银行](/openapi/v3/capital/capitallhh/banks/search-banks-by-bank-account)
 | 消费者投诉v3{rowspan=16} | [创建投诉通知回调](/openapi/v3/merchant-service/complaint-notifications#post) {colspan=2}
 | [查询投诉通知回调](/openapi/v3/merchant-service/complaint-notifications#get) {colspan=2}
 | [修改投诉通知回调](/openapi/v3/merchant-service/complaint-notifications#put) {colspan=2}
@@ -228,6 +228,15 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | | [通过商户订单号查单](/openapi/v3/eduschoolpay/transactions/out-trade-no/{out_trade_no})
 | | [通过微信支付订单号查单](/openapi/v3/eduschoolpay/transactions/id/{transaction_id})
 | | [查询用户欠款状态](/openapi/v3/eduschoolpay/users/{openid}/debt-state)
+| 智慧零售v3{rowspan=4} | [创建订单](/openapi/v3/payscore/smartretail-orders#post) | &nbsp;
+| [查询订单](/openapi/v3/payscore/smartretail-orders#get) | &nbsp;
+| [撤销订单](/openapi/v3/payscore/smartretail-orders/{out_order_no}/cancel) | &nbsp;
+| [完结订单](/openapi/v3/payscore/smartretail-orders/{out_order_no}/complete) | &nbsp;
+| 先享后付v3{rowspan=5} | [创建订单](/openapi/v3/payscore/payafter-orders#post) | &nbsp;
+| [查询订单](/openapi/v3/payscore/payafter-orders#get) | &nbsp;
+| [撤销订单](/openapi/v3/payscore/payafter-orders/{out_order_no}/cancel) | &nbsp;
+| [完结订单](/openapi/v3/payscore/payafter-orders/{out_order_no}/complete) | &nbsp;
+| [同步订单](/openapi/v3/payscore/payafter-orders/{out_order_no}/sync) | &nbsp;
 | 平台证书v3{rowspan=1} | [获取平台证书列表](/openapi/v3/certificates) {colspan=2}
 
 {.vp-table}
