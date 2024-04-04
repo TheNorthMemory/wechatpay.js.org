@@ -75,8 +75,8 @@ const stream = createReadStream(localFilePath)
 const media = new Multipart()
   .append('file', stream, basename(localFilePath))
   .append('meta', JSON.stringify({
-    filename: basename(localFilePath),
-    sha256: 'from upstream or local calculated',
+    file_name: basename(localFilePath),
+    file_digest: 'from upstream or local calculated',
   }))
 
 wxpay.v3.ecommerce.account.cancelApplications.media.post(media)
