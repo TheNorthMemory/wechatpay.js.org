@@ -48,6 +48,14 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | [用户状态查询](/openapi/v2/vehicle/pay/querystate) | [用户状态查询](/openapi/v2/vehicle/partnerpay/querystate)
 | [申请代扣](/openapi/v2/vehicle/pay/payapply) | [申请代扣](/openapi/v2/vehicle/partnerpay/payapply)
 | [查询订单](/openapi/v2/transit/queryorder) | [查询订单](/openapi/v2/transit/partnerpay/queryorder)
+| 免押租借v2{rowspan=5} | [创建租借订单](/openapi/v2/wxv/createrentbill) | &nbsp;
+| [查询租借订单](/openapi/v2/wxv/queryrentbill) | &nbsp;
+| [撤销租借订单](/openapi/v2/wxv/cancelbill) | &nbsp;
+| [完结租借订单](/openapi/v2/wxv/finishrentbill) | &nbsp;
+| [修改租借订单](/openapi/v2/wxv/changerentmoney) | &nbsp;
+| 免押速住v2{rowspan=3} | [创建速住订单](/openapi/v2/wxv/createhotelbill) | &nbsp;
+| [查询速住订单](/openapi/v2/wxv/queryhotelbill) | &nbsp;
+| [完结速住订单](/openapi/v2/wxv/finishhotelbill) | &nbsp;
 | 基础支付v3{rowspan=10} | [APP下单](/openapi/v3/pay/transactions/app) | [APP下单](/openapi/v3/pay/partner/transactions/app)
 | [H5下单](/openapi/v3/pay/transactions/h5) | [H5下单](/openapi/v3/pay/partner/transactions/h5)
 | [JSAPI下单](/openapi/v3/pay/transactions/jsapi) | [JSAPI下单](/openapi/v3/pay/partner/transactions/jsapi)

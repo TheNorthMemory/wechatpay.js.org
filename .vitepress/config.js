@@ -277,6 +277,26 @@ function openapiSidebar() {
             },
           ],
         },
+        {
+          text: '免压租借',
+          collapsed: true,
+          items: [
+            ['创建租借订单', '/openapi/v2/wxv/createrentbill'],
+            ['查询租借订单', '/openapi/v2/wxv/queryrentbill'],
+            ['撤销租借订单', '/openapi/v2/wxv/cancelbill'],
+            ['完结租借订单', '/openapi/v2/wxv/finishrentbill'],
+            ['修改租借订单', '/openapi/v2/wxv/changerentmoney'],
+          ].map(transArrayItem),
+        },
+        {
+          text: '免压速住',
+          collapsed: true,
+          items: [
+            ['创建速住订单', '/openapi/v2/wxv/createhotelbill'],
+            ['查询速住订单', '/openapi/v2/wxv/queryhotelbill'],
+            ['完结速住订单', '/openapi/v2/wxv/finishhotelbill'],
+          ].map(transArrayItem),
+        },
       ],
     },
     {
@@ -791,7 +811,16 @@ function webhookSidebar() {
         ['合单支付通知', '/webhook/v2/combined-transactions-success'],
         ['退款结果通知', '/webhook/v2/refund-processed'],
         ['车牌状态变更通知', '/webhook/v2/vehicle-state-changed-for-parking'],
-      ].map(transArrayItem),
+      ].map(transArrayItem).concat({
+        text: '免压租借/速住',
+        collapsed: true,
+        items: [
+          ['确认成功通知', '/webhook/v2/CHECK.SUCCESS'],
+          ['确认失败通知', '/webhook/v2/CHECK.FAIL'],
+          ['支付成功通知', '/webhook/v2/TRANSACTION.SUCCESS'],
+          ['支付失败通知', '/webhook/v2/TRANSACTION.FAIL'],
+        ].map(transArrayItem),
+      }),
     },
     {
       text: 'JSON格式报文',
