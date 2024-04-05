@@ -197,6 +197,14 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | [~~查询投诉详情详情~~](/openapi/v3/merchant-service/complaints/{transaction_id}):thumbsdown: {colspan=2}
 | [~~查询投诉单协商历史~~](/openapi/v3/merchant-service/complaints/{transaction_id}/negotiation-historys):thumbsdown: {colspan=2}
 | [~~商户反馈~~](/openapi/v3/merchant-service/feedbacks):thumbsdown: {colspan=2}
+| 教育续费通v3{rowspan=8} | [预签约](/openapi/v3/edu-papay/contracts/presign) {colspan=2}
+| [通过协议号查询签约](/openapi/v3/edu-papay/contracts/id/{contract_id}) {colspan=2}
+| [通过用户标识查询签约](/openapi/v3/edu-papay/user/{openid}/contracts) {colspan=2}
+| [商户主动发起解约](/openapi/v3/edu-papay/contracts/{contract_id}) {colspan=2}
+| [通过商户订单号查单](/openapi/v3/edu-papay/transactions/out-trade-no/{out_trade_no}) {colspan=2}
+| [通过微信订单号查单](/openapi/v3/edu-papay/transactions/id/{transaction_id}) {colspan=2}
+| [给用户发送扣款预通知](/openapi/v3/edu-papay/user-notifications/{contract_id}/send) {colspan=2}
+| [受理扣款](/openapi/v3/edu-papay/transactions) {colspan=2}
 | 微信支付分v3{rowspan=20} | [创建支付分订单](/openapi/v3/payscore/serviceorder#post) | [创建支付分订单](/openapi/v3/payscore/partner/serviceorder#post)
 | [查询支付分订单](/openapi/v3/payscore/serviceorder#get) | [查询支付分订单](/openapi/v3/payscore/partner/serviceorder#get)
 | [取消支付分订单](/openapi/v3/payscore/serviceorder/{out_order_no}/cancel) | | [取消支付分订单](/openapi/v3/payscore/partner/serviceorder/{out_order_no}/cancel)

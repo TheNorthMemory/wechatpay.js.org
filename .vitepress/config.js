@@ -644,6 +644,20 @@ function openapiSidebar() {
           ],
         },
         {
+          text: '教育续费通',
+          collapsed: true,
+          items: [
+            ['预签约', '/openapi/v3/edu-papay/contracts/presign'],
+            ['通过协议号查询签约', '/openapi/v3/edu-papay/contracts/id/{contract_id}'],
+            ['通过用户标识查询签约', '/openapi/v3/edu-papay/user/{openid}/contracts'],
+            ['商户主动发起解约', '/openapi/v3/edu-papay/contracts/{contract_id}'],
+            ['通过商户订单号查单', '/openapi/v3/edu-papay/transactions/out-trade-no/{out_trade_no}'],
+            ['通过微信订单号查单', '/openapi/v3/edu-papay/transactions/id/{transaction_id}'],
+            ['给用户发送扣款预通知', '/openapi/v3/edu-papay/user-notifications/{contract_id}/send'],
+            ['受理扣款', '/openapi/v3/edu-papay/transactions'],
+          ].map(transArrayItem),
+        },
+        {
           text: '微信支付分',
           collapsed: true,
           items: [
@@ -864,6 +878,14 @@ function webhookSidebar() {
           items: [
             ['产生新投诉通知', '/webhook/v3/COMPLAINT.CREATE'],
             ['投诉状态变化通知', '/webhook/v3/COMPLAINT.STATE_CHANGE'],
+          ].map(transArrayItem),
+        },
+        {
+          text: '教育续费通',
+          collapsed: true,
+          items: [
+            ['签约成功通知', '/webhook/v3/ENTRUST.SIGNING'],
+            ['解约成功通知', '/webhook/v3/ENTRUST.RELEASE'],
           ].map(transArrayItem),
         },
         {
