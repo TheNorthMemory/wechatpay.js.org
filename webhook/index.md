@@ -26,6 +26,8 @@ description: 后台通知交互时，如果微信收到商户的应答不符合�
 | [商家转账单据终态通知](/webhook/v3/MCHTRANSFER.BILL.FINISHED) | &nbsp;
 | JSON {rowspan=2} | [产生新投诉通知](/webhook/v3/COMPLAINT.CREATE) {colspan=2}
 | [投诉状态变化通知](/webhook/v3/COMPLAINT.STATE_CHANGE) {colspan=2}
+| JSON {rowspan=2} | [委托代扣签约成功通知](/webhook/v3/ENTRUST.SIGN) {colspan=2}
+| [委托代扣解约成功通知](/webhook/v3/ENTRUST.TERMINATE) {colspan=2}
 | JSON {rowspan=2} | [教育续费通签约成功通知](/webhook/v3/ENTRUST.SIGNING) {colspan=2}
 | [教育续费通解约成功通知](/webhook/v3/ENTRUST.RELEASE) {colspan=2}
 | JSON {rowspan=5} | [支付分服务用户授权成功通知](/webhook/v3/PAYSCORE.USER_OPEN_SERVICE) {colspan=2}

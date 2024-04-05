@@ -197,6 +197,16 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | [~~查询投诉详情详情~~](/openapi/v3/merchant-service/complaints/{transaction_id}):thumbsdown: {colspan=2}
 | [~~查询投诉单协商历史~~](/openapi/v3/merchant-service/complaints/{transaction_id}/negotiation-historys):thumbsdown: {colspan=2}
 | [~~商户反馈~~](/openapi/v3/merchant-service/feedbacks):thumbsdown: {colspan=2}
+| 委托代扣v3{rowspan=10} | [JSAPI场景预约扣费预签约](/openapi/v3/papay/scheduled-deduct-sign/contracts/pre-entrust-sign/jsapi) | [JSAPI场景预约扣费预签约](/openapi/v3/papay/scheduled-deduct-sign/partner/contracts/pre-entrust-sign/jsapi)
+| [App场景预约扣费预签约](/openapi/v3/papay/scheduled-deduct-sign/contracts/pre-entrust-sign/app) | [App场景预约扣费预签约](/openapi/v3/papay/scheduled-deduct-sign/partner/contracts/pre-entrust-sign/app)
+| [H5场景预约扣费预签约](/openapi/v3/papay/scheduled-deduct-sign/contracts/pre-entrust-sign/h5) | [H5场景预约扣费预签约](/openapi/v3/papay/scheduled-deduct-sign/partner/contracts/pre-entrust-sign/h5)
+| [小程序场景预约扣费预签约](/openapi/v3/papay/scheduled-deduct-sign/contracts/pre-entrust-sign/mini-program) | [小程序场景预约扣费预签约](/openapi/v3/papay/scheduled-deduct-sign/partner/contracts/pre-entrust-sign/mini-program)
+| [通过商户协议号查询签约协议](/openapi/v3/papay/sign/contracts/plan-id/{plan_id}/out-contract-code/{out_contract_code}) | [通过商户协议号查询签约协议](/openapi/v3/papay/sign/partner/contracts/plan-id/{plan_id}/out-contract-code/{out_contract_code})
+| [通过商户协议号解除签约协议](/openapi/v3/papay/sign/contracts/plan-id/{plan_id}/out-contract-code/{out_contract_code}/terminate) | [通过商户协议号解除签约协议](/openapi/v3/papay/sign/partner/contracts/plan-id/{plan_id}/out-contract-code/{out_contract_code}/terminate)
+| [预约扣费](/openapi/v3/papay/pay/schedules/contract-id/{contract_id}/schedule) | [预约扣费](/openapi/v3/papay/pay/partner/schedules/contract-id/{contract_id}/schedule)
+| [查询扣费预约](/openapi/v3/papay/pay/schedules/contract-id/{contract_id}) | [查询扣费预约](/openapi/v3/papay/pay/partner/schedules/contract-id/{contract_id})
+| [发送预扣费通知](/openapi/v3/papay/contracts/{contract_id}/notify) | [发送预扣费通知](/openapi/v3/partner-papay/contracts/{contract_id}/notify)
+| [受理扣款](/openapi/v3/papay/pay/transactions/apply) | [受理扣款](/openapi/v3/papay/pay/partner/transactions/apply)
 | 教育续费通v3{rowspan=8} | [预签约](/openapi/v3/edu-papay/contracts/presign) {colspan=2}
 | [通过协议号查询签约](/openapi/v3/edu-papay/contracts/id/{contract_id}) {colspan=2}
 | [通过用户标识查询签约](/openapi/v3/edu-papay/user/{openid}/contracts) {colspan=2}
