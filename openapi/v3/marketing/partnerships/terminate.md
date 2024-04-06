@@ -76,7 +76,7 @@ wxpay.v3.marketing.partnerships.terminate.post({
 //                                        ^^^^
   partner,
   authorized_data,
-})
+}, { headers })
 .then(
   ({ // [!code hl:7]
     data: {

@@ -5,7 +5,7 @@ description: 用户使用券后，微信会把相关核销券信息发送给商�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/cash-coupons/check-notice.html) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/payscore.php?chapter=17_9&index=8)
+{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/cash-coupons/check-notice.html) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/cash-coupons/check-notice.html)
 
 ## 请求头(headers) {#req.headers}
 
@@ -112,7 +112,7 @@ Request-ID: 08F78BB5AF0610D302189F99DD5C20BA56F89845-0
  * @prop {string} available_end_time
  * @prop {boolean} singleitem
  * @prop {{coupon_amount: number, transaction_minimum: number}} normal_coupon_information
- * @prop {{consume_time: string, consume_mchid: string, transaction_id: string}} consume_information
+ * @prop {{consume_time: string, consume_mchid: string, transaction_id: string, goods_detail?: {goods_id: string, quantity: number, price: number, discount_amount: number}[]}} consume_information
  */
 /** @type {string} 原始HTTP POST的文本 */
 var json;

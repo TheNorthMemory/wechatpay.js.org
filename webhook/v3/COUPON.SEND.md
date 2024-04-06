@@ -5,7 +5,7 @@ description: 领券完成后，微信会把相关领券结果和用户信息发�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/cash-coupons/check-notice.html) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/payscore.php?chapter=17_9&index=8)
+{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/cash-coupons/check-notice.html) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/merchant-exclusive-coupon/coupon/busicoupon-send.html)
 
 ## 请求头(headers) {#req.headers}
 
@@ -81,7 +81,7 @@ Request-ID: 08F78BB5AF0610D302189F99DD5C20BA56F89845-0
  * @prop {string} unionid
  * @prop {'BUSICOUPON_SEND_CHANNEL_MINIAPP' | 'BUSICOUPON_SEND_CHANNEL_API' | 'BUSICOUPON_SEND_CHANNEL_PAYGIFT' | 'BUSICOUPON_SEND_CHANNEL_H5' | 'BUSICOUPON_SEND_CHANNEL_FTOF' | 'BUSICOUPON_SEND_CHANNEL_MEMBERCARD_ACT' | 'BUSICOUPON_SEND_CHANNEL_HALL' | 'BUSICOUPON_SEND_CHANNEL_JSAPI' | 'BUSICOUPON_SEND_CHANNEL_MINI_APP_LIVE' | 'BUSICOUPON_SEND_CHANNEL_WECHAT_SEARCH' | 'BUSICOUPON_SEND_CHANNEL_PAY_HAS_DISCOUNT' | 'BUSICOUPON_SEND_CHANNEL_WECHAT_AD' | 'BUSICOUPON_SEND_CHANNEL_RIGHTS_PLATFORM' | 'BUSICOUPON_SEND_CHANNEL_RECEIVE_MONEY_GIFT' | 'BUSICOUPON_SEND_CHANNEL_MEMBER_PAY_RIGHT' | 'BUSICOUPON_SEND_CHANNEL_BUSI_SMART_RETAIL' | 'BUSICOUPON_SEND_CHANNEL_FINDER_LIVEROOM'} send_channel
  * @prop {string} send_merchant
- * @prop {{transaction_id: string, act_code: string}} attach_info
+ * @prop {{transaction_id: string, act_code: string, hall_code?: string, hall_belong_mch_id?: number, card_id?: string, activity_id?: string}} attach_info
  */
 /** @type {string} 原始HTTP POST的文本 */
 var json;
