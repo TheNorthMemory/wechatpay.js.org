@@ -100,6 +100,70 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | [申请资金账单](/openapi/v3/bill/fundflowbill) {colspan=2}
 | | [申请子商户资金账单](/openapi/v3/bill/sub-merchant-fundflowbill)
 | [下载账单文件](/openapi/v3/billdownload/file) {colspan=2}
+| 代金券v3{rowspan=16} | [设置消息通知地址](/openapi/v3/marketing/favor/callbacks#post) {colspan=2}
+| [获取已设置的消息通知地址](/openapi/v3/marketing/favor/callbacks#get) {colspan=2}
+| [创建代金券批次](/openapi/v3/marketing/favor/coupon-stocks) {colspan=2}
+| [条件查询批次列表](/openapi/v3/marketing/favor/stocks) {colspan=2}
+| [查询批次详情](/openapi/v3/marketing/favor/stocks/{stock_id}) {colspan=2}
+| [查询代金券可用单品](/openapi/v3/marketing/favor/stocks/{stock_id}/items) {colspan=2}
+| [查询代金券可用商户](/openapi/v3/marketing/favor/stocks/{stock_id}/merchants) {colspan=2}
+| [激活代金券批次](/openapi/v3/marketing/favor/stocks/{stock_id}/start) {colspan=2}
+| [暂停代金券批次](/openapi/v3/marketing/favor/stocks/{stock_id}/pause) {colspan=2}
+| [重启代金券批次](/openapi/v3/marketing/favor/stocks/{stock_id}/restart) {colspan=2}
+| [发放代金券](/openapi/v3/marketing/favor/users/{openid}/coupons#post) {colspan=2}
+| [根据商户号查用户的券](/openapi/v3/marketing/favor/users/{openid}/coupons#get) {colspan=2}
+| [查询代金券详情](/openapi/v3/marketing/favor/users/{openid}/coupons/{coupon_id}) {colspan=2}
+| [下载批次核销明细](/openapi/v3/marketing/favor/stocks/{stock_id}/use-flow) {colspan=2}
+| [下载批次退款明细](/openapi/v3/marketing/favor/stocks/{stock_id}/refund-flow) {colspan=2}
+| [（营销）图片上传](/openapi/v3/marketing/favor/media/image-upload) {colspan=2}
+| 商家券v3{rowspan=20} | [设置商家券事件通知地址](/openapi/v3/marketing/busifavor/callbacks#post) {colspan=2}
+| [查询商家券事件通知地址](/openapi/v3/marketing/busifavor/callbacks#get) {colspan=2}
+| [创建商家券](/openapi/v3/marketing/busifavor/stocks) {colspan=2}
+| [上传预存code](/openapi/v3/marketing/busifavor/stocks/{stock_id}/couponcodes) {colspan=2}
+| [查询商家券详情](/openapi/v3/marketing/busifavor/stocks/{stock_id}#get) {colspan=2}
+| [修改商家券基本信息](/openapi/v3/marketing/busifavor/stocks/{stock_id}#patch) {colspan=2}
+| [修改批次预算](/openapi/v3/marketing/busifavor/stocks/{stock_id}/budget) {colspan=2}
+| [使券失效](/openapi/v3/marketing/busifavor/coupons/deactivate) {colspan=2}
+| [申请退券](/openapi/v3/marketing/busifavor/coupons/return) {colspan=2}
+| [关联订单信息](/openapi/v3/marketing/busifavor/coupons/associate) {colspan=2}
+| [取消关联订单信息](/openapi/v3/marketing/busifavor/coupons/disassociate) {colspan=2}
+| [根据过滤条件查询用户券](/openapi/v3/marketing/busifavor/users/{openid}/coupons) {colspan=2}
+| [查询用户单张券详情](/openapi/v3/marketing/busifavor/users/{openid}/coupons/{coupon_code}/appids/{appid}) {colspan=2}
+| [核销用户券](/openapi/v3/marketing/busifavor/coupons/use) {colspan=2}
+| [发放消费卡](/openapi/v3/marketing/busifavor/coupons/{card_id}/send) {colspan=2}
+| [营销补差付款](/openapi/v3/marketing/busifavor/subsidy/pay-receipts#post) {colspan=2}
+| [查询营销补差付款单列表](/openapi/v3/marketing/busifavor/subsidy/pay-receipts#get) {colspan=2}
+| [查询营销补差付款单详情](/openapi/v3/marketing/busifavor/subsidy/pay-receipts/{subsidy_receipt_id}) {colspan=2}
+| [营销补差回退](/openapi/v3/marketing/busifavor/subsidy/return-receipts) {colspan=2}
+| [查询营销补差回退单详情](/openapi/v3/marketing/busifavor/subsidy/return-receipts/{subsidy_return_receipt_id}) {colspan=2}
+| 委托营销v3{rowspan=3} | [查询合作关系列表](/openapi/v3/marketing/partnerships) {colspan=2}
+| [建立合作关系](/openapi/v3/marketing/partnerships/build) {colspan=2}
+| [终止合作关系](/openapi/v3/marketing/partnerships/terminate) {colspan=2}
+| 支付有礼v3{rowspan=8} | [获取活动列表](/openapi/v3/marketing/paygiftactivity/activities) {colspan=2}
+| [查询活动详情](/openapi/v3/marketing/paygiftactivity/activities/{activity_id}) {colspan=2}
+| [创建全场满额送活动](/openapi/v3/marketing/paygiftactivity/unique-threshold-activity) {colspan=2}
+| [终止活动](/openapi/v3/marketing/paygiftactivity/activities/{activity_id}/terminate) {colspan=2}
+| [查询活动指定商品列表](/openapi/v3/marketing/paygiftactivity/activities/{activity_id}/goods) {colspan=2}
+| [查询活动发券商户号](/openapi/v3/marketing/paygiftactivity/activities/{activity_id}/merchants) {colspan=2}
+| [新增活动发券商户号](/openapi/v3/marketing/paygiftactivity/activities/{activity_id}/merchants/add) {colspan=2}
+| [删除活动发券商户号](/openapi/v3/marketing/paygiftactivity/activities/{activity_id}/merchants/delete) {colspan=2}
+| 支付即服务v3{rowspan=4} | [服务人员注册](/openapi/v3/smartguide/guides#post) {colspan=2}
+| [服务人员查询](/openapi/v3/smartguide/guides#get) {colspan=2}
+| [服务人员信息更新](/openapi/v3/smartguide/guides/{guide_id}) {colspan=2}
+| [服务人员分配](/openapi/v3/smartguide/guides/{guide_id}/assign) {colspan=2}
+| 品牌小店营销v3{rowspan=8} | [查询小店活动门店列表](/openapi/v3/marketing/goods-subsidy-activity/retail-store-act/{brand_id}/stores#get) {colspan=2}
+| [添加小店活动门店](/openapi/v3/marketing/goods-subsidy-activity/retail-store-act/{brand_id}/stores#post) {colspan=2}
+| [删除小店活动门店](/openapi/v3/marketing/goods-subsidy-activity/retail-store-act/{brand_id}/stores#delete) {colspan=2}
+| [查询小店活动门店详情](/openapi/v3/marketing/goods-subsidy-activity/retail-store-act/{brand_id}/stores/{store_code}) {colspan=2}
+| [生成小店活动物料码](/openapi/v3/marketing/goods-subsidy-activity/retail-store-act/{brand_id}/materials) {colspan=2}
+| [添加零售小店活动业务代理](/openapi/v3/marketing/goods-subsidy-activity/retail-store-act/{activity_id}/representative#put) {colspan=2}
+| [删除零售小店活动业务代理](/openapi/v3/marketing/goods-subsidy-activity/retail-store-act/{activity_id}/representative#delete) {colspan=2}
+| [查询零售小店活动业务代理](/openapi/v3/marketing/goods-subsidy-activity/retail-store-act/{activity_id}/representatives) {colspan=2}
+| 电子小票v3{rowspan=5} | [创建自定义入口](/openapi/v3/marketing/shopping-receipt/customentrances) {colspan=2}
+| [查询自定义入口](/openapi/v3/marketing/shopping-receipt/customentrances/{brand_id}#get) {colspan=2}
+| [更新自定义入口](/openapi/v3/marketing/shopping-receipt/customentrances/{brand_id}#patch) {colspan=2}
+| [上传商家电子小票跳转信息](/openapi/v3/marketing/shopping-receipt/merchantshoppingreceiptjumpinfos) {colspan=2}
+| [上传电子小票图片文件](/openapi/v3/marketing/shopping-receipt/shoppingreceipts) {colspan=2}
 | 商家转账v3{rowspan=10} | [发起商家转账](/openapi/v3/transfer/batches) | [发起商家转账](/openapi/v3/partner-transfer/batches)
 | [查询批次单(平台批次单号)](/openapi/v3/transfer/batches/batch-id/{batch_id}) | [查询批次单(平台批次单号)](/openapi/v3/partner-transfer/batches/batch-id/{batch_id})
 | [查询批次单(商家批次单号)](/openapi/v3/transfer/batches/out-batch-no/{out_batch_no}) | [查询批次单(商家批次单号)](/openapi/v3/partner-transfer/batches/out-batch-no/{out_batch_no})
