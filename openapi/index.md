@@ -184,6 +184,17 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | [下载发票文件](/openapi/v3/new-tax-control-fapiao/download) {colspan=2}
 | [上传电子发票文件](/openapi/v3/new-tax-control-fapiao/fapiao-applications/upload-fapiao-file) {colspan=2}
 | [将电子发票插入微信用户卡包](/openapi/v3/new-tax-control-fapiao/fapiao-applications/{fapiao_apply_id}/insert-cards) {colspan=2}
+| 出租车电子发票v3{rowspan=11} | &nbsp; | [新增出租车公司](/openapi/v3/taxi-invoice/taxi-company/create-taxi-company)
+| | [获取出租车公司商户信息](/openapi/v3/taxi-invoice/taxi-companies/{company_mchid})
+| | [更新出租车信息](/openapi/v3/taxi-invoice/taxi/update-taxi)
+| | [获取出租车信息](/openapi/v3/taxi-invoice/taxies/{plate_number})
+| | [更新司机信息](/openapi/v3/taxi-invoice/driver/update-driver)
+| | [获取司机信息](/openapi/v3/taxi-invoice/drivers/{driver_license})
+| | [司机签到签退](/openapi/v3/taxi-invoice/attendance/punch)
+| | [获取乘客行程单列表](/openapi/v3/taxi-invoice/user-taxi-orders)
+| | [根据凭证查询乘客行程单](/openapi/v3/taxi-invoice/user-taxi-order/find-by-token)
+| | [上传出租车电子发票文件](/openapi/v3/taxi-invoice/cards/upload-file)
+| | [将出租车电子发票插入微信用户卡包](/openapi/v3/taxi-invoice/cards)
 | 商家转账v3{rowspan=10} | [发起商家转账](/openapi/v3/transfer/batches) | [发起商家转账](/openapi/v3/partner-transfer/batches)
 | [查询批次单(平台批次单号)](/openapi/v3/transfer/batches/batch-id/{batch_id}) | [查询批次单(平台批次单号)](/openapi/v3/partner-transfer/batches/batch-id/{batch_id})
 | [查询批次单(商家批次单号)](/openapi/v3/transfer/batches/out-batch-no/{out_batch_no}) | [查询批次单(商家批次单号)](/openapi/v3/partner-transfer/batches/out-batch-no/{out_batch_no})

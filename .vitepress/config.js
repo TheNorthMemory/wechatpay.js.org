@@ -563,6 +563,23 @@ function openapiSidebar() {
                 ['查询电子发票', '/openapi/v3/new-tax-control-fapiao/fapiao-applications/{fapiao_apply_id}'],
               )),
             },
+            {
+              text: '出租车电子发票',
+              collapsed: true,
+              items: [
+                ['新增出租车公司', '/openapi/v3/taxi-invoice/taxi-company/create-taxi-company'],
+                ['获取出租车公司商户信息', '/openapi/v3/taxi-invoice/taxi-companies/{company_mchid}'],
+                ['更新出租车信息', '/openapi/v3/taxi-invoice/taxi/update-taxi'],
+                ['获取出租车信息', '/openapi/v3/taxi-invoice/taxies/{plate_number}'],
+                ['更新司机信息', '/openapi/v3/taxi-invoice/driver/update-driver'],
+                ['获取司机信息', '/openapi/v3/taxi-invoice/drivers/{driver_license}'],
+                ['司机签到签退', '/openapi/v3/taxi-invoice/attendance/punch'],
+                ['获取乘客行程单列表', '/openapi/v3/taxi-invoice/user-taxi-orders'],
+                ['根据凭证查询乘客行程单', '/openapi/v3/taxi-invoice/user-taxi-order/find-by-token'],
+                ['上传出租车电子发票文件', '/openapi/v3/taxi-invoice/cards/upload-file'],
+                ['将出租车电子发票插入卡包', '/openapi/v3/taxi-invoice/cards'],
+              ].map(transArrayItem),
+            },
           ],
         },
         {
