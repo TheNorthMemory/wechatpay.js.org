@@ -169,6 +169,21 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | | [同业过滤标签管理](/openapi/v3/goldplan/merchants/set-advertising-industry-filter)
 | | [开通广告展示](/openapi/v3/goldplan/merchants/open-advertising-show)
 | | [关闭广告展示](/openapi/v3/goldplan/merchants/close-advertising-show)
+| 电子发票v3{rowspan=15} | &nbsp; | [检查子商户开票功能状态](/openapi/v3/new-tax-control-fapiao/merchant/{sub_mchid}/check)
+| [创建电子发票卡券模板](/openapi/v3/new-tax-control-fapiao/card-template) {colspan=2}
+| [配置开发选项](/openapi/v3/new-tax-control-fapiao/merchant/development-config#patch) {colspan=2}
+| [查询配置的开发选项](/openapi/v3/new-tax-control-fapiao/merchant/development-config#get) {colspan=2}
+| [查询电子发票](/openapi/v3/new-tax-control-fapiao/fapiao-applications/{fapiao_apply_id}) {colspan=2}
+| [获取抬头填写链接](/openapi/v3/new-tax-control-fapiao/user-title/title-url) {colspan=2}
+| [获取用户填写的抬头](/openapi/v3/new-tax-control-fapiao/user-title) {colspan=2}
+| [获取商户开票基础信息](/openapi/v3/new-tax-control-fapiao/merchant/base-information) {colspan=2}
+| [获取商品和服务税收分类对照表](/openapi/v3/new-tax-control-fapiao/merchant/tax-codes) {colspan=2}
+| [开具电子发票](/openapi/v3/new-tax-control-fapiao/fapiao-applications) {colspan=2}
+| [冲红电子发票](/openapi/v3/new-tax-control-fapiao/fapiao-applications/{fapiao_apply_id}/reverse) {colspan=2}
+| [获取发票下载信息](/openapi/v3/new-tax-control-fapiao/fapiao-applications/{fapiao_apply_id}/fapiao-files) {colspan=2}
+| [下载发票文件](/openapi/v3/new-tax-control-fapiao/download) {colspan=2}
+| [上传电子发票文件](/openapi/v3/new-tax-control-fapiao/fapiao-applications/upload-fapiao-file) {colspan=2}
+| [将电子发票插入微信用户卡包](/openapi/v3/new-tax-control-fapiao/fapiao-applications/{fapiao_apply_id}/insert-cards) {colspan=2}
 | 商家转账v3{rowspan=10} | [发起商家转账](/openapi/v3/transfer/batches) | [发起商家转账](/openapi/v3/partner-transfer/batches)
 | [查询批次单(平台批次单号)](/openapi/v3/transfer/batches/batch-id/{batch_id}) | [查询批次单(平台批次单号)](/openapi/v3/partner-transfer/batches/batch-id/{batch_id})
 | [查询批次单(商家批次单号)](/openapi/v3/transfer/batches/out-batch-no/{out_batch_no}) | [查询批次单(商家批次单号)](/openapi/v3/partner-transfer/batches/out-batch-no/{out_batch_no})

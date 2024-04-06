@@ -531,6 +531,38 @@ function openapiSidebar() {
                 ['关闭广告展示', '/openapi/v3/goldplan/merchants/close-advertising-show'],
               ].map(transArrayItem),
             },
+            {
+              text: '电子发票',
+              collapsed: true,
+              items: [
+                ['检查子商户开票功能状态', '/openapi/v3/new-tax-control-fapiao/merchant/{sub_mchid}/check'],
+                ['创建电子发票卡券模板', '/openapi/v3/new-tax-control-fapiao/card-template'],
+                ['配置开发选项', '/openapi/v3/new-tax-control-fapiao/merchant/development-config#patch'],
+                ['查询配置的开发选项', '/openapi/v3/new-tax-control-fapiao/merchant/development-config#get'],
+                ['获取抬头填写链接', '/openapi/v3/new-tax-control-fapiao/user-title/title-url'],
+                ['获取用户填写的抬头', '/openapi/v3/new-tax-control-fapiao/user-title'],
+              ].map(transArrayItem).concat({
+                text: '区块链电子发票',
+                collapsed: true,
+                items: [
+                  ['获取商户开票基础信息', '/openapi/v3/new-tax-control-fapiao/merchant/base-information'],
+                  ['获取商品和服务税收分类对照表', '/openapi/v3/new-tax-control-fapiao/merchant/tax-codes'],
+                  ['开具电子发票', '/openapi/v3/new-tax-control-fapiao/fapiao-applications'],
+                  ['冲红电子发票', '/openapi/v3/new-tax-control-fapiao/fapiao-applications/{fapiao_apply_id}/reverse'],
+                  ['获取发票下载信息', '/openapi/v3/new-tax-control-fapiao/fapiao-applications/{fapiao_apply_id}/fapiao-files'],
+                  ['下载发票文件', '/openapi/v3/new-tax-control-fapiao/download'],
+                ].map(transArrayItem),
+              }, {
+                text: '自建/三方模式',
+                collapsed: true,
+                items: [
+                  ['上传电子发票文件', '/openapi/v3/new-tax-control-fapiao/fapiao-applications/upload-fapiao-file'],
+                  ['将电子发票插入卡包', '/openapi/v3/new-tax-control-fapiao/fapiao-applications/{fapiao_apply_id}/insert-cards'],
+                ].map(transArrayItem),
+              }, transArrayItem(
+                ['查询电子发票', '/openapi/v3/new-tax-control-fapiao/fapiao-applications/{fapiao_apply_id}'],
+              )),
+            },
           ],
         },
         {
@@ -1040,6 +1072,16 @@ function webhookSidebar() {
           items: [
             ['核销事件回调通知', '/webhook/v3/COUPON.USE'],
             ['领券事件回调通知', '/webhook/v3/COUPON.SEND'],
+          ].map(transArrayItem),
+        },
+        {
+          text: '电子发票',
+          collapsed: true,
+          items: [
+            ['发票卡券作废通知', '/webhook/v3/FAPIAO.CARD_DISCARDED'],
+            ['发票插入用户卡包成功通知', '/webhook/v3/FAPIAO.CARD_INSERTED'],
+            ['发票开具成功通知', '/webhook/v3/FAPIAO.ISSUED'],
+            ['发票冲红成功通知', '/webhook/v3/FAPIAO.REVERSED'],
           ].map(transArrayItem),
         },
         {
