@@ -520,6 +520,17 @@ function openapiSidebar() {
                 ['上传电子小票图片文件', '/openapi/v3/marketing/shopping-receipt/shoppingreceipts'],
               ].map(transArrayItem),
             },
+            {
+              text: '点金计划',
+              collapsed: true,
+              items: [
+                ['点金计划管理', '/openapi/v3/goldplan/merchants/changegoldplanstatus'],
+                ['商家小票管理', '/openapi/v3/goldplan/merchants/changecustompagestatus'],
+                ['同业过滤标签管理', '/openapi/v3/goldplan/merchants/set-advertising-industry-filter'],
+                ['开通广告展示', '/openapi/v3/goldplan/merchants/open-advertising-show'],
+                ['关闭广告展示', '/openapi/v3/goldplan/merchants/close-advertising-show'],
+              ].map(transArrayItem),
+            },
           ],
         },
         {

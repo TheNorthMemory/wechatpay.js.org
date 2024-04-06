@@ -164,6 +164,11 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | [更新自定义入口](/openapi/v3/marketing/shopping-receipt/customentrances/{brand_id}#patch) {colspan=2}
 | [上传商家电子小票跳转信息](/openapi/v3/marketing/shopping-receipt/merchantshoppingreceiptjumpinfos) {colspan=2}
 | [上传电子小票图片文件](/openapi/v3/marketing/shopping-receipt/shoppingreceipts) {colspan=2}
+| 点金计划v3{rowspan=5} | &nbsp; | [点金计划管理](/openapi/v3/goldplan/merchants/changegoldplanstatus)
+| | [商家小票管理](/openapi/v3/goldplan/merchants/changecustompagestatus)
+| | [同业过滤标签管理](/openapi/v3/goldplan/merchants/set-advertising-industry-filter)
+| | [开通广告展示](/openapi/v3/goldplan/merchants/open-advertising-show)
+| | [关闭广告展示](/openapi/v3/goldplan/merchants/close-advertising-show)
 | 商家转账v3{rowspan=10} | [发起商家转账](/openapi/v3/transfer/batches) | [发起商家转账](/openapi/v3/partner-transfer/batches)
 | [查询批次单(平台批次单号)](/openapi/v3/transfer/batches/batch-id/{batch_id}) | [查询批次单(平台批次单号)](/openapi/v3/partner-transfer/batches/batch-id/{batch_id})
 | [查询批次单(商家批次单号)](/openapi/v3/transfer/batches/out-batch-no/{out_batch_no}) | [查询批次单(商家批次单号)](/openapi/v3/partner-transfer/batches/out-batch-no/{out_batch_no})
