@@ -151,7 +151,11 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | [服务人员查询](/openapi/v3/smartguide/guides#get) {colspan=2}
 | [服务人员信息更新](/openapi/v3/smartguide/guides/{guide_id}) {colspan=2}
 | [服务人员分配](/openapi/v3/smartguide/guides/{guide_id}/assign) {colspan=2}
-| 品牌小店营销v3{rowspan=8} | [查询小店活动门店列表](/openapi/v3/marketing/goods-subsidy-activity/retail-store-act/{brand_id}/stores#get) {colspan=2}
+| 品牌小店营销v3{rowspan=12} | [按区域查询品牌加价购活动](/openapi/v3/marketing/goods-subsidy-activity/activities) {colspan=2}
+| [门店报名品牌加价购活动](/openapi/v3/marketing/goods-subsidy-activity/activity/{activity_id}/apply) {colspan=2}
+| [锁定品牌加价购活动资格](/openapi/v3/marketing/goods-subsidy-activity/qualification/lock) {colspan=2}
+| [解锁品牌加价购活动资格](/openapi/v3/marketing/goods-subsidy-activity/qualification/unlock) {colspan=2}
+| [查询小店活动门店列表](/openapi/v3/marketing/goods-subsidy-activity/retail-store-act/{brand_id}/stores#get) {colspan=2}
 | [添加小店活动门店](/openapi/v3/marketing/goods-subsidy-activity/retail-store-act/{brand_id}/stores#post) {colspan=2}
 | [删除小店活动门店](/openapi/v3/marketing/goods-subsidy-activity/retail-store-act/{brand_id}/stores#delete) {colspan=2}
 | [查询小店活动门店详情](/openapi/v3/marketing/goods-subsidy-activity/retail-store-act/{brand_id}/stores/{store_code}) {colspan=2}

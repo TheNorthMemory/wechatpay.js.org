@@ -253,50 +253,56 @@ function openapiSidebar() {
           ].map(transArrayItem),
         },
         {
-          text: '微信车主服务',
+          text: '委托代扣',
           collapsed: true,
           items: [
             {
-              text: '直连商户模式',
+              text: '微信车主服务',
               collapsed: true,
               items: [
-                ['用户入场通知', '/openapi/v2/vehicle/pay/notification'],
-                ['用户状态查询', '/openapi/v2/vehicle/pay/querystate'],
-                ['申请代扣', '/openapi/v2/vehicle/pay/payapply'],
-                ['查询订单', '/openapi/v2/transit/queryorder'],
+                {
+                  text: '直连商户模式',
+                  collapsed: true,
+                  items: [
+                    ['用户入场通知', '/openapi/v2/vehicle/pay/notification'],
+                    ['用户状态查询', '/openapi/v2/vehicle/pay/querystate'],
+                    ['申请代扣', '/openapi/v2/vehicle/pay/payapply'],
+                    ['查询订单', '/openapi/v2/transit/queryorder'],
+                  ].map(transArrayItem),
+                },
+                {
+                  text: '合作伙伴模式',
+                  collapsed: true,
+                  items: [
+                    ['用户入场通知', '/openapi/v2/vehicle/partnerpay/notification'],
+                    ['用户状态查询', '/openapi/v2/vehicle/partnerpay/querystate'],
+                    ['申请代扣', '/openapi/v2/vehicle/partnerpay/payapply'],
+                    ['查询订单', '/openapi/v2/transit/partnerpay/queryorder'],
+                  ].map(transArrayItem),
+                },
+              ],
+            },
+            {
+              text: '免压租借',
+              collapsed: true,
+              items: [
+                ['创建租借订单', '/openapi/v2/wxv/createrentbill'],
+                ['查询租借订单', '/openapi/v2/wxv/queryrentbill'],
+                ['撤销租借订单', '/openapi/v2/wxv/cancelbill'],
+                ['完结租借订单', '/openapi/v2/wxv/finishrentbill'],
+                ['修改租借订单', '/openapi/v2/wxv/changerentmoney'],
               ].map(transArrayItem),
             },
             {
-              text: '合作伙伴模式',
+              text: '免压速住',
               collapsed: true,
               items: [
-                ['用户入场通知', '/openapi/v2/vehicle/partnerpay/notification'],
-                ['用户状态查询', '/openapi/v2/vehicle/partnerpay/querystate'],
-                ['申请代扣', '/openapi/v2/vehicle/partnerpay/payapply'],
-                ['查询订单', '/openapi/v2/transit/partnerpay/queryorder'],
+                ['创建速住订单', '/openapi/v2/wxv/createhotelbill'],
+                ['查询速住订单', '/openapi/v2/wxv/queryhotelbill'],
+                ['完结速住订单', '/openapi/v2/wxv/finishhotelbill'],
               ].map(transArrayItem),
             },
           ],
-        },
-        {
-          text: '免压租借',
-          collapsed: true,
-          items: [
-            ['创建租借订单', '/openapi/v2/wxv/createrentbill'],
-            ['查询租借订单', '/openapi/v2/wxv/queryrentbill'],
-            ['撤销租借订单', '/openapi/v2/wxv/cancelbill'],
-            ['完结租借订单', '/openapi/v2/wxv/finishrentbill'],
-            ['修改租借订单', '/openapi/v2/wxv/changerentmoney'],
-          ].map(transArrayItem),
-        },
-        {
-          text: '免压速住',
-          collapsed: true,
-          items: [
-            ['创建速住订单', '/openapi/v2/wxv/createhotelbill'],
-            ['查询速住订单', '/openapi/v2/wxv/queryhotelbill'],
-            ['完结速住订单', '/openapi/v2/wxv/finishhotelbill'],
-          ].map(transArrayItem),
         },
       ],
     },
@@ -499,6 +505,10 @@ function openapiSidebar() {
               text: '品牌小店营销',
               collapsed: true,
               items: [
+                ['按区域查询品牌加价购活动', '/openapi/v3/marketing/goods-subsidy-activity/activities'],
+                ['门店报名品牌加价购活动', '/openapi/v3/marketing/goods-subsidy-activity/activity/{activity_id}/apply'],
+                ['锁定品牌加价购活动资格', '/openapi/v3/marketing/goods-subsidy-activity/qualification/lock'],
+                ['解锁品牌加价购活动资格', '/openapi/v3/marketing/goods-subsidy-activity/qualification/unlock'],
                 ['查询小店活动门店列表', '/openapi/v3/marketing/goods-subsidy-activity/retail-store-act/{brand_id}/stores#get'],
                 ['添加小店活动门店', '/openapi/v3/marketing/goods-subsidy-activity/retail-store-act/{brand_id}/stores#post'],
                 ['删除小店活动门店', '/openapi/v3/marketing/goods-subsidy-activity/retail-store-act/{brand_id}/stores#delete'],
