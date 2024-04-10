@@ -335,6 +335,7 @@ function openapiSidebar() {
                 ['H5下单', '/openapi/v3/pay/partner/transactions/h5'],
                 ['JSAPI下单', '/openapi/v3/pay/partner/transactions/jsapi'],
                 ['Native下单', '/openapi/v3/pay/partner/transactions/native'],
+                ['扫码支付下单', '/openapi/v3/pay/partner/transactions/scannedpos'],
                 ['按平台单号查单', '/openapi/v3/pay/partner/transactions/id/{transaction_id}'],
                 ['按商户单号查单', '/openapi/v3/pay/partner/transactions/out-trade-no/{out_trade_no}'],
                 ['关闭订单', '/openapi/v3/pay/partner/transactions/out-trade-no/{out_trade_no}/close'],
