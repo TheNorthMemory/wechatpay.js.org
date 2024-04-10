@@ -657,6 +657,8 @@ function openapiSidebar() {
                 ['完结分账', '/openapi/v3/ecommerce/profitsharing/finish-order'],
                 ['请求分账回退', '/openapi/v3/ecommerce/profitsharing/returnorders#post'],
                 ['查询分账回退结果', '/openapi/v3/ecommerce/profitsharing/returnorders#get'],
+                ['请求售后服务分账', '/openapi/v3/ecommerce/profitsharing/after-sales-orders#post'],
+                ['查询售后服务分账结果', '/openapi/v3/ecommerce/profitsharing/after-sales-orders#get'],
               ].map(transArrayItem),
             },
             {

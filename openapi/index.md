@@ -209,7 +209,7 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | [申请转账明细电子回单](/openapi/v3/transfer-detail/electronic-receipts#post) {colspan=2}
 | [查询明细回单受理结果](/openapi/v3/transfer-detail/electronic-receipts#get) {colspan=2}
 | [下载电子回单文件](/openapi/v3/transferdownload/signfile) {colspan=2}
-| 平台收付通v3{rowspan=35} | &nbsp; | [二级商户进件](/openapi/v3/ecommerce/applyments/)
+| 平台收付通v3{rowspan=37} | &nbsp; | [二级商户进件](/openapi/v3/ecommerce/applyments/)
 | | [查询进件状态(平台申请单号)](/openapi/v3/ecommerce/applyments/{applyment_id})
 | | [查询进件状态(业务申请编号)](/openapi/v3/ecommerce/applyments/out-request-no/{out_request_no})
 | | [请求补差](/openapi/v3/ecommerce/subsidies/create)
@@ -223,6 +223,8 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | | [完结分账](/openapi/v3/ecommerce/profitsharing/finish-order)
 | | [请求分账回退](/openapi/v3/ecommerce/profitsharing/returnorders#post)
 | | [查询分账回退结果](/openapi/v3/ecommerce/profitsharing/returnorders#get)
+| | [请求售后服务分账](/openapi/v3/ecommerce/profitsharing/after-sales-orders#post)
+| | [查询售后服务分账结果](/openapi/v3/ecommerce/profitsharing/after-sales-orders#get)
 | | [发起退款申请](/openapi/v3/ecommerce/refunds/apply)
 | | [查询退款(商户退款单号)](/openapi/v3/ecommerce/refunds/out-refund-no/{out_refund_no})
 | | [查询退款(平台退款单号)](/openapi/v3/ecommerce/refunds/id/{refund_id})

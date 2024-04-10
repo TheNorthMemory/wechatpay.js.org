@@ -125,8 +125,8 @@ wxpay.v3.ecommerce.profitsharing.returnorders.post({
 import { AxiosRequestConfig, AxiosPromise } from 'axios'
 namespace WeChatPay.OpenAPI.V3.Ecommerce.Profitsharing.Returnorders.GetHttpMethod {
   export interface RequestConfig extends AxiosRequestConfig {
-    sub_mchid: string
     params: {
+      sub_mchid: string
       order_id?: string
       out_order_no?: string
       out_return_no: string
@@ -181,7 +181,6 @@ import { wxpay } from './virtual'
 // ---cut---
 wxpay.v3.ecommerce.profitsharing.returnorders.get({
 //                                            ^^^
-  sub_mchid,
   params,
 })
 .then(
