@@ -48,16 +48,23 @@
             <li title="最后更新时间: {sitemap:lastmod}">
               <a href="{sitemap:loc}">
                 <xsl:variable name="nameWithoutHostname" select="substring-after(sitemap:loc, $hostname)" />
-                <xsl:variable name="nameWithZeroWidthSpace">
+                <xsl:variable name="namePrependZeroWidthSpaceBeforeDotChar">
                   <xsl:call-template name="string-replace-all">
                     <xsl:with-param name="text" select="$nameWithoutHostname" />
+                    <xsl:with-param name="replace" select="'.'" />
+                    <xsl:with-param name="by" select="'&#8203;.'" />
+                  </xsl:call-template>
+                </xsl:variable>
+                <xsl:variable name="namePrependZeroWidthSpaceBeforeSlashChar">
+                  <xsl:call-template name="string-replace-all">
+                    <xsl:with-param name="text" select="$namePrependZeroWidthSpaceBeforeDotChar" />
                     <xsl:with-param name="replace" select="'/'" />
                     <xsl:with-param name="by" select="'&#8203;/'" />
                   </xsl:call-template>
                 </xsl:variable>
                 <xsl:variable name="nameWithUnescapedRighBrace">
                   <xsl:call-template name="string-replace-all">
-                    <xsl:with-param name="text" select="$nameWithZeroWidthSpace" />
+                    <xsl:with-param name="text" select="$namePrependZeroWidthSpaceBeforeSlashChar" />
                     <xsl:with-param name="replace" select="'%7D'" />
                     <xsl:with-param name="by" select="'}'" />
                   </xsl:call-template>
