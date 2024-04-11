@@ -117,13 +117,17 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | [下载批次核销明细](/openapi/v3/marketing/favor/stocks/{stock_id}/use-flow) {colspan=2}
 | [下载批次退款明细](/openapi/v3/marketing/favor/stocks/{stock_id}/refund-flow) {colspan=2}
 | [（营销）图片上传](/openapi/v3/marketing/favor/media/image-upload) {colspan=2}
-| 商家券v3{rowspan=20} | [设置商家券事件通知地址](/openapi/v3/marketing/busifavor/callbacks#post) {colspan=2}
+| 商家券v3{rowspan=24} | [设置商家券事件通知地址](/openapi/v3/marketing/busifavor/callbacks#post) {colspan=2}
 | [查询商家券事件通知地址](/openapi/v3/marketing/busifavor/callbacks#get) {colspan=2}
+| [上传预存code](/openapi/v3/marketing/busifavor/stocks/{stock_id}/couponcodes#post) {colspan=2}
+| [查询预存code列表](/openapi/v3/marketing/busifavor/stocks/{stock_id}/couponcodes#get) {colspan=2}
+| [查询预存code详情](/openapi/v3/marketing/busifavor/stocks/{stock_id}/couponcodes/{coupon_code}#get) {colspan=2}
+| [删除预存code](/openapi/v3/marketing/busifavor/stocks/{stock_id}/couponcodes/{coupon_code}#delete) {colspan=2}
 | [创建商家券](/openapi/v3/marketing/busifavor/stocks) {colspan=2}
-| [上传预存code](/openapi/v3/marketing/busifavor/stocks/{stock_id}/couponcodes) {colspan=2}
 | [查询商家券详情](/openapi/v3/marketing/busifavor/stocks/{stock_id}#get) {colspan=2}
 | [修改商家券基本信息](/openapi/v3/marketing/busifavor/stocks/{stock_id}#patch) {colspan=2}
 | [修改批次预算](/openapi/v3/marketing/busifavor/stocks/{stock_id}/budget) {colspan=2}
+| [向用户发券](/openapi/v3/marketing/busifavor/coupons/send) {colspan=2}
 | [使券失效](/openapi/v3/marketing/busifavor/coupons/deactivate) {colspan=2}
 | [申请退券](/openapi/v3/marketing/busifavor/coupons/return) {colspan=2}
 | [关联订单信息](/openapi/v3/marketing/busifavor/coupons/associate) {colspan=2}
