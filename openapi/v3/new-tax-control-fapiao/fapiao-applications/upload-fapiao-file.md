@@ -69,13 +69,13 @@ const { basename } = require('path')
 const localFilePath = '/path/to/merchant-invoice-file.pdf'
 const stream = createReadStream(localFilePath)
 const media = new Multipart()
-  .append('file', stream, basename(localFilePath))
   .append('meta', JSON.stringify({
     sub_mchid,
     file_type: 'PDF',
     digest_alogrithm: 'SM3',
     digest: 'from upstream or local calculated',
   }))
+  .append('file', stream, basename(localFilePath))
 
 wxpay.v3.newTaxControlFapiao.fapiaoApplications.uploadFapiaoFile.post(media)
 //                                                               ^^^^

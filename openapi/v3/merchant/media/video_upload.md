@@ -68,11 +68,11 @@ const { basename } = require('path');
 let localFilePath = '/path/to/merchant-video-file.mp4'
 const stream = createReadStream(localFilePath)
 const media = new Multipart()
-  .append('file', stream, basename(localFilePath))
   .append('meta', JSON.stringify({
     filename: basename(localFilePath),
     sha256: 'from upstream or local calculated',
   }))
+  .append('file', stream, basename(localFilePath))
 
 wxpay.v3.merchant.media.video_upload.post(media)
 //                                   ^^^^

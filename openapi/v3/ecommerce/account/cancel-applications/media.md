@@ -73,11 +73,11 @@ const { basename } = require('path');
 let localFilePath = '/path/to/merchant-certificate-file.jpg'
 const stream = createReadStream(localFilePath)
 const media = new Multipart()
-  .append('file', stream, basename(localFilePath))
   .append('meta', JSON.stringify({
     file_name: basename(localFilePath),
     file_digest: 'from upstream or local calculated',
   }))
+  .append('file', stream, basename(localFilePath))
 
 wxpay.v3.ecommerce.account.cancelApplications.media.post(media)
 //                                                  ^^^^

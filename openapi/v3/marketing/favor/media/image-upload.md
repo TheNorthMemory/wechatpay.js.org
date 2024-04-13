@@ -73,11 +73,11 @@ const { basename } = require('path')
 const localFilePath = '/path/to/merchant-image-file.jpg'
 const stream = createReadStream(localFilePath)
 const media = new Multipart()
-  .append('file', stream, basename(localFilePath))
   .append('meta', JSON.stringify({
     filename: basename(localFilePath),
     sha256: 'from upstream or local calculated',
   }))
+  .append('file', stream, basename(localFilePath))
 
 wxpay.v3.marketing.favor.media.imageUpload.post(media)
 //                                         ^^^^

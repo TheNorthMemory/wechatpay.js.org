@@ -5,7 +5,7 @@ description: 商户上传反馈图片的接口。 将媒体图片进行二进制
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/tool/merchant-service/chapter5_1.shtml)
+{{ $frontmatter.description }} [官方文档](https://pay.wechatpay.cn/docs/partner/apis/consumer-complaint/images/create-images.html)
 
 ```js twoslash
 // @filename: virtual.ts
@@ -26,12 +26,12 @@ namespace WeChatPay.OpenAPI.V3.MerchantService.Images {
   export interface Upload {
     /**
      * shortland
-     * @link https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/tool/merchant-service/chapter5_1.shtml
+     * @link https://pay.wechatpay.cn/docs/partner/apis/consumer-complaint/images/create-images.html
      */
     (data?: Upload.PostHttpMethod.BinaryDataRequest, config?: Upload.PostHttpMethod.RequestConfig): AxiosPromise<Upload.PostHttpMethod.WellformedResponse>
     /**
      * 商户上传反馈图片API
-     * @link https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/tool/merchant-service/chapter5_1.shtml
+     * @link https://pay.wechatpay.cn/docs/partner/apis/consumer-complaint/images/create-images.html
      */
     post(data?: Multipart, config?: Upload.PostHttpMethod.RequestConfig): AxiosPromise<Upload.PostHttpMethod.WellformedResponse>
   }
@@ -68,11 +68,11 @@ const { basename } = require('path');
 let localFilePath = '/path/to/merchant-image-file.jpg'
 const stream = createReadStream(localFilePath)
 const media = new Multipart()
-  .append('file', stream, basename(localFilePath))
   .append('meta', JSON.stringify({
     filename: basename(localFilePath),
     sha256: 'from upstream or local calculated',
   }))
+  .append('file', stream, basename(localFilePath))
 
 wxpay.v3.merchantService.images.upload.post(media)
 //                                     ^^^^
