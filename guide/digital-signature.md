@@ -219,6 +219,64 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 > ```
 > [官方文档](https://pay.weixin.qq.com/wiki/doc/api/tools/cash_coupon_xcx.php?chapter=18_3&index=4)
 
+#### 代金券/商家券 {#symmetric.frontend.favors}
+
+> [!TIP] 小程序发券插件
+> ```js twoslash
+> var stock_id = '', out_request_no = '', send_coupon_merchant = '';
+> /** @type { string= } */
+> var coupon_code;
+> /** @type { 'https://action.weixin.qq.com/busifavor/getcouponinfo' } */
+> var actionUrl;
+> /** @type {import('crypto').CipherKey} the APIv2 secret key */
+> var apiv2Secret;
+> //---cut---
+> const { Hash } = require('wechatpay-axios-plugin')
+>
+> // 签名方法为固定值
+> const signType = 'HMAC-SHA256'
+> const send_coupon_params = [{
+>   stock_id,
+>   out_request_no,
+> },{
+>   stock_id,
+>   out_request_no,
+> }]
+> const flat4sign = send_coupon_params.reduce((x, y, i) => {
+>   Object.entries(y).map(([k, v]) => x[`${k}${i}`] = v)
+>   return x
+> }, { send_coupon_merchant })
+> const sign = Hash.sign(signType, flat4sign, apiv2Secret) // [!code hl]
+> ```
+> [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter9_3_1.shtml)
+
+> [!TIP] 通过Url跳转，由商户H5重定向至指定微信支付H5页面
+> ```js twoslash
+> var stock_id = '', out_request_no = '', send_coupon_merchant = '', open_id = '';
+> /** @type { string= } */
+> var coupon_code;
+> /** @type { 'https://action.weixin.qq.com/busifavor/getcouponinfo' } */
+> var actionUrl;
+> /** @type {import('crypto').CipherKey} the APIv2 secret key */
+> var apiv2Secret;
+> //---cut---
+> const { Hash } = require('wechatpay-axios-plugin')
+>
+> // 签名方法为固定值
+> const signType = 'HMAC-SHA256'
+> const input = {
+>   stock_id,
+>   out_request_no,
+>   send_coupon_merchant,
+>   open_id,
+>   coupon_code,
+> }
+> const sign = Hash.sign(signType, input, apiv2Secret) // [!code hl]
+>
+> const nextUrl = `${actionUrl}?${new URLSearchParams({...input, sign})}#wechat_redirect`
+> ```
+> [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter9_4_1.shtml)
+
 #### 微信支付分 {#symmetric.frontend.payscore}
 
 > [!TIP] APP 唤起微信支付分小程序订单详情场景
