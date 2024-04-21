@@ -315,6 +315,14 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | [查询扣费预约](/openapi/v3/papay/pay/schedules/contract-id/{contract_id}) | [查询扣费预约](/openapi/v3/papay/pay/partner/schedules/contract-id/{contract_id})
 | [发送预扣费通知](/openapi/v3/papay/contracts/{contract_id}/notify) | [发送预扣费通知](/openapi/v3/partner-papay/contracts/{contract_id}/notify)
 | [受理扣款](/openapi/v3/papay/pay/transactions/apply) | [受理扣款](/openapi/v3/papay/pay/partner/transactions/apply)
+| 校园轻松付v3{rowspan=8} | &nbsp; | [查询用户签约列表](/openapi/v3/eduschoolpay/users/{openid}/contracts)
+| | [预签约](/openapi/v3/eduschoolpay/contracts/presign)
+| | [商户主动解约](/openapi/v3/eduschoolpay/contracts/{contract_id}/terminate)
+| | [通过协议号查询签约信息](/openapi/v3/eduschoolpay/contracts/{contract_id})
+| | [使用签约协议号发起扣款](/openapi/v3/eduschoolpay/transactions)
+| | [通过商户订单号查单](/openapi/v3/eduschoolpay/transactions/out-trade-no/{out_trade_no})
+| | [通过微信支付订单号查单](/openapi/v3/eduschoolpay/transactions/id/{transaction_id})
+| | [查询用户欠款状态](/openapi/v3/eduschoolpay/users/{openid}/debt-state)
 | 教育续费通v3{rowspan=8} | [预签约](/openapi/v3/edu-papay/contracts/presign) {colspan=2}
 | [通过协议号查询签约](/openapi/v3/edu-papay/contracts/id/{contract_id}) {colspan=2}
 | [通过用户标识查询签约](/openapi/v3/edu-papay/user/{openid}/contracts) {colspan=2}
@@ -323,6 +331,16 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | [通过微信订单号查单](/openapi/v3/edu-papay/transactions/id/{transaction_id}) {colspan=2}
 | [给用户发送扣款预通知](/openapi/v3/edu-papay/user-notifications/{contract_id}/send) {colspan=2}
 | [受理扣款](/openapi/v3/edu-papay/transactions) {colspan=2}
+| 停车服务v3{rowspan=4} | [查询车牌服务开通信息](/openapi/v3/vehicle/parking/services/find) {colspan=2}
+| [创建停车入场](/openapi/v3/vehicle/parking/parkings) {colspan=2}
+| [扣费受理](/openapi/v3/vehicle/transactions/parking) {colspan=2}
+| [查询订单](/openapi/v3/vehicle/transactions/out-trade-no/{out_trade_no}) {colspan=2}
+| ETC授权v3{rowspan=6} | &nbsp; | [查询ETC签约状态](/openapi/v3/vehicle/etc/users/{openid}/contracts)
+| | [通过商户ETC绑定号查询签约状态](/openapi/v3/vehicle/etc/contracts/{contract_id})
+| | [预开通用户ETC扣费](/openapi/v3/vehicle/etc/preopen)
+| | [通过商户订单号查询订单](/openapi/v3/vehicle/etc/transactions/out-trade-no/{out_trade_no})
+| | [通过微信订单号查询订单](/openapi/v3/vehicle/etc/transactions/id/{transaction_id})
+| | [高速场景商户扣款](/openapi/v3/vehicle/etc/transactions/highway)
 | 微信支付分v3{rowspan=20} | [创建支付分订单](/openapi/v3/payscore/serviceorder#post) | [创建支付分订单](/openapi/v3/payscore/partner/serviceorder#post)
 | [查询支付分订单](/openapi/v3/payscore/serviceorder#get) | [查询支付分订单](/openapi/v3/payscore/partner/serviceorder#get)
 | [取消支付分订单](/openapi/v3/payscore/serviceorder/{out_order_no}/cancel) | | [取消支付分订单](/openapi/v3/payscore/partner/serviceorder/{out_order_no}/cancel)
@@ -350,18 +368,6 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | [查询用户的签约计划](/openapi/v3/payscore/sign-plan/user-sign-plans/merchant-sign-plan-no/{merchant_sign_plan_no}) | [查询用户的签约计划](/openapi/v3/payscore/sign-plan/partner/user-sign-plans/merchant-sign-plan-no/{merchant_sign_plan_no})
 | [取消用户的签约计划](/openapi/v3/payscore/sign-plan/user-sign-plans/merchant-sign-plan-no/{merchant_sign_plan_no}/stop) | [取消用户的签约计划](/openapi/v3/payscore/sign-plan/partner/user-sign-plans/merchant-sign-plan-no/{merchant_sign_plan_no}/stop)
 | [创建用户签约计划的服务单](/openapi/v3/payscore/sign-plan/serviceorder) | [创建用户签约计划的服务单](/openapi/v3/payscore/sign-plan/partner/serviceorder)
-| 停车服务v3{rowspan=4} | [查询车牌服务开通信息](/openapi/v3/vehicle/parking/services/find) {colspan=2}
-| [创建停车入场](/openapi/v3/vehicle/parking/parkings) {colspan=2}
-| [扣费受理](/openapi/v3/vehicle/transactions/parking) {colspan=2}
-| [查询订单](/openapi/v3/vehicle/transactions/out-trade-no/{out_trade_no}) {colspan=2}
-|校园轻松付v3{rowspan=8} | &nbsp; | [查询用户签约列表](/openapi/v3/eduschoolpay/users/{openid}/contracts)
-| | [预签约](/openapi/v3/eduschoolpay/contracts/presign)
-| | [商户主动解约](/openapi/v3/eduschoolpay/contracts/{contract_id}/terminate)
-| | [通过协议号查询签约信息](/openapi/v3/eduschoolpay/contracts/{contract_id})
-| | [使用签约协议号发起扣款](/openapi/v3/eduschoolpay/transactions)
-| | [通过商户订单号查单](/openapi/v3/eduschoolpay/transactions/out-trade-no/{out_trade_no})
-| | [通过微信支付订单号查单](/openapi/v3/eduschoolpay/transactions/id/{transaction_id})
-| | [查询用户欠款状态](/openapi/v3/eduschoolpay/users/{openid}/debt-state)
 | 智慧零售v3{rowspan=4} | [创建订单](/openapi/v3/payscore/smartretail-orders#post) | &nbsp;
 | [查询订单](/openapi/v3/payscore/smartretail-orders#get) | &nbsp;
 | [撤销订单](/openapi/v3/payscore/smartretail-orders/{out_order_no}/cancel) | &nbsp;

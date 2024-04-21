@@ -874,6 +874,20 @@ function openapiSidebar() {
               ].map(transArrayItem),
             },
             {
+              text: '校园轻松付',
+              collapsed: true,
+              items: [
+                ['查询用户签约列表', '/openapi/v3/eduschoolpay/users/{openid}/contracts'],
+                ['提交预签约', '/openapi/v3/eduschoolpay/contracts/presign'],
+                ['商户主动解约', '/openapi/v3/eduschoolpay/contracts/{contract_id}/terminate'],
+                ['通过协议号查询签约信息', '/openapi/v3/eduschoolpay/contracts/{contract_id}'],
+                ['使用签约协议号发起扣款', '/openapi/v3/eduschoolpay/transactions'],
+                ['通过商户订单号查单', '/openapi/v3/eduschoolpay/transactions/out-trade-no/{out_trade_no}'],
+                ['通过微信支付订单号查单', '/openapi/v3/eduschoolpay/transactions/id/{transaction_id}'],
+                ['查询用户欠款状态', '/openapi/v3/eduschoolpay/users/{openid}/debt-state'],
+              ].map(transArrayItem),
+            },
+            {
               text: '教育续费通',
               collapsed: true,
               items: [
@@ -885,6 +899,28 @@ function openapiSidebar() {
                 ['通过微信订单号查单', '/openapi/v3/edu-papay/transactions/id/{transaction_id}'],
                 ['给用户发送扣款预通知', '/openapi/v3/edu-papay/user-notifications/{contract_id}/send'],
                 ['受理扣款', '/openapi/v3/edu-papay/transactions'],
+              ].map(transArrayItem),
+            },
+            {
+              text: '停车服务',
+              collapsed: true,
+              items: [
+                ['查询车牌服务开通信息', '/openapi/v3/vehicle/parking/services/find'],
+                ['创建停车入场', '/openapi/v3/vehicle/parking/parkings'],
+                ['扣费受理', '/openapi/v3/vehicle/transactions/parking'],
+                ['查询订单', '/openapi/v3/vehicle/transactions/out-trade-no/{out_trade_no}'],
+              ].map(transArrayItem),
+            },
+            {
+              text: 'ETC授权',
+              collapsed: true,
+              items: [
+                ['查询签约状态(OPENID)', '/openapi/v3/vehicle/etc/users/{openid}/contracts'],
+                ['查询签约状态(商户绑定号)', '/openapi/v3/vehicle/etc/contracts/{contract_id}'],
+                ['预开通用户ETC扣费', '/openapi/v3/vehicle/etc/preopen'],
+                ['查询订单(商户订单号)', '/openapi/v3/vehicle/etc/transactions/out-trade-no/{out_trade_no}'],
+                ['查询订单(微信订单号)', '/openapi/v3/vehicle/etc/transactions/id/{transaction_id}'],
+                ['高速场景商户扣款', '/openapi/v3/vehicle/etc/transactions/highway'],
               ].map(transArrayItem),
             },
           ],
@@ -992,30 +1028,6 @@ function openapiSidebar() {
                   ].map(transArrayItem),
                 },
               ],
-            },
-            {
-              text: '停车服务',
-              collapsed: true,
-              items: [
-                ['查询车牌服务开通信息', '/openapi/v3/vehicle/parking/services/find'],
-                ['创建停车入场', '/openapi/v3/vehicle/parking/parkings'],
-                ['扣费受理', '/openapi/v3/vehicle/transactions/parking'],
-                ['查询订单', '/openapi/v3/vehicle/transactions/out-trade-no/{out_trade_no}'],
-              ].map(transArrayItem),
-            },
-            {
-              text: '校园轻松付',
-              collapsed: true,
-              items: [
-                ['查询用户签约列表', '/openapi/v3/eduschoolpay/users/{openid}/contracts'],
-                ['提交预签约', '/openapi/v3/eduschoolpay/contracts/presign'],
-                ['商户主动解约', '/openapi/v3/eduschoolpay/contracts/{contract_id}/terminate'],
-                ['通过协议号查询签约信息', '/openapi/v3/eduschoolpay/contracts/{contract_id}'],
-                ['使用签约协议号发起扣款', '/openapi/v3/eduschoolpay/transactions'],
-                ['通过商户订单号查单', '/openapi/v3/eduschoolpay/transactions/out-trade-no/{out_trade_no}'],
-                ['通过微信支付订单号查单', '/openapi/v3/eduschoolpay/transactions/id/{transaction_id}'],
-                ['查询用户欠款状态', '/openapi/v3/eduschoolpay/users/{openid}/debt-state'],
-              ].map(transArrayItem),
             },
             {
               text: '智慧零售',
@@ -1136,15 +1148,40 @@ function webhookSidebar() {
           items: [
             ['签约成功通知', '/webhook/v3/ENTRUST.SIGN'],
             ['解约成功通知', '/webhook/v3/ENTRUST.TERMINATE'],
-          ].map(transArrayItem),
-        },
-        {
-          text: '教育续费通',
-          collapsed: true,
-          items: [
-            ['签约成功通知', '/webhook/v3/ENTRUST.SIGNING'],
-            ['解约成功通知', '/webhook/v3/ENTRUST.RELEASE'],
-          ].map(transArrayItem),
+          ].map(transArrayItem).concat({
+            text: '校园轻松付',
+            collapsed: true,
+            items: [
+              ['用户签约成功通知', '/webhook/v3/PAYSCORE.USER_OPEN_SERVICE#EDUSCHOOLPAY'],
+              ['用户解约成功通知', '/webhook/v3/PAYSCORE.USER_CLOSE_SERVICE#EDUSCHOOLPAY'],
+              ['用户订单支付成功通知', '/webhook/v3/TRANSACTION.INDUSTRY_SUCCESS'],
+              ['用户订单支付失败通知', '/webhook/v3/TRANSACTION.INDUSTRY_FAILED'],
+              ['用户欠款状态变化通知', '/webhook/v3/EDU_SCHOOL_PAY.USER_DEBT_STATE_UPDATE'],
+              ['用户还款通知', '/webhook/v3/TRANSACTION.PAY_BACK#EDUSCHOOLPAY'],
+            ].map(transArrayItem),
+          }).concat({
+            text: '教育续费通',
+            collapsed: true,
+            items: [
+              ['签约成功通知', '/webhook/v3/ENTRUST.SIGNING'],
+              ['解约成功通知', '/webhook/v3/ENTRUST.RELEASE'],
+            ].map(transArrayItem),
+          }).concat({
+            text: '停车服务',
+            collapsed: true,
+            items: [
+              ['停车入场状态变更通知', '/webhook/v3/VEHICLE.ENTRANCE_STATE_CHANGE'],
+              ['订单支付成功通知', '/webhook/v3/TRANSACTION.SUCCESS#PARKING'],
+              ['订单支付失败通知', '/webhook/v3/TRANSACTION.FAIL'],
+              ['用户还款通知', '/webhook/v3/TRANSACTION.PAY_BACK#PARKING'],
+            ].map(transArrayItem),
+          }).concat({
+            text: 'ETC授权',
+            collapsed: true,
+            items: [
+              ['签约状态变化通知', '/webhook/v3/VEHICLE.USER_STATE_CHANGE'],
+            ].map(transArrayItem),
+          }),
         },
         {
           text: '支付分',
@@ -1161,26 +1198,6 @@ function webhookSidebar() {
             items: [
               ['用户签约计划成功通知', '/webhook/v3/PAYSCORE.USER_SIGN_PLAN'],
               ['用户取消已签约的计划通知', '/webhook/v3/PAYSCORE.USER_CANCEL_SIGN_PLAN'],
-            ].map(transArrayItem),
-          }).concat({
-            text: '停车服务',
-            collapsed: true,
-            items: [
-              ['停车入场状态变更通知', '/webhook/v3/VEHICLE.ENTRANCE_STATE_CHANGE'],
-              ['订单支付成功通知', '/webhook/v3/TRANSACTION.SUCCESS#PARKING'],
-              ['订单支付失败通知', '/webhook/v3/TRANSACTION.FAIL'],
-              ['用户还款通知', '/webhook/v3/TRANSACTION.PAY_BACK#PARKING'],
-            ].map(transArrayItem),
-          }).concat({
-            text: '校园轻松付',
-            collapsed: true,
-            items: [
-              ['用户签约成功通知', '/webhook/v3/PAYSCORE.USER_OPEN_SERVICE#EDUSCHOOLPAY'],
-              ['用户解约成功通知', '/webhook/v3/PAYSCORE.USER_CLOSE_SERVICE#EDUSCHOOLPAY'],
-              ['用户订单支付成功通知', '/webhook/v3/TRANSACTION.INDUSTRY_SUCCESS'],
-              ['用户订单支付失败通知', '/webhook/v3/TRANSACTION.INDUSTRY_FAILED'],
-              ['用户欠款状态变化通知', '/webhook/v3/EDU_SCHOOL_PAY.USER_DEBT_STATE_UPDATE'],
-              ['用户还款通知', '/webhook/v3/TRANSACTION.PAY_BACK#EDUSCHOOLPAY'],
             ].map(transArrayItem),
           }).concat(transArrayItem(
             ['智慧零售/先享后付订单确认', '/webhook/v3/PAYSCORE.USER_ACCEPTED']

@@ -34,8 +34,19 @@ description: 后台通知交互时，如果微信收到商户的应答不符合�
 | [投诉状态变化通知](/webhook/v3/COMPLAINT.STATE_CHANGE) {colspan=2}
 | JSON {rowspan=2} | [委托代扣签约成功通知](/webhook/v3/ENTRUST.SIGN) {colspan=2}
 | [委托代扣解约成功通知](/webhook/v3/ENTRUST.TERMINATE) {colspan=2}
+| JSON {rowspan=6} | &nbsp; | [校园轻松付用户签约成功通知](/webhook/v3/PAYSCORE.USER_OPEN_SERVICE#EDUSCHOOLPAY)
+| | [校园轻松付用户解约成功通知](/webhook/v3/PAYSCORE.USER_CLOSE_SERVICE#EDUSCHOOLPAY)
+| | [校园轻松付订单支付成功通知](/webhook/v3/TRANSACTION.INDUSTRY_SUCCESS)
+| | [校园轻松付订单支付失败通知](/webhook/v3/TRANSACTION.INDUSTRY_FAILED)
+| | [校园轻松付用户欠款状态变化通知](/webhook/v3/EDU_SCHOOL_PAY.USER_DEBT_STATE_UPDATE)
+| | [校园轻松付用户还款通知](/webhook/v3/TRANSACTION.PAY_BACK#EDUSCHOOLPAY)
 | JSON {rowspan=2} | [教育续费通签约成功通知](/webhook/v3/ENTRUST.SIGNING) {colspan=2}
 | [教育续费通解约成功通知](/webhook/v3/ENTRUST.RELEASE) {colspan=2}
+| JSON {rowspan=4} | [停车入场状态变更通知](/webhook/v3/VEHICLE.ENTRANCE_STATE_CHANGE) {colspan=2}
+| [停车服务订单支付成功通知](/webhook/v3/TRANSACTION.SUCCESS#PARKING) {colspan=2}
+| [停车服务订单支付失败通知](/webhook/v3/TRANSACTION.FAIL) {colspan=2}
+| [停车服务用户还款通知](/webhook/v3/TRANSACTION.PAY_BACK#PARKING) {colspan=2}
+| JSON {rowspan=1} | &nbsp; | [ETC授权签约状态变化通知](/webhook/v3/VEHICLE.USER_STATE_CHANGE)
 | JSON {rowspan=5} | [支付分服务用户授权成功通知](/webhook/v3/PAYSCORE.USER_OPEN_SERVICE) {colspan=2}
 | [支付分服务用户解除授权通知](/webhook/v3/PAYSCORE.USER_CLOSE_SERVICE) {colspan=2}
 | [支付分服务用户确认成功通知](/webhook/v3/PAYSCORE.USER_CONFIRM) {colspan=2}
@@ -43,16 +54,6 @@ description: 后台通知交互时，如果微信收到商户的应答不符合�
 | | [支付分服务账户绑定结果通知](/webhook/v3/PAYSCORE.BIND_SERVICE_ACCOUNT)
 | JSON {rowspan=2} | [用户签约计划成功通知](/webhook/v3/PAYSCORE.USER_SIGN_PLAN) {colspan=2}
 | [用户取消已签约的计划通知](/webhook/v3/PAYSCORE.USER_CANCEL_SIGN_PLAN) {colspan=2}
-| JSON {rowspan=4} | [停车入场状态变更通知](/webhook/v3/VEHICLE.ENTRANCE_STATE_CHANGE) {colspan=2}
-| [停车服务订单支付成功通知](/webhook/v3/TRANSACTION.SUCCESS#PARKING) {colspan=2}
-| [停车服务订单支付失败通知](/webhook/v3/TRANSACTION.FAIL) {colspan=2}
-| [停车服务用户还款通知](/webhook/v3/TRANSACTION.PAY_BACK#PARKING) {colspan=2}
-| JSON {rowspan=6} | &nbsp; | [校园轻松付用户签约成功通知](/webhook/v3/PAYSCORE.USER_OPEN_SERVICE#EDUSCHOOLPAY)
-| | [校园轻松付用户解约成功通知](/webhook/v3/PAYSCORE.USER_CLOSE_SERVICE#EDUSCHOOLPAY)
-| | [校园轻松付订单支付成功通知](/webhook/v3/TRANSACTION.INDUSTRY_SUCCESS)
-| | [校园轻松付订单支付失败通知](/webhook/v3/TRANSACTION.INDUSTRY_FAILED)
-| | [校园轻松付用户欠款状态变化通知](/webhook/v3/EDU_SCHOOL_PAY.USER_DEBT_STATE_UPDATE)
-| | [校园轻松付用户还款通知](/webhook/v3/TRANSACTION.PAY_BACK#EDUSCHOOLPAY)
 | JSON {rowspan=1} | [智慧零售/先享后付确认订单通知](/webhook/v3/PAYSCORE.USER_ACCEPTED) | &nbsp;
 | JSON {rowspan=3} | &nbsp; | [处罚二级商户通知](/webhook/v3/VIOLATION.PUNISH)
 | | [拦截二级商户通知](/webhook/v3/VIOLATION.INTERCEPT)
