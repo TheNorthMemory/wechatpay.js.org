@@ -165,6 +165,7 @@ Options:
 - `https://fraud.mch.weixin.qq.com/`
 - `https://payapp.mch.weixin.qq.com/`
 - `https://apihk.mch.weixin.qq.com/`
+- `https://pay.wechatpay.cn/`
 
 本开发包在初始化阶段，内置了默认的接入点(**endpoint**)，在特殊接口，如[付款到银行卡获取加密敏感信息的RSA公钥](/openapi/v2/risk/getpublickey)，就需要显式声明所对应的接入点(**endpoint**)；
 在构造请求链时，把 相对路径(**pathname**) 以`/`做切分，取出 `segments` 映射成实例对象属性，接口支持的**HTTP METHOD**即作为末尾驱动执行函数，按需代入 查询参数(**querystring**)，发起HTTP请求。
