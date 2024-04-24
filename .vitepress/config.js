@@ -1047,7 +1047,7 @@ function openapiSidebar() {
                 ['查询订单', '/openapi/v3/payscore/payafter-orders#get'],
                 ['撤销订单', '/openapi/v3/payscore/payafter-orders/{out_order_no}/cancel'],
                 ['完结订单', '/openapi/v3/payscore/payafter-orders/{out_order_no}/complete'],
-                ['同步订单', '/openapi/v3/payscore/smartretail-orders/{out_order_no}/sync'],
+                ['同步订单', '/openapi/v3/payscore/payafter-orders/{out_order_no}/sync'],
               ].map(transArrayItem),
             },
           ],
