@@ -5,7 +5,7 @@ description: 微信支付通过支付通知接口将用户支付成功消息通�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [普通支付通知](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/transactions/chapter3_11.shtml) [服务商支付通知](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/transactions/chapter5_11.shtml) [合单支付通知](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/combine/chapter3_7.shtml) [停车服务扣费成功通知](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter8_8_6.shtml) [服务商停车服务扣费成功通知](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter8_8_6.shtml)
+{{ $frontmatter.description }} [普通支付通知](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/transactions/chapter3_11.shtml) [服务商支付通知](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/transactions/chapter5_11.shtml) [合单支付通知](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/combine/chapter3_7.shtml) [停车服务扣费成功通知](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter8_8_6.shtml) [服务商停车服务扣费成功通知](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter8_8_6.shtml) [保险商户委托代扣成功通过](https://pay.weixin.qq.com/docs/merchant/apis/insurance-entrusted-payment/deduct-result-notify.html)
 
 ## 请求头(headers) {#req.headers}
 
@@ -139,6 +139,8 @@ Request-ID: 08F78BB5AF0610D302189F99DD5C20BA56F89845-0
 1. 合单支付成功会带上(**combine_mchid**)字段 {#COMBINE}
 
 1. 停车服务(**trade_scene**)为固定值"**PARKING**" {#PARKING}
+
+1. 保险商户委托代扣成功通知(**trade_type**)为"**PAP**" {#INSURANCE_ENTRUST}
 
 ## 处理程序 {#app}
 

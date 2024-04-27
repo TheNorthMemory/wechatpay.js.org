@@ -315,6 +315,17 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | [查询扣费预约](/openapi/v3/papay/pay/schedules/contract-id/{contract_id}) | [查询扣费预约](/openapi/v3/papay/pay/partner/schedules/contract-id/{contract_id})
 | [发送预扣费通知](/openapi/v3/papay/contracts/{contract_id}/notify) | [发送预扣费通知](/openapi/v3/partner-papay/contracts/{contract_id}/notify)
 | [受理扣款](/openapi/v3/papay/pay/transactions/apply) | [受理扣款](/openapi/v3/papay/pay/partner/transactions/apply)
+| 保险委托代扣v3{rowspan=11} | [查询保险自动续费预约](/openapi/v3/papay/insurance-pay/policy-periods/contract-id/{contract_id}/policy-period-id/{policy_period_id}) | &#8203;
+| [预约保险自动续费](/openapi/v3/papay/insurance-pay/policy-periods/contract-id/{contract_id}/policy-period-id/{policy_period_id}/schedule) | &nbsp;
+| [受理保险自动续费扣款](/openapi/v3/papay/insurance-pay/transactions/apply) | &nbsp;
+| [受理续期自动续费协议](/openapi/v3/papay/insurance-sign/contracts/plan-id/{plan_id}/contract-id/{contract_id}/renew) | &nbsp;
+| [查询保险自动续费协议](/openapi/v3/papay/insurance-sign/contracts/plan-id/{plan_id}/out-contract-code/{out_contract_code}) | &nbsp;
+| [解除保险自动续费协议](/openapi/v3/papay/insurance-sign/contracts/plan-id/{plan_id}/out-contract-code/{out_contract_code}/terminate) | &nbsp;
+| [查询保险扣费周期列表](/openapi/v3/papay/insurance-sign/policy_periods/plan-id/{plan_id}/out-contract-code/{out_contract_code}) | &nbsp;
+| [App预签约](/openapi/v3/papay/insurance-sign/contracts/pre-entrust-sign/app) | &nbsp;
+| [H5预签约](/openapi/v3/papay/insurance-sign/contracts/pre-entrust-sign/h5) | &nbsp;
+| [JSAPI预签约](/openapi/v3/papay/insurance-sign/contracts/pre-entrust-sign/jsapi) | &nbsp;
+| [小程序预签约](/openapi/v3/papay/insurance-sign/contracts/pre-entrust-sign/mini-program) | &nbsp;
 | 校园轻松付v3{rowspan=8} | &nbsp; | [查询用户签约列表](/openapi/v3/eduschoolpay/users/{openid}/contracts)
 | | [预签约](/openapi/v3/eduschoolpay/contracts/presign)
 | | [商户主动解约](/openapi/v3/eduschoolpay/contracts/{contract_id}/terminate)

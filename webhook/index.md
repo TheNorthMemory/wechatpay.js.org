@@ -34,6 +34,11 @@ description: 后台通知交互时，如果微信收到商户的应答不符合�
 | [投诉状态变化通知](/webhook/v3/COMPLAINT.STATE_CHANGE) {colspan=2}
 | JSON {rowspan=2} | [委托代扣签约成功通知](/webhook/v3/ENTRUST.SIGN) {colspan=2}
 | [委托代扣解约成功通知](/webhook/v3/ENTRUST.TERMINATE) {colspan=2}
+| JSON {rowspan=5} | [保险商户委托代扣签约成功通知](/webhook/v3/INSURANCE_ENTRUST.SIGN) | &nbsp;
+| [保险商户委托代扣解约成功通知](/webhook/v3/INSURANCE_ENTRUST.TERMINATE)
+| [保险商户委托代扣续期完成通知](/webhook/v3/INSURANCE_ENTRUST.RENEW)
+| [保险商户委托代扣成功支付通知](/webhook/v3/TRANSACTION.SUCCESS#INSURANCE_ENTRUST)
+| [保险商户委托代扣支付失败通知](/webhook/v3/TRANSACTION.FAIL#INSURANCE_ENTRUST)
 | JSON {rowspan=6} | &nbsp; | [校园轻松付用户签约成功通知](/webhook/v3/PAYSCORE.USER_OPEN_SERVICE#EDUSCHOOLPAY)
 | | [校园轻松付用户解约成功通知](/webhook/v3/PAYSCORE.USER_CLOSE_SERVICE#EDUSCHOOLPAY)
 | | [校园轻松付订单支付成功通知](/webhook/v3/TRANSACTION.INDUSTRY_SUCCESS)
@@ -44,7 +49,7 @@ description: 后台通知交互时，如果微信收到商户的应答不符合�
 | [教育续费通解约成功通知](/webhook/v3/ENTRUST.RELEASE) {colspan=2}
 | JSON {rowspan=4} | [停车入场状态变更通知](/webhook/v3/VEHICLE.ENTRANCE_STATE_CHANGE) {colspan=2}
 | [停车服务订单支付成功通知](/webhook/v3/TRANSACTION.SUCCESS#PARKING) {colspan=2}
-| [停车服务订单支付失败通知](/webhook/v3/TRANSACTION.FAIL) {colspan=2}
+| [停车服务订单支付失败通知](/webhook/v3/TRANSACTION.FAIL#PARKING) {colspan=2}
 | [停车服务用户还款通知](/webhook/v3/TRANSACTION.PAY_BACK#PARKING) {colspan=2}
 | JSON {rowspan=1} | &nbsp; | [ETC授权签约状态变化通知](/webhook/v3/VEHICLE.USER_STATE_CHANGE)
 | JSON {rowspan=5} | [支付分服务用户授权成功通知](/webhook/v3/PAYSCORE.USER_OPEN_SERVICE) {colspan=2}

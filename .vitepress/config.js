@@ -874,6 +874,23 @@ function openapiSidebar() {
               ].map(transArrayItem),
             },
             {
+              text: '保险商户委托代扣',
+              collapsed: true,
+              items: [
+                ['查询保险自动续费预约', '/openapi/v3/papay/insurance-pay/policy-periods/contract-id/{contract_id}/policy-period-id/{policy_period_id}'],
+                ['预约保险自动续费', '/openapi/v3/papay/insurance-pay/policy-periods/contract-id/{contract_id}/policy-period-id/{policy_period_id}/schedule'],
+                ['受理保险自动续费扣款', '/openapi/v3/papay/insurance-pay/transactions/apply'],
+                ['受理续期自动续费协议', '/openapi/v3/papay/insurance-sign/contracts/plan-id/{plan_id}/contract-id/{contract_id}/renew'],
+                ['查询保险自动续费协议', '/openapi/v3/papay/insurance-sign/contracts/plan-id/{plan_id}/out-contract-code/{out_contract_code}'],
+                ['解除保险自动续费协议', '/openapi/v3/papay/insurance-sign/contracts/plan-id/{plan_id}/out-contract-code/{out_contract_code}/terminate'],
+                ['查询保险扣费周期列表', '/openapi/v3/papay/insurance-sign/policy_periods/plan-id/{plan_id}/out-contract-code/{out_contract_code}'],
+                ['App预签约', '/openapi/v3/papay/insurance-sign/contracts/pre-entrust-sign/app'],
+                ['H5预签约', '/openapi/v3/papay/insurance-sign/contracts/pre-entrust-sign/h5'],
+                ['JSAPI预签约', '/openapi/v3/papay/insurance-sign/contracts/pre-entrust-sign/jsapi'],
+                ['小程序预签约', '/openapi/v3/papay/insurance-sign/contracts/pre-entrust-sign/mini-program'],
+              ].map(transArrayItem),
+            },
+            {
               text: '校园轻松付',
               collapsed: true,
               items: [
@@ -1149,6 +1166,16 @@ function webhookSidebar() {
             ['签约成功通知', '/webhook/v3/ENTRUST.SIGN'],
             ['解约成功通知', '/webhook/v3/ENTRUST.TERMINATE'],
           ].map(transArrayItem).concat({
+            text: '保险商户委托代扣',
+            collapsed: true,
+            items: [
+              ['签约成功通知', '/webhook/v3/INSURANCE_ENTRUST.SIGN'],
+              ['解约成功通知', '/webhook/v3/INSURANCE_ENTRUST.TERMINATE'],
+              ['续期完成通知', '/webhook/v3/INSURANCE_ENTRUST.RENEW'],
+              ['支付成功通知', '/webhook/v3/TRANSACTION.SUCCESS#INSURANCE_ENTRUST'],
+              ['支付失败通知', '/webhook/v3/TRANSACTION.FAIL#INSURANCE_ENTRUST'],
+            ].map(transArrayItem),
+          }).concat({
             text: '校园轻松付',
             collapsed: true,
             items: [
@@ -1172,7 +1199,7 @@ function webhookSidebar() {
             items: [
               ['停车入场状态变更通知', '/webhook/v3/VEHICLE.ENTRANCE_STATE_CHANGE'],
               ['订单支付成功通知', '/webhook/v3/TRANSACTION.SUCCESS#PARKING'],
-              ['订单支付失败通知', '/webhook/v3/TRANSACTION.FAIL'],
+              ['订单支付失败通知', '/webhook/v3/TRANSACTION.FAIL#PARKING'],
               ['用户还款通知', '/webhook/v3/TRANSACTION.PAY_BACK#PARKING'],
             ].map(transArrayItem),
           }).concat({
@@ -1184,7 +1211,7 @@ function webhookSidebar() {
           }),
         },
         {
-          text: '支付分',
+          text: '微信支付分',
           collapsed: true,
           items: [
             ['用户授权成功通知', '/webhook/v3/PAYSCORE.USER_OPEN_SERVICE'],
