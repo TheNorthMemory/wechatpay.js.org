@@ -602,6 +602,19 @@ function openapiSidebar() {
           ],
         },
         {
+          text: '微工卡',
+          collapsed: true,
+          items: [
+            ['生成用户授权token', '/openapi/v3/payroll-card/tokens'],
+            ['查询授权关系', '/openapi/v3/payroll-card/relations/{openid}'],
+            ['核身预下单', '/openapi/v3/payroll-card/authentications/pre-order'],
+            ['核身预下单(流程中完成授权)', '/openapi/v3/payroll-card/authentications/pre-order-with-auth'],
+            ['获取核身结果', '/openapi/v3/payroll-card/authentications/{authenticate_number}'],
+            ['查询核身记录', '/openapi/v3/payroll-card/authentications'],
+            ['发起批量转账', '/openapi/v3/payroll-card/transfer-batches'],
+          ].map(transArrayItem),
+        },
+        {
           text: '商家转账',
           collapsed: true,
           items: [
