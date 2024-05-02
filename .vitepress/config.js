@@ -611,6 +611,8 @@ function openapiSidebar() {
             ['核身预下单(流程中完成授权)', '/openapi/v3/payroll-card/authentications/pre-order-with-auth'],
             ['获取核身结果', '/openapi/v3/payroll-card/authentications/{authenticate_number}'],
             ['查询核身记录', '/openapi/v3/payroll-card/authentications'],
+            ['校验核身结果', '/openapi/v3/payroll-card/wesure/token-validations'],
+            ['生成投保结果', '/openapi/v3/payroll-card/wesure/insurance'],
             ['发起批量转账', '/openapi/v3/payroll-card/transfer-batches'],
           ].map(transArrayItem),
         },
