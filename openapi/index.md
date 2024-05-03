@@ -397,6 +397,12 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | [撤销订单](/openapi/v3/payscore/payafter-orders/{out_order_no}/cancel) | &nbsp;
 | [完结订单](/openapi/v3/payscore/payafter-orders/{out_order_no}/complete) | &nbsp;
 | [同步订单](/openapi/v3/payscore/payafter-orders/{out_order_no}/sync) | &nbsp;
+| 微信先享卡v3{rowspan=6} | [预受理领卡请求](/openapi/v3/discount-card/cards) | &nbsp;
+| [查询先享卡订单](/openapi/v3/discount-card/cards/{out_card_code}) | &nbsp;
+| [更新先享卡订单](/openapi/v3/discount-card/orders/{out_order_no}#patch) | &nbsp;
+| [通过先享卡订单号查询订单](/openapi/v3/discount-card/orders/{out_order_no}#get) | &nbsp;
+| [通过商户订单号查询订单](/openapi/v3/discount-card/orders/out-trade-no/{out_trade_no}) | &nbsp;
+| [增加用户记录](/openapi/v3/discount-card/cards/{out_card_code}/add-user-records) | &nbsp;
 | 平台证书v3{rowspan=1} | [获取平台证书列表](/openapi/v3/certificates) {colspan=2}
 
 {.vp-table}

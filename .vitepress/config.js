@@ -1082,6 +1082,18 @@ function openapiSidebar() {
                 ['同步订单', '/openapi/v3/payscore/payafter-orders/{out_order_no}/sync'],
               ].map(transArrayItem),
             },
+            {
+              text: '微信先享卡',
+              collapsed: true,
+              items: [
+                ['预受理领卡请求', '/openapi/v3/discount-card/cards'],
+                ['查询先享卡订单', '/openapi/v3/discount-card/cards/{out_card_code}'],
+                ['更新先享卡订单', '/openapi/v3/discount-card/orders/{out_order_no}#patch'],
+                ['通过先享卡订单号查询订单', '/openapi/v3/discount-card/orders/{out_order_no}#get'],
+                ['通过商户订单号查询订单', '/openapi/v3/discount-card/orders/out-trade-no/{out_trade_no}'],
+                ['增加用户记录', '/openapi/v3/discount-card/cards/{out_card_code}/add-user-records'],
+              ].map(transArrayItem),
+            },
           ],
         },
         transArrayItem(
@@ -1243,7 +1255,15 @@ function webhookSidebar() {
             ].map(transArrayItem),
           }).concat(transArrayItem(
             ['智慧零售/先享后付订单确认', '/webhook/v3/PAYSCORE.USER_ACCEPTED']
-          )),
+          )).concat({
+            text: '微信先享卡',
+            collapsed: true,
+            items: [
+              ['用户领卡通知(预受理领卡)', '/webhook/v3/DISCOUNT_CARD.USER_ACCEPTED'],
+              ['用户领卡通知(模板配置)', '/webhook/v3/DISCOUNT_CARD.GET_CARD'],
+              ['用户结算通知', '/webhook/v3/DISCOUNT_CARD.SETTLEMENT'],
+            ].map(transArrayItem),
+          }),
         },
         {
           text: '违规',
