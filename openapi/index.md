@@ -403,6 +403,13 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | [通过先享卡订单号查询订单](/openapi/v3/discount-card/orders/{out_order_no}#get) | &nbsp;
 | [通过商户订单号查询订单](/openapi/v3/discount-card/orders/out-trade-no/{out_trade_no}) | &nbsp;
 | [增加用户记录](/openapi/v3/discount-card/cards/{out_card_code}/add-user-records) | &nbsp;
+| 出行券v3{rowspan=1} | [出行券切卡组件预下单](/openapi/v3/industry-coupon/tokens) | &nbsp;
+| 刷码乘车v3{rowspan=3} | [查询用户服务可用信息](/openapi/v3/qrcode/user-services/contract-id/{contract_id}) {colspan=2}
+| [扣费受理](/openapi/v3/qrcode/transactions) {colspan=2}
+| [查询订单](/openapi/v3/qrcode/transactions/out-trade-no/{out_trade_no}) {colspan=2}
+| 爱心餐v3{rowspan=3} | [查询爱心餐品牌信息](/openapi/v3/lovefeast/brands/{brand_id}) {colspan=2}
+| [查询用户捐赠单列表](/openapi/v3/lovefeast/users/{openid}/orders/brand-id/{brand_id}) {colspan=2}
+| [查询用户捐赠单详情](/openapi/v3/lovefeast/users/{openid}/orders/out-trade-no/{out_trade_no}) {colspan=2}
 | 平台证书v3{rowspan=1} | [获取平台证书列表](/openapi/v3/certificates) {colspan=2}
 
 {.vp-table}
