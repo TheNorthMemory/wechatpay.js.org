@@ -103,6 +103,36 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | [申请资金账单](/openapi/v3/bill/fundflowbill) {colspan=2}
 | | [申请子商户资金账单](/openapi/v3/bill/sub-merchant-fundflowbill)
 | [下载账单文件](/openapi/v3/billdownload/file) {colspan=2}
+| 会员卡v3{rowspan=30} | [设置回调地址](/openapi/v3/marketing/membercard-open/callback#patch) {colspan=2}
+| [查询回调地址](/openapi/v3/marketing/membercard-open/callback#get) {colspan=2}
+| [创建会员卡模板](/openapi/v3/marketing/membercard-open/cards#post) {colspan=2}
+| [查询会员卡模板列表](/openapi/v3/marketing/membercard-open/cards#get) {colspan=2}
+| [查询会员卡模板信息](/openapi/v3/marketing/membercard-open/cards/{card_id}#get) {colspan=2}
+| [修改会员卡模板信息](/openapi/v3/marketing/membercard-open/cards/{card_id}#patch) {colspan=2}
+| [删除会员卡模板信息](/openapi/v3/marketing/membercard-open/cards/{card_id}#delete) {colspan=2}
+| [设置会员卡模板权益项](/openapi/v3/marketing/membercard-open/cards/{card_id}/rights) {colspan=2}
+| [老会员卡模板升级](/openapi/v3/marketing/membercard-open/cards/{card_id}/upgrade) {colspan=2}
+| [导入会员Code](/openapi/v3/marketing/membercard-open/cards/{card_id}/codes/deposit) {colspan=2}
+| [根据openid导入用户会员卡](/openapi/v3/marketing/membercard-open/cards/{card_id}/users/import) {colspan=2}
+| [根据手机号导入用户会员卡](/openapi/v3/marketing/membercard-open/cards/{card_id}/phone-membercard/import) {colspan=2}
+| [通过加密手机号查询会员领卡状态](/openapi/v3/marketing/membercard-open/phonenumber-member/search) {colspan=2}
+| [导入加密手机号提醒会员领卡](/openapi/v3/marketing/membercard-open/phonenumber-member/import) {colspan=2}
+| [生成商户投放预授权凭证](/openapi/v3/marketing/membercard-open/cards/{card_id}/permission-tokens) {colspan=2}
+| [查询用户在品牌下所有会员卡](/openapi/v3/marketing/membercard-open/user/cards) {colspan=2}
+| [创建会员卡二维码](/openapi/v3/marketing/membercard-open/cards/{card_id}/qrcode) {colspan=2}
+| [加密code解码(跳转型激活)](/openapi/v3/marketing/membercard-open/cards/{card_id}/decrypt-code) {colspan=2}
+| [激活会员卡(跳转型激活)](/openapi/v3/marketing/membercard-open/cards/{card_id}/codes/{code}/activate) {colspan=2}
+| [获取用户信息(跳转型激活)](/openapi/v3/marketing/membercard-open/activate-informations/{activate_ticket}) {colspan=2}
+| [查询用户会员卡信息](/openapi/v3/marketing/membercard-open/cards/{card_id}/codes/{code}#get) {colspan=2}
+| [修改用户会员卡信息](/openapi/v3/marketing/membercard-open/cards/{card_id}/codes/{code}#patch) {colspan=2}
+| [作废用户会员卡](/openapi/v3/marketing/membercard-open/cards/{card_id}/codes/{code}/unavailable) {colspan=2}
+| [设置会员权益](/openapi/v3/marketing/membercard-open/cards/{card_id}/codes/{code}/rights) {colspan=2}
+| [支付结果页展示会员积分](/openapi/v3/marketing/membercard-open/cards/{card_id}/codes/{code}/bonus/prepare) {colspan=2}
+| [设置支付后展示的积分到账](/openapi/v3/marketing/membercard-open/cards/{card_id}/codes/{code}/bonus/commit) {colspan=2}
+| [创建活动](/openapi/v3/marketing/membercard-activity/activities#post) {colspan=2}
+| [查询活动列表](/openapi/v3/marketing/membercard-activity/activities#get) {colspan=2}
+| [查询活动详情](/openapi/v3/marketing/membercard-activity/activities/{activity_id}) {colspan=2}
+| [终止活动](/openapi/v3/marketing/membercard-activity/activities/{activity_id}/terminate) {colspan=2}
 | 代金券v3{rowspan=16} | [设置消息通知地址](/openapi/v3/marketing/favor/callbacks#post) {colspan=2}
 | [获取已设置的消息通知地址](/openapi/v3/marketing/favor/callbacks#get) {colspan=2}
 | [创建代金券批次](/openapi/v3/marketing/favor/coupon-stocks) {colspan=2}
