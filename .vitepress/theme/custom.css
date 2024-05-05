@@ -73,7 +73,7 @@
 .vp-table tbody tr td[rowspan]:first-child {
   cursor: default;
   white-space: nowrap;
-  padding: 0;
+  padding: 8px 0;
 }
 
 .vp-table tbody tr:not(:hover) td[rowspan] {
