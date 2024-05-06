@@ -7,7 +7,7 @@ export default defineConfig({
   description: 'Promise based and chained WeChatPay OpenAPI client SDK for NodeJS',
   lastUpdated: true,
   cleanUrls: true,
-  buildConcurrency: 24,
+  buildConcurrency: 20,
   markdown: {
     codeTransformers: [
       transformerTwoslash()
