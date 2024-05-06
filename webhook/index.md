@@ -26,7 +26,8 @@ description: 后台通知交互时，如果微信收到商户的应答不符合�
 | [用户管理会员卡事件通知](/webhook/v3/MEMBERCARD.USERCARD_MANAGE) {colspan=2}
 | JSON {rowspan=1} | [核销事件回调通知](/webhook/v3/COUPON.USE) {colspan=2}
 | JSON {rowspan=1} | [领券事件回调通知](/webhook/v3/COUPON.SEND) {colspan=2}
-| JSON {rowspan=4} | [发票卡券作废通知](/webhook/v3/FAPIAO.CARD_DISCARDED) {colspan=2}
+| JSON {rowspan=5} | [用户发票抬头填写完成通知](/webhook/v3/FAPIAO.USER_APPLIED) {colspan=2}
+| [发票卡券作废通知](/webhook/v3/FAPIAO.CARD_DISCARDED) {colspan=2}
 | [发票插入用户卡包成功通知](/webhook/v3/FAPIAO.CARD_INSERTED) {colspan=2}
 | [发票开具成功通知](/webhook/v3/FAPIAO.ISSUED) {colspan=2}
 | [发票冲红成功通知](/webhook/v3/FAPIAO.REVERSED) {colspan=2}
@@ -63,8 +64,10 @@ description: 后台通知交互时，如果微信收到商户的应答不符合�
 | JSON {rowspan=2} | [用户签约计划成功通知](/webhook/v3/PAYSCORE.USER_SIGN_PLAN) {colspan=2}
 | [用户取消已签约的计划通知](/webhook/v3/PAYSCORE.USER_CANCEL_SIGN_PLAN) {colspan=2}
 | JSON {rowspan=1} | [智慧零售/先享后付确认订单通知](/webhook/v3/PAYSCORE.USER_ACCEPTED) | &nbsp;
-| JSON {rowspan=3} | [先享卡用户领卡通知(预受理领卡)](/webhook/v3/DISCOUNT_CARD.USER_ACCEPTED) | &nbsp;
+| JSON {rowspan=5} | [先享卡用户领卡通知(预受理领卡)](/webhook/v3/DISCOUNT_CARD.USER_ACCEPTED) | &nbsp;
 | [先享卡用户领卡通知(模板配置)](/webhook/v3/DISCOUNT_CARD.GET_CARD) | &nbsp;
+| [先享卡守约状态变化通知](/webhook/v3/DISCOUNT_CARD.AGREEMENT_ENDED) | &nbsp;
+| [先享卡扣费状态变化通知](/webhook/v3/DISCOUNT_CARD.USER_PAID) | &nbsp;
 | [先享卡用户结算通知](/webhook/v3/DISCOUNT_CARD.SETTLEMENT) | &nbsp;
 | JSON {rowspan=3} | &nbsp; | [处罚二级商户通知](/webhook/v3/VIOLATION.PUNISH)
 | | [拦截二级商户通知](/webhook/v3/VIOLATION.INTERCEPT)

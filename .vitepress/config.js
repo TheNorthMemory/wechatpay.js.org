@@ -1222,6 +1222,7 @@ function webhookSidebar() {
           text: '电子发票',
           collapsed: true,
           items: [
+            ['用户发票抬头填写完成通知', '/webhook/v3/FAPIAO.USER_APPLIED'],
             ['发票卡券作废通知', '/webhook/v3/FAPIAO.CARD_DISCARDED'],
             ['发票插入用户卡包成功通知', '/webhook/v3/FAPIAO.CARD_INSERTED'],
             ['发票开具成功通知', '/webhook/v3/FAPIAO.ISSUED'],
@@ -1311,6 +1312,8 @@ function webhookSidebar() {
             items: [
               ['用户领卡通知(预受理领卡)', '/webhook/v3/DISCOUNT_CARD.USER_ACCEPTED'],
               ['用户领卡通知(模板配置)', '/webhook/v3/DISCOUNT_CARD.GET_CARD'],
+              ['守约状态变化通知', '/webhook/v3/DISCOUNT_CARD.AGREEMENT_ENDED'],
+              ['扣费状态变化通知', '/webhook/v3/DISCOUNT_CARD.USER_PAID'],
               ['用户结算通知', '/webhook/v3/DISCOUNT_CARD.SETTLEMENT'],
             ].map(transArrayItem),
           }),
