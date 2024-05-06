@@ -255,7 +255,7 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | [申请转账明细电子回单](/openapi/v3/transfer-detail/electronic-receipts#post) {colspan=2}
 | [查询明细回单受理结果](/openapi/v3/transfer-detail/electronic-receipts#get) {colspan=2}
 | [下载电子回单文件](/openapi/v3/transferdownload/signfile) {colspan=2}
-| 平台收付通v3{rowspan=37} | &nbsp; | [二级商户进件](/openapi/v3/ecommerce/applyments/)
+| 平台收付通v3{rowspan=44} | &nbsp; | [二级商户进件](/openapi/v3/ecommerce/applyments/)
 | | [查询进件状态(平台申请单号)](/openapi/v3/ecommerce/applyments/{applyment_id})
 | | [查询进件状态(业务申请编号)](/openapi/v3/ecommerce/applyments/out-request-no/{out_request_no})
 | | [请求补差](/openapi/v3/ecommerce/subsidies/create)
@@ -292,6 +292,13 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | | [申请资金出境](/openapi/v3/funds-to-oversea/orders)
 | | [查询出境结果](/openapi/v3/funds-to-oversea/orders/{out_order_id})
 | | [获取购付汇账单](/openapi/v3/funds-to-oversea/bill-download-url)
+| | [合单代扣-APP方式预签约](/openapi/v3/ecommerce/combine-papay/contracts/pre-entrust-sign)
+| | [合单代扣-小程序方式预签约](/openapi/v3/ecommerce/combine-papay/contracts/pre-entrust-sign/mini-program)
+| | [合单代扣-通过商户协议号查询协议](/openapi/v3/ecommerce/combine-papay/contracts/plan-id/{plan_id}/out-contract-code/{out_contract_code})
+| | [合单代扣-商户协议号解约协议](/openapi/v3/ecommerce/combine-papay/contracts/plan-id/{plan_id}/out-contract-code/{out_contract_code}/terminate)
+| | [合单代扣-撤销订单](/openapi/v3/ecommerce/combine-papay/transactions/{combine_out_trade_no}/reverse)
+| | [合单代扣-查询订单](/openapi/v3/ecommerce/combine-papay/transactions/{combine_out_trade_no})
+| | [合单代扣-发起免密支付](/openapi/v3/ecommerce/combine-papay/transactions)
 | 商户提现v3{rowspan=6} | &nbsp; | [合作伙伴预约提现](/openapi/v3/merchant/fund/withdraw)
 | | [查询预约提现状态(商户单号)](/openapi/v3/merchant/fund/withdraw/out-request-no/{out_request_no})
 | | [查询预约提现状态(平台单号)](/openapi/v3/merchant/fund/withdraw/withdraw-id/{withdraw_id})

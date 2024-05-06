@@ -771,6 +771,19 @@ function openapiSidebar() {
                 ['获取购付汇账单', '/openapi/v3/funds-to-oversea/bill-download-url'],
               ].map(transArrayItem),
             },
+            {
+              text: '合单代扣',
+              collapsed: true,
+              items: [
+                ['APP预签约', '/openapi/v3/ecommerce/combine-papay/contracts/pre-entrust-sign'],
+                ['小程序预签约', '/openapi/v3/ecommerce/combine-papay/contracts/pre-entrust-sign/mini-program'],
+                ['查询协议', '/openapi/v3/ecommerce/combine-papay/contracts/plan-id/{plan_id}/out-contract-code/{out_contract_code}'],
+                ['解约协议', '/openapi/v3/ecommerce/combine-papay/contracts/plan-id/{plan_id}/out-contract-code/{out_contract_code}/terminate'],
+                ['撤销订单', '/openapi/v3/ecommerce/combine-papay/transactions/{combine_out_trade_no}/reverse'],
+                ['查询订单', '/openapi/v3/ecommerce/combine-papay/transactions/{combine_out_trade_no}'],
+                ['免密支付', '/openapi/v3/ecommerce/combine-papay/transactions'],
+              ].map(transArrayItem),
+            },
           ],
         },
         {
@@ -1199,6 +1212,14 @@ function webhookSidebar() {
             ['转账批次完成通知', '/webhook/v3/MCHTRANSFER.BATCH.FINISHED'],
             ['转账批次关闭通知', '/webhook/v3/MCHTRANSFER.BATCH.CLOSED'],
             ['转账单据终态通知', '/webhook/v3/MCHTRANSFER.BILL.FINISHED'],
+          ].map(transArrayItem),
+        },
+        {
+          text: '平台收付通合单代扣',
+          collapsed: true,
+          items: [
+            ['签约成功通知', '/webhook/v3/ECOMMERCE_ENTRUST.SIGN'],
+            ['解约成功通知', '/webhook/v3/ECOMMERCE_ENTRUST.TERMINATE'],
           ].map(transArrayItem),
         },
         {
