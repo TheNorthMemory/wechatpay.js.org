@@ -107,7 +107,7 @@ wxpay.v3.taxiInvoice.driver.updateDriver.post({
   driver_status,
   driver_photo,
   region_id,
-})
+}, { headers, })
 .then(
   ({ // [!code hl:23]
     data: {

@@ -95,7 +95,7 @@ wxpay.v3.profitsharing.orders.post({
   out_order_no,
   receivers,
   unfreeze_unsplit,
-})
+}, { headers, })
 .then(
   ({ // [!code hl:17]
     data: {

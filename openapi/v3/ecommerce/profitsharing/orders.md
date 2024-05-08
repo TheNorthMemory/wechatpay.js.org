@@ -176,6 +176,7 @@ import { wxpay } from './virtual'
 wxpay.v3.ecommerce.profitsharing.orders.get({
 //                                      ^^^
   params,
+  headers,
 })
 .then(
   ({ // [!code hl:23]

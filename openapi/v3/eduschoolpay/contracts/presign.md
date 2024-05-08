@@ -94,7 +94,7 @@ wxpay.v3.eduschoolpay.contracts.presign.post({
   downgrade_default_contract,
   identity,
   bank_card,
-})
+}, { headers, })
 .then(
   ({ // [!code hl:7]
     data: {

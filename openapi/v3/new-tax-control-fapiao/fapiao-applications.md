@@ -92,6 +92,6 @@ wxpay.v3.newTaxControlFapiao.fapiaoApplications.post({
   fapiao_apply_id,
   buyer_information,
   fapiao_information,
-})
+}, { headers, })
 .then(({ status }) => status === 202) // [!code hl]
 ```

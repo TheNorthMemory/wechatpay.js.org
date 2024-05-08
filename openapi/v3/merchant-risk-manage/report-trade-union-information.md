@@ -123,7 +123,7 @@ wxpay.v3.merchantRiskManage.reportTradeUnionInformation.post({
   extra_fields1,
   extra_fields2,
   extra_fields3,
-})
+}, { headers, })
 .then(
   ({ // [!code hl:15]
     data: {

@@ -86,7 +86,7 @@ wxpay.v3.profitsharing.receivers.add.post({
   name,
   relation_type,
   custom_relation,
-})
+}, { headers, })
 .then(
   ({ // [!code hl:17]
     data: {

@@ -83,7 +83,7 @@ wxpay.v3.ecommerce.profitsharing.receivers.add.post({
   name,
   encrypted_name,
   relation_type,
-})
+}, { headers, })
 .then(
   ({ // [!code hl:9]
     data: {

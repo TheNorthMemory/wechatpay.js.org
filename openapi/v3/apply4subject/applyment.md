@@ -210,6 +210,7 @@ import { wxpay } from './virtual'
 wxpay.v3.apply4subject.applyment.get({
 //                               ^^^^
   params,
+  headers,
 })
 .then(
   ({ // [!code hl:11]

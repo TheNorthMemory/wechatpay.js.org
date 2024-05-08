@@ -127,7 +127,7 @@ wxpay.v3.papay.insuranceSign.contracts.preEntrustSign.app.post({
   can_auto_insure,
   can_auto_reinsure,
   real_identity,
-})
+}, { headers, })
 .then(
   ({ // [!code hl:7]
     data: {
