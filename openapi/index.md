@@ -440,6 +440,12 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | [通过先享卡订单号查询订单](/openapi/v3/discount-card/orders/{out_order_no}#get) | &nbsp;
 | [通过商户订单号查询订单](/openapi/v3/discount-card/orders/out-trade-no/{out_trade_no}) | &nbsp;
 | [增加用户记录](/openapi/v3/discount-card/cards/{out_card_code}/add-user-records) | &nbsp;
+| 充电宝隔夜归还v3{rowspan=4} | [查询用户保险订单领取资格](/openapi/v3/hire-power-bank/user-qualifications/{openid}) |  &nbsp;
+| [查询用户保险订单领取资格](/openapi/v3/hire-power-bank/insurance-orders) | &nbsp;
+| [创建保险订单](/openapi/v3/hire-power-bank/insurance-orders) | &nbsp;
+| [查询保险订单详情](/openapi/v3/hire-power-bank/insurance-orders/{out_order_no}) | &nbsp;
+| 扫码点餐v3{rowspan=1} | &nbsp; | [点餐订单信息同步](/openapi/v3/catering/orders/sync-status)
+| 微信寄快递v3{rowspan=1} | &nbsp; | [用户openid转换](/openapi/v3/express/users/{openid}/transform)
 | 出行券v3{rowspan=1} | [出行券切卡组件预下单](/openapi/v3/industry-coupon/tokens) | &nbsp;
 | 刷码乘车v3{rowspan=3} | [查询用户服务可用信息](/openapi/v3/qrcode/user-services/contract-id/{contract_id}) {colspan=2}
 | [扣费受理](/openapi/v3/qrcode/transactions) {colspan=2}

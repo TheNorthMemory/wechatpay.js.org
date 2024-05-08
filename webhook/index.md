@@ -71,6 +71,7 @@ description: 后台通知交互时，如果微信收到商户的应答不符合�
 | [先享卡守约状态变化通知](/webhook/v3/DISCOUNT_CARD.AGREEMENT_ENDED) | &nbsp;
 | [先享卡扣费状态变化通知](/webhook/v3/DISCOUNT_CARD.USER_PAID) | &nbsp;
 | [先享卡用户结算通知](/webhook/v3/DISCOUNT_CARD.SETTLEMENT) | &nbsp;
+| JSON {rowspan=1} | [隔夜归还保险订单状态变化通知](/webhook/v3/HIRE_POWER_BANK.RECEIVE_INSURANCE) | &nbsp;
 | JSON {rowspan=3} | &nbsp; | [处罚二级商户通知](/webhook/v3/VIOLATION.PUNISH)
 | | [拦截二级商户通知](/webhook/v3/VIOLATION.INTERCEPT)
 | | [二级商户申诉通知](/webhook/v3/VIOLATION.APPEAL)
