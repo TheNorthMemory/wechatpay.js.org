@@ -188,6 +188,10 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | [服务人员查询](/openapi/v3/smartguide/guides#get) {colspan=2}
 | [服务人员信息更新](/openapi/v3/smartguide/guides/{guide_id}) {colspan=2}
 | [服务人员分配](/openapi/v3/smartguide/guides/{guide_id}/assign) {colspan=2}
+| 智慧商圈v3{rowspan=4} | [商圈会员积分服务授权状态查询](/openapi/v3/businesscircle/user-authorizations/{openid}) {colspan=2}
+| [商圈会员待积分状态查询](/openapi/v3/businesscircle/users/{openid}/points/commit_status) {colspan=2}
+| [商圈会员积分同步](/openapi/v3/businesscircle/points/notify) {colspan=2}
+| [商圈会员停车状态同步](/openapi/v3/businesscircle/parkings) {colspan=2}
 | 品牌小店营销v3{rowspan=12} | [按区域查询品牌加价购活动](/openapi/v3/marketing/goods-subsidy-activity/activities) {colspan=2}
 | [门店报名品牌加价购活动](/openapi/v3/marketing/goods-subsidy-activity/activity/{activity_id}/apply) {colspan=2}
 | [锁定品牌加价购活动资格](/openapi/v3/marketing/goods-subsidy-activity/qualification/lock) {colspan=2}

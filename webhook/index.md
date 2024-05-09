@@ -24,6 +24,9 @@ description: 后台通知交互时，如果微信收到商户的应答不符合�
 | JSON {rowspan=3} | [会员卡领卡事件通知](/webhook/v3/MEMBERCARD.ACCEPT_CARD) {colspan=2}
 | [会员卡激活事件通知](/webhook/v3/MEMBERCARD.ACTIVATE_CARD) {colspan=2}
 | [用户管理会员卡事件通知](/webhook/v3/MEMBERCARD.USERCARD_MANAGE) {colspan=2}
+| JSON {rowspan=3} | [商圈会员积分服务授权结果通知](/webhook/v3/MALL_AUTH.ACTIVATE_CARD) {colspan=2}
+| [商圈会员支付结果通知](/webhook/v3/MALL_TRANSACTION.SUCCESS) {colspan=2}
+| [商圈会员退款成功通知](/webhook/v3/MALL_REFUND.SUCCESS) {colspan=2}
 | JSON {rowspan=1} | [核销事件回调通知](/webhook/v3/COUPON.USE) {colspan=2}
 | JSON {rowspan=1} | [领券事件回调通知](/webhook/v3/COUPON.SEND) {colspan=2}
 | JSON {rowspan=5} | [用户发票抬头填写完成通知](/webhook/v3/FAPIAO.USER_APPLIED) {colspan=2}

@@ -552,6 +552,16 @@ function openapiSidebar() {
               ].map(transArrayItem),
             },
             {
+              text: '智慧商圈',
+              collapsed: true,
+              items: [
+                ['会员积分服务授权状态查询', '/openapi/v3/businesscircle/user-authorizations/{openid}'],
+                ['会员待积分状态查询', '/openapi/v3/businesscircle/users/{openid}/points/commit_status'],
+                ['会员积分同步', '/openapi/v3/businesscircle/points/notify'],
+                ['会员停车状态同步', '/openapi/v3/businesscircle/parkings'],
+              ].map(transArrayItem),
+            },
+            {
               text: '品牌小店营销',
               collapsed: true,
               items: [
@@ -1229,6 +1239,15 @@ function webhookSidebar() {
             ['领卡事件通知', '/webhook/v3/MEMBERCARD.ACCEPT_CARD'],
             ['激活事件通知', '/webhook/v3/MEMBERCARD.ACTIVATE_CARD'],
             ['用户管理会员卡事件通知', '/webhook/v3/MEMBERCARD.USERCARD_MANAGE'],
+          ].map(transArrayItem),
+        },
+        {
+          text: '智慧商圈',
+          collapsed: true,
+          items: [
+            ['会员积分服务授权结果通知', '/webhook/v3/MALL_AUTH.ACTIVATE_CARD'],
+            ['会员支付结果通知', '/webhook/v3/MALL_TRANSACTION.SUCCESS'],
+            ['会员退款成功通知', '/webhook/v3/MALL_REFUND.SUCCESS'],
           ].map(transArrayItem),
         },
         {
