@@ -17,6 +17,7 @@ namespace WeChatPay.OpenAPI.V3.Transfer.Batches.OutBatchNo._out_batch_no_.Detail
     out_batch_no: string
   }
   export interface WellformedResponse {
+    mchid: string
     out_batch_no: string
     batch_id: string
     appid: string
@@ -95,6 +96,7 @@ wxpay.v3.transfer.batches.outBatchNo._out_batch_no_.details.outDetailNo._out_det
 .then(
   ({ // [!code hl:31]
     data: {
+      mchid,
       out_batch_no,
       batch_id,
       appid,
@@ -110,6 +112,7 @@ wxpay.v3.transfer.batches.outBatchNo._out_batch_no_.details.outDetailNo._out_det
       update_time,
     },
   }) => ({
+    mchid,
     out_batch_no,
     batch_id,
     appid,

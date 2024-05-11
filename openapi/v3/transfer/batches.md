@@ -27,6 +27,7 @@ namespace WeChatPay.OpenAPI.V3.Transfer.Batches.PostHttpMethod {
       user_name?: string
     }[]
     transfer_scene_id?: string
+    notify_url?: string
   }
   export interface RequestConfig extends AxiosRequestConfig {
     data?: JsonDataRequest
@@ -38,6 +39,7 @@ namespace WeChatPay.OpenAPI.V3.Transfer.Batches.PostHttpMethod {
     out_batch_no: string
     batch_id: string
     create_time: string
+    batch_status: 'ACCEPTED' | 'PROCESSING' | 'FINISHED' | 'CLOSED'
   }
 }
 namespace WeChatPay.OpenAPI.V3.Transfer {
@@ -85,6 +87,7 @@ wxpay.v3.transfer.batches.post({
   total_num,
   transfer_detail_list,
   transfer_scene_id,
+  notify_url,
 }, { headers, })
 .then(
   ({ // [!code hl:11]
@@ -92,11 +95,13 @@ wxpay.v3.transfer.batches.post({
       out_batch_no,
       batch_id,
       create_time,
+      batch_status,
     },
   }) => ({
     out_batch_no,
     batch_id,
     create_time,
+    batch_status,
   })
 )
 ```

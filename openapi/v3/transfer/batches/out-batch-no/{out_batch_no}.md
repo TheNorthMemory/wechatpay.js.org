@@ -40,6 +40,7 @@ namespace WeChatPay.OpenAPI.V3.Transfer.Batches.OutBatchNo._out_batch_no_.GetHtt
       success_num: number
       fail_amount: number
       fail_num: number
+      transfer_scene_id: string
     }
     transfer_detail_list: {
       detail_id: string
