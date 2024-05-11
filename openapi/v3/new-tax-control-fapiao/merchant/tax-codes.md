@@ -28,8 +28,10 @@ namespace WeChatPay.OpenAPI.V3.NewTaxControlFapiao.Merchant.TaxCodes.GetHttpMeth
       self: string
     }
     data: {
-      tax_code: string
       goods_name: string
+      goods_id: number
+      goods_category: string
+      tax_code: string
       tax_rate: number
       tax_prefer_mark: string
     }[]

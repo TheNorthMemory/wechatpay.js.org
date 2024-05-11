@@ -34,10 +34,15 @@ namespace WeChatPay.OpenAPI.V3.NewTaxControlFapiao.FapiaoApplications.PostHttpMe
       remark: string
       items: {
         tax_code: string
+        goods_category: string
+        goods_name: string
+        goods_id: number
         specification: string
         unit: string
         quantity: number
         total_amount: number
+        tax_rate: number
+        tax_prefer_mark: string
         discount: boolean
       }[]
     }[]

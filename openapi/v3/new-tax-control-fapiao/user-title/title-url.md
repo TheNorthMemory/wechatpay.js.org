@@ -31,6 +31,7 @@ namespace WeChatPay.OpenAPI.V3.NewTaxControlFapiao.UserTitle.TitleUrl.GetHttpMet
     title_url: string
     miniprogram_appid: string
     miniprogram_path: string
+    miniprogram_user_name: string
   }
 }
 namespace WeChatPay.OpenAPI.V3.NewTaxControlFapiao.UserTitle {
@@ -77,11 +78,13 @@ wxpay.v3.newTaxControlFapiao.userTitle.titleUrl.get({
       title_url,
       miniprogram_appid,
       miniprogram_path,
+      miniprogram_user_name,
     },
   }) => ({
     title_url,
     miniprogram_appid,
     miniprogram_path,
+    miniprogram_user_name,
   })
 )
 ```
