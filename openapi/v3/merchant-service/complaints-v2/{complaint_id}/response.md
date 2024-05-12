@@ -13,7 +13,6 @@ description: 商户可通过调用此接口，提交回复内容。其中上传�
 import { AxiosRequestConfig, AxiosPromise } from 'axios'
 namespace WeChatPay.OpenAPI.V3.MerchantService.ComplaintsV2._complaint_id_.Response.PostHttpMethod {
   export interface JsonDataRequest {
-    complaint_id: string
     complainted_mchid: string
     response_content: string
     response_images: string[]
@@ -22,6 +21,7 @@ namespace WeChatPay.OpenAPI.V3.MerchantService.ComplaintsV2._complaint_id_.Respo
   }
   export interface RequestConfig extends AxiosRequestConfig {
     data?: JsonDataRequest
+    complaint_id: string
   }
   export interface WellformedResponse {
   }
@@ -72,12 +72,11 @@ import { wxpay } from './virtual'
 // ---cut---
 wxpay.v3.merchantService.complaintsV2._complaint_id_.response.post({
 //                                                            ^^^^
-  complaint_id,
   complainted_mchid,
   response_content,
   response_images,
   jump_url,
   jump_url_text,
-})
+}, { complaint_id, })
 .then(({ status, }) => status === 204) // [!code hl]
 ```

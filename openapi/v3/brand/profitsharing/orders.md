@@ -24,11 +24,15 @@ namespace WeChatPay.OpenAPI.V3.Brand.Profitsharing.Orders.PostHttpMethod {
       account: string
       amount: number
       description: string
+      name?: string
     }[]
     finish: boolean
   }
   export interface RequestConfig extends AxiosRequestConfig {
     data?: JsonDataRequest
+    headers?: {
+      'Wechatpay-Serial': string
+    }
   }
   export interface WellformedResponse {
     brand_mchid: string
@@ -36,6 +40,17 @@ namespace WeChatPay.OpenAPI.V3.Brand.Profitsharing.Orders.PostHttpMethod {
     transaction_id: string
     out_order_no: string
     order_id: string
+    receivers: {
+      type: string
+      account: string
+      amount: number
+      description: string
+      result: string
+      finish_time: string
+      fail_reason: string
+      detail_id: string
+    }[]
+    status: 'PROCESSING' | 'FINISHED'
   }
 }
 namespace WeChatPay.OpenAPI.V3.Brand.Profitsharing {
@@ -87,15 +102,17 @@ wxpay.v3.brand.profitsharing.orders.post({
   out_order_no,
   receivers,
   finish,
-})
+}, { headers, })
 .then(
-  ({ // [!code hl:15]
+  ({ // [!code hl:19]
     data: {
       brand_mchid,
       sub_mchid,
       transaction_id,
       out_order_no,
       order_id,
+      receivers,
+      status,
     },
   }) => ({
     brand_mchid,
@@ -103,6 +120,8 @@ wxpay.v3.brand.profitsharing.orders.post({
     transaction_id,
     out_order_no,
     order_id,
+    receivers,
+    status,
   })
 )
 ```
@@ -137,6 +156,7 @@ namespace WeChatPay.OpenAPI.V3.Brand.Profitsharing.Orders.GetHttpMethod {
       result: string
       finish_time: string
       fail_reason: string
+      detail_id?:  string
     }[]
     close_reason: string
     finish_amount: number
@@ -182,7 +202,7 @@ wxpay.v3.brand.profitsharing.orders.get({
   params,
 })
 .then(
-  ({ // [!code hl:23]
+  ({ // [!code hl:21]
     data: {
       sub_mchid,
       transaction_id,
@@ -190,7 +210,6 @@ wxpay.v3.brand.profitsharing.orders.get({
       order_id,
       status,
       receivers,
-      close_reason,
       finish_amount,
       finish_description,
     },
@@ -201,7 +220,6 @@ wxpay.v3.brand.profitsharing.orders.get({
     order_id,
     status,
     receivers,
-    close_reason,
     finish_amount,
     finish_description,
   })

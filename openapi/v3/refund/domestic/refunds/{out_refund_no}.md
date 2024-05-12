@@ -42,6 +42,7 @@ namespace WeChatPay.OpenAPI.V3.Refund.Domestic.Refunds._out_refund_no_.GetHttpMe
       settlement_total: number
       discount_refund: number
       currency: string
+      refund_fee: number
     }
     promotion_detail?: {
       promotion_id: string

@@ -30,6 +30,7 @@ namespace WeChatPay.OpenAPI.V3.CombineTransactions.App.PostHttpMethod {
       }
       out_trade_no: string
       sub_mchid: string
+      detail: string
       goods_tag: string
       description: string
       settle_info: {
@@ -40,16 +41,30 @@ namespace WeChatPay.OpenAPI.V3.CombineTransactions.App.PostHttpMethod {
     }[]
     combine_payer_info: {
       openid: string
+      sub_openid?: string
     }
     time_start: string
     time_expire: string
     notify_url: string
+    limit_pay?: 'no_balance' | 'no_debit' | 'balance_only'
+    contract_info?: {
+      mchid: string
+      appid: string
+      out_contract_code: string
+      plan_id: number
+      contract_display_account: string
+      notify_url: string
+    }
   }
   export interface RequestConfig extends AxiosRequestConfig {
     data?: JsonDataRequest
   }
   export interface WellformedResponse {
     prepay_id: string
+    contract_result?: {
+      code: string
+      message: string
+    }
   }
 }
 namespace WeChatPay.OpenAPI.V3.CombineTransactions {
@@ -103,8 +118,10 @@ wxpay.v3.combineTransactions.app.post({
   time_start,
   time_expire,
   notify_url,
+  limit_pay,
+  contract_info,
 })
-.then(({ data: { prepay_id: prepayid, }, }) => {
+.then(({ data: { prepay_id: prepayid, contract_result, }, }) => {
   const noncestr = Formatter.nonce();
   const timestamp = '' + Formatter.timestamp();
   return { // [!code hl:12]

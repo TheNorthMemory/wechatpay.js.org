@@ -40,6 +40,11 @@ namespace WeChatPay.OpenAPI.V3.CombineTransactions.Native.PostHttpMethod {
     time_start: string
     time_expire: string
     notify_url: string
+    limit_pay?: 'no_balance' | 'no_debit' | 'balance_only'
+    combine_payer_info?: {
+      openid: string
+      sub_openid?: string
+    }
   }
   export interface RequestConfig extends AxiosRequestConfig {
     data?: JsonDataRequest
@@ -93,6 +98,8 @@ wxpay.v3.combineTransactions.native.post({
   time_start,
   time_expire,
   notify_url,
+  limit_pay,
+  combine_payer_info,
 })
 .then(
   ({ // [!code hl:7]

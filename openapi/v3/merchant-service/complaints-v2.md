@@ -53,6 +53,11 @@ namespace WeChatPay.OpenAPI.V3.MerchantService.ComplaintsV2.GetHttpMethod {
         type: string
         share_power_info: {
           return_time: string
+          return_address_info?: {
+            return_address: string
+            longitude: string
+            latitude: string
+          }
         }
       }
     }[]

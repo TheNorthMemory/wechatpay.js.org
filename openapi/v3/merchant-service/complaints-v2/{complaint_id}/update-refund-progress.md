@@ -72,7 +72,6 @@ import { wxpay } from './virtual'
 // ---cut---
 wxpay.v3.merchantService.complaintsV2._complaint_id_.updateRefundProgress.post({
 //                                                                        ^^^^
-  complaint_id,
   action,
   launch_refund_day,
   reject_reason,
