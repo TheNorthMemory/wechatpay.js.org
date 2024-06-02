@@ -365,6 +365,34 @@ function openapiSidebar() {
           ].map(transArrayItem),
         },
         {
+          text: '免密支付',
+          collapsed: true,
+          items: [
+            {
+              text: '直连商户模式',
+              collapsed: true,
+              items: [
+                ['JSAPI下单并授权', '/openapi/v3/pay/transactions/jsapi-with-contract'],
+                ['小程序预签约', '/openapi/v3/password-exempt-contract/contracts/normal/pre-entrust-sign/mini-program'],
+                ['支付后预签约', '/openapi/v3/password-exempt-contract/contracts/normal/pre-entrust-sign/pay-redirect-sign'],
+              ].map(transArrayItem),
+            },
+            {
+              text: '合作伙伴模式',
+              collapsed: true,
+              items: [
+                ['JSAPI下单并授权', '/openapi/v3/pay/partner/transactions/jsapi-with-contract'],
+                ['小程序预签约', '/openapi/v3/password-exempt-contract/contracts/service-provider/pre-entrust-sign/mini-program'],
+                ['支付后预签约', '/openapi/v3/password-exempt-contract/contracts/service-provider/pre-entrust-sign/pay-redirect-sign'],
+              ].map(transArrayItem),
+            },
+            ...[
+              ['通过商户协议号查询协议', '/openapi/v3/password-exempt-contract/contracts/service-id/{service_id}/out-contract-code/{out_contract_code}'],
+              ['通过商户协议号解约协议', '/openapi/v3/password-exempt-contract/contracts/service-id/{service_id}/out-contract-code/{out_contract_code}/terminate'],
+            ].map(transArrayItem),
+          ],
+        },
+        {
           text: '分账',
           collapsed: true,
           items: [
@@ -779,6 +807,14 @@ function openapiSidebar() {
                 ['申请资金出境', '/openapi/v3/funds-to-oversea/orders'],
                 ['查询出境结果', '/openapi/v3/funds-to-oversea/orders/{out_order_id}'],
                 ['获取购付汇账单', '/openapi/v3/funds-to-oversea/bill-download-url'],
+              ].map(transArrayItem),
+            },
+            {
+              text: '免密支付',
+              collapsed: true,
+              items: [
+                ['小程序预签约', '/openapi/v3/password-exempt-contract/contracts/ecommerce/pre-entrust-sign/mini-program'],
+                ['支付后预签约', '/openapi/v3/password-exempt-contract/contracts/ecommerce/pre-entrust-sign/pay-redirect-sign'],
               ].map(transArrayItem),
             },
             {

@@ -75,6 +75,11 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | [合单Native下单](/openapi/v3/combine-transactions/native) {colspan=2}
 | [合单查单](/openapi/v3/combine-transactions/out-trade-no/{combine_out_trade_no}) {colspan=2}
 | [合单关单](/openapi/v3/combine-transactions/out-trade-no/{combine_out_trade_no}/close) {colspan=2}
+| 免密支付v3{rowspan=5} | [JSAPI下单并授权](/openapi/v3/pay/transactions/jsapi-with-contract) | [JSAPI下单并授权](/openapi/v3/pay/partner/transactions/jsapi-with-contract)
+| [小程序场景预签约](/openapi/v3/password-exempt-contract/contracts/normal/pre-entrust-sign/mini-program) | [小程序场景预签约](/openapi/v3/password-exempt-contract/contracts/service-provider/pre-entrust-sign/mini-program)
+| [支付后场景预签约](/openapi/v3/password-exempt-contract/contracts/normal/pre-entrust-sign/pay-redirect-sign) | [支付后场景预签约](/openapi/v3/password-exempt-contract/contracts/service-provider/pre-entrust-sign/pay-redirect-sign)
+| [通过商户协议号查询协议](/openapi/v3/password-exempt-contract/contracts/service-id/{service_id}/out-contract-code/{out_contract_code}) {colspan=2}
+| [通过商户协议号解约协议](/openapi/v3/password-exempt-contract/contracts/service-id/{service_id}/out-contract-code/{out_contract_code}/terminate) {colspan=2}
 | 分账v3{rowspan=10} | &nbsp; | [查询最大分账比例](/openapi/v3/profitsharing/merchant-configs/{sub_mchid})
 | | [添加分账接收方](/openapi/v3/profitsharing/receivers/add)
 | | [删除分账接收方](/openapi/v3/profitsharing/receivers/delete)
@@ -261,7 +266,7 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | [申请转账明细电子回单](/openapi/v3/transfer-detail/electronic-receipts#post) {colspan=2}
 | [查询明细回单受理结果](/openapi/v3/transfer-detail/electronic-receipts#get) {colspan=2}
 | [下载电子回单文件](/openapi/v3/transferdownload/signfile) {colspan=2}
-| 平台收付通v3{rowspan=44} | &nbsp; | [二级商户进件](/openapi/v3/ecommerce/applyments/)
+| 平台收付通v3{rowspan=46} | &nbsp; | [二级商户进件](/openapi/v3/ecommerce/applyments/)
 | | [查询进件状态(平台申请单号)](/openapi/v3/ecommerce/applyments/{applyment_id})
 | | [查询进件状态(业务申请编号)](/openapi/v3/ecommerce/applyments/out-request-no/{out_request_no})
 | | [请求补差](/openapi/v3/ecommerce/subsidies/create)
@@ -298,6 +303,8 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | | [申请资金出境](/openapi/v3/funds-to-oversea/orders)
 | | [查询出境结果](/openapi/v3/funds-to-oversea/orders/{out_order_id})
 | | [获取购付汇账单](/openapi/v3/funds-to-oversea/bill-download-url)
+| | [免密支付-小程序预签约](/openapi/v3/password-exempt-contract/contracts/ecommerce/pre-entrust-sign/mini-program)
+| | [免密支付-支付后预签约](/openapi/v3/password-exempt-contract/contracts/ecommerce/pre-entrust-sign/pay-redirect-sign)
 | | [合单代扣-APP方式预签约](/openapi/v3/ecommerce/combine-papay/contracts/pre-entrust-sign)
 | | [合单代扣-小程序方式预签约](/openapi/v3/ecommerce/combine-papay/contracts/pre-entrust-sign/mini-program)
 | | [合单代扣-通过商户协议号查询协议](/openapi/v3/ecommerce/combine-papay/contracts/plan-id/{plan_id}/out-contract-code/{out_contract_code})
