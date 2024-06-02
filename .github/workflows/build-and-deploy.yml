@@ -34,7 +34,7 @@ jobs:
         run: npm ci
       - name: Build with VitePress
         run: |
-          NODE_OPTIONS=--max_old_space_size=6656 npm run build
+          NODE_OPTIONS=--max_old_space_size=7168 npm run build
           touch .vitepress/dist/.nojekyll
           cp CNAME .vitepress/dist/
           echo 445e70dccce2fea23d65e112ca878181 > .vitepress/dist/baidu_verify_codeva-UYZ3YizqDZ.html
