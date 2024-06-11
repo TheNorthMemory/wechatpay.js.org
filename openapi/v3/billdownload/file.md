@@ -18,7 +18,7 @@ namespace WeChatPay.OpenAPI.V3.Billdownload.File.GetHttpMethod {
       token: string
       tartype?: 'GZIP'
     }
-    responseType: 'arraybuffer'
+    responseType: 'stream'
     transformResponse: []
   }
   export interface WellformedResponse extends ReadStream {
@@ -59,8 +59,7 @@ wxpay.v3.billdownload.file.get({
 //                         ^^^
   params,
   responseType,
-//^?
-  transformResponse,
+  transformResponse: [],
 })
 .then(
   ({ // [!code hl:5]

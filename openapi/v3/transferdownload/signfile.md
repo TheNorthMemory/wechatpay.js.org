@@ -17,7 +17,7 @@ namespace WeChatPay.OpenAPI.V3.Transferdownload.Signfile.GetHttpMethod {
     params: {
       token: string
     }
-    responseType: 'arraybuffer'
+    responseType: 'stream'
     transformResponse: []
   }
   export interface WellformedResponse extends ReadStream {

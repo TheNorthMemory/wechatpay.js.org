@@ -24,7 +24,8 @@ namespace WeChatPay.OpenAPI.Invoicing.Fapiao.FapiaoFile.GetHttpMethod {
       invoice_no: string
       fapiao_id: string
     }
-    responseType: 'arraybuffer'
+    responseType: 'stream'
+    transformResponse: []
   }
   export interface WellformedResponse extends ReadStream {
   }
@@ -64,6 +65,7 @@ axios.get('/invoicing/fapiao/fapiao-file', {
   baseURL,
   params,
   responseType,
+  transformResponse: [],
 })
 .then(
   ({ // [!code hl:8]

@@ -15,7 +15,7 @@ import { ReadStream } from 'fs'
 namespace WeChatPay.OpenAPI.V3.MerchantService.Images._media_id_.GetHttpMethod {
   export interface RequestConfig extends AxiosRequestConfig {
     media_id: string
-    responseType: 'arraybuffer'
+    responseType: 'stream'
     transformResponse: []
   }
   export interface WellformedResponse extends ReadStream {
@@ -60,8 +60,7 @@ wxpay.v3.merchantService.images._media_id_.get({
 //                                         ^^^
   media_id,
   responseType,
-//^?
-  transformResponse,
+  transformResponse: [],
 })
 .then(
   ({ // [!code hl:5]

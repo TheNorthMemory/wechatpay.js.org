@@ -27,7 +27,7 @@ namespace WeChatPay.OpenAPI.V2.Pay.Downloadfundflow.PostHttpMethod {
   export interface RequestConfig extends AxiosRequestConfig {
     data?: XmlDataRequest
     security: true
-    responseType: 'arraybuffer'
+    responseType: 'stream'
     transformResponse: []
   }
   export interface WellformedResponse extends ReadStream {
@@ -81,7 +81,6 @@ wxpay.v2.pay.downloadfundflow.post({
   account_type,
   tar_type,
 }, { security, responseType, transformResponse, })
-//             ^?
 .then(
   ({ // [!code hl:5]
     data,
