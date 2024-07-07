@@ -5,7 +5,7 @@ description: 当微信支付分订单支付状态处于“待支付”时，商�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/payscore/chapter3_6.shtml)
+{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/payscore/chapter3_6.shtml) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/service-order/collect-service-order.html)
 
 ```js twoslash
 // @filename: virtual.ts
@@ -32,12 +32,12 @@ namespace WeChatPay.OpenAPI.V3.Payscore.Serviceorder._out_order_no_ {
   export interface Pay {
     /**
      * shortland
-     * @link https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/payscore/chapter3_6.shtml
+     * @link https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/service-order/collect-service-order.html
      */
     (data: Pay.PostHttpMethod.JsonDataRequest, config: Pay.PostHttpMethod.RequestConfig): AxiosPromise<Pay.PostHttpMethod.WellformedResponse>
     /**
      * 商户发起催收扣款API
-     * @link https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/payscore/chapter3_6.shtml
+     * @link https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/service-order/collect-service-order.html
      */
     post(data: Pay.PostHttpMethod.JsonDataRequest, config: Pay.PostHttpMethod.RequestConfig): AxiosPromise<Pay.PostHttpMethod.WellformedResponse>
   }

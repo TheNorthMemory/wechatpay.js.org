@@ -5,7 +5,7 @@ description: 用户申请使用服务时，商户可通过此接口申请创建/
 
 # 创建支付分订单 {#post}
 
-用户申请使用服务时，商户可通过此接口申请创建微信支付分订单。 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/payscore/chapter3_1.shtml)
+用户申请使用服务时，商户可通过此接口申请创建微信支付分订单。 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/payscore/chapter3_1.shtml) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/service-order/create-service-order.html)
 
 ```js twoslash
 // @filename: virtual.ts
@@ -97,12 +97,12 @@ namespace WeChatPay.OpenAPI.V3.Payscore {
   export interface Serviceorder {
     /**
      * shortland
-     * @link https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/payscore/chapter3_1.shtml
+     * @link https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/service-order/create-service-order.html
      */
     (data: Serviceorder.PostHttpMethod.JsonDataRequest, config?: Serviceorder.PostHttpMethod.RequestConfig): AxiosPromise<Serviceorder.PostHttpMethod.WellformedResponse>
     /**
      * 创建支付分订单API
-     * @link https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/payscore/chapter3_1.shtml
+     * @link https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/service-order/create-service-order.html
      */
     post(data: Serviceorder.PostHttpMethod.JsonDataRequest, config?: Serviceorder.PostHttpMethod.RequestConfig): AxiosPromise<Serviceorder.PostHttpMethod.WellformedResponse>
   }
@@ -186,7 +186,7 @@ wxpay.v3.payscore.serviceorder.post({
 
 # 查询支付分订单 {#get}
 
-用于查询单笔微信支付分订单详细信息。 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/payscore/chapter3_2.shtml)
+用于查询单笔微信支付分订单详细信息。 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/payscore/chapter3_2.shtml) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/service-order/get-service-order.html)
 
 ```js twoslash
 // @filename: virtual.ts
@@ -276,103 +276,11 @@ namespace WeChatPay.OpenAPI.V3.Payscore.Serviceorder.GetHttpMethod {
     openid: string
   }
 }
-namespace WeChatPay.OpenAPI.V3.Payscore.Serviceorder.PostHttpMethod {
-  export interface JsonDataRequest {
-    out_order_no: string
-    appid: string
-    service_id: string
-    post_payments: {
-      name: string
-      amount: number
-      description: string
-      count: number
-    }[]
-    post_discounts: {
-      name: string
-      description: string
-      amount: number
-      count: number
-    }[]
-    time_range: {
-      start_time: string
-      start_time_remark: string
-      end_time: string
-      end_time_remark: string
-    }
-    location: {
-      start_location: string
-      end_location: string
-    }
-    service_introduction: string
-    risk_fund: {
-      name: string
-      amount: number
-      description: string
-    }
-    attach: string
-    notify_url: string
-    openid: string
-    need_user_confirm: boolean
-  }
-  export interface RequestConfig extends AxiosRequestConfig {
-    data?: JsonDataRequest
-  }
-  export interface WellformedResponse {
-    out_order_no: string
-    appid: string
-    service_id: string
-    post_payments: {
-      name: string
-      amount: number
-      description: string
-      count: number
-    }[]
-    post_discounts: {
-      name: string
-      description: string
-      amount: number
-      count: number
-    }[]
-    time_range: {
-      start_time: string
-      start_time_remark: string
-      end_time: string
-      end_time_remark: string
-    }
-    location: {
-      start_location: string
-      end_location: string
-    }
-    service_introduction: string
-    risk_fund: {
-      name: string
-      amount: number
-      description: string
-    }
-    attach: string
-    notify_url: string
-    mchid: string
-    state: string
-    state_description: string
-    order_id: string
-    package: string
-  }
-}
 namespace WeChatPay.OpenAPI.V3.Payscore {
   export interface Serviceorder {
     /**
-     * shortland
-     * @link https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/payscore/chapter3_1.shtml
-     */
-    (data: Serviceorder.PostHttpMethod.JsonDataRequest, config?: Serviceorder.PostHttpMethod.RequestConfig): AxiosPromise<Serviceorder.PostHttpMethod.WellformedResponse>
-    /**
-     * 创建支付分订单API
-     * @link https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/payscore/chapter3_1.shtml
-     */
-    post(data: Serviceorder.PostHttpMethod.JsonDataRequest, config?: Serviceorder.PostHttpMethod.RequestConfig): AxiosPromise<Serviceorder.PostHttpMethod.WellformedResponse>
-    /**
      * 查询支付分订单API
-     * @link https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/payscore/chapter3_2.shtml
+     * @link https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/service-order/get-service-order.html
      */
     get(config: Serviceorder.GetHttpMethod.RequestConfig): AxiosPromise<Serviceorder.GetHttpMethod.WellformedResponse>
   }
@@ -419,7 +327,7 @@ wxpay.v3.payscore.serviceorder.get({
       state,
       state_description,
       order_id,
-      package: packageStr,
+      openid,
     },
   }) => ({
     out_order_no,
@@ -437,7 +345,7 @@ wxpay.v3.payscore.serviceorder.get({
     state,
     state_description,
     order_id,
-    package: packageStr,
+    openid,
   })
 )
 ```

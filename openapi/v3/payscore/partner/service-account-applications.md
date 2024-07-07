@@ -5,7 +5,7 @@ description: 已接入收付通的商户，在已完成支付分权限开通及�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter6_2_13.shtml)
+{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter6_2_13.shtml) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/partner-weixin-pay-score/partner-service-account/create-service-account-application.html)
 
 ```js twoslash
 // @filename: virtual.ts
@@ -39,12 +39,12 @@ namespace WeChatPay.OpenAPI.V3.Payscore.Partner {
   export interface ServiceAccountApplications {
     /**
      * shortland
-     * @link https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter6_2_13.shtml
+     * @link https://pay.weixin.qq.com/docs/partner/apis/partner-weixin-pay-score/partner-service-account/create-service-account-application.html
      */
     (data: ServiceAccountApplications.PostHttpMethod.JsonDataRequest, config?: ServiceAccountApplications.PostHttpMethod.RequestConfig): AxiosPromise<ServiceAccountApplications.PostHttpMethod.WellformedResponse>
     /**
      * 收付通子商户申请绑定支付分服务
-     * @link https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter6_2_13.shtml
+     * @link https://pay.weixin.qq.com/docs/partner/apis/partner-weixin-pay-score/partner-service-account/create-service-account-application.html
      */
     post(data: ServiceAccountApplications.PostHttpMethod.JsonDataRequest, config?: ServiceAccountApplications.PostHttpMethod.RequestConfig): AxiosPromise<ServiceAccountApplications.PostHttpMethod.WellformedResponse>
   }

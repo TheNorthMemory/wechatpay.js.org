@@ -5,7 +5,7 @@ description: 通过openid查询用户授权信息
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter6_2_21.shtml)
+{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter6_2_21.shtml) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/partner-weixin-pay-score/partner-service-auth/get-partner-permissions-by-open-id.html)
 
 ```js twoslash
 // @filename: virtual.ts
@@ -27,20 +27,23 @@ namespace WeChatPay.OpenAPI.V3.Payscore.Partner.Permissions.Search.GetHttpMethod
     appid: string
     mchid: string
     openid: string
-    sub_openid: string
     authorization_code: string
     authorization_state: string
-    cancel_authorization_time: string
-    authorization_success_time: string
+    notify_url: string
+    cancel_authorization_time: string | Date
+    authorization_success_time: string | Date
     sub_mchid: string
     sub_appid: string
+    sub_openid: string
+    user_risk_level: number
+    risk_level_version: number
   }
 }
 namespace WeChatPay.OpenAPI.V3.Payscore.Partner.Permissions {
   export interface Search {
     /**
      * 查询与用户授权记录（openid）API
-     * @link https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter6_2_21.shtml
+     * @link https://pay.weixin.qq.com/docs/partner/apis/partner-weixin-pay-score/partner-service-auth/get-partner-permissions-by-open-id.html
      */
     get(config: Search.GetHttpMethod.RequestConfig): AxiosPromise<Search.GetHttpMethod.WellformedResponse>
   }
@@ -80,32 +83,38 @@ wxpay.v3.payscore.partner.permissions.search.get({
   params,
 })
 .then(
-  ({ // [!code hl:27]
+  ({ // [!code hl:33]
     data: {
       service_id,
       appid,
       mchid,
       openid,
-      sub_openid,
       authorization_code,
       authorization_state,
+      notify_url,
       cancel_authorization_time,
       authorization_success_time,
       sub_mchid,
       sub_appid,
+      sub_openid,
+      user_risk_level,
+      risk_level_version,
     },
   }) => ({
     service_id,
     appid,
     mchid,
     openid,
-    sub_openid,
     authorization_code,
     authorization_state,
+    notify_url,
     cancel_authorization_time,
     authorization_success_time,
     sub_mchid,
     sub_appid,
+    sub_openid,
+    user_risk_level,
+    risk_level_version,
   })
 )
 ```

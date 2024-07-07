@@ -5,7 +5,7 @@ description: 由于收款商户进行的某些“线下操作”会导致微信�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [FINISHED:商户完结订单] [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/payscore/chapter3_6.shtml)
+{{ $frontmatter.description }} [FINISHED:商户完结订单] [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/payscore/chapter3_6.shtml) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/service-order/sync-service-order.html)
 
 ```js twoslash
 // @filename: virtual.ts
@@ -26,8 +26,12 @@ namespace WeChatPay.OpenAPI.V3.Payscore.Serviceorder._out_order_no_.Sync.PostHtt
   }
   export interface WellformedResponse {
     out_order_no: string
-    appid: string
     service_id: string
+    appid: string
+    mchid: string
+    service_introduction: string
+    state: string
+    state_description: string
     post_payments: {
       name: string
       amount: number
@@ -38,30 +42,12 @@ namespace WeChatPay.OpenAPI.V3.Payscore.Serviceorder._out_order_no_.Sync.PostHtt
       name: string
       description: string
       amount: number
-      count: number
     }[]
-    time_range: {
-      start_time: string
-      start_time_remark: string
-      end_time: string
-      end_time_remark: string
-    }
-    location: {
-      start_location: string
-      end_location: string
-    }
-    service_introduction: string
     risk_fund: {
       name: string
       amount: number
       description: string
     }
-    attach: string
-    notify_url: string
-    mchid: string
-    state: string
-    state_description: string
-    order_id: string
     total_amount: number
     need_collection: boolean
     collection: {
@@ -70,44 +56,39 @@ namespace WeChatPay.OpenAPI.V3.Payscore.Serviceorder._out_order_no_.Sync.PostHtt
       paying_amount: number
       paid_amount: number
       details: {
-        seq: number
         amount: number
         paid_type: string
         paid_time: string
         transaction_id: string
-        promotion_detail: {
-          coupon_id: string
-          name: string
-          scope: string
-          type: string
-          amount: number
-          stock_id: string
-          wechatpay_contribute: number
-          merchant_contribute: number
-          other_contribute: number
-          currency: string
-          goods_detail: {
-            goods_id: string
-            quantity: number
-            unit_price: number
-            discount_amount: number
-            goods_remark: string
-          }[]
-        }[]
       }[]
+      bank_type: string
     }
+    time_range: {
+      start_time: string
+      end_time: string
+      start_time_remark: string
+      end_time_remark: string
+    }
+    location: {
+      start_location: string
+      end_location: string
+    }
+    attach: string
+    notify_url: string
+    openid: string
+    order_id: string
   }
 }
 namespace WeChatPay.OpenAPI.V3.Payscore.Serviceorder._out_order_no_ {
   export interface Sync {
     /**
      * shortland
-     * @link https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/payscore/chapter3_6.shtml
+     * @link https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/service-order/sync-service-order.html
      */
     (data: Sync.PostHttpMethod.JsonDataRequest, config: Sync.PostHttpMethod.RequestConfig): AxiosPromise<Sync.PostHttpMethod.WellformedResponse>
     /**
      * 同步服务订单信息API
-     * @link https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/payscore/chapter3_6.shtml
+     * @link https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/service-order/sync-service-order.html
      */
     post(data: Sync.PostHttpMethod.JsonDataRequest, config: Sync.PostHttpMethod.RequestConfig): AxiosPromise<Sync.PostHttpMethod.WellformedResponse>
   }
@@ -150,46 +131,48 @@ wxpay.v3.payscore.serviceorder._out_order_no_.sync.post({
   detail,
 }, { out_order_no })
 .then(
-  ({ // [!code hl:41]
+  ({ // [!code hl:43]
     data: {
       out_order_no,
-      appid,
       service_id,
-      post_payments,
-      post_discounts,
-      time_range,
-      location,
-      service_introduction,
-      risk_fund,
-      attach,
-      notify_url,
+      appid,
       mchid,
+      service_introduction,
       state,
       state_description,
-      order_id,
+      post_payments,
+      post_discounts,
+      risk_fund,
       total_amount,
       need_collection,
       collection,
+      time_range,
+      location,
+      attach,
+      notify_url,
+      openid,
+      order_id,
     },
   }) => ({
     out_order_no,
-    appid,
     service_id,
-    post_payments,
-    post_discounts,
-    time_range,
-    location,
-    service_introduction,
-    risk_fund,
-    attach,
-    notify_url,
+    appid,
     mchid,
+    service_introduction,
     state,
     state_description,
-    order_id,
+    post_payments,
+    post_discounts,
+    risk_fund,
     total_amount,
     need_collection,
     collection,
+    time_range,
+    location,
+    attach,
+    notify_url,
+    openid,
+    order_id,
   })
 )
 ```

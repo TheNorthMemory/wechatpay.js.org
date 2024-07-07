@@ -64,6 +64,7 @@ namespace WeChatPay.OpenAPI.V3.Payscore.Partner.Servicepayondeliveryorder.PostHt
         picture: string
         amount: number
         count: number
+        category_id: string[]
       }[]
     }
   }
@@ -71,6 +72,61 @@ namespace WeChatPay.OpenAPI.V3.Payscore.Partner.Servicepayondeliveryorder.PostHt
     data?: JsonDataRequest
   }
   export interface WellformedResponse {
+    out_order_no: string
+    service_id: string
+    appid: string
+    mchid: string
+    sub_appid: string
+    sub_mchid: string
+    service_introduction: string
+    state: string
+    state_description: string
+    post_payments: {
+      name: string
+      amount: number
+      description: string
+      count: number
+    }[]
+    post_discounts: {
+      name: string
+      description: string
+      amount: number
+      count: number
+    }[]
+    risk_fund: {
+      name: string
+      amount: number
+      description: string
+    }
+    time_range: {
+      start_time: string
+      end_time: string
+      start_time_remark: string
+      end_time_remark: string
+    }
+    location: {
+      start_location: string
+      end_location: string
+    }
+    attach: string
+    notify_url: string
+    order_id: string
+    package: string
+    shopping_info: {
+      real_merchant_appid: string
+      jump_link: {
+        jump_link_type: string
+        appid: string
+        path: string
+      }
+      goods: {
+        name: string
+        picture: string
+        amount: number
+        count: number
+        category_id: string[]
+      }[]
+    }
   }
 }
 namespace WeChatPay.OpenAPI.V3.Payscore.Partner {
@@ -133,5 +189,49 @@ wxpay.v3.payscore.partner.servicepayondeliveryorder.post({
   mchid,
   shopping_info,
 })
-.then(({ data, }) => data) // [!code hl:1]
+.then(
+  ({ // [!code hl:43]
+    data: {
+      out_order_no,
+      service_id,
+      appid,
+      mchid,
+      sub_appid,
+      sub_mchid,
+      service_introduction,
+      state,
+      state_description,
+      post_payments,
+      post_discounts,
+      risk_fund,
+      time_range,
+      location,
+      attach,
+      notify_url,
+      order_id,
+      package: packageStr,
+      shopping_info,
+    },
+  }) => ({
+    out_order_no,
+    service_id,
+    appid,
+    mchid,
+    sub_appid,
+    sub_mchid,
+    service_introduction,
+    state,
+    state_description,
+    post_payments,
+    post_discounts,
+    risk_fund,
+    time_range,
+    location,
+    attach,
+    notify_url,
+    order_id,
+    package: packageStr,
+    shopping_info,
+  })
+)
 ```

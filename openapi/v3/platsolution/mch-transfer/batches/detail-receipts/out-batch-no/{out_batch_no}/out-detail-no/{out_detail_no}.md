@@ -1,0 +1,124 @@
+---
+title: 查询商家转账明细电子回单
+description: 查询商家转账明细电子回单接口，商户通过该接口可以查询商家转账明细电子回单受理进度信息，当电子回单文件生成结束后，将返回电子回单文件的hash值、电子回单文件的下载地址等。
+---
+
+# {{ $frontmatter.title }} {#get}
+
+{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/partner/apis/platsolution-mch-transfer/receipts/receipt-query-by-detail-out-no.html)
+
+```js twoslash
+// @filename: virtual.ts
+/// <reference types="node" />
+import { AxiosRequestConfig, AxiosPromise } from 'axios'
+namespace WeChatPay.OpenAPI.V3.Platsolution.MchTransfer.Batches.DetailReceipts.OutBatchNo._out_batch_no_.OutDetailNo._out_detail_no_.GetHttpMethod {
+  export interface RequestConfig extends AxiosRequestConfig {
+    out_batch_no: string
+    out_detail_no: string
+    params: {
+      sub_mchid: string
+    }
+  }
+  export interface WellformedResponse {
+    batch_id: string
+    out_batch_no: string
+    detail_id: string
+    out_detail_no: string
+    sub_mchid: string
+    receipt_state: string
+    hash_type: string
+    hash_value: string
+    download_url: string
+  }
+}
+namespace WeChatPay.OpenAPI.V3.Platsolution.MchTransfer.Batches.DetailReceipts.OutBatchNo._out_batch_no_.OutDetailNo {
+  export interface _out_detail_no_ {
+    /**
+     * 查询商家转账明细电子回单
+     * @link https://pay.weixin.qq.com/docs/partner/apis/platsolution-mch-transfer/receipts/receipt-query-by-detail-out-no.html
+     */
+    get(config: _out_detail_no_.GetHttpMethod.RequestConfig): AxiosPromise<_out_detail_no_.GetHttpMethod.WellformedResponse>
+  }
+}
+namespace WeChatPay.OpenAPI.V3.Platsolution.MchTransfer.Batches.DetailReceipts.OutBatchNo._out_batch_no_ {
+  export interface OutDetailNo {
+    _out_detail_no_: OutDetailNo._out_detail_no_
+  }
+}
+namespace WeChatPay.OpenAPI.V3.Platsolution.MchTransfer.Batches.DetailReceipts.OutBatchNo {
+  export interface _out_batch_no_ {
+    outDetailNo: _out_batch_no_.OutDetailNo
+  }
+}
+namespace WeChatPay.OpenAPI.V3.Platsolution.MchTransfer.Batches.DetailReceipts {
+  export interface OutBatchNo {
+    _out_batch_no_: OutBatchNo._out_batch_no_
+  }
+}
+namespace WeChatPay.OpenAPI.V3.Platsolution.MchTransfer.Batches {
+  export interface DetailReceipts {
+    outBatchNo: DetailReceipts.OutBatchNo
+  }
+}
+namespace WeChatPay.OpenAPI.V3.Platsolution.MchTransfer {
+  export interface Batches {
+    detailReceipts: Batches.DetailReceipts
+  }
+}
+namespace WeChatPay.OpenAPI.V3.Platsolution {
+  export interface MchTransfer {
+    batches: MchTransfer.Batches
+  }
+}
+namespace WeChatPay.OpenAPI.V3 {
+  export interface Platsolution {
+    mchTransfer: Platsolution.MchTransfer
+  }
+}
+namespace WeChatPay.OpenAPI {
+  export interface V3 {
+    platsolution: V3.Platsolution
+  }
+}
+export interface Wechatpay {
+  /**
+   * APIv3 endpoint
+   */
+  v3: WeChatPay.OpenAPI.V3
+}
+export var wxpay: Wechatpay
+// @filename: business.js
+import { wxpay } from './virtual'
+// ---cut---
+wxpay.v3.platsolution.mchTransfer.batches.detailReceipts.outBatchNo._out_batch_no_.outDetailNo._out_detail_no_.get({
+//                                                                                                             ^^^
+  out_batch_no,
+  out_detail_no,
+  params,
+})
+.then(
+  ({ // [!code hl:23]
+    data: {
+      batch_id,
+      out_batch_no,
+      detail_id,
+      out_detail_no,
+      sub_mchid,
+      receipt_state,
+      hash_type,
+      hash_value,
+      download_url,
+    },
+  }) => ({
+    batch_id,
+    out_batch_no,
+    detail_id,
+    out_detail_no,
+    sub_mchid,
+    receipt_state,
+    hash_type,
+    hash_value,
+    download_url,
+  })
+)
+```

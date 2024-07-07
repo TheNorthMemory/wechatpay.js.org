@@ -5,7 +5,7 @@ description: 商户预授权
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/payscore/chapter9_2.shtml)
+{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/payscore/chapter9_2.shtml) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/service-auth/apply-permissions.html)
 
 ```js twoslash
 // @filename: virtual.ts
@@ -29,12 +29,12 @@ namespace WeChatPay.OpenAPI.V3.Payscore {
   export interface Permissions {
     /**
      * shortland
-     * @link https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/payscore/chapter9_2.shtml
+     * @link https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/service-auth/apply-permissions.html
      */
     (data: Permissions.PostHttpMethod.JsonDataRequest, config?: Permissions.PostHttpMethod.RequestConfig): AxiosPromise<Permissions.PostHttpMethod.WellformedResponse>
     /**
      * 商户预授权API
-     * @link https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/payscore/chapter9_2.shtml
+     * @link https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/service-auth/apply-permissions.html
      */
     post(data: Permissions.PostHttpMethod.JsonDataRequest, config?: Permissions.PostHttpMethod.RequestConfig): AxiosPromise<Permissions.PostHttpMethod.WellformedResponse>
   }

@@ -5,7 +5,7 @@ description: 微信支付通过支付通知接口将用户支付成功消息通�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [普通支付通知](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/transactions/chapter3_11.shtml) [服务商支付通知](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/transactions/chapter5_11.shtml) [合单支付通知](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/combine/chapter3_7.shtml) [停车服务扣费成功通知](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter8_8_6.shtml) [服务商停车服务扣费成功通知](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter8_8_6.shtml) [保险商户委托代扣成功通过](https://pay.weixin.qq.com/docs/merchant/apis/insurance-entrusted-payment/deduct-result-notify.html)
+{{ $frontmatter.description }} [普通支付通知](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/transactions/chapter3_11.shtml) [服务商支付通知](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/transactions/chapter5_11.shtml) [合单支付通知](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/combine/chapter3_7.shtml) [停车服务扣费成功通知](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter8_8_6.shtml) [服务商停车服务扣费成功通知](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter8_8_6.shtml) [保险商户委托代扣成功通过](https://pay.weixin.qq.com/docs/merchant/apis/insurance-entrusted-payment/deduct-result-notify.html) [合单支付成功通知](https://pay.weixin.qq.com/docs/partner/apis/combine-payment/orders/payment-notice.html)
 
 ## 请求头(headers) {#req.headers}
 
@@ -127,6 +127,28 @@ Request-ID: 08F78BB5AF0610D302189F99DD5C20BA56F89845-0
     "attach":"自定义数据",
     "scene_info":{
         "device_id":"013467007045764"
+    },
+    "sub_orders": [
+      {
+        "mchid": "1900000109",
+        "trade_type": "JSAPI",
+        "trade_state": "SUCCESS",
+        "bank_type": "CMC",
+        "attach": "深圳分店",
+        "amount": {
+          "total_amount": 10,
+          "currency": "CNY",
+          "payer_amount": 10,
+          "payer_currency": "CNY",
+          "settlement_rate": 92253400
+        },
+        "success_time": "2015-05-20T13:29:35.120+08:00",
+        "transaction_id": "1009660380201506130728806387",
+        "out_trade_no": "20150806125346"
+      }
+    ],
+    "combine_payer_info": {
+      "openid": "oUpF8uMuAJO_M2pxb1Q9zNjWeS6o"
     }
 }
 ```
@@ -180,6 +202,8 @@ Request-ID: 08F78BB5AF0610D302189F99DD5C20BA56F89845-0
  * @prop {string} trade_type
  * @prop {string} attach
  * @prop {{device_id:string}=} scene_info
+ * @prop {{mchid: string, trade_type: string, trade_state: string, bank_type: string, attach: string, amount: {total_amount: number, currency: string, payer_amount: number, payer_currency: string, settlement_rate: number}, success_time: string, transaction_id: string, out_trade_no: string}[]=} sub_orders
+ * @prop {{openid: string}=} combine_payer_info
  */
 /** @type {string} 原始HTTP POST的文本 */
 var json;
@@ -264,6 +288,8 @@ const {
   trade_scene,
   parking_info,
   promotion_detail,
+  sub_orders,
+  combine_payer_info,
 } = JSON.parse(Aes.AesGcm.decrypt(nonce, apiv3Key, ciphertext, associated_data))
 
 // do your business

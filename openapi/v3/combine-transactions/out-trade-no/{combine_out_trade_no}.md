@@ -5,7 +5,7 @@ description: 电商平台通过合单查询订单API查询订单状态，完成�
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/combine/chapter3_3.shtml)
+{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/combine/chapter3_3.shtml) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/combine-payment/orders/query-order.html)
 
 ```js twoslash
 // @filename: virtual.ts
@@ -39,6 +39,7 @@ namespace WeChatPay.OpenAPI.V3.CombineTransactions.OutTradeNo._combine_out_trade
         currency: string
         payer_amount: number
         payer_currency: string
+        settlement_rate: number
       }
     }[]
     combine_payer_info: {

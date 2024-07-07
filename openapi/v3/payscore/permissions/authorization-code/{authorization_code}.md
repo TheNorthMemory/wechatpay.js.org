@@ -5,7 +5,7 @@ description: 通过authorization_code，商户查询与用户授权关系
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/payscore/chapter9_3.shtml)
+{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/payscore/chapter9_3.shtml) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/service-auth/get-permissions-by-authorization-code.html)
 
 ```js twoslash
 // @filename: virtual.ts
@@ -27,13 +27,15 @@ namespace WeChatPay.OpenAPI.V3.Payscore.Permissions.AuthorizationCode._authoriza
     notify_url: string
     cancel_authorization_time: string | Date
     authorization_success_time: string | Date
+    user_risk_level: number
+    risk_level_version: number
   }
 }
 namespace WeChatPay.OpenAPI.V3.Payscore.Permissions.AuthorizationCode {
   export interface _authorization_code_ {
     /**
      * 查询与用户授权记录（授权协议号）API
-     * @link https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/payscore/chapter9_3.shtml
+     * @link https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/service-auth/get-permissions-by-authorization-code.html
      */
     get(config: _authorization_code_.GetHttpMethod.RequestConfig): AxiosPromise<_authorization_code_.GetHttpMethod.WellformedResponse>
   }
@@ -74,7 +76,7 @@ wxpay.v3.payscore.permissions.authorizationCode._authorization_code_.get({
   params,
 })
 .then(
-  ({ // [!code hl:21]
+  ({ // [!code hl:25]
     data: {
       service_id,
       appid,
@@ -84,6 +86,8 @@ wxpay.v3.payscore.permissions.authorizationCode._authorization_code_.get({
       notify_url,
       cancel_authorization_time,
       authorization_success_time,
+      user_risk_level,
+      risk_level_version,
     },
   }) => ({
     service_id,
@@ -94,6 +98,8 @@ wxpay.v3.payscore.permissions.authorizationCode._authorization_code_.get({
     notify_url,
     cancel_authorization_time,
     authorization_success_time,
+    user_risk_level,
+    risk_level_version,
   })
 )
 ```

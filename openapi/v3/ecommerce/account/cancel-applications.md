@@ -16,7 +16,7 @@ namespace WeChatPay.OpenAPI.V3.Ecommerce.Account.CancelApplications.PostHttpMeth
     sub_mchid: string
     out_apply_no: string
     application_info: {
-      application_type: string
+      application_type: 'SP_CANCEL_ACCOUNT_APPLICATION'| 'SUB_CANCEL_ACCOUNT_APPLICATION'
       application_media_id: string
     }[]
   }

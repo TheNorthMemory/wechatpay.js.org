@@ -5,7 +5,7 @@ description: 用户申请使用服务时，商户可通过此接口申请创建/
 
 # 创建支付分订单(合作伙伴模式) {#post}
 
-用户申请使用服务时，商户可通过此接口申请创建微信支付分订单。 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter6_2_1.shtml)
+用户申请使用服务时，商户可通过此接口申请创建微信支付分订单。 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter6_2_1.shtml) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/partner-weixin-pay-score/partner-service-order/create-partner-service-order.html)
 
 ```js twoslash
 // @filename: virtual.ts
@@ -28,6 +28,7 @@ namespace WeChatPay.OpenAPI.V3.Payscore.Partner.Serviceorder.PostHttpMethod {
     post_discounts: {
       name: string
       description: string
+      amount: number
       count: number
     }[]
     risk_fund: {
@@ -73,6 +74,7 @@ namespace WeChatPay.OpenAPI.V3.Payscore.Partner.Serviceorder.PostHttpMethod {
     post_discounts: {
       name: string
       description: string
+      amount: number
       count: number
     }[]
     risk_fund: {
@@ -100,12 +102,12 @@ namespace WeChatPay.OpenAPI.V3.Payscore.Partner {
   export interface Serviceorder {
     /**
      * shortland
-     * @link https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter6_2_1.shtml
+     * @link https://pay.weixin.qq.com/docs/partner/apis/partner-weixin-pay-score/partner-service-order/create-partner-service-order.html
      */
     (data: Serviceorder.PostHttpMethod.JsonDataRequest, config?: Serviceorder.PostHttpMethod.RequestConfig): AxiosPromise<Serviceorder.PostHttpMethod.WellformedResponse>
     /**
      * 创建支付分订单API
-     * @link https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter6_2_1.shtml
+     * @link https://pay.weixin.qq.com/docs/partner/apis/partner-weixin-pay-score/partner-service-order/create-partner-service-order.html
      */
     post(data: Serviceorder.PostHttpMethod.JsonDataRequest, config?: Serviceorder.PostHttpMethod.RequestConfig): AxiosPromise<Serviceorder.PostHttpMethod.WellformedResponse>
   }
@@ -201,7 +203,7 @@ wxpay.v3.payscore.partner.serviceorder.post({
 
 # 查询支付分订单(合作伙伴模式) {#get}
 
-用于查询单笔微信支付分订单详细信息。 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter6_2_2.shtml)
+用于查询单笔微信支付分订单详细信息。 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter6_2_2.shtml) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/partner-weixin-pay-score/partner-service-order/get-partner-service-order.html)
 
 ```js twoslash
 // @filename: virtual.ts
@@ -276,6 +278,7 @@ namespace WeChatPay.OpenAPI.V3.Payscore.Partner.Serviceorder.GetHttpMethod {
           }[]
         }[]
       }[]
+      bank_type: string
     }
     time_range: {
       start_time: string
@@ -299,7 +302,7 @@ namespace WeChatPay.OpenAPI.V3.Payscore.Partner {
   export interface Serviceorder {
     /**
      * 查询支付分订单API
-     * @link https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter6_2_2.shtml
+     * @link https://pay.weixin.qq.com/docs/partner/apis/partner-weixin-pay-score/partner-service-order/get-partner-service-order.html
      */
     get(config: Serviceorder.GetHttpMethod.RequestConfig): AxiosPromise<Serviceorder.GetHttpMethod.WellformedResponse>
   }

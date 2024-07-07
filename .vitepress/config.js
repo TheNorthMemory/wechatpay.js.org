@@ -728,6 +728,25 @@ function openapiSidebar() {
               ['查询明细回单受理结果', '/openapi/v3/transfer-detail/electronic-receipts#get'],
               ['下载电子回单文件', '/openapi/v3/transferdownload/signfile'],
             ].map(transArrayItem),
+            {
+              text: '预约转账',
+              collapsed: true,
+              items: [
+                ['受理商家转账', '/openapi/v3/platsolution/mch-transfer/batches/apply'],
+                ['受理单次预约商家转账', '/openapi/v3/platsolution/mch-transfer/reservation/apply'],
+                ['关闭预约商家转账记录', '/openapi/v3/platsolution/mch-transfer/reservation/out-reservation-no/{out_reservation_no}/close'],
+                ['平台预约单号查询转账记录', '/openapi/v3/platsolution/mch-transfer/reservation/reservation-id/{reservation_id}'],
+                ['商户预约单号查询转账记录', '/openapi/v3/platsolution/mch-transfer/reservation/out-reservation-no/{out_reservation_no}'],
+                ['商户明细单号查询明细单', '/openapi/v3/platsolution/mch-transfer/batches/out-batch-no/{out_batch_no}/details/out-detail-no/{out_detail_no}'],
+                ['商户批次单号查询批次单', '/openapi/v3/platsolution/mch-transfer/batches/out-batch-no/{out_batch_no}'],
+                ['申请商家转账批次电子回单', '/openapi/v3/platsolution/mch-transfer/batches/summary-receipts/out-batch-no/{out_batch_no}/apply'],
+                ['查询商家转账批次电子回单', '/openapi/v3/platsolution/mch-transfer/batches/summary-receipts/out-batch-no/{out_batch_no}'],
+                ['平台批次单号查询批次单', '/openapi/v3/platsolution/mch-transfer/batches/batch-id/{batch_id}'],
+                ['申请商家转账明细电子回单', '/openapi/v3/platsolution/mch-transfer/batches/detail-receipts/out-batch-no/{out_batch_no}/out-detail-no/{out_detail_no}/apply'],
+                ['查询商家转账明细电子回单', '/openapi/v3/platsolution/mch-transfer/batches/detail-receipts/out-batch-no/{out_batch_no}/out-detail-no/{out_detail_no}'],
+                ['平台明细单号查询明细单', '/openapi/v3/platsolution/mch-transfer/batches/batch-id/{batch_id}/details/detail-id/{detail_id}'],
+              ].map(transArrayItem),
+            },
           ],
         },
         {
@@ -830,6 +849,18 @@ function openapiSidebar() {
                 ['免密支付', '/openapi/v3/ecommerce/combine-papay/transactions'],
               ].map(transArrayItem),
             },
+            {
+              text: '商家转账',
+              collapsed: true,
+              items: [
+                ['申请二级商户授权', '/openapi/v3/ecommerce/mch-transfer/authorizations'],
+                ['查询二级商户授权状态', '/openapi/v3/ecommerce/mch-transfer/authorizations/{sub_mchid}'],
+                ['发起转账', '/openapi/v3/ecommerce/mch-transfer/transfer-bills'],
+                ['撤销转账', '/openapi/v3/ecommerce/mch-transfer/transfer-bills/out-bill-no/{out_bill_no}/cancel'],
+                ['平台单号查询转账单', '/openapi/v3/ecommerce/mch-transfer/transfer-bills/transfer-bill-no/{transfer_bill_no}'],
+                ['商户单号查询转账单', '/openapi/v3/ecommerce/mch-transfer/transfer-bills/out-bill-no/{out_bill_no}'],
+              ].map(transArrayItem),
+            },
           ],
         },
         {
@@ -905,6 +936,7 @@ function openapiSidebar() {
                 ['上报订单关联信息', '/openapi/v3/merchant-risk-manage/report-trade-union-information'],
                 ['查询风险信息', '/openapi/v3/merchant-risk-manage/trade-risk-information'],
                 ['处置结果回传', '/openapi/v3/merchant-risk-manage/trade-risk-result'],
+                ['查询子商户管控情况', '/openapi/v3/mch-operation-manage/merchant-limitations/sub-mchid/{sub_mchid}'],
               ].map(transArrayItem),
             },
             ...[
@@ -1073,6 +1105,9 @@ function openapiSidebar() {
                   ['完结订单', '/openapi/v3/payscore/serviceorder/{out_order_no}/complete'],
                   ['同步订单', '/openapi/v3/payscore/serviceorder/{out_order_no}/sync'],
                   ['请求催收', '/openapi/v3/payscore/serviceorder/{out_order_no}/pay'],
+                  ['下发服务预扣费消息', '/openapi/v3/payscore/serviceorder/{out_order_no}/send-prepaidmessage'],
+                  ['下发费用待处理消息', '/openapi/v3/payscore/serviceorder/{out_order_no}/send-pendingmessage'],
+                  ['评估用户分层', '/openapi/v3/payscore/permissions/assess-user-risk-level'],
                 ].map(transArrayItem),
                 {
                   text: '免确认',
@@ -1105,6 +1140,9 @@ function openapiSidebar() {
                   ['完结订单', '/openapi/v3/payscore/partner/serviceorder/{out_order_no}/complete'],
                   ['同步订单', '/openapi/v3/payscore/partner/serviceorder/{out_order_no}/sync'],
                   ['请求催收', '/openapi/v3/payscore/partner/serviceorder/{out_order_no}/pay'],
+                  ['下发服务预扣费消息', '/openapi/v3/payscore/partner/serviceorder/{out_order_no}/send-prepaidmessage'],
+                  ['下发费用待处理消息', '/openapi/v3/payscore/partner/serviceorder/{out_order_no}/send-pendingmessage'],
+                  ['评估用户分层', '/openapi/v3/payscore/partner/permissions/assess-user-risk-level'],
                 ].map(transArrayItem),
                 {
                   text: '免确认',

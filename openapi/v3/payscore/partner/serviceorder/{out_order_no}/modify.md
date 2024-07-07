@@ -5,7 +5,7 @@ description: 完结订单总金额与实际金额不符时，且当服务订单�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter6_2_4.shtml)
+{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter6_2_4.shtml) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/partner-weixin-pay-score/partner-service-order/modify-partner-service-order.html)
 
 ```js twoslash
 // @filename: virtual.ts
@@ -41,12 +41,12 @@ namespace WeChatPay.OpenAPI.V3.Payscore.Partner.Serviceorder._out_order_no_ {
   export interface Modify {
     /**
      * shortland
-     * @link https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter6_2_4.shtml
+     * @link https://pay.weixin.qq.com/docs/partner/apis/partner-weixin-pay-score/partner-service-order/modify-partner-service-order.html
      */
     (data: Modify.PostHttpMethod.JsonDataRequest, config: Modify.PostHttpMethod.RequestConfig): AxiosPromise<Modify.PostHttpMethod.WellformedResponse>
     /**
      * 修改订单金额API
-     * @link https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter6_2_4.shtml
+     * @link https://pay.weixin.qq.com/docs/partner/apis/partner-weixin-pay-score/partner-service-order/modify-partner-service-order.html
      */
     post(data: Modify.PostHttpMethod.JsonDataRequest, config: Modify.PostHttpMethod.RequestConfig): AxiosPromise<Modify.PostHttpMethod.WellformedResponse>
   }

@@ -22,6 +22,16 @@ namespace WeChatPay.OpenAPI.V3.Payscore.Partner.Servicequotas.ServiceId._service
     }
   }
   export interface WellformedResponse {
+    service_id: string
+    mchid: string
+    sub_mchid: string
+    appid: string
+    sub_appid: string
+    risk_level_version: number
+    quotas: {
+      risk_level: number
+      suggested_quota: number
+    }[]
   }
 }
 namespace WeChatPay.OpenAPI.V3.Payscore.Partner.Servicequotas.ServiceId {
@@ -73,5 +83,25 @@ wxpay.v3.payscore.partner.servicequotas.serviceId._service_id_.get({
   service_id,
   params,
 })
-.then(({ data, }) => data) // [!code hl:1]
+.then(
+  ({ // [!code hl:19]
+    data: {
+      service_id,
+      mchid,
+      sub_mchid,
+      appid,
+      sub_appid,
+      risk_level_version,
+      quotas,
+    },
+  }) => ({
+    service_id,
+    mchid,
+    sub_mchid,
+    appid,
+    sub_appid,
+    risk_level_version,
+    quotas,
+  })
+)
 ```

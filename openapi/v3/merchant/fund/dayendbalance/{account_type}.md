@@ -1,11 +1,11 @@
 ---
 title: 查询账户日终余额
-description: 通过此接口可以查询本商户号指定日期当天24点的账户余额。**注意：**• 可查询90天内的日终余额。
+description: 通过此接口可以查询本商户号指定日期当天24点的账户余额。**注意：**• 可查询90天内的日终余额。• 当日日终余额在次日生成，建议商户在上午 10 点以后查询。
 ---
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/ecommerce/amount/chapter3_4.shtml) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter4_1_21.shtml) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/ecommerce/amount/chapter3_4.shtml)
+{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/ecommerce/amount/chapter3_4.shtml) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter4_1_21.shtml) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/ecommerce/amount/chapter3_4.shtml) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/ecommerce-balance/accounts/query-day-end-balance.html)
 
 ```js twoslash
 // @filename: virtual.ts
@@ -27,7 +27,7 @@ namespace WeChatPay.OpenAPI.V3.Merchant.Fund.Dayendbalance {
   export interface _account_type_ {
     /**
      * 查询账户日终余额API
-     * @link https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/ecommerce/amount/chapter3_4.shtml
+     * @link https://pay.weixin.qq.com/docs/partner/apis/ecommerce-balance/accounts/query-day-end-balance.html
      */
     get(config: _account_type_.GetHttpMethod.RequestConfig): AxiosPromise<_account_type_.GetHttpMethod.WellformedResponse>
   }

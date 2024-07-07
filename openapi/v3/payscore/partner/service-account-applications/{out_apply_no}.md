@@ -5,7 +5,7 @@ description: 收付通服务商查询子商户的支付分服务绑定结果
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter6_2_14.shtml)
+{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter6_2_14.shtml) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/partner-weixin-pay-score/partner-service-account/get-service-account-application.html)
 
 ```js twoslash
 // @filename: virtual.ts
@@ -31,7 +31,7 @@ namespace WeChatPay.OpenAPI.V3.Payscore.Partner.ServiceAccountApplications {
   export interface _out_apply_no_ {
     /**
      * 查询收付通子商户服务绑定结果
-     * @link https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter6_2_14.shtml
+     * @link https://pay.weixin.qq.com/docs/partner/apis/partner-weixin-pay-score/partner-service-account/get-service-account-application.html
      */
     get(config: _out_apply_no_.GetHttpMethod.RequestConfig): AxiosPromise<_out_apply_no_.GetHttpMethod.WellformedResponse>
   }

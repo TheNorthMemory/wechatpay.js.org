@@ -5,7 +5,7 @@ description: 通过openid查询用户授权信息
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/payscore/chapter9_5.shtml)
+{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/payscore/chapter9_5.shtml) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/service-auth/get-permissions-by-open-id.html)
 
 ```js twoslash
 // @filename: virtual.ts
@@ -27,13 +27,15 @@ namespace WeChatPay.OpenAPI.V3.Payscore.Permissions.Openid._openid_.GetHttpMetho
     authorization_code: string
     cancel_authorization_time: string | Date
     authorization_success_time: string | Date
+    user_risk_level: number
+    risk_level_version: number
   }
 }
 namespace WeChatPay.OpenAPI.V3.Payscore.Permissions.Openid {
   export interface _openid_ {
     /**
      * 查询与用户授权记录（openid）API
-     * @link https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/payscore/chapter9_5.shtml
+     * @link https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/service-auth/get-permissions-by-open-id.html
      */
     get(config: _openid_.GetHttpMethod.RequestConfig): AxiosPromise<_openid_.GetHttpMethod.WellformedResponse>
   }
@@ -74,7 +76,7 @@ wxpay.v3.payscore.permissions.openid._openid_.get({
   params,
 })
 .then(
-  ({ // [!code hl:19]
+  ({ // [!code hl:23]
     data: {
       service_id,
       appid,
@@ -83,6 +85,8 @@ wxpay.v3.payscore.permissions.openid._openid_.get({
       authorization_code,
       cancel_authorization_time,
       authorization_success_time,
+      user_risk_level,
+      risk_level_version,
     },
   }) => ({
     service_id,
@@ -92,6 +96,8 @@ wxpay.v3.payscore.permissions.openid._openid_.get({
     authorization_code,
     cancel_authorization_time,
     authorization_success_time,
+    user_risk_level,
+    risk_level_version,
   })
 )
 ```
