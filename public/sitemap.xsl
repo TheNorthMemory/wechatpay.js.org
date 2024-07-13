@@ -30,8 +30,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>站点地图 | <xsl:value-of select="$hostname" /></title>
         <style type="text/css">
-          :root {--vp-c-green-soft: rgba(16, 185, 129, .14);--vp-c-brand-1: #3451b2;--vp-c-brand-2: #3a5ccc;--vp-c-bg-soft: #f6f6f7;}
-          @media screen and (prefers-color-scheme: dark) { :root {--vp-c-green-soft: rgba(16, 185, 129, .16);--vp-c-brand-1: #a8b1ff;--vp-c-brand-2: #5c73e7;--vp-c-bg-soft: #202127;} }
+          :root {--vp-c-bg: #fff;--vp-c-text-1: rgba(60, 60, 67);--vp-c-green-soft: rgba(16, 185, 129, .14);--vp-c-brand-1: #3451b2;--vp-c-brand-2: #3a5ccc;--vp-c-bg-soft: #f6f6f7;}
+          @media screen and (prefers-color-scheme: dark) { :root {--vp-c-bg: #1b1b1f;--vp-c-text-1: rgba(255, 255, 245, .86);--vp-c-green-soft: rgba(16, 185, 129, .16);--vp-c-brand-1: #a8b1ff;--vp-c-brand-2: #5c73e7;--vp-c-bg-soft: #202127;} }
+          body {color:var(--vp-c-text-1);background-color:var(--vp-c-bg)}
           ol {padding-bottom: 50px}
           ol li {padding: 8px 16px}
           ol li:nth-child(odd) { background-color: var(--vp-c-bg-soft); }
