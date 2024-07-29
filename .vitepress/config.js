@@ -12,6 +12,12 @@ export default defineConfig({
     codeTransformers: [
       transformerTwoslash()
     ],
+    config(md) {
+      md.renderer.rules.table_open = (tokens, idx, options, env, self) => {
+        tokens[idx].attrGet('tabindex') ?? tokens[idx].attrJoin('tabindex', '0')
+        return self.renderToken(tokens, idx, options)
+      }
+    },
   },
   srcExclude: ['**/README.md'],
   sitemap: {
