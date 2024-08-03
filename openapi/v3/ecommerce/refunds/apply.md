@@ -5,7 +5,8 @@ description: 当交易发生之后一段时间内，由于买家或者卖家的�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/ecommerce/refunds/chapter3_1.shtml)
+{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/ecommerce/refunds/chapter3_1.shtml) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/ecommerce-r
+efund/refunds/create-refund.html)
 
 ```js twoslash
 // @filename: virtual.ts
@@ -22,10 +23,16 @@ namespace WeChatPay.OpenAPI.V3.Ecommerce.Refunds.Apply.PostHttpMethod {
     reason: string
     amount: {
       refund: number
+      from?: {
+        account: 'AVAILABLE' | 'UNAVAILABLE'
+        amount: number
+      }[]
       total: number
-      currency: string
+      currency: 'CNY'
     }
     notify_url: string
+    refund_account: 'REFUND_SOURCE_SUB_MERCHANT' | 'REFUND_SOURCE_PARTNER_ADVANCE'
+    funds_account: 'AVAILABLE'
   }
   export interface RequestConfig extends AxiosRequestConfig {
     data?: JsonDataRequest
@@ -36,7 +43,12 @@ namespace WeChatPay.OpenAPI.V3.Ecommerce.Refunds.Apply.PostHttpMethod {
     create_time: string
     amount: {
       refund: number
+      from?: {
+        account: 'AVAILABLE' | 'UNAVAILABLE'
+        amount: number
+      }[]
       payer_refund: number
+      advance: number
       discount_refund: number
       currency: string
     }
@@ -47,6 +59,7 @@ namespace WeChatPay.OpenAPI.V3.Ecommerce.Refunds.Apply.PostHttpMethod {
       amount: number
       refund_amount: number
     }[]
+    refund_account: 'REFUND_SOURCE_SUB_MERCHANT' | 'REFUND_SOURCE_PARTNER_ADVANCE'
   }
 }
 namespace WeChatPay.OpenAPI.V3.Ecommerce.Refunds {
@@ -99,15 +112,18 @@ wxpay.v3.ecommerce.refunds.apply.post({
   reason,
   amount,
   notify_url,
+  refund_account,
+  funds_account,
 })
 .then(
-  ({ // [!code hl:15]
+  ({ // [!code hl:17]
     data: {
       refund_id,
       out_refund_no,
       create_time,
       amount,
       promotion_detail,
+      refund_account,
     },
   }) => ({
     refund_id,
@@ -115,6 +131,7 @@ wxpay.v3.ecommerce.refunds.apply.post({
     create_time,
     amount,
     promotion_detail,
+    refund_account,
   })
 )
 ```

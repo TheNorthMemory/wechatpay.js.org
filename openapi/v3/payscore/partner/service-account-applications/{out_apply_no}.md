@@ -13,7 +13,7 @@ description: 收付通服务商查询子商户的支付分服务绑定结果
 import { AxiosRequestConfig, AxiosPromise } from 'axios'
 namespace WeChatPay.OpenAPI.V3.Payscore.Partner.ServiceAccountApplications._out_apply_no_.GetHttpMethod {
   export interface RequestConfig extends AxiosRequestConfig {
-    out_order_no: string
+    out_apply_no: string
   }
   export interface WellformedResponse {
     service_id: string
@@ -68,7 +68,7 @@ import { wxpay } from './virtual'
 // ---cut---
 wxpay.v3.payscore.partner.serviceAccountApplications._out_apply_no_.get({
 //                                                                  ^^^
-  out_order_no,
+  out_apply_no,
 })
 .then(
   ({ // [!code hl:23]

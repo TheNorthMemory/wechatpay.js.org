@@ -5,7 +5,7 @@ description: 微信支付按天提供微信支付账户的资金流水账单文�
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter7_9_5.shtml)
+{{ $frontmatter.description }}  [官方文档](https://pay.weixin.qq.com/docs/partner/apis/bill-download/sub-merchant-fund-flow-bill/get-sub-merchant-fund-flow-bill.html) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter7_9_5.shtml)
 
 ```js twoslash
 // @filename: virtual.ts
@@ -15,9 +15,9 @@ namespace WeChatPay.OpenAPI.V3.Ecommerce.Bill.Fundflowbill.GetHttpMethod {
   export interface RequestConfig extends AxiosRequestConfig {
     params: {
       bill_date: string
-      account_type: string
-      tar_type: string
-      algorithm: string
+      account_type: 'ALL'
+      tar_type?: 'GZIP'
+      algorithm: 'AEAD_AES_256_GCM' | 'SM4_GCM'
     }
   }
   export interface WellformedResponse {

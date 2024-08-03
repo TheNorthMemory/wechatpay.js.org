@@ -16,12 +16,14 @@ namespace WeChatPay.OpenAPI.V3.Ecommerce.Fund.Enddaybalance._sub_mchid_.GetHttpM
     sub_mchid: string
     params: {
       date: string
+      account_type?: 'BASIC' | 'DEPOSIT'
     }
   }
   export interface WellformedResponse {
     sub_mchid: string
     available_amount: number
     pending_amount: number
+    account_type?: 'BASIC' | 'DEPOSIT'
   }
 }
 namespace WeChatPay.OpenAPI.V3.Ecommerce.Fund.Enddaybalance {
@@ -69,16 +71,18 @@ wxpay.v3.ecommerce.fund.enddaybalance._sub_mchid_.get({
   params,
 })
 .then(
-  ({ // [!code hl:11]
+  ({ // [!code hl:13]
     data: {
       sub_mchid,
       available_amount,
       pending_amount,
+      account_type,
     },
   }) => ({
     sub_mchid,
     available_amount,
     pending_amount,
+    account_type,
   })
 )
 ```

@@ -41,6 +41,7 @@ namespace WeChatPay.OpenAPI.V3.CombineTransactions.OutTradeNo._combine_out_trade
         payer_currency: string
         settlement_rate: number
       }
+      settlement_rate: number
     }[]
     combine_payer_info: {
       openid: string

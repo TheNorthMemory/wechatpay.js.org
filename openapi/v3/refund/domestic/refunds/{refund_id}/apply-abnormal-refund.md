@@ -16,7 +16,7 @@ namespace WeChatPay.OpenAPI.V3.Refund.Domestic.Refunds._refund_id_.ApplyAbnormal
   export interface JsonDataRequest {
     sub_mchid?: string
     out_refund_no: string
-    type: string
+    type: 'USER_BANK_CARD' | 'MERCHANT_BANK_CARD'
     bank_type?: string
     bank_account?: string
     real_name?: string

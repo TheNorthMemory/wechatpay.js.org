@@ -5,7 +5,7 @@ description: 当交易发生之后一年内，由于买家或者卖家的原因�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter3_5_9.shtml) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter4_5_9.shtml)
+{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter3_5_9.shtml) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter4_5_9.shtml) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/refund/refunds/create.html) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/refund/refunds/create.html) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/weixin-pay-score/refunds/create.html)
 
 ```js twoslash
 // @filename: virtual.ts

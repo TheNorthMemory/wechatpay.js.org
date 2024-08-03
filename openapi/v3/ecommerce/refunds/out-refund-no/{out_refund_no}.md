@@ -5,7 +5,7 @@ description: 提交退款申请后，通过调用该接口查询退款状态。
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/ecommerce/refunds/chapter3_2.shtml)
+{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/ecommerce/refunds/chapter3_2.shtml) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/ecommerce-refund/refunds/query-refund-by-out-refund-no.html)
 
 ```js twoslash
 // @filename: virtual.ts
@@ -30,7 +30,12 @@ namespace WeChatPay.OpenAPI.V3.Ecommerce.Refunds.OutRefundNo._out_refund_no_.Get
     status: string
     amount: {
       refund: number
+      from?: {
+        account: 'AVAILABLE' | 'UNAVAILABLE'
+        amount: number
+      }[]
       payer_refund: number
+      advance: number
       discount_refund: number
       currency: string
     }
@@ -41,6 +46,8 @@ namespace WeChatPay.OpenAPI.V3.Ecommerce.Refunds.OutRefundNo._out_refund_no_.Get
       amount: number
       refund_amount: number
     }[]
+    refund_account: 'REFUND_SOURCE_SUB_MERCHANT' | 'REFUND_SOURCE_PARTNER_ADVANCE'
+    funds_account: 'AVAILABLE'
   }
 }
 namespace WeChatPay.OpenAPI.V3.Ecommerce.Refunds.OutRefundNo {
@@ -88,7 +95,7 @@ wxpay.v3.ecommerce.refunds.outRefundNo._out_refund_no_.get({
   params,
 })
 .then(
-  ({ // [!code hl:27]
+  ({ // [!code hl:31]
     data: {
       refund_id,
       out_refund_no,
@@ -101,6 +108,8 @@ wxpay.v3.ecommerce.refunds.outRefundNo._out_refund_no_.get({
       status,
       amount,
       promotion_detail,
+      refund_account,
+      funds_account,
     },
   }) => ({
     refund_id,
@@ -114,6 +123,8 @@ wxpay.v3.ecommerce.refunds.outRefundNo._out_refund_no_.get({
     status,
     amount,
     promotion_detail,
+    refund_account,
+    funds_account,
   })
 )
 ```

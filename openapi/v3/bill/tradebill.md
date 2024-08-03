@@ -5,7 +5,9 @@ description: 微信支付按天提供交易账单文件，商户可以通过该�
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter7_9_1.shtml)
+{{ $frontmatter.description }}  [官方文档]
+(https://pay.weixin.qq.com/docs/merchant/apis/bill-download/trade-bill/get-trade-bill.html) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/bill-download/trade-bill/get-trade
+-bill.html) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter7_9_1.shtml)
 
 ```js twoslash
 // @filename: virtual.ts
@@ -16,7 +18,7 @@ namespace WeChatPay.OpenAPI.V3.Bill.Tradebill.GetHttpMethod {
     params: {
       bill_date: string
       sub_mchid?: string
-      bill_type?: 'ALL' | 'SUCCESS' | 'REFUND'
+      bill_type?: 'ALL' | 'SUCCESS' | 'REFUND' | 'RECHARGE_REFUND' | 'ALL_SPECIAL' | 'SUC_SPECIAL' | 'REF_SPECIAL'
       tar_type?: 'GZIP'
     }
   }

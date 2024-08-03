@@ -5,7 +5,7 @@ description: 微信支付按天提供微信支付账户的资金流水账单文�
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter4_1_25.shtml) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter4_1_12.shtml)
+{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/partner/apis/bill-download/sub-mch-fund-flow-bill/get-sub-mch-fund-flow-bill.html) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter4_1_25.shtml) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter4_1_12.shtml)
 
 ```js twoslash
 // @filename: virtual.ts
@@ -18,7 +18,7 @@ namespace WeChatPay.OpenAPI.V3.Bill.SubMerchantFundflowbill.GetHttpMethod {
       bill_date: string
       tar_type?: 'GZIP'
       algorithm?: 'AEAD_AES_256_GCM' | 'SM4_GCM'
-      account_type?: 'BASIC' | 'OPERATION' | 'FEES'
+      account_type?: 'BASIC' | 'OPERATION' | 'FEES' | 'DEPOSIT'
     }
   }
   export interface WellformedResponse {

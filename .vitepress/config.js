@@ -1149,6 +1149,7 @@ function openapiSidebar() {
                   ['下发服务预扣费消息', '/openapi/v3/payscore/partner/serviceorder/{out_order_no}/send-prepaidmessage'],
                   ['下发费用待处理消息', '/openapi/v3/payscore/partner/serviceorder/{out_order_no}/send-pendingmessage'],
                   ['评估用户分层', '/openapi/v3/payscore/partner/permissions/assess-user-risk-level'],
+                  ['支付场景中预授权', '/openapi/v3/payscore/partner/permissions/apply-for-scene'],
                 ].map(transArrayItem),
                 {
                   text: '免确认',
@@ -1305,12 +1306,25 @@ function webhookSidebar() {
           ].map(transArrayItem),
         },
         {
-          text: '平台收付通合单代扣',
+          text: '平台收付通',
           collapsed: true,
           items: [
-            ['签约成功通知', '/webhook/v3/ECOMMERCE_ENTRUST.SIGN'],
-            ['解约成功通知', '/webhook/v3/ECOMMERCE_ENTRUST.TERMINATE'],
-          ].map(transArrayItem),
+            {
+              text: '合单代扣',
+              collapsed: true,
+              items: [
+                ['签约成功通知', '/webhook/v3/ECOMMERCE_ENTRUST.SIGN'],
+                ['解约成功通知', '/webhook/v3/ECOMMERCE_ENTRUST.TERMINATE'],
+              ].map(transArrayItem),
+            },{
+              text: '商家充值',
+              collapsed: true,
+              items: [
+                ['充值成功通知', '/webhook/v3/RECHARGE.SUCCESS'],
+                ['关闭充值通知', '/webhook/v3/RECHARGE.CLOSED'],
+              ].map(transArrayItem),
+            }
+          ],
         },
         {
           text: '会员卡',
