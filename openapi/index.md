@@ -154,6 +154,10 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | [下载批次核销明细](/openapi/v3/marketing/favor/stocks/{stock_id}/use-flow) {colspan=2}
 | [下载批次退款明细](/openapi/v3/marketing/favor/stocks/{stock_id}/refund-flow) {colspan=2}
 | [（营销）图片上传](/openapi/v3/marketing/favor/media/image-upload) {colspan=2}
+| 消费金v3{rowspan=4} | [发放指定批次的消费金](/openapi/v3/multiuse/users/{openid}/coupons) | &nbsp;
+| [下载批次核销明细(消费金)](/openapi/v3/multiuse/stocks/{stock_id}/use-flow) | &nbsp;
+| [下载批次发放明细(消费金)](/openapi/v3/multiuse/stocks/{stock_id}/send-flow) | &nbsp;
+| [下载批次退款明细(消费金)](/openapi/v3/multiuse/stocks/{stock_id}/refund-flow) | &nbsp;
 | 商家券v3{rowspan=24} | [设置商家券事件通知地址](/openapi/v3/marketing/busifavor/callbacks#post) {colspan=2}
 | [查询商家券事件通知地址](/openapi/v3/marketing/busifavor/callbacks#get) {colspan=2}
 | [上传预存code](/openapi/v3/marketing/busifavor/stocks/{stock_id}/couponcodes#post) {colspan=2}

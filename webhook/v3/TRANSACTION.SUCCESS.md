@@ -28,6 +28,7 @@ Request-ID: 08F78BB5AF0610D302189F99DD5C20BA56F89845-0
   "event_type":"TRANSACTION.SUCCESS",
   "resource" : {
     "algorithm":"AEAD_AES_256_GCM",
+    "original_type": "transaction",
     "ciphertext": "...",
     "nonce": "...",
     "associated_data": ""
@@ -164,6 +165,8 @@ Request-ID: 08F78BB5AF0610D302189F99DD5C20BA56F89845-0
 
 1. 保险商户委托代扣成功通知(**trade_type**)为"**PAP**" {#INSURANCE_ENTRUST}
 
+1. 分账动帐通知(**original_type**)为"**profitsharing**" {#PROFITSHARING}
+
 ## 处理程序 {#app}
 
 ```js twoslash
@@ -180,7 +183,7 @@ Request-ID: 08F78BB5AF0610D302189F99DD5C20BA56F89845-0
  * @prop {string} create_time
  * @prop {string} resource_type
  * @prop {'TRANSACTION.SUCCESS'} event_type
- * @prop {{algorithm: string, ciphertext: string, nonce: string, associated_data: string}} resource
+ * @prop {{algorithm: string, original_type: 'transaction'|'profitsharing', ciphertext: string, nonce: string, associated_data: string}} resource
  * @typedef PlainObject
  * @prop {string} transaction_id
  * @prop {string} amount
@@ -259,6 +262,7 @@ const {
   resource_type,
   event_type,
   resource: {
+    original_type,
     ciphertext,
     nonce,
     associated_data

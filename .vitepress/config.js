@@ -523,6 +523,16 @@ function openapiSidebar() {
               ].map(transArrayItem),
             },
             {
+              text: '消费金',
+              collapsed: true,
+              items: [
+                ['发放指定批次', '/openapi/v3/multiuse/users/{openid}/coupons'],
+                ['下载批次核销明细', '/openapi/v3/multiuse/stocks/{stock_id}/use-flow'],
+                ['下载批次发放明细', '/openapi/v3/multiuse/stocks/{stock_id}/send-flow'],
+                ['下载批次退款明细', '/openapi/v3/multiuse/stocks/{stock_id}/refund-flow'],
+              ].map(transArrayItem),
+            },
+            {
               text: '商家券',
               collapsed: true,
               items: [

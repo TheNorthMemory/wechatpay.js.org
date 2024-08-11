@@ -99,7 +99,7 @@ wxpay.v3.marketing.favor.users._openid_.coupons.post({
 
 # 根据商户号查用户的券 {#get}
 
-可通过该接口查询用户在某商户号可用的全部券，可用于商户的小程序/H5中，用户"我的代金券"或"提交订单页"展示优惠信息。无法查询到微信支付立减金。本接口查不到用户的微信支付立减金（又称“全平台通用券”），即在所有商户都可以使用的券，例如：摇摇乐红包 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/convention/chapter3_9.shtml)
+可通过该接口查询用户在某商户号可用的全部券，可用于商户的小程序/H5中，用户"我的代金券"或"提交订单页"展示优惠信息。无法查询到微信支付立减金。本接口查不到用户的微信支付立减金（又称“全平台通用券”），即在所有商户都可以使用的券，例如：摇摇乐红包 [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/cash-coupons/coupon/list-coupons-by-filter.html) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/cash-coupons/coupon/list-coupons-by-filter.html) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/convention/chapter3_9.shtml)
 
 ```js twoslash
 // @filename: virtual.ts
@@ -117,6 +117,7 @@ namespace WeChatPay.OpenAPI.V3.Marketing.Favor.Users._openid_.Coupons.GetHttpMet
       available_mchid: string
       offset: number
       limit: number
+      business_type?: 'MULTIUSE'
     }
   }
   export interface WellformedResponse {
@@ -153,6 +154,8 @@ namespace WeChatPay.OpenAPI.V3.Marketing.Favor.Users._openid_.Coupons.GetHttpMet
           discount_amount: number
         }[]
       }
+      available_balance?: number
+      business_type?: 'MULTIUSE'
     }[]
     total_count: number
     offset: number

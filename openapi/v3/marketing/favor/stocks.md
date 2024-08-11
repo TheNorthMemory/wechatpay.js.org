@@ -5,7 +5,7 @@ description: 通过此接口可查询多个批次的信息，包括批次的配�
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/convention/chapter3_4.shtml)
+{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/cash-coupons/stock/list-stocks.html) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/cash-coupons/stock/list-stocks.html) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/convention/chapter3_4.shtml)
 
 ```js twoslash
 // @filename: virtual.ts
@@ -26,6 +26,50 @@ namespace WeChatPay.OpenAPI.V3.Marketing.Favor.Stocks.GetHttpMethod {
     total_count: number
     limit: number
     offset: number
+    data: {
+      stock_id: string
+      stock_creator_mchid: string
+      stock_name: string
+      status: string
+      create_time: string
+      description: string
+      stock_use_rule: {
+        max_coupons: number
+        max_amount: number
+        max_amount_by_day: number
+        fixed_normal_coupon: {
+          coupon_amount: number
+          transaction_minimum: number
+        },
+        max_coupons_per_user: number
+        coupon_type: string
+        goods_tag: string[]
+        trade_type: string[]
+        combine_use: string
+      },
+      available_begin_time: string
+      available_end_time: string
+      distributed_coupons: number
+      no_cash: string
+      start_time: string
+      stop_time: string
+      cut_to_message: {
+        single_price_max: number
+        cut_to_price: number
+      },
+      singleitem: boolean
+      stock_type: string
+      card_id: string
+      business_type?: 'MULTIUSE'
+      available_region_list?: {
+        type: string
+        province: string
+        city: string
+        district: string
+        country: string
+      }[]
+      available_industry_list?: string[]
+    }[]
   }
 }
 namespace WeChatPay.OpenAPI.V3.Marketing.Favor {
@@ -67,16 +111,18 @@ wxpay.v3.marketing.favor.stocks.get({
   params,
 })
 .then(
-  ({ // [!code hl:11]
+  ({ // [!code hl:13]
     data: {
       total_count,
       limit,
       offset,
+      data,
     },
   }) => ({
     total_count,
     limit,
     offset,
+    data,
   })
 )
 ```

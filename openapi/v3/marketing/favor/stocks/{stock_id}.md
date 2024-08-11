@@ -5,7 +5,7 @@ description: 通过此接口可查询批次信息，包括批次的配置信息�
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/convention/chapter3_5.shtml)
+{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/cash-coupons/stock/query-stock.html) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/cash-coupons/stock/query-stock.html) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/convention/chapter3_5.shtml)
 
 ```js twoslash
 // @filename: virtual.ts
@@ -45,6 +45,15 @@ namespace WeChatPay.OpenAPI.V3.Marketing.Favor.Stocks._stock_id_.GetHttpMethod {
       cut_to_price: number
     }
     distributed_coupons: number
+    business_type?: 'MULTIUSE'
+    available_region_list?: {
+      type: string
+      province: string
+      city: string
+      district: string
+      country: string
+    }[]
+    available_industry_list?: string[]
   }
 }
 namespace WeChatPay.OpenAPI.V3.Marketing.Favor.Stocks {
@@ -92,7 +101,7 @@ wxpay.v3.marketing.favor.stocks._stock_id_.get({
   params,
 })
 .then(
-  ({ // [!code hl:37]
+  ({ // [!code hl:43]
     data: {
       stock_name,
       available_begin_time,
@@ -110,6 +119,9 @@ wxpay.v3.marketing.favor.stocks._stock_id_.get({
       singleitem,
       cut_to_message,
       distributed_coupons,
+      business_type,
+      available_region_list,
+      available_industry_list,
     },
   }) => ({
     stock_name,
@@ -128,6 +140,9 @@ wxpay.v3.marketing.favor.stocks._stock_id_.get({
     singleitem,
     cut_to_message,
     distributed_coupons,
+    business_type,
+    available_region_list,
+    available_industry_list,
   })
 )
 ```

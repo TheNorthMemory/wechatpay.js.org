@@ -5,7 +5,7 @@ description: 通过此接口可查询代金券信息，包括代金券的基础�
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/convention/chapter3_6.shtml)
+{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/cash-coupons/coupon/query-coupon.html) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/cash-coupons/coupon/query-coupon.html) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/convention/chapter3_6.shtml)
 
 ```js twoslash
 // @filename: virtual.ts
@@ -52,6 +52,8 @@ namespace WeChatPay.OpenAPI.V3.Marketing.Favor.Users._openid_.Coupons._coupon_id
         discount_amount: number
       }[]
     }
+    available_balance?: number
+    business_type?: 'MULTIUSE'
   }
 }
 namespace WeChatPay.OpenAPI.V3.Marketing.Favor.Users._openid_.Coupons {
@@ -110,7 +112,7 @@ wxpay.v3.marketing.favor.users._openid_.coupons._coupon_id_.get({
   params,
 })
 .then(
-  ({ // [!code hl:37]
+  ({ // [!code hl:41]
     data: {
       stock_creator_mchid,
       stock_id,
@@ -128,6 +130,8 @@ wxpay.v3.marketing.favor.users._openid_.coupons._coupon_id_.get({
       available_end_time,
       normal_coupon_information,
       consume_information,
+      available_balance,
+      business_type,
     },
   }) => ({
     stock_creator_mchid,
@@ -146,6 +150,8 @@ wxpay.v3.marketing.favor.users._openid_.coupons._coupon_id_.get({
     available_end_time,
     normal_coupon_information,
     consume_information,
+    available_balance,
+    business_type,
   })
 )
 ```
