@@ -23,7 +23,7 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | 合单支付v2{rowspan=3} | [合单下单](/openapi/v2/pay/combinedorder) {colspan=2}
 | [合单查单](/openapi/v2/pay/querycombinedorder) {colspan=2}
 | [合单关单](/openapi/v2/pay/closecombinedorder) {colspan=2}
-| 分账v2{rowspan=10} | &nbsp; | [查询最大分账比例](/openapi/v2/pay/profitsharingmerchantratioquery)
+| 分账v2{rowspan=10} | | [查询最大分账比例](/openapi/v2/pay/profitsharingmerchantratioquery)
 | [添加分账接收方](/openapi/v2/pay/profitsharingaddreceiver) {colspan=2}
 | [删除分账接收方](/openapi/v2/pay/profitsharingremovereceiver) {colspan=2}
 | [请求单次分账](/openapi/v2/secapi/pay/profitsharing) {colspan=2}
@@ -38,24 +38,24 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | 现金红包v2{rowspan=4} | [发放普通红包](/openapi/v2/mmpaymkttransfers/sendredpack) {colspan=2}
 | [~~发放裂变红包~~](/openapi/v2/mmpaymkttransfers/sendgroupredpack) :no_entry_sign: {colspan=2}
 | [查询红包记录](/openapi/v2/mmpaymkttransfers/gethbinfo) {colspan=2}
-| [发放小程序红包](/openapi/v2/mmpaymkttransfers/sendminiprogramhb) | &nbsp;
-| 付款到零钱v2{rowspan=2} | [发起付款](/openapi/v2/mmpaymkttransfers/promottion/transfers) | &nbsp;
-| [查询付款](/openapi/v2/mmpaymkttransfers/gettransferinfo) | &nbsp;
-| 付款到银行卡v2{rowspan=3} | [获取加密公钥](/openapi/v2/risk/getpublickey) | &nbsp;
-| [发起付款](/openapi/v2/mmpaysptrans/pay_bank) | &nbsp;
-| [查询付款](/openapi/v2/mmpaymkttransfers/query_bank) | &nbsp;
+| [发放小程序红包](/openapi/v2/mmpaymkttransfers/sendminiprogramhb)
+| 付款到零钱v2{rowspan=2} | [发起付款](/openapi/v2/mmpaymkttransfers/promottion/transfers)
+| [查询付款](/openapi/v2/mmpaymkttransfers/gettransferinfo)
+| 付款到银行卡v2{rowspan=3} | [获取加密公钥](/openapi/v2/risk/getpublickey)
+| [发起付款](/openapi/v2/mmpaysptrans/pay_bank)
+| [查询付款](/openapi/v2/mmpaymkttransfers/query_bank)
 | 微信车主服务v2{rowspan=4} | [用户入场通知](/openapi/v2/vehicle/pay/notification) | [用户入场通知](/openapi/v2/vehicle/partnerpay/notification)
 | [用户状态查询](/openapi/v2/vehicle/pay/querystate) | [用户状态查询](/openapi/v2/vehicle/partnerpay/querystate)
 | [申请代扣](/openapi/v2/vehicle/pay/payapply) | [申请代扣](/openapi/v2/vehicle/partnerpay/payapply)
 | [查询订单](/openapi/v2/transit/queryorder) | [查询订单](/openapi/v2/transit/partnerpay/queryorder)
-| 免押租借v2{rowspan=5} | [创建租借订单](/openapi/v2/wxv/createrentbill) | &nbsp;
-| [查询租借订单](/openapi/v2/wxv/queryrentbill) | &nbsp;
-| [撤销租借订单](/openapi/v2/wxv/cancelbill) | &nbsp;
-| [完结租借订单](/openapi/v2/wxv/finishrentbill) | &nbsp;
-| [修改租借订单](/openapi/v2/wxv/changerentmoney) | &nbsp;
-| 免押速住v2{rowspan=3} | [创建速住订单](/openapi/v2/wxv/createhotelbill) | &nbsp;
-| [查询速住订单](/openapi/v2/wxv/queryhotelbill) | &nbsp;
-| [完结速住订单](/openapi/v2/wxv/finishhotelbill) | &nbsp;
+| 免押租借v2{rowspan=5} | [创建租借订单](/openapi/v2/wxv/createrentbill)
+| [查询租借订单](/openapi/v2/wxv/queryrentbill)
+| [撤销租借订单](/openapi/v2/wxv/cancelbill)
+| [完结租借订单](/openapi/v2/wxv/finishrentbill)
+| [修改租借订单](/openapi/v2/wxv/changerentmoney)
+| 免押速住v2{rowspan=3} | [创建速住订单](/openapi/v2/wxv/createhotelbill)
+| [查询速住订单](/openapi/v2/wxv/queryhotelbill)
+| [完结速住订单](/openapi/v2/wxv/finishhotelbill)
 | 基础支付v3{rowspan=13} | [付款码支付](/openapi/v3/pay/transactions/codepay) | [付款码支付](/openapi/v3/pay/partner/transactions/codepay)
 | [APP下单](/openapi/v3/pay/transactions/app) | [APP下单](/openapi/v3/pay/partner/transactions/app)
 | [H5下单](/openapi/v3/pay/transactions/h5) | [H5下单](/openapi/v3/pay/partner/transactions/h5)
@@ -80,7 +80,7 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | [支付后场景预签约](/openapi/v3/password-exempt-contract/contracts/normal/pre-entrust-sign/pay-redirect-sign) | [支付后场景预签约](/openapi/v3/password-exempt-contract/contracts/service-provider/pre-entrust-sign/pay-redirect-sign)
 | [通过商户协议号查询协议](/openapi/v3/password-exempt-contract/contracts/service-id/{service_id}/out-contract-code/{out_contract_code}) {colspan=2}
 | [通过商户协议号解约协议](/openapi/v3/password-exempt-contract/contracts/service-id/{service_id}/out-contract-code/{out_contract_code}/terminate) {colspan=2}
-| 分账v3{rowspan=10} | &nbsp; | [查询最大分账比例](/openapi/v3/profitsharing/merchant-configs/{sub_mchid})
+| 分账v3{rowspan=10} | | [查询最大分账比例](/openapi/v3/profitsharing/merchant-configs/{sub_mchid})
 | | [添加分账接收方](/openapi/v3/profitsharing/receivers/add)
 | | [删除分账接收方](/openapi/v3/profitsharing/receivers/delete)
 | | [请求分账](/openapi/v3/profitsharing/orders)
@@ -90,7 +90,7 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | | [请求分账回退](/openapi/v3/profitsharing/return-orders)
 | | [查询分账回退结果](/openapi/v3/profitsharing/return-orders/{out_return_no})
 | | [申请分账账单](/openapi/v3/profitsharing/bills)
-| 连锁品牌分账v3{rowspan=9} | &nbsp; | [查询最大分账比例](/openapi/v3/brand/profitsharing/brand-configs/{brand_mchid})
+| 连锁品牌分账v3{rowspan=9} | | [查询最大分账比例](/openapi/v3/brand/profitsharing/brand-configs/{brand_mchid})
 | | [添加分账接收方](/openapi/v3/brand/profitsharing/receivers/add)
 | | [删除分账接收方](/openapi/v3/brand/profitsharing/receivers/delete)
 | | [请求分账](/openapi/v3/brand/profitsharing/orders#post)
@@ -154,10 +154,10 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | [下载批次核销明细](/openapi/v3/marketing/favor/stocks/{stock_id}/use-flow) {colspan=2}
 | [下载批次退款明细](/openapi/v3/marketing/favor/stocks/{stock_id}/refund-flow) {colspan=2}
 | [（营销）图片上传](/openapi/v3/marketing/favor/media/image-upload) {colspan=2}
-| 消费金v3{rowspan=4} | [发放指定批次的消费金](/openapi/v3/multiuse/users/{openid}/coupons) | &nbsp;
-| [下载批次核销明细(消费金)](/openapi/v3/multiuse/stocks/{stock_id}/use-flow) | &nbsp;
-| [下载批次发放明细(消费金)](/openapi/v3/multiuse/stocks/{stock_id}/send-flow) | &nbsp;
-| [下载批次退款明细(消费金)](/openapi/v3/multiuse/stocks/{stock_id}/refund-flow) | &nbsp;
+| 消费金v3{rowspan=4} | [发放指定批次的消费金](/openapi/v3/multiuse/users/{openid}/coupons)
+| [下载批次核销明细(消费金)](/openapi/v3/multiuse/stocks/{stock_id}/use-flow)
+| [下载批次发放明细(消费金)](/openapi/v3/multiuse/stocks/{stock_id}/send-flow)
+| [下载批次退款明细(消费金)](/openapi/v3/multiuse/stocks/{stock_id}/refund-flow)
 | 商家券v3{rowspan=24} | [设置商家券事件通知地址](/openapi/v3/marketing/busifavor/callbacks#post) {colspan=2}
 | [查询商家券事件通知地址](/openapi/v3/marketing/busifavor/callbacks#get) {colspan=2}
 | [上传预存code](/openapi/v3/marketing/busifavor/stocks/{stock_id}/couponcodes#post) {colspan=2}
@@ -218,14 +218,14 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | [更新自定义入口](/openapi/v3/marketing/shopping-receipt/customentrances/{brand_id}#patch) {colspan=2}
 | [上传商家电子小票跳转信息](/openapi/v3/marketing/shopping-receipt/merchantshoppingreceiptjumpinfos) {colspan=2}
 | [上传电子小票图片文件](/openapi/v3/marketing/shopping-receipt/shoppingreceipts) {colspan=2}
-| 小票打印v3{rowspan=2} | &nbsp; | [按小票机设备号打印订单](/openapi/v3/pay-devices/printers/{device_id}/print-orders)
-| &nbsp; | [按小票机打印单号查询订单](/openapi/v3/pay-devices/printers/{device_id}/print-orders/{print_order_no})
-| 点金计划v3{rowspan=5} | &nbsp; | [点金计划管理](/openapi/v3/goldplan/merchants/changegoldplanstatus)
+| 小票打印v3{rowspan=2} | | [按小票机设备号打印订单](/openapi/v3/pay-devices/printers/{device_id}/print-orders)
+| | [按小票机打印单号查询订单](/openapi/v3/pay-devices/printers/{device_id}/print-orders/{print_order_no})
+| 点金计划v3{rowspan=5} | | [点金计划管理](/openapi/v3/goldplan/merchants/changegoldplanstatus)
 | | [商家小票管理](/openapi/v3/goldplan/merchants/changecustompagestatus)
 | | [同业过滤标签管理](/openapi/v3/goldplan/merchants/set-advertising-industry-filter)
 | | [开通广告展示](/openapi/v3/goldplan/merchants/open-advertising-show)
 | | [关闭广告展示](/openapi/v3/goldplan/merchants/close-advertising-show)
-| 电子发票v3{rowspan=15} | &nbsp; | [检查子商户开票功能状态](/openapi/v3/new-tax-control-fapiao/merchant/{sub_mchid}/check)
+| 电子发票v3{rowspan=15} | | [检查子商户开票功能状态](/openapi/v3/new-tax-control-fapiao/merchant/{sub_mchid}/check)
 | [创建电子发票卡券模板](/openapi/v3/new-tax-control-fapiao/card-template) {colspan=2}
 | [配置开发选项](/openapi/v3/new-tax-control-fapiao/merchant/development-config#patch) {colspan=2}
 | [查询配置的开发选项](/openapi/v3/new-tax-control-fapiao/merchant/development-config#get) {colspan=2}
@@ -240,7 +240,7 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | [下载发票文件](/openapi/v3/new-tax-control-fapiao/download) {colspan=2}
 | [上传电子发票文件](/openapi/v3/new-tax-control-fapiao/fapiao-applications/upload-fapiao-file) {colspan=2}
 | [将电子发票插入微信用户卡包](/openapi/v3/new-tax-control-fapiao/fapiao-applications/{fapiao_apply_id}/insert-cards) {colspan=2}
-| 出租车电子发票v3{rowspan=11} | &nbsp; | [新增出租车公司](/openapi/v3/taxi-invoice/taxi-company/create-taxi-company)
+| 出租车电子发票v3{rowspan=11} | | [新增出租车公司](/openapi/v3/taxi-invoice/taxi-company/create-taxi-company)
 | | [获取出租车公司商户信息](/openapi/v3/taxi-invoice/taxi-companies/{company_mchid})
 | | [更新出租车信息](/openapi/v3/taxi-invoice/taxi/update-taxi)
 | | [获取出租车信息](/openapi/v3/taxi-invoice/taxies/{plate_number})
@@ -251,7 +251,7 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | | [根据凭证查询乘客行程单](/openapi/v3/taxi-invoice/user-taxi-order/find-by-token)
 | | [上传出租车电子发票文件](/openapi/v3/taxi-invoice/cards/upload-file)
 | | [将出租车电子发票插入微信用户卡包](/openapi/v3/taxi-invoice/cards)
-| 微工卡v3{rowspan=9} | &nbsp; | [生成用户授权token](/openapi/v3/payroll-card/tokens)
+| 微工卡v3{rowspan=9} | | [生成用户授权token](/openapi/v3/payroll-card/tokens)
 | | [查询微工卡授权关系](/openapi/v3/payroll-card/relations/{openid})
 | | [微工卡核身预下单](/openapi/v3/payroll-card/authentications/pre-order)
 | | [微工卡核身预下单(流程中完成授权)](/openapi/v3/payroll-card/authentications/pre-order-with-auth)
@@ -283,7 +283,7 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | | [申请商家转账明细电子回单](/openapi/v3/platsolution/mch-transfer/batches/detail-receipts/out-batch-no/{out_batch_no}/out-detail-no/{out_detail_no}/apply)
 | | [查询商家转账明细电子回单](/openapi/v3/platsolution/mch-transfer/batches/detail-receipts/out-batch-no/{out_batch_no}/out-detail-no/{out_detail_no})
 | | [平台转账明细单号查询明细单](/openapi/v3/platsolution/mch-transfer/batches/batch-id/{batch_id}/details/detail-id/{detail_id})
-| 平台收付通v3{rowspan=52} | &nbsp; | [二级商户进件](/openapi/v3/ecommerce/applyments/)
+| 平台收付通v3{rowspan=52} | | [二级商户进件](/openapi/v3/ecommerce/applyments/)
 | | [查询进件状态(平台申请单号)](/openapi/v3/ecommerce/applyments/{applyment_id})
 | | [查询进件状态(业务申请编号)](/openapi/v3/ecommerce/applyments/out-request-no/{out_request_no})
 | | [请求补差](/openapi/v3/ecommerce/subsidies/create)
@@ -335,26 +335,26 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | | [撤销转账](/openapi/v3/ecommerce/mch-transfer/transfer-bills/out-bill-no/{out_bill_no}/cancel)
 | | [微信转账单号查询转账单](/openapi/v3/ecommerce/mch-transfer/transfer-bills/transfer-bill-no/{transfer_bill_no})
 | | [商户单号查询转账单](/openapi/v3/ecommerce/mch-transfer/transfer-bills/out-bill-no/{out_bill_no})
-| 商户提现v3{rowspan=6} | &nbsp; | [合作伙伴预约提现](/openapi/v3/merchant/fund/withdraw)
+| 商户提现v3{rowspan=6} | | [合作伙伴预约提现](/openapi/v3/merchant/fund/withdraw)
 | | [查询预约提现状态(商户单号)](/openapi/v3/merchant/fund/withdraw/out-request-no/{out_request_no})
 | | [查询预约提现状态(平台单号)](/openapi/v3/merchant/fund/withdraw/withdraw-id/{withdraw_id})
 | | [查询账户实时余额](/openapi/v3/merchant/fund/balance/{account_type})
 | | [查询账户日终余额](/openapi/v3/merchant/fund/dayendbalance/{account_type})
 | | [按日下载提现异常文件](/openapi/v3/merchant/fund/withdraw/bill-type/{bill_type})
-| 来账识别v3{rowspan=2} | &nbsp; | [合作伙伴银行来账查询](/openapi/v3/merchantfund/merchant/income-records)
+| 来账识别v3{rowspan=2} | | [合作伙伴银行来账查询](/openapi/v3/merchantfund/merchant/income-records)
 | | [二级商户银行来账查询](/openapi/v3/merchantfund/partner/income-records)
-| 商户进件v3{rowspan=3} | &nbsp; | [提交进件申请单](/openapi/v3/applyment4sub/applyment/)
+| 商户进件v3{rowspan=3} | | [提交进件申请单](/openapi/v3/applyment4sub/applyment/)
 | | [查询进件状态(申请单号)](/openapi/v3/applyment4sub/applyment/applyment_id/{applyment_id})
 | | [查询进件状态(业务申请编号)](/openapi/v3/applyment4sub/applyment/business_code/{business_code})
-| 结算账户v3{rowspan=3} | &nbsp; | [查询结算账户](/openapi/v3/apply4sub/sub_merchants/{sub_mchid}/settlement)
+| 结算账户v3{rowspan=3} | | [查询结算账户](/openapi/v3/apply4sub/sub_merchants/{sub_mchid}/settlement)
 | | [修改结算账户](/openapi/v3/apply4sub/sub_merchants/{sub_mchid}/modify-settlement)
 | | [查询结算账户修改状态](/openapi/v3/apply4sub/sub_merchants/{sub_mchid}/application/{application_no})
-| 确认开户意愿v3{rowspan=5} | &nbsp; | [查询商户确认状态](/openapi/v3/apply4subject/applyment/merchants/{sub_mchid}/state)
+| 确认开户意愿v3{rowspan=5} | | [查询商户确认状态](/openapi/v3/apply4subject/applyment/merchants/{sub_mchid}/state)
 | | [提交商户申请单](/openapi/v3/apply4subject/applyment#post)
 | | [查询申请单审核结果](/openapi/v3/apply4subject/applyment#get)
 | | [撤销申请单(申请单编号)](/openapi/v3/apply4subject/applyment/{applyment_id}/cancel)
 | | [撤销申请单(业务申请编号)](/openapi/v3/apply4subject/applyment/{business_code}/cancel)
-| 文件上传v3{rowspan=2} | &nbsp; | [商户图片文件上传](/openapi/v3/merchant/media/upload)
+| 文件上传v3{rowspan=2} | | [商户图片文件上传](/openapi/v3/merchant/media/upload)
 | | [商户视频文件上传](/openapi/v3/merchant/media/video_upload)
 | 商户风险管理v3{rowspan=8} | [创建接收违规通知的URL](/openapi/v3/merchant-risk-manage/violation-notifications#post) {colspan=2}
 | [查询接收违规通知的URL](/openapi/v3/merchant-risk-manage/violation-notifications#get) {colspan=2}
@@ -364,9 +364,9 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | [处置结果回传](/openapi/v3/merchant-risk-manage/trade-risk-result) {colspan=2}
 | [查询风险信息](/openapi/v3/merchant-risk-manage/trade-risk-information) {colspan=2}
 | | [查询子商户管控情况](/openapi/v3/mch-operation-manage/merchant-limitations/sub-mchid/{sub_mchid})
-| 商户身份核实v3{rowspan=2} | &nbsp; | [发起不活跃商户身份核实](/openapi/v3/compliance/inactive-merchant-identity-verification/merchants)
+| 商户身份核实v3{rowspan=2} | | [发起不活跃商户身份核实](/openapi/v3/compliance/inactive-merchant-identity-verification/merchants)
 | | [查询不活跃商户身份核实结果](/openapi/v3/compliance/inactive-merchant-identity-verification/merchants/{sub_mchid}/verifications/{verification_id})
-| 银行组件v3{rowspan=6} | &nbsp; | [查询省份列表](/openapi/v3/capital/capitallhh/areas/provinces)
+| 银行组件v3{rowspan=6} | | [查询省份列表](/openapi/v3/capital/capitallhh/areas/provinces)
 | | [查询城市列表](/openapi/v3/capital/capitallhh/areas/provinces/{province_code}/cities)
 | | [查询支行列表](/openapi/v3/capital/capitallhh/banks/{bank_alias_code}/branches)
 | | [查询支持对公业务的银行列表](/openapi/v3/capital/capitallhh/banks/corporate-banking)
@@ -398,18 +398,18 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | [查询扣费预约](/openapi/v3/papay/pay/schedules/contract-id/{contract_id}) | [查询扣费预约](/openapi/v3/papay/pay/partner/schedules/contract-id/{contract_id})
 | [发送预扣费通知](/openapi/v3/papay/contracts/{contract_id}/notify) | [发送预扣费通知](/openapi/v3/partner-papay/contracts/{contract_id}/notify)
 | [受理扣款](/openapi/v3/papay/pay/transactions/apply) | [受理扣款](/openapi/v3/papay/pay/partner/transactions/apply)
-| 保险委托代扣v3{rowspan=11} | [查询保险自动续费预约](/openapi/v3/papay/insurance-pay/policy-periods/contract-id/{contract_id}/policy-period-id/{policy_period_id}) | &#8203;
-| [预约保险自动续费](/openapi/v3/papay/insurance-pay/policy-periods/contract-id/{contract_id}/policy-period-id/{policy_period_id}/schedule) | &nbsp;
-| [受理保险自动续费扣款](/openapi/v3/papay/insurance-pay/transactions/apply) | &nbsp;
-| [受理续期自动续费协议](/openapi/v3/papay/insurance-sign/contracts/plan-id/{plan_id}/contract-id/{contract_id}/renew) | &nbsp;
-| [查询保险自动续费协议](/openapi/v3/papay/insurance-sign/contracts/plan-id/{plan_id}/out-contract-code/{out_contract_code}) | &nbsp;
-| [解除保险自动续费协议](/openapi/v3/papay/insurance-sign/contracts/plan-id/{plan_id}/out-contract-code/{out_contract_code}/terminate) | &nbsp;
-| [查询保险扣费周期列表](/openapi/v3/papay/insurance-sign/policy_periods/plan-id/{plan_id}/out-contract-code/{out_contract_code}) | &nbsp;
-| [App预签约](/openapi/v3/papay/insurance-sign/contracts/pre-entrust-sign/app) | &nbsp;
-| [H5预签约](/openapi/v3/papay/insurance-sign/contracts/pre-entrust-sign/h5) | &nbsp;
-| [JSAPI预签约](/openapi/v3/papay/insurance-sign/contracts/pre-entrust-sign/jsapi) | &nbsp;
-| [小程序预签约](/openapi/v3/papay/insurance-sign/contracts/pre-entrust-sign/mini-program) | &nbsp;
-| 校园轻松付v3{rowspan=8} | &nbsp; | [查询用户签约列表](/openapi/v3/eduschoolpay/users/{openid}/contracts)
+| 保险委托代扣v3{rowspan=11} | [查询保险自动续费预约](/openapi/v3/papay/insurance-pay/policy-periods/contract-id/{contract_id}/policy-period-id/{policy_period_id})
+| [预约保险自动续费](/openapi/v3/papay/insurance-pay/policy-periods/contract-id/{contract_id}/policy-period-id/{policy_period_id}/schedule)
+| [受理保险自动续费扣款](/openapi/v3/papay/insurance-pay/transactions/apply)
+| [受理续期自动续费协议](/openapi/v3/papay/insurance-sign/contracts/plan-id/{plan_id}/contract-id/{contract_id}/renew)
+| [查询保险自动续费协议](/openapi/v3/papay/insurance-sign/contracts/plan-id/{plan_id}/out-contract-code/{out_contract_code})
+| [解除保险自动续费协议](/openapi/v3/papay/insurance-sign/contracts/plan-id/{plan_id}/out-contract-code/{out_contract_code}/terminate)
+| [查询保险扣费周期列表](/openapi/v3/papay/insurance-sign/policy_periods/plan-id/{plan_id}/out-contract-code/{out_contract_code})
+| [App预签约](/openapi/v3/papay/insurance-sign/contracts/pre-entrust-sign/app)
+| [H5预签约](/openapi/v3/papay/insurance-sign/contracts/pre-entrust-sign/h5)
+| [JSAPI预签约](/openapi/v3/papay/insurance-sign/contracts/pre-entrust-sign/jsapi)
+| [小程序预签约](/openapi/v3/papay/insurance-sign/contracts/pre-entrust-sign/mini-program)
+| 校园轻松付v3{rowspan=8} | | [查询用户签约列表](/openapi/v3/eduschoolpay/users/{openid}/contracts)
 | | [预签约](/openapi/v3/eduschoolpay/contracts/presign)
 | | [商户主动解约](/openapi/v3/eduschoolpay/contracts/{contract_id}/terminate)
 | | [通过协议号查询签约信息](/openapi/v3/eduschoolpay/contracts/{contract_id})
@@ -429,7 +429,7 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | [创建停车入场](/openapi/v3/vehicle/parking/parkings) {colspan=2}
 | [扣费受理](/openapi/v3/vehicle/transactions/parking) {colspan=2}
 | [查询订单](/openapi/v3/vehicle/transactions/out-trade-no/{out_trade_no}) {colspan=2}
-| ETC授权v3{rowspan=6} | &nbsp; | [查询ETC签约状态](/openapi/v3/vehicle/etc/users/{openid}/contracts)
+| ETC授权v3{rowspan=6} | | [查询ETC签约状态](/openapi/v3/vehicle/etc/users/{openid}/contracts)
 | | [通过商户ETC绑定号查询签约状态](/openapi/v3/vehicle/etc/contracts/{contract_id})
 | | [预开通用户ETC扣费](/openapi/v3/vehicle/etc/preopen)
 | | [通过商户订单号查询订单](/openapi/v3/vehicle/etc/transactions/out-trade-no/{out_trade_no})
@@ -450,10 +450,10 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | [商户预授权(免确认)](/openapi/v3/payscore/permissions) | [商户预授权(免确认)](/openapi/v3/payscore/partner/permissions)
 | [查询授权状态(CODE)(免确认)](/openapi/v3/payscore/permissions/authorization-code/{authorization_code}) | [查询授权状态(CODE)(免确认)](/openapi/v3/payscore/partner/permissions/authorization-code/{authorization_code})
 | [查询授权状态(OPENID)(免确认)](/openapi/v3/payscore/permissions/openid/{openid}) | [查询授权状态(OPENID)(免确认)](/openapi/v3/payscore/partner/permissions/search)
-| [查询授权状态](/openapi/v3/payscore/user-service-state) | &nbsp;
+| [查询授权状态](/openapi/v3/payscore/user-service-state)
 | [解除用户授权(CODE)(免确认)](/openapi/v3/payscore/permissions/authorization-code/{authorization_code}/terminate)| [解除用户授权(CODE)(免确认)](/openapi/v3/payscore/partner/permissions/authorization-code/{authorization_code}/terminate)
 | [解除用户授权(OPENID)(免确认)](/openapi/v3/payscore/permissions/openid/{openid}/terminate) | [解除用户授权(OPENID)(免确认)](/openapi/v3/payscore/partner/permissions/terminate)
-| [解除用户授权](/openapi/v3/payscore/users/{openid}/permissions/{service_id}/terminate) | &nbsp;
+| [解除用户授权](/openapi/v3/payscore/users/{openid}/permissions/{service_id}/terminate)
 | [创单结单合并(免确认)](/openapi/v3/payscore/serviceorder/direct-complete) | [创单结单合并(免确认)](/openapi/v3/payscore/partner/serviceorder/direct-complete)
 | | [查询先享金额分层](/openapi/v3/payscore/partner/servicequotas/service-id/{service_id})
 | | [申请绑定支付分服务](/openapi/v3/payscore/partner/service-account-applications)
@@ -466,28 +466,28 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | [查询用户的签约计划](/openapi/v3/payscore/sign-plan/user-sign-plans/merchant-sign-plan-no/{merchant_sign_plan_no}) | [查询用户的签约计划](/openapi/v3/payscore/sign-plan/partner/user-sign-plans/merchant-sign-plan-no/{merchant_sign_plan_no})
 | [取消用户的签约计划](/openapi/v3/payscore/sign-plan/user-sign-plans/merchant-sign-plan-no/{merchant_sign_plan_no}/stop) | [取消用户的签约计划](/openapi/v3/payscore/sign-plan/partner/user-sign-plans/merchant-sign-plan-no/{merchant_sign_plan_no}/stop)
 | [创建用户签约计划的服务单](/openapi/v3/payscore/sign-plan/serviceorder) | [创建用户签约计划的服务单](/openapi/v3/payscore/sign-plan/partner/serviceorder)
-| 智慧零售v3{rowspan=4} | [创建订单](/openapi/v3/payscore/smartretail-orders#post) | &nbsp;
-| [查询订单](/openapi/v3/payscore/smartretail-orders#get) | &nbsp;
-| [撤销订单](/openapi/v3/payscore/smartretail-orders/{out_order_no}/cancel) | &nbsp;
-| [完结订单](/openapi/v3/payscore/smartretail-orders/{out_order_no}/complete) | &nbsp;
-| 先享后付v3{rowspan=5} | [创建订单](/openapi/v3/payscore/payafter-orders#post) | &nbsp;
-| [查询订单](/openapi/v3/payscore/payafter-orders#get) | &nbsp;
-| [撤销订单](/openapi/v3/payscore/payafter-orders/{out_order_no}/cancel) | &nbsp;
-| [完结订单](/openapi/v3/payscore/payafter-orders/{out_order_no}/complete) | &nbsp;
-| [同步订单](/openapi/v3/payscore/payafter-orders/{out_order_no}/sync) | &nbsp;
-| 微信先享卡v3{rowspan=6} | [预受理领卡请求](/openapi/v3/discount-card/cards) | &nbsp;
-| [查询先享卡订单](/openapi/v3/discount-card/cards/{out_card_code}) | &nbsp;
-| [更新先享卡订单](/openapi/v3/discount-card/orders/{out_order_no}#patch) | &nbsp;
-| [通过先享卡订单号查询订单](/openapi/v3/discount-card/orders/{out_order_no}#get) | &nbsp;
-| [通过商户订单号查询订单](/openapi/v3/discount-card/orders/out-trade-no/{out_trade_no}) | &nbsp;
-| [增加用户记录](/openapi/v3/discount-card/cards/{out_card_code}/add-user-records) | &nbsp;
-| 充电宝隔夜归还v3{rowspan=4} | [查询用户保险订单领取资格](/openapi/v3/hire-power-bank/user-qualifications/{openid}) |  &nbsp;
-| [查询用户保险订单领取资格](/openapi/v3/hire-power-bank/insurance-orders) | &nbsp;
-| [创建保险订单](/openapi/v3/hire-power-bank/insurance-orders) | &nbsp;
-| [查询保险订单详情](/openapi/v3/hire-power-bank/insurance-orders/{out_order_no}) | &nbsp;
-| 扫码点餐v3{rowspan=1} | &nbsp; | [点餐订单信息同步](/openapi/v3/catering/orders/sync-status)
-| 微信寄快递v3{rowspan=1} | &nbsp; | [用户openid转换](/openapi/v3/express/users/{openid}/transform)
-| 出行券v3{rowspan=1} | [出行券切卡组件预下单](/openapi/v3/industry-coupon/tokens) | &nbsp;
+| 智慧零售v3{rowspan=4} | [创建订单](/openapi/v3/payscore/smartretail-orders#post)
+| [查询订单](/openapi/v3/payscore/smartretail-orders#get)
+| [撤销订单](/openapi/v3/payscore/smartretail-orders/{out_order_no}/cancel)
+| [完结订单](/openapi/v3/payscore/smartretail-orders/{out_order_no}/complete)
+| 先享后付v3{rowspan=5} | [创建订单](/openapi/v3/payscore/payafter-orders#post)
+| [查询订单](/openapi/v3/payscore/payafter-orders#get)
+| [撤销订单](/openapi/v3/payscore/payafter-orders/{out_order_no}/cancel)
+| [完结订单](/openapi/v3/payscore/payafter-orders/{out_order_no}/complete)
+| [同步订单](/openapi/v3/payscore/payafter-orders/{out_order_no}/sync)
+| 微信先享卡v3{rowspan=6} | [预受理领卡请求](/openapi/v3/discount-card/cards)
+| [查询先享卡订单](/openapi/v3/discount-card/cards/{out_card_code})
+| [更新先享卡订单](/openapi/v3/discount-card/orders/{out_order_no}#patch)
+| [通过先享卡订单号查询订单](/openapi/v3/discount-card/orders/{out_order_no}#get)
+| [通过商户订单号查询订单](/openapi/v3/discount-card/orders/out-trade-no/{out_trade_no})
+| [增加用户记录](/openapi/v3/discount-card/cards/{out_card_code}/add-user-records)
+| 充电宝隔夜归还v3{rowspan=4} | [查询用户保险订单领取资格](/openapi/v3/hire-power-bank/user-qualifications/{openid})
+| [查询用户保险订单领取资格](/openapi/v3/hire-power-bank/insurance-orders)
+| [创建保险订单](/openapi/v3/hire-power-bank/insurance-orders)
+| [查询保险订单详情](/openapi/v3/hire-power-bank/insurance-orders/{out_order_no})
+| 扫码点餐v3{rowspan=1} | | [点餐订单信息同步](/openapi/v3/catering/orders/sync-status)
+| 微信寄快递v3{rowspan=1} | | [用户openid转换](/openapi/v3/express/users/{openid}/transform)
+| 出行券v3{rowspan=1} | [出行券切卡组件预下单](/openapi/v3/industry-coupon/tokens)
 | 刷码乘车v3{rowspan=3} | [查询用户服务可用信息](/openapi/v3/qrcode/user-services/contract-id/{contract_id}) {colspan=2}
 | [扣费受理](/openapi/v3/qrcode/transactions) {colspan=2}
 | [查询订单](/openapi/v3/qrcode/transactions/out-trade-no/{out_trade_no}) {colspan=2}

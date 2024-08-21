@@ -1,3 +1,8 @@
+:root {
+  --vp-font-family-base: inherit;
+  --vp-font-family-mono: inherit;
+}
+
 @media (min-width: 768px) {
   .Layout .VPHome {
     margin-bottom: 20px;
@@ -55,11 +60,6 @@
   margin: 0;
   width: 100%;
   display: table;
-}
-
-._webhook_ tbody td:nth-last-child(-n + 2):empty,
-._openapi_ tbody td:nth-last-child(-n + 2):empty {
-  display: none;
 }
 
 ._webhook_ thead th,
