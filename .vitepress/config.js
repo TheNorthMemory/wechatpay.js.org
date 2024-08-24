@@ -817,6 +817,15 @@ function openapiSidebar() {
               ].map(transArrayItem),
             },
             {
+              text: '充值',
+              collapsed: true,
+              items: [
+                ['申请充值', '/openapi/v3/platsolution/ecommerce/recharges/apply'],
+                ['查询充值结果', '/openapi/v3/platsolution/ecommerce/recharges/out-recharge-no/{out_recharge_no}'],
+                ['关闭充值', '/openapi/v3/platsolution/ecommerce/recharges/out-recharge-no/{out_recharge_no}/close'],
+              ].map(transArrayItem),
+            },
+            {
               text: '二级商户提现',
               collapsed: true,
               items: [
@@ -1381,6 +1390,7 @@ function webhookSidebar() {
           items: [
             ['签约成功通知', '/webhook/v3/ENTRUST.SIGN'],
             ['解约成功通知', '/webhook/v3/ENTRUST.TERMINATE'],
+            ['解约挽留信息通知', '/webhook/v3/ENTRUST.TERMINATE_RETENTION'],
           ].map(transArrayItem).concat({
             text: '保险商户委托代扣',
             collapsed: true,

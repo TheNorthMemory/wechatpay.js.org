@@ -45,6 +45,7 @@ description: 后台通知交互时，如果微信收到商户的应答不符合�
 | [投诉状态变化通知](/webhook/v3/COMPLAINT.STATE_CHANGE) {colspan=2}
 | JSON {rowspan=2} | [委托代扣签约成功通知](/webhook/v3/ENTRUST.SIGN) {colspan=2}
 | [委托代扣解约成功通知](/webhook/v3/ENTRUST.TERMINATE) {colspan=2}
+| JSON {rowspan=1} | [代扣解约-获取解约挽留信息](/webhook/v3/ENTRUST.TERMINATE_RETENTION)
 | JSON {rowspan=5} | [保险商户委托代扣签约成功通知](/webhook/v3/INSURANCE_ENTRUST.SIGN)
 | [保险商户委托代扣解约成功通知](/webhook/v3/INSURANCE_ENTRUST.TERMINATE)
 | [保险商户委托代扣续期完成通知](/webhook/v3/INSURANCE_ENTRUST.RENEW)
