@@ -5,7 +5,7 @@ description: 领券完成后，微信会把相关领券结果和用户信息发�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/cash-coupons/check-notice.html) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/merchant-exclusive-coupon/coupon/busicoupon-send.html)
+{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/partner/apis/merchant-exclusive-coupon/coupon/busicoupon-send.html)
 
 ## 请求头(headers) {#req.headers}
 

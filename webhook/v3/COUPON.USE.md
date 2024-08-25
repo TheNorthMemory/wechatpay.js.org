@@ -66,6 +66,7 @@ Request-ID: 08F78BB5AF0610D302189F99DD5C20BA56F89845-0
     "consume_time": "2015-05-20T13:29:35+08:00",
     "consume_mchid": "9856081",
     "transaction_id": "4200752501201407033233368018",
+    "consume_amount": 50,
     "goods_detail": [
       {
         "goods_id": "a_goods1",
@@ -74,7 +75,8 @@ Request-ID: 08F78BB5AF0610D302189F99DD5C20BA56F89845-0
         "discount_amount": 4
       }
     ]
-  }
+  },
+  "business_type": "MULTIUSE"
 }
 ```
 :::
@@ -112,7 +114,8 @@ Request-ID: 08F78BB5AF0610D302189F99DD5C20BA56F89845-0
  * @prop {string} available_end_time
  * @prop {boolean} singleitem
  * @prop {{coupon_amount: number, transaction_minimum: number}} normal_coupon_information
- * @prop {{consume_time: string, consume_mchid: string, transaction_id: string, goods_detail?: {goods_id: string, quantity: number, price: number, discount_amount: number}[]}} consume_information
+ * @prop {{consume_time: string, consume_mchid: string, transaction_id: string, consume_amount?: number, goods_detail?: {goods_id: string, quantity: number, price: number, discount_amount: number}[]}} consume_information
+ * @prop {'MULTIUSE'=} business_type
  */
 /** @type {string} 原始HTTP POST的文本 */
 var json;
@@ -194,6 +197,7 @@ const {
   singleitem,
   normal_coupon_information,
   consume_information,
+  business_type,
 } = JSON.parse(Aes.AesGcm.decrypt(nonce, apiv3Key, ciphertext, associated_data))
 
 // do your business
@@ -218,6 +222,7 @@ Status: 200
 ```
 
 > [!IMPORTANT] 注意：
+> - *business_type* 细分业务类型，仅有当值为**MULTIUSE**（消费金）时，才会返回，同时返回**consume_information.consume_amount**字段及值；
 > - 同样的通知可能会多次发送给商户系统。商户系统必须能够正确处理重复的通知。 推荐的做法是，当商户系统收到通知进行处理时，先检查对应业务数据的状态，并判断该通知是否已经处理。如果未处理，则再进行处理；如果已处理，则直接返回结果成功。在对业务数据进行状态检查和处理之前，要采用数据锁进行并发控制，以避免函数重入造成的数据混乱。
 > - 特别提醒：商户系统对于开启结果通知的内容一定要做签名验证，并校验通知的信息是否与商户侧的信息一致，防止数据泄露导致出现“假通知”，造成资金损失。
 > - 对后台通知交互时，如果微信收到应答不是成功或超时，微信认为通知失败，微信会通过一定的策略定期重新发起通知，尽可能提高通知的成功率，但微信不保证通知最终能成功。（通知频率为1min1次，总计9次）
