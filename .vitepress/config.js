@@ -1,6 +1,8 @@
 import { defineConfig } from 'vitepress'
 import { transformerTwoslash } from '@shikijs/vitepress-twoslash'
 
+const baseUri = 'https://wechatpay.js.org'
+
 export default defineConfig({
   lang: 'zh-CN',
   title: 'wechatpay.js.org',
@@ -8,6 +10,7 @@ export default defineConfig({
   lastUpdated: true,
   cleanUrls: true,
   buildConcurrency: 20,
+  metaChunk: true,
   markdown: {
     codeTransformers: [
       transformerTwoslash()
@@ -15,25 +18,32 @@ export default defineConfig({
   },
   srcExclude: ['**/README.md'],
   sitemap: {
-    hostname: 'https://wechatpay.js.org',
-    xslUrl: 'https://wechatpay.js.org/sitemap.xsl',
+    hostname: baseUri,
+    xslUrl: '/sitemap.xsl',
   },
   head: [
-    ['meta', { name: 'theme-color', content: '#00c250' }],
+    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' }],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' }],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' }],
+    ['link', { rel: 'manifest', href: '/site.webmanifest' }],
+    ['meta', { name: 'theme-color', content: '#19ab47' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:locale', content: 'zh_CN' }],
-    ['meta', { property: 'og:title', content: 'Promise based and chained WeChatPay OpenAPI client SDK for NodeJS' }],
     ['meta', { property: 'og:site_name', content: 'wechatpay.js.org' }],
-    ['meta', { property: 'og:url', content: 'https://wechatpay.js.org/' }],
-    ...(process?.argv?.at(2) === 'dev' ? [] : [
+    ...(process?.argv?.[2] === 'dev' ? [] : [
       ['script', { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-8NRT7Z8PN5' }],
       ['script', {}, `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);}; gtag('js', new Date()); gtag('config', 'G-8NRT7Z8PN5');`],
     ]),
   ],
-  transformPageData(pageData) {
-    const href = `https://wechatpay.js.org/${pageData.relativePath}`.replace(/(?:index)?\.md$/, '')
-    pageData.frontmatter.head ??= []
-    pageData.frontmatter.head?.push([ 'link', { rel: 'canonical', href, }])
+  transformHead(ctx) {
+    const href = `${baseUri}/${ctx.pageData.relativePath}`.replace(/(?:index)?\.md$/, '')
+    return [
+      ['link', { rel: 'canonical', href }],
+      ['meta', { property: 'og:url', content: href }],
+      ['meta', { property: 'og:title', content: ctx.title }],
+      ['meta', { property: 'og:description', content: ctx.description }],
+      ['meta', { property: 'og:image', content: `${baseUri}/android-chrome-512x512.png` }],
+    ]
   },
   themeConfig: {
     returnToTopLabel: '回到顶部',
@@ -823,6 +833,14 @@ function openapiSidebar() {
                 ['申请充值', '/openapi/v3/platsolution/ecommerce/recharges/apply'],
                 ['查询充值结果', '/openapi/v3/platsolution/ecommerce/recharges/out-recharge-no/{out_recharge_no}'],
                 ['关闭充值', '/openapi/v3/platsolution/ecommerce/recharges/out-recharge-no/{out_recharge_no}/close'],
+              ].map(transArrayItem),
+            },
+            {
+              text: '赔付',
+              collapsed: true,
+              items: [
+                ['开通保险理赔功能', '/openapi/v3/platsolution/ecommerce/insurance-compensation-contracts'],
+                ['查询保险理赔功能开通状态', '/openapi/v3/platsolution/ecommerce/insurance-compensation-contracts/sub-mchid/{sub_mchid}/check-opened'],
               ].map(transArrayItem),
             },
             {
