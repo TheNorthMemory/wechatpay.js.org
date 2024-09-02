@@ -165,7 +165,7 @@ function guideSidebar() {
 }
 
 /**
- * @param {string[]} param0
+ * @param {string[]}
  */
 function transArrayItem([ text, link ]) { return { text, link }; }
 
@@ -173,7 +173,7 @@ function openapiSidebar() {
   return [
     {
       text: 'APIv2',
-      collapsed: false,
+      collapsed: true,
       items: [
         {
           text: '沙箱环境',
