@@ -260,6 +260,8 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | | [校验核身结果](/openapi/v3/payroll-card/wesure/token-validations)
 | | [生成投保结果](/openapi/v3/payroll-card/wesure/insurance)
 | | [发起批量转账](/openapi/v3/payroll-card/transfer-batches)
+| 商家充值v3 {rowspan=2} | [申请银行转账充值](/openapi/v3/recharge/bank-transfer-recharges/apply) {colspan=2}
+| [查询银行转账充值结果](/openapi/v3/recharge/bank-transfer-recharges/out-recharge-no/{out_recharge_no}) {colspan=2}
 | 商家转账v3{rowspan=23} | [发起商家转账](/openapi/v3/transfer/batches) | [发起商家转账](/openapi/v3/partner-transfer/batches)
 | [查询批次单(平台批次单号)](/openapi/v3/transfer/batches/batch-id/{batch_id}) | [查询批次单(平台批次单号)](/openapi/v3/partner-transfer/batches/batch-id/{batch_id})
 | [查询批次单(商家批次单号)](/openapi/v3/transfer/batches/out-batch-no/{out_batch_no}) | [查询批次单(商家批次单号)](/openapi/v3/partner-transfer/batches/out-batch-no/{out_batch_no})
@@ -310,9 +312,9 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | | [申请销户号余额提现](/openapi/v3/mch_operate/risk/withdrawl-apply)
 | | [查询销户号余额提现状态(商户提现单号)](/openapi/v3/mch_operate/risk/withdrawl-apply/out-request-no/{out_request_no})
 | | [查询销户号余额提现状态(平台提现单号)](/openapi/v3/mch_operate/risk/withdrawl-apply/applyment-id/{applyment_id})
-| | [申请充值](/openapi/v3/platsolution/ecommerce/recharges/apply)
-| | [查询充值结果](/openapi/v3/platsolution/ecommerce/recharges/out-recharge-no/{out_recharge_no})
-| | [关闭充值](/openapi/v3/platsolution/ecommerce/recharges/out-recharge-no/{out_recharge_no}/close)
+| | [申请二级商户充值](/openapi/v3/platsolution/ecommerce/recharges/apply)
+| | [查询二级商户充值结果](/openapi/v3/platsolution/ecommerce/recharges/out-recharge-no/{out_recharge_no})
+| | [关闭二级商户充值](/openapi/v3/platsolution/ecommerce/recharges/out-recharge-no/{out_recharge_no}/close)
 | | [开通保险理赔功能](/openapi/v3/platsolution/ecommerce/insurance-compensation-contracts)
 | | [查询保险理赔功能开通状态](/openapi/v3/platsolution/ecommerce/insurance-compensation-contracts/sub-mchid/{sub_mchid}/check-opened)
 | | [二级商户账户余额提现](/openapi/v3/ecommerce/fund/withdraw)
@@ -351,6 +353,10 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | 商户进件v3{rowspan=3} | | [提交进件申请单](/openapi/v3/applyment4sub/applyment/)
 | | [查询进件状态(申请单号)](/openapi/v3/applyment4sub/applyment/applyment_id/{applyment_id})
 | | [查询进件状态(业务申请编号)](/openapi/v3/applyment4sub/applyment/business_code/{business_code})
+| 资料变更v3{rowspan=4} | | [提交资料变更申请单](/openapi/v3/mchalterapply/mchsubjectalterapplyment)
+| | [查询变更申请单状态(申请单号)](/openapi/v3/mchalterapply/mchsubjectalterapplyment/{apply_id})
+| | [查询变更申请单状态(业务单号)](/openapi/v3/mchalterapply/mchsubjectalterapplyment/merchant/{merchant_code}/out-request-no/{out_request_no})
+| | [撤销资料变更申请单](/openapi/v3/mchalterapply/mchsubjectalterapplyment/{apply_id}/revoke)
 | 结算账户v3{rowspan=3} | | [查询结算账户](/openapi/v3/apply4sub/sub_merchants/{sub_mchid}/settlement)
 | | [修改结算账户](/openapi/v3/apply4sub/sub_merchants/{sub_mchid}/modify-settlement)
 | | [查询结算账户修改状态](/openapi/v3/apply4sub/sub_merchants/{sub_mchid}/application/{application_no})
@@ -393,7 +399,7 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | [~~查询投诉详情详情~~](/openapi/v3/merchant-service/complaints/{transaction_id}) :no_entry_sign: {colspan=2}
 | [~~查询投诉单协商历史~~](/openapi/v3/merchant-service/complaints/{transaction_id}/negotiation-historys) :no_entry_sign: {colspan=2}
 | [~~商户反馈~~](/openapi/v3/merchant-service/feedbacks) :no_entry_sign: {colspan=2}
-| 委托代扣v3{rowspan=10} | [JSAPI场景预约扣费预签约](/openapi/v3/papay/scheduled-deduct-sign/contracts/pre-entrust-sign/jsapi) | [JSAPI场景预约扣费预签约](/openapi/v3/papay/scheduled-deduct-sign/partner/contracts/pre-entrust-sign/jsapi)
+| 委托代扣v3{rowspan=11} | [JSAPI场景预约扣费预签约](/openapi/v3/papay/scheduled-deduct-sign/contracts/pre-entrust-sign/jsapi) | [JSAPI场景预约扣费预签约](/openapi/v3/papay/scheduled-deduct-sign/partner/contracts/pre-entrust-sign/jsapi)
 | [App场景预约扣费预签约](/openapi/v3/papay/scheduled-deduct-sign/contracts/pre-entrust-sign/app) | [App场景预约扣费预签约](/openapi/v3/papay/scheduled-deduct-sign/partner/contracts/pre-entrust-sign/app)
 | [H5场景预约扣费预签约](/openapi/v3/papay/scheduled-deduct-sign/contracts/pre-entrust-sign/h5) | [H5场景预约扣费预签约](/openapi/v3/papay/scheduled-deduct-sign/partner/contracts/pre-entrust-sign/h5)
 | [小程序场景预约扣费预签约](/openapi/v3/papay/scheduled-deduct-sign/contracts/pre-entrust-sign/mini-program) | [小程序场景预约扣费预签约](/openapi/v3/papay/scheduled-deduct-sign/partner/contracts/pre-entrust-sign/mini-program)
@@ -403,6 +409,7 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | [查询扣费预约](/openapi/v3/papay/pay/schedules/contract-id/{contract_id}) | [查询扣费预约](/openapi/v3/papay/pay/partner/schedules/contract-id/{contract_id})
 | [发送预扣费通知](/openapi/v3/papay/contracts/{contract_id}/notify) | [发送预扣费通知](/openapi/v3/partner-papay/contracts/{contract_id}/notify)
 | [受理扣款](/openapi/v3/papay/pay/transactions/apply) | [受理扣款](/openapi/v3/papay/pay/partner/transactions/apply)
+| [重试扣费通知](/openapi/v3/papay/contracts/{contract_id}/fail-notify) | [重试扣费通知](/openapi/v3/partner-papay/contracts/{contract_id}/fail-notify)
 | 保险委托代扣v3{rowspan=11} | [查询保险自动续费预约](/openapi/v3/papay/insurance-pay/policy-periods/contract-id/{contract_id}/policy-period-id/{policy_period_id})
 | [预约保险自动续费](/openapi/v3/papay/insurance-pay/policy-periods/contract-id/{contract_id}/policy-period-id/{policy_period_id}/schedule)
 | [受理保险自动续费扣款](/openapi/v3/papay/insurance-pay/transactions/apply)

@@ -5,7 +5,7 @@ description: 商户可通过调用此接口，提交回复内容。其中上传�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter10_2_14.shtml)
+{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/partner/apis/consumer-complaint/complaints/response-complaint-v2.html) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter10_2_14.shtml)
 
 ```js twoslash
 // @filename: virtual.ts
@@ -18,6 +18,11 @@ namespace WeChatPay.OpenAPI.V3.MerchantService.ComplaintsV2._complaint_id_.Respo
     response_images: string[]
     jump_url: string
     jump_url_text: string
+    mini_program_jump_info?: {
+      appid: string
+      path: string
+      text: string
+    }
   }
   export interface RequestConfig extends AxiosRequestConfig {
     data?: JsonDataRequest
@@ -77,6 +82,7 @@ wxpay.v3.merchantService.complaintsV2._complaint_id_.response.post({
   response_images,
   jump_url,
   jump_url_text,
+  mini_program_jump_info,
 }, { complaint_id, })
 .then(({ status, }) => status === 204) // [!code hl]
 ```

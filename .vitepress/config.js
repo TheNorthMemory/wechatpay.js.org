@@ -716,6 +716,14 @@ function openapiSidebar() {
           ].map(transArrayItem),
         },
         {
+          text: '商家充值',
+          collapsed: true,
+          items: [
+            ['申请银行转账充值', '/openapi/v3/recharge/bank-transfer-recharges/apply'],
+            ['查询银行转账充值结果', '/openapi/v3/recharge/bank-transfer-recharges/out-recharge-no/{out_recharge_no}'],
+          ].map(transArrayItem),
+        },
+        {
           text: '商家转账',
           collapsed: true,
           items: [
@@ -830,9 +838,9 @@ function openapiSidebar() {
               text: '充值',
               collapsed: true,
               items: [
-                ['申请充值', '/openapi/v3/platsolution/ecommerce/recharges/apply'],
-                ['查询充值结果', '/openapi/v3/platsolution/ecommerce/recharges/out-recharge-no/{out_recharge_no}'],
-                ['关闭充值', '/openapi/v3/platsolution/ecommerce/recharges/out-recharge-no/{out_recharge_no}/close'],
+                ['申请二级商户充值', '/openapi/v3/platsolution/ecommerce/recharges/apply'],
+                ['查询二级商户充值结果', '/openapi/v3/platsolution/ecommerce/recharges/out-recharge-no/{out_recharge_no}'],
+                ['关闭二级商户充值', '/openapi/v3/platsolution/ecommerce/recharges/out-recharge-no/{out_recharge_no}/close'],
               ].map(transArrayItem),
             },
             {
@@ -931,6 +939,16 @@ function openapiSidebar() {
                 ['提交进件申请单', '/openapi/v3/applyment4sub/applyment/'],
                 ['查询进件状态(申请单号)', '/openapi/v3/applyment4sub/applyment/applyment_id/{applyment_id}'],
                 ['查询进件状态(业务单号)', '/openapi/v3/applyment4sub/applyment/business_code/{business_code}'],
+              ].map(transArrayItem),
+            },
+            {
+              text: '特约商户资料变更',
+              collapsed: true,
+              items: [
+                ['提交变更申请单', '/openapi/v3/mchalterapply/mchsubjectalterapplyment'],
+                ['查询变更单状态(申请单号)', '/openapi/v3/mchalterapply/mchsubjectalterapplyment/{apply_id}'],
+                ['查询变更单状态(业务单号)', '/openapi/v3/mchalterapply/mchsubjectalterapplyment/merchant/{merchant_code}/out-request-no/{out_request_no}'],
+                ['撤销资料变更申请单', '/openapi/v3/mchalterapply/mchsubjectalterapplyment/{apply_id}/revoke'],
               ].map(transArrayItem),
             },
             {
@@ -1039,6 +1057,7 @@ function openapiSidebar() {
                 ['查询扣费预约', '/openapi/v3/papay/pay/schedules/contract-id/{contract_id}'],
                 ['发送预扣费通知', '/openapi/v3/papay/contracts/{contract_id}/notify'],
                 ['受理扣款', '/openapi/v3/papay/pay/transactions/apply'],
+                ['重试扣费通知', '/openapi/v3/papay/contracts/{contract_id}/fail-notify'],
               ].map(transArrayItem),
             },
             {
@@ -1055,6 +1074,7 @@ function openapiSidebar() {
                 ['查询扣费预约', '/openapi/v3/papay/pay/partner/schedules/contract-id/{contract_id}'],
                 ['发送预扣费通知', '/openapi/v3/partner-papay/contracts/{contract_id}/notify'],
                 ['受理扣款', '/openapi/v3/papay/pay/partner/transactions/apply'],
+                ['重试扣费通知', '/openapi/v3/partner-papay/contracts/{contract_id}/fail-notify'],
               ].map(transArrayItem),
             },
             {

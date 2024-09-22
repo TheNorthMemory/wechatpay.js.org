@@ -1,29 +1,24 @@
 ---
-title: 查询二级商户充值结果
-description: 提交充值申请后，可调用该接口查询充值状态。充值到账存在延迟： 1、扫码充值：3分钟内到账 2、银行转账：一般可在10分钟内到账。受央行大额系统工作时间限制，周一至周四17:15-20:30，周五17:15-24:00，节假日全天会延迟到账
+title: 查询银行转账充值结果
+description: 提交充值申请后，可调用该接口查询充值状态。银行充值到账存在延迟：一般可在10分钟内到账。受央行大额系统工作时间限制，周一至周四17:15-20:30，周五17:15-24:00，节假日全天会延迟到账。
 ---
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/partner/apis/platsolution-mch-recharge/recharge/get-by-out-no.html)
+{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/mch-recharge/bank-recharge/bank-transfer-recharge-get-by-out-no.html)
 
 ```js twoslash
 // @filename: virtual.ts
 /// <reference types="node" />
 import { AxiosRequestConfig, AxiosPromise } from 'axios'
-namespace WeChatPay.OpenAPI.V3.Platsolution.Ecommerce.Recharges.OutRechargeNo._out_recharge_no_.GetHttpMethod {
+namespace WeChatPay.OpenAPI.V3.Recharge.BankTransferRecharges.OutRechargeNo._out_recharge_no_.GetHttpMethod {
   export interface RequestConfig extends AxiosRequestConfig {
     out_recharge_no: string
-    params: {
-      sub_mchid: string
-    }
   }
   export interface WellformedResponse {
-    sp_mchid: string
-    sub_mchid: string
+    mchid: string
     recharge_id: string
     out_recharge_no: string
-    recharge_channel: string
     account_type: string
     recharge_state: string
     recharge_scene: string
@@ -33,53 +28,44 @@ namespace WeChatPay.OpenAPI.V3.Platsolution.Ecommerce.Recharges.OutRechargeNo._o
       currency: string
     }
     bank_transfer_info: {
-      bill_no: string
       memo: string
       return_time: string
       return_reason: string
       bank_name: string
       bank_card_tail: string
     }
-    qr_recharge_info: {
-      openid: string
-    }
     accept_time: string
     success_time: string
     close_time: string
   }
 }
-namespace WeChatPay.OpenAPI.V3.Platsolution.Ecommerce.Recharges.OutRechargeNo {
+namespace WeChatPay.OpenAPI.V3.Recharge.BankTransferRecharges.OutRechargeNo {
   export interface _out_recharge_no_ {
     /**
-     * 查询充值结果
-     * @link https://pay.weixin.qq.com/docs/partner/apis/platsolution-mch-recharge/recharge/get-by-out-no.html
+     * 查询银行转账充值结果
+     * @link https://pay.weixin.qq.com/docs/merchant/apis/mch-recharge/bank-recharge/bank-transfer-recharge-get-by-out-no.html
      */
     get(config: _out_recharge_no_.GetHttpMethod.RequestConfig): AxiosPromise<_out_recharge_no_.GetHttpMethod.WellformedResponse>
   }
 }
-namespace WeChatPay.OpenAPI.V3.Platsolution.Ecommerce.Recharges {
+namespace WeChatPay.OpenAPI.V3.Recharge.BankTransferRecharges {
   export interface OutRechargeNo {
     _out_recharge_no_: OutRechargeNo._out_recharge_no_
   }
 }
-namespace WeChatPay.OpenAPI.V3.Platsolution.Ecommerce {
-  export interface Recharges {
-    outRechargeNo: Recharges.OutRechargeNo
-  }
-}
-namespace WeChatPay.OpenAPI.V3.Platsolution {
-  export interface Ecommerce {
-    recharges: Ecommerce.Recharges
+namespace WeChatPay.OpenAPI.V3.Recharge {
+  export interface BankTransferRecharges {
+    outRechargeNo: BankTransferRecharges.OutRechargeNo
   }
 }
 namespace WeChatPay.OpenAPI.V3 {
-  export interface Platsolution {
-    ecommerce: Platsolution.Ecommerce
+  export interface Recharge {
+    bankTransferRecharges: Recharge.BankTransferRecharges
   }
 }
 namespace WeChatPay.OpenAPI {
   export interface V3 {
-    platsolution: V3.Platsolution
+    recharge: V3.Recharge
   }
 }
 export interface Wechatpay {
@@ -92,43 +78,36 @@ export var wxpay: Wechatpay
 // @filename: business.js
 import { wxpay } from './virtual'
 // ---cut---
-wxpay.v3.platsolution.ecommerce.recharges.outRechargeNo._out_recharge_no_.get({
-//                                                                        ^^^
+wxpay.v3.recharge.bankTransferRecharges.outRechargeNo._out_recharge_no_.get({
+//                                                                      ^^^
   out_recharge_no,
-  params,
 })
 .then(
-  ({ // [!code hl:35]
+  ({ // [!code hl:29]
     data: {
-      sp_mchid,
-      sub_mchid,
+      mchid,
       recharge_id,
       out_recharge_no,
-      recharge_channel,
       account_type,
       recharge_state,
       recharge_scene,
       recharge_state_desc,
       recharge_amount,
       bank_transfer_info,
-      qr_recharge_info,
       accept_time,
       success_time,
       close_time,
     },
   }) => ({
-    sp_mchid,
-    sub_mchid,
+    mchid,
     recharge_id,
     out_recharge_no,
-    recharge_channel,
     account_type,
     recharge_state,
     recharge_scene,
     recharge_state_desc,
     recharge_amount,
     bank_transfer_info,
-    qr_recharge_info,
     accept_time,
     success_time,
     close_time,

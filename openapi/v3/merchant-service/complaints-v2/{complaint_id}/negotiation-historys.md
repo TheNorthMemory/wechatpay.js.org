@@ -5,7 +5,7 @@ description: 商户可通过调用此接口，查询指定投诉的用户商户�
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter10_2_12.shtml)
+{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/partner/apis/consumer-complaint/complaints/query-negotiation-history-v2.html) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter10_2_12.shtml)
 
 ```js twoslash
 // @filename: virtual.ts
@@ -22,7 +22,7 @@ namespace WeChatPay.OpenAPI.V3.MerchantService.ComplaintsV2._complaint_id_.Negot
   export interface WellformedResponse {
     data: {
       complaint_media_list: {
-        media_type: string
+        media_type: 'USER_COMPLAINT_IMAGE' | 'OPERATION_IMAGE'
         media_url: string[]
       }
       log_id: string
@@ -31,6 +31,8 @@ namespace WeChatPay.OpenAPI.V3.MerchantService.ComplaintsV2._complaint_id_.Negot
       operate_type: string
       operate_details: string
       image_list: string[]
+      user_appy_platform_service_reason: string
+      user_appy_platform_service_reason_description: string
     }[]
     limit: number
     offset: number

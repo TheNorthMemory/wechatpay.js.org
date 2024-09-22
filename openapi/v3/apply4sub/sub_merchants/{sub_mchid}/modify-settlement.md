@@ -5,7 +5,7 @@ description: 修改结算帐号API
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/tool/applyment4sub/chapter3_3.shtml)
+{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/tool/applyment4sub/chapter3_3.shtml) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/ecommerce-merchant-application/get-settlement.html)
 
 ```js twoslash
 // @filename: virtual.ts
@@ -13,6 +13,7 @@ description: 修改结算帐号API
 import { AxiosRequestConfig, AxiosPromise } from 'axios'
 namespace WeChatPay.OpenAPI.V3.Apply4sub.Sub_merchants._sub_mchid_.ModifySettlement.PostHttpMethod {
   export interface JsonDataRequest {
+    modify_mode: 'MODIFY_MODE_ASYNC'
     account_type: string
     account_name: string
     account_bank: string
@@ -78,6 +79,7 @@ import { wxpay } from './virtual'
 // ---cut---
 wxpay.v3.apply4sub.sub_merchants._sub_mchid_.modifySettlement.post({
 //                                                            ^^^^
+  modify_mode,
   account_type,
   account_name,
   account_bank,

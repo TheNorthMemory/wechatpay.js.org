@@ -5,7 +5,7 @@ description: 商户可通过调用此接口，查询指定时间段的所有用�
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter10_2_11.shtml)
+{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/partner/apis/consumer-complaint/complaints/list-complaints-v2.html) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter10_2_11.shtml)
 
 ```js twoslash
 // @filename: virtual.ts
@@ -59,7 +59,10 @@ namespace WeChatPay.OpenAPI.V3.MerchantService.ComplaintsV2.GetHttpMethod {
             latitude: string
           }
         }
+        is_returned_to_same_machine: boolean
       }
+      in_platform_service: boolean
+      need_immediate_service: boolean
     }[]
     limit: number
     offset: number

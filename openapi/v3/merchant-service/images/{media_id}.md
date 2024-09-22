@@ -5,7 +5,7 @@ description: 下载图片API为通用接口，消费者投诉相关图片都可�
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/consumer-complaint/images/query-images.html)
+{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/partner/apis/consumer-complaint/images/query-images.html) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/consumer-complaint/images/query-images.html)
 
 ```js twoslash
 // @filename: virtual.ts

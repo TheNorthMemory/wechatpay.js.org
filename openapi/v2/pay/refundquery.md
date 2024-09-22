@@ -20,6 +20,9 @@ namespace WeChatPay.OpenAPI.V2.Pay.Refundquery.PostHttpMethod {
     nonce_str?: string
     sign_type?: 'MD5' | 'HMAC-SHA256'
     transaction_id: string
+    out_trade_no: string
+    out_refund_no: string
+    refund_id: string
     offset: number
   }
   export interface RequestConfig extends AxiosRequestConfig {
@@ -106,6 +109,9 @@ wxpay.v2.pay.refundquery.post({
   nonce_str,
   sign_type,
   transaction_id,
+  out_trade_no,
+  out_refund_no,
+  refund_id,
   offset,
 })
 .then(

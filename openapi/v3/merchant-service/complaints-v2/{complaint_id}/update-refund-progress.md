@@ -5,7 +5,7 @@ description: 商户可通过调用此接口，更新“申请退款”单据的�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter10_2_19.shtml)
+{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/partner/apis/consumer-complaint/complaints/update-refund-progress.html) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter10_2_19.shtml)
 
 ```js twoslash
 // @filename: virtual.ts

@@ -5,7 +5,7 @@ description: 商户可通过调用此接口，查询指定投诉单的用户投�
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter10_2_13.shtml)
+{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/partner/apis/consumer-complaint/complaints/query-complaint-v2.html) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter10_2_13.shtml)
 
 ```js twoslash
 // @filename: virtual.ts
@@ -47,8 +47,16 @@ namespace WeChatPay.OpenAPI.V3.MerchantService.ComplaintsV2._complaint_id_.GetHt
       type: string
       share_power_info: {
         return_time: string
+        return_address_info?: {
+          return_address: string
+          longitude: string
+          latitude: string
+        }
       }
+      is_returned_to_same_machine: boolean
     }
+    in_platform_service: boolean
+    need_immediate_service: boolean
   }
 }
 namespace WeChatPay.OpenAPI.V3.MerchantService.ComplaintsV2 {
@@ -90,7 +98,7 @@ wxpay.v3.merchantService.complaintsV2._complaint_id_.get({
   complaint_id,
 })
 .then(
-  ({ // [!code hl:41]
+  ({ // [!code hl:45]
     data: {
       complaint_id,
       complaint_time,
@@ -110,6 +118,8 @@ wxpay.v3.merchantService.complaintsV2._complaint_id_.get({
       apply_refund_amount,
       user_tag_list,
       additional_info,
+      in_platform_service,
+      need_immediate_service,
     },
   }) => ({
     complaint_id,
@@ -130,6 +140,8 @@ wxpay.v3.merchantService.complaintsV2._complaint_id_.get({
     apply_refund_amount,
     user_tag_list,
     additional_info,
+    in_platform_service,
+    need_immediate_service,
   })
 )
 ```

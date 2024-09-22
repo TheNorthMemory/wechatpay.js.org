@@ -5,7 +5,7 @@ description: 普通服务商（银行、支付机构、电商平台不可用）�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter11_1_1.shtml)
+{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter11_1_1.shtml) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/ecommerce-merchant-application/applyment/submit-applyment.html)
 
 ```js twoslash
 // @filename: virtual.ts
@@ -26,7 +26,6 @@ namespace WeChatPay.OpenAPI.V3.Applyment4sub.Applyment._empty_.PostHttpMethod {
       business_authorization_letter: string
       openid: string
       mobile_phone: string
-      contact_email: string
     }
     subject_info: {
       subject_type: string
@@ -69,7 +68,6 @@ namespace WeChatPay.OpenAPI.V3.Applyment4sub.Applyment._empty_.PostHttpMethod {
           id_card_national: string
           id_card_name: string
           id_card_number: string
-          id_card_address: string
           card_period_begin: string
           card_period_end: string
         }
@@ -78,7 +76,6 @@ namespace WeChatPay.OpenAPI.V3.Applyment4sub.Applyment._empty_.PostHttpMethod {
           id_doc_copy_back: string
           id_doc_name: string
           id_doc_number: string
-          id_doc_address: string
           doc_period_begin: string
           doc_period_end: string
         }

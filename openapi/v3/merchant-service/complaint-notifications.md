@@ -5,7 +5,7 @@ description: 商户通过调用此接口创建投诉通知回调URL，当用户�
 
 # 创建投诉通知回调 {#post}
 
-商户通过调用此接口创建投诉通知回调URL，当用户产生新投诉且投诉状态已变更时，微信支付会通过回 调URL通知商户。对于服务商、渠道商，会收到所有子商户的投诉信息推送。 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/tool/merchant-service/chapter3_2.shtml)
+商户通过调用此接口创建投诉通知回调URL，当用户产生新投诉且投诉状态已变更时，微信支付会通过回 调URL通知商户。对于服务商、渠道商，会收到所有子商户的投诉信息推送。 [官方文档](https://pay.weixin.qq.com/docs/partner/apis/consumer-complaint/complaint-notifications/create-complaint-notifications.html) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/tool/merchant-service/chapter3_2.shtml)
 
 ```js twoslash
 // @filename: virtual.ts
@@ -76,7 +76,7 @@ wxpay.v3.merchantService.complaintNotifications.post({
 
 # 查询投诉通知回调 {#get}
 
-商户通过调用此接口查询投诉通知的回调URL。 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/tool/merchant-service/chapter3_3.shtml)
+商户通过调用此接口查询投诉通知的回调URL。 [官方文档](https://pay.weixin.qq.com/docs/partner/apis/consumer-complaint/complaint-notifications/query-complaint-notifications.html) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/tool/merchant-service/chapter3_3.shtml)
 
 ```js twoslash
 // @filename: virtual.ts
@@ -136,7 +136,7 @@ wxpay.v3.merchantService.complaintNotifications.get()
 
 # 更新投诉通知回调 {#put}
 
-商户通过调用此接口更新投诉通知的回调URL。[官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/tool/merchant-service/chapter3_4.shtml)
+商户通过调用此接口更新投诉通知的回调URL。[官方文档](https://pay.weixin.qq.com/docs/partner/apis/consumer-complaint/complaint-notifications/update-complaint-notifications.html) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/tool/merchant-service/chapter3_4.shtml)
 
 ```js twoslash
 // @filename: virtual.ts
@@ -202,7 +202,7 @@ wxpay.v3.merchantService.complaintNotifications.put({
 
 # 删除投诉通知回调 {#delete}
 
-当商户不再需要推送通知时，可通过调用此接口删除投诉通知的回调URL，取消通知回调。 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/tool/merchant-service/chapter3_5.shtml)
+当商户不再需要推送通知时，可通过调用此接口删除投诉通知的回调URL，取消通知回调。 [官方文档](https://pay.weixin.qq.com/docs/partner/apis/consumer-complaint/complaint-notifications/delete-complaint-notifications.html) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/tool/merchant-service/chapter3_5.shtml)
 
 ```js twoslash
 // @filename: virtual.ts

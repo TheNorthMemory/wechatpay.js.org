@@ -5,7 +5,7 @@ description: 商户上传反馈图片的接口。 将媒体图片进行二进制
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.wechatpay.cn/docs/partner/apis/consumer-complaint/images/create-images.html)
+{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/partner/apis/consumer-complaint/images/create-images.html) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/tool/merchant-service/chapter5_1.shtml)
 
 ```js twoslash
 // @filename: virtual.ts

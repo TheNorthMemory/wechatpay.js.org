@@ -5,7 +5,7 @@ description: 电商平台通过查询申请状态API查询二级商户入驻申�
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/ecommerce/applyments/chapter3_2.shtml)
+{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/ecommerce/applyments/chapter3_2.shtml) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/ecommerce-merchant-application/applyment/get-state-by-out-request-no.html)
 
 ```js twoslash
 // @filename: virtual.ts
@@ -23,7 +23,7 @@ namespace WeChatPay.OpenAPI.V3.Ecommerce.Applyments.OutRequestNo._out_request_no
     account_validation: {
       account_name: string
       account_no: string
-      pay_amount: string
+      pay_amount: number
       destination_account_number: string
       destination_account_name: string
       destination_account_bank: string
@@ -38,6 +38,7 @@ namespace WeChatPay.OpenAPI.V3.Ecommerce.Applyments.OutRequestNo._out_request_no
     legal_validation_url: string
     out_request_no: string
     applyment_id: number
+    sign_state: 'UNSIGNED' | 'SIGNED' | 'NOT_SIGNABLE'
   }
 }
 namespace WeChatPay.OpenAPI.V3.Ecommerce.Applyments.OutRequestNo {
@@ -95,6 +96,7 @@ wxpay.v3.ecommerce.applyments.outRequestNo._out_request_no_.get({
       legal_validation_url,
       out_request_no,
       applyment_id,
+      sign_state,
     },
   }) => ({
     applyment_state,
@@ -106,6 +108,7 @@ wxpay.v3.ecommerce.applyments.outRequestNo._out_request_no_.get({
     legal_validation_url,
     out_request_no,
     applyment_id,
+    sign_state,
   })
 )
 ```

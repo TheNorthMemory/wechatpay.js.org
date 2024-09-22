@@ -21,6 +21,7 @@ namespace WeChatPay.OpenAPI.V2.Secapi.Pay.Refundv2.PostHttpMethod {
     nonce_str: string
     sign_type: string
     transaction_id: string
+    out_trade_no: string
     out_refund_no: string
     total_fee: number
     refund_fee: number
@@ -116,6 +117,7 @@ wxpay.v2.secapi.pay.refundv2.post({
   nonce_str,
   sign_type,
   transaction_id,
+  out_trade_no,
   out_refund_no,
   total_fee,
   refund_fee,
