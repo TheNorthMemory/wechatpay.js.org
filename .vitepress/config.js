@@ -825,6 +825,7 @@ function openapiSidebar() {
                 ['查询退款(平台退款单号)', '/openapi/v3/ecommerce/refunds/id/{refund_id}'],
                 ['垫付退款回补', '/openapi/v3/ecommerce/refunds/{refund_id}/return-advance#post'],
                 ['查询退款回补结果', '/openapi/v3/ecommerce/refunds/{refund_id}/return-advance#get'],
+                ['发起异常退款', '/openapi/v3/ecommerce/refunds/{refund_id}/apply-abnormal-refund'],
               ].map(transArrayItem),
             },
             {
@@ -846,6 +847,8 @@ function openapiSidebar() {
                 ['申请二级商户充值', '/openapi/v3/platsolution/ecommerce/recharges/apply'],
                 ['查询二级商户充值结果', '/openapi/v3/platsolution/ecommerce/recharges/out-recharge-no/{out_recharge_no}'],
                 ['关闭二级商户充值', '/openapi/v3/platsolution/ecommerce/recharges/out-recharge-no/{out_recharge_no}/close'],
+                ['申请银行转账充值', '/openapi/v3/platsolution/ecommerce/bank-transfer-recharges/apply'],
+                ['查询银行转账充值结果', '/openapi/v3/platsolution/ecommerce/bank-transfer-recharges/out-recharge-no/{out_recharge_no}'],
               ].map(transArrayItem),
             },
             {
