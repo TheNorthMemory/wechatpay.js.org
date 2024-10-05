@@ -5,7 +5,7 @@ description: 查出活动id对应的活动详情
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/membercard_open/chapter8_4.shtml)
+{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/membercard_open/chapter8_4.shtml) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/membership-card/member-gift/query-activity-detail.html)
 
 ```js twoslash
 // @filename: virtual.ts
@@ -17,12 +17,12 @@ namespace WeChatPay.OpenAPI.V3.Marketing.MembercardActivity.Activities._activity
   }
   export interface WellformedResponse {
     activity_id: string
-    activity_status: string
+    activity_status: 'CREATED' | 'ONGOING' | 'TERMINATED' | 'OVER_TIME'
     create_time: string
     update_time: string
     card_id: string
     activity_name: string
-    activity_type: string
+    activity_type: 'NON_MEMBER_AFTERPAY' | 'MEMBER_AFTERPAY' | 'NON_MEMBER_MINIPROGRAM' | 'MEMBER_MINIPROGRAM'
     begin_time: string
     end_time: string
     award_send_period: {
@@ -68,6 +68,14 @@ namespace WeChatPay.OpenAPI.V3.Marketing.MembercardActivity.Activities._activity
         goods_tags: []
       }
     }
+    miniprogram_activity_setting?: {
+      outer_str: string[]
+      award_jump_deploy: {
+        mini_program_appid: string
+        mini_program_path: string
+        button_text: string
+      }
+    }
   }
 }
 namespace WeChatPay.OpenAPI.V3.Marketing.MembercardActivity.Activities {
@@ -75,6 +83,7 @@ namespace WeChatPay.OpenAPI.V3.Marketing.MembercardActivity.Activities {
     /**
      * 查询活动详情API
      * @link https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/membercard_open/chapter8_4.shtml
+     * @link https://pay.weixin.qq.com/docs/merchant/apis/membership-card/member-gift/query-activity-detail.html
      */
     get(config: _activity_id_.GetHttpMethod.RequestConfig): AxiosPromise<_activity_id_.GetHttpMethod.WellformedResponse>
   }

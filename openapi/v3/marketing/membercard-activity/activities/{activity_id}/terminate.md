@@ -5,7 +5,7 @@ description: 将活动终止，不会再被曝光
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/membercard_open/chapter8_2.shtml)
+{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/membercard_open/chapter8_2.shtml) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/membership-card/member-gift/terminating-activity.html)
 
 ```js twoslash
 // @filename: virtual.ts
@@ -28,11 +28,13 @@ namespace WeChatPay.OpenAPI.V3.Marketing.MembercardActivity.Activities._activity
     /**
      * shortland
      * @link https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/membercard_open/chapter8_2.shtml
+     * @link https://pay.weixin.qq.com/docs/merchant/apis/membership-card/member-gift/create-activity.html
      */
     (data: Terminate.PostHttpMethod.JsonDataRequest, config: Terminate.PostHttpMethod.RequestConfig): AxiosPromise<Terminate.PostHttpMethod.WellformedResponse>
     /**
      * 终止活动API
      * @link https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/membercard_open/chapter8_2.shtml
+     * @link https://pay.weixin.qq.com/docs/merchant/apis/membership-card/member-gift/create-activity.html
      */
     post(data: Terminate.PostHttpMethod.JsonDataRequest, config: Terminate.PostHttpMethod.RequestConfig): AxiosPromise<Terminate.PostHttpMethod.WellformedResponse>
   }
