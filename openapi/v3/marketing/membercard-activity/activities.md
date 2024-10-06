@@ -189,9 +189,10 @@ wxpay.v3.marketing.membercardActivity.activities.post({
   stock_list,
   out_request_no,
   pay_activity_setting,
+  miniprogram_activity_setting,
 })
 .then(
-  ({ // [!code hl:31]
+  ({ // [!code hl:33]
     data: {
       activity_id,
       activity_status,
@@ -206,6 +207,7 @@ wxpay.v3.marketing.membercardActivity.activities.post({
       stock_list,
       out_request_no,
       pay_activity_setting,
+      miniprogram_activity_setting,
     },
   }) => ({
     activity_id,
@@ -221,6 +223,7 @@ wxpay.v3.marketing.membercardActivity.activities.post({
     stock_list,
     out_request_no,
     pay_activity_setting,
+    miniprogram_activity_setting,
   })
 )
 ```

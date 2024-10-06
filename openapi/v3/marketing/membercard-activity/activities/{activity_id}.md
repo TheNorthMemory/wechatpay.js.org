@@ -123,7 +123,7 @@ wxpay.v3.marketing.membercardActivity.activities._activity_id_.get({
   activity_id,
 })
 .then(
-  ({ // [!code hl:31]
+  ({ // [!code hl:33]
     data: {
       activity_id,
       activity_status,
@@ -138,6 +138,7 @@ wxpay.v3.marketing.membercardActivity.activities._activity_id_.get({
       stock_list,
       out_request_no,
       pay_activity_setting,
+      miniprogram_activity_setting,
     },
   }) => ({
     activity_id,
@@ -153,6 +154,7 @@ wxpay.v3.marketing.membercardActivity.activities._activity_id_.get({
     stock_list,
     out_request_no,
     pay_activity_setting,
+    miniprogram_activity_setting,
   })
 )
 ```
