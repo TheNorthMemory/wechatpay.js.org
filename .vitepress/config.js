@@ -62,8 +62,8 @@ export default defineConfig({
       label: '页面导航',
     },
     editLink: {
-      pattern: 'https://github.com/TheNorthMemory/wechatpay.js.org/edit/main/:path',
-      text: '在 GitHub 上编辑此页面',
+      pattern: 'https://github.com/TheNorthMemory/wechatpay.js.org/blob/main/:path',
+      text: '在 GitHub 上查看源文件',
     },
     footer: {
       message: 'Released under the MIT License. (<a href="https://wechatpay.js.org/sitemap.xml">SITEMAP</a>)',
@@ -80,7 +80,7 @@ export default defineConfig({
       linkText: '返回首页',
     },
     lastUpdated: {
-      text: '最后更新于',
+      text: '更新于',
       formatOptions: {
         dateStyle: 'medium',
         timeStyle: 'short',
