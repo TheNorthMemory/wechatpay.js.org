@@ -5,7 +5,7 @@ description: 除付款码支付场景以外，商户系统先调用该接口在�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/transactions/chapter3_2.shtml)
+{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/transactions/chapter5_2.shtml) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/partner-jsapi-payment/partner-jsons/partner-jsapi-prepay.html)
 
 ```js twoslash
 // @filename: virtual.ts
@@ -27,7 +27,7 @@ namespace WeChatPay.OpenAPI.V3.Pay.Partner.Transactions.Jsapi.PostHttpMethod {
       currency?: 'CNY'
     }
     payer: {
-      openid: string
+      sp_openid?: string
       sub_openid?: string
     }
   }
@@ -42,12 +42,12 @@ namespace WeChatPay.OpenAPI.V3.Pay.Partner.Transactions {
   export interface Jsapi {
     /**
      * shortland
-     * @link https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/transactions/chapter3_2.shtml
+     * @link https://pay.weixin.qq.com/docs/partner/apis/partner-jsapi-payment/partner-jsons/partner-jsapi-prepay.html
      */
     (data: Jsapi.PostHttpMethod.JsonDataRequest, config?: Jsapi.PostHttpMethod.RequestConfig): AxiosPromise<Jsapi.PostHttpMethod.WellformedResponse>
     /**
      * APP下单API
-     * @link https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/transactions/chapter3_2.shtml
+     * @link https://pay.weixin.qq.com/docs/partner/apis/partner-jsapi-payment/partner-jsons/partner-jsapi-prepay.html
      */
     post(data: Jsapi.PostHttpMethod.JsonDataRequest, config?: Jsapi.PostHttpMethod.RequestConfig): AxiosPromise<Jsapi.PostHttpMethod.WellformedResponse>
   }
@@ -99,7 +99,7 @@ wxpay.v3.pay.partner.transactions.jsapi.post({
   out_trade_no,
   notify_url,
   amount: { total, currency },
-  payer: { openid },
+  payer: { sp_openid, sub_openid },
 })
 .then(({ data: { prepay_id } }) => {
   const nonceStr = Formatter.nonce();

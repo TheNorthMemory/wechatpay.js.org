@@ -5,7 +5,7 @@ description: 商户Native支付下单接口，微信后台系统返回链接参�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/transactions/chapter3_3.shtml)
+{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/transactions/chapter5_3.shtml) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/partner-native-payment/partner-jsons/partner-native-prepay.html)
 
 ```js twoslash
 // @filename: virtual.ts
@@ -38,12 +38,12 @@ namespace WeChatPay.OpenAPI.V3.Pay.Partner.Transactions {
   export interface Native {
     /**
      * shortland
-     * @link https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/transactions/chapter3_3.shtml
+     * @link https://pay.weixin.qq.com/docs/partner/apis/partner-native-payment/partner-jsons/partner-native-prepay.html
      */
     (data: Native.PostHttpMethod.JsonDataRequest, config?: Native.PostHttpMethod.RequestConfig): AxiosPromise<Native.PostHttpMethod.WellformedResponse>
     /**
      * Native下单API
-     * @link https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/transactions/chapter3_3.shtml
+     * @link https://pay.weixin.qq.com/docs/partner/apis/partner-native-payment/partner-jsons/partner-native-prepay.html
      */
     post(data: Native.PostHttpMethod.JsonDataRequest, config?: Native.PostHttpMethod.RequestConfig): AxiosPromise<Native.PostHttpMethod.WellformedResponse>
   }

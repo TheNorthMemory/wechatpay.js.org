@@ -1,11 +1,11 @@
 ---
-title: 分账回退通知(JSON)
+title: 分账动账成功回退通知(JSON)
 description: 1、此功能仅针对分账接收方。2、分账动账金额变动后，微信会把相关变动结果发送给需要实时关注的分账接收方。
 ---
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [分账动账通知](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/ecommerce/profitsharing/chapter3_6.shtml)
+{{ $frontmatter.description }} [分账动账通知](https://pay.weixin.qq.com/wiki/doc/api/allocation_sl.php?chapter=25_9&index=11) [分账动账通知](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/ecommerce/profitsharing/chapter3_6.shtml) [分账动账通知](https://pay.weixin.qq.com/docs/partner/apis/ecommerce-profit-sharing/notification.html) [分账动账通知](https://pay.weixin.qq.com/docs/partner/apis/profit-sharing/notice-division.html) [分账动账通知](https://pay.weixin.qq.com/docs/merchant/apis/profit-sharing/notice-division.html)
 
 ## 请求头(headers) {#req.headers}
 
@@ -73,12 +73,13 @@ Request-ID: 08F78BB5AF0610D302189F99DD5C20BA56F89845-0
  * @prop {'PROFITSHARING.RETURN'} event_type
  * @prop {{algorithm: string, ciphertext: string, nonce: string, associated_data: string}} resource
  * @typedef PlainObject
- * @prop {string} sp_mchid
- * @prop {string} sub_mchid
+ * @prop {string=} mchid
+ * @prop {string=} sp_mchid
+ * @prop {string=} sub_mchid
  * @prop {string} transaction_id
  * @prop {string} order_id
  * @prop {string} out_order_no
- * @prop {{type: string, account: string, amount: number, description: string}} receiver
+ * @prop {{type: 'MERCHANT_ID'|'PERSONAL_OPENID', account: string, amount: number, description: string}} receiver
  * @prop {string} success_time
  */
 /** @type {string} 原始HTTP POST的文本 */
@@ -145,6 +146,7 @@ const {
 /** @type {PlainObject} */
 // ---cut-end---
 const {
+  mchid,
   sp_mchid,
   sub_mchid,
   transaction_id,

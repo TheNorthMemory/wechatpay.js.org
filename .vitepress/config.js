@@ -1348,11 +1348,11 @@ function webhookSidebar() {
           ].map(transArrayItem),
         },
         {
-          text: '分账',
+          text: '分账动账',
           collapsed: true,
           items: [
-            ['分账成功通知', '/webhook/v3/PROFITSHARING.SUCCESS'],
-            ['分账回退通知', '/webhook/v3/PROFITSHARING.RETURN'],
+            ['分账动账成功变动通知', '/webhook/v3/PROFITSHARING.SUCCESS'],
+            ['分账动账成功回退通知', '/webhook/v3/PROFITSHARING.RETURN'],
           ].map(transArrayItem),
         },
         {
