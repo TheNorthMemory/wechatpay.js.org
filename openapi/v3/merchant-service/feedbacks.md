@@ -7,6 +7,11 @@ description: 商户上传反馈处理结果的接口。 包括商户反馈类型
 
 {{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/tool/merchant-service/chapter3_6.shtml)
 
+::: danger :no_entry_sign: {.im-deprecated}
+
+本接口服务已于 `2020.11.27` (北京时间)下线，文档仅做留存参考。
+:::
+
 ```js twoslash
 // @filename: virtual.ts
 /// <reference types="node" />

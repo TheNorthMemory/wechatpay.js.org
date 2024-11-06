@@ -8,11 +8,11 @@
     "serve": "vitepress serve"
   },
   "dependencies": {
-    "vitepress": "^1.4.1"
+    "vitepress": "^1.5.0"
   },
   "devDependencies": {
-    "@shikijs/vitepress-twoslash": "^1.22.0",
-    "@types/node": "^22.7.6",
+    "@shikijs/vitepress-twoslash": "^1.22.2",
+    "@types/node": "^22.9.0",
     "wechatpay-axios-plugin": "^0.8.13"
   }
 }

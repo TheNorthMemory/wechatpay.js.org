@@ -7,6 +7,11 @@ description: 裂变红包：一次可以发放一组红包。首先领取的用�
 
 {{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/api/tools/cash_coupon.php?chapter=13_5&index=4) [官方文档](https://pay.weixin.qq.com/wiki/doc/api/tools/cash_coupon_sl.php?chapter=13_5&index=4)
 
+::: danger :no_entry_sign: {.im-deprecated}
+
+本接口服务已于 `2024.06.05` (北京时间)下线，文档仅做留存参考。
+:::
+
 ```js twoslash
 // @filename: virtual.ts
 /// <reference types="node" />

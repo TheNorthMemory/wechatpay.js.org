@@ -39,7 +39,7 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | [~~发放裂变红包~~](/openapi/v2/mmpaymkttransfers/sendgroupredpack) :no_entry_sign: {colspan=2}
 | [查询红包记录](/openapi/v2/mmpaymkttransfers/gethbinfo) {colspan=2}
 | [发放小程序红包](/openapi/v2/mmpaymkttransfers/sendminiprogramhb)
-| 付款到零钱v2{rowspan=2} | [发起付款](/openapi/v2/mmpaymkttransfers/promottion/transfers)
+| 付款到零钱v2{rowspan=2} | [发起付款](/openapi/v2/mmpaymkttransfers/promotion/transfers)
 | [查询付款](/openapi/v2/mmpaymkttransfers/gettransferinfo)
 | 付款到银行卡v2{rowspan=3} | [获取加密公钥](/openapi/v2/risk/getpublickey)
 | [发起付款](/openapi/v2/mmpaysptrans/pay_bank)

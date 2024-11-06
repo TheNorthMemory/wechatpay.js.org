@@ -254,7 +254,7 @@ function openapiSidebar() {
           text: '付款到零钱',
           collapsed: true,
           items: [
-            ['发起付款', '/openapi/v2/mmpaymkttransfers/promottion/transfers'],
+            ['发起付款', '/openapi/v2/mmpaymkttransfers/promotion/transfers'],
             ['查询付款', '/openapi/v2/mmpaymkttransfers/gettransferinfo'],
           ].map(transArrayItem),
         },
