@@ -28,11 +28,24 @@
   }
 }
 
-.VPHomeHero:not(.has-image) .main .text i {
+.im-home {
+  --vp-c-bg: transparent;
+  --vp-c-gutter: transparent;
+  --vp-home-hero-name-color: var(--vp-c-text-1);
+}
+
+.im-home .VPContent.is-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.VPHomeHero:not(.has-image) .main i {
   font-style: normal;
   text-decoration: none;
 }
 
+.VPHomeHero:not(.has-image) .main .name,
 .VPHomeHero:not(.has-image) .main .text,
 .VPHomeHero:not(.has-image) .main .tagline {
   max-width: inherit;

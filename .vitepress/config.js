@@ -6,7 +6,7 @@ const baseUri = 'https://wechatpay.js.org'
 export default defineConfig({
   lang: 'zh-CN',
   title: 'wechatpay.js.org',
-  description: 'Promise based and chained WeChatPay OpenAPI client SDK for NodeJS',
+  description: 'Promise based and chained WeChatPay OpenAPI SDK for NodeJS',
   lastUpdated: true,
   cleanUrls: true,
   buildConcurrency: 24,
@@ -118,6 +118,10 @@ export default defineConfig({
         text: '回调通知',
         link: '/webhook/',
         activeMatch: '^/webhook/'
+      },
+      {
+        text: 'PHP版',
+        link: 'https://wechatpay.im/',
       },
     ],
     socialLinks: [
