@@ -9,6 +9,12 @@ aside: true
 
 `$ npm install wechatpay-axios-plugin`
 
+## 下载平台公钥 {#pubkey}
+
+> [!NOTE]
+> 2024年Q3，微信支付官方开启了「平台公钥」平替「平台证书」方案，初始化所需的参数仅需配置上 **平台公钥ID** 及 **平台公钥** 即完全兼容支持，CLI/API下载 **平台证书** 已不是一个必要步骤，可略过。
+> **平台公钥ID** 及 **平台公钥** 均可在 [微信支付商户平台](https://pay.weixin.qq.com/) -> 账户中心 -> API安全 查看及/或下载。
+
 ## 下载平台证书 {#cli}
 
 下载命令行需额外安装依赖 `$ npm install --no-save yargs`，然后执行如下命令：
@@ -53,37 +59,45 @@ const merchantId = '190000****';
 // 「商户API证书」的「证书序列号」
 const merchantCertificateSerial = '3775B6A45ACD588826D15E583A95F5DD********';
 
-// 从本地文件中加载「商户API私钥」
+// 从本地文件中加载「商户API私钥」，用于生成请求的签名
 const merchantPrivateKeyFilePath = '/path/to/merchant/apiclient_key.pem';
 const merchantPrivateKeyInstance = readFileSync(merchantPrivateKeyFilePath);
 
-// 「微信支付平台证书」的「证书序列号」，下载器下载后有提示`serial`序列号字段
-const platformCertificateSerial = '7132d72a03e93cddf8c03bbd1f37eedf********';
+// 「微信支付平台证书」的「平台证书序列号」
+// 可以从「微信支付平台证书」文件解析，也可以在 商户平台 -> 账户中心 -> API安全 查询到
+const platformCertificateSerial = '7132D72A03E93CDDF8C03BBD1F37EEDF********';
 
-// 从本地文件中加载「微信支付平台证书」，用来验证微信支付请求响应体的签名
-const platformCertificateFilePath = '/path/to/wechatpay/cert.pem';
-const platformCertificateInstance = readFileSync(platformCertificateFilePath);
+// 从本地文件中加载「微信支付平台证书」，可由内置的CLI工具下载到，用来验证微信支付应答的签名
+const platformCertificateFilePath  = '/path/to/wechatpay/certificate.pem';
+const onePlatformPublicKeyInstance = readFileSync(platformCertificateFilePath);
 
+// 从本地文件中加载「微信支付平台公钥」，用来验证微信支付应答的签名
+const platformPublicKeyFilePath    = '/path/to/wechatpay/publickey.pem';
+const twoPlatformPublicKeyInstance = readFileSync(platformPublicKeyFilePath);
+
+// 「微信支付平台公钥」的「平台公钥ID」
+// 需要在 商户平台 -> 账户中心 -> API安全 查询
+const platformPublicKeyId = 'PUB_KEY_ID_01142321349124100000000000********';
+
+// 构造一个 APIv2 & APIv3 客户端实例
 const wxpay = new Wechatpay({
   mchid: merchantId,
   serial: merchantCertificateSerial,
   privateKey: merchantPrivateKeyInstance,
   certs: {
-    // 这里设计成Key/Value结构，是为了支持多「微信支付平台证书」
-    // 尤其是在「新旧平台证书交替灰度时」需要把新旧证书都配上。
-    [platformCertificateSerial]: platformCertificateInstance,
+    [platformCertificateSerial]: onePlatformPublicKeyInstance,
+    [platformPublicKeyId]: twoPlatformPublicKeyInstance,
   },
-  // 使用APIv2时，需要至少设置 `secret`字段，示例代码未开启
-  // APIv2密钥(32字节)
-  // secret: 'your_merchant_secret_key_string',
+  // 使用APIv2(密钥32字节)时，需要至少设置 `secret`字段
+  secret: 'your_merchant_secret_key_string',
   // // 接口不要求证书情形，例如仅收款merchant对象参数可选
-  // merchant: {
-  //   cert: readFileSync('/path/to/merchant/apiclient_cert.pem'),
-  //   key: merchantPrivateKeyInstance,
-  //   // or
-  //   // passphrase: 'your_merchant_id',
-  //   // pfx: fs.readFileSync('/your/merchant/cert/apiclient_cert.p12'),
-  // },
+  merchant: {
+    cert: readFileSync('/path/to/merchant/apiclient_cert.pem'),
+    key: merchantPrivateKeyInstance,
+    // 或者配置如下配置项
+    // passphrase: 'your_merchant_id',
+    // pfx: readFileSync('/your/merchant/cert/apiclient_cert.p12'),
+  },
 });
 ```
 
