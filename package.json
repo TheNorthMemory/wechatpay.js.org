@@ -8,7 +8,7 @@
     "serve": "vitepress serve"
   },
   "dependencies": {
-    "vitepress": "^1.5.0"
+    "vitepress": "^1.6.3"
   },
   "devDependencies": {
     "@shikijs/vitepress-twoslash": "^1.22.2",
