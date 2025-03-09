@@ -65,7 +65,7 @@ wxpay.v3.certificates.get({ params })
     encrypt_certificate: { ciphertext, nonce, associated_data }
   }) => ({
     effective_time, expire_time, serial_no,
-    x509_certificate: Aes.AesGcm.decrypt(nonce, apiv3Key, ciphertext, associated_data) // [!code hl]
+    x509_certificate: Aes.AesGcm.decrypt(ciphertext, apiv3Key, nonce, associated_data) // [!code hl]
   })
 ))
 ```

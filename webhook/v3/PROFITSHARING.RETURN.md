@@ -159,7 +159,7 @@ const {
     description,
   },
   success_time,
-} = JSON.parse(Aes.AesGcm.decrypt(nonce, apiv3Key, ciphertext, associated_data))
+} = JSON.parse(Aes.AesGcm.decrypt(ciphertext, apiv3Key, nonce, associated_data))
 
 // do your business
 // ...

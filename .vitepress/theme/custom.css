@@ -1,3 +1,9 @@
+@media (max-width: 960px) {
+  .VPLocalNav:not(.has-sidebar) .container {
+    justify-content: flex-end;
+  }
+}
+
 @media (min-width: 768px) {
   .Layout .VPHome {
     margin-bottom: 20px;
@@ -14,7 +20,11 @@
   }
 
   .VPButton.brand {
-    width: 100%;
+    width: 50%;
+  }
+
+  .im-home h1.heading {
+    display: block;
   }
 
   .VPHomeHero:not(.has-image) .main {
@@ -123,12 +133,14 @@
 .im-home .VPFooter .copyright {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   overflow: hidden;
   display: -webkit-box;
 }
 
 .im-home .VPFooter .copyright {
   -webkit-line-clamp: 1;
+  line-clamp: 1;
 }
 
 .im-home .VPFeature:hover {
@@ -166,6 +178,10 @@
 .VPHomeHero:not(.has-image) .main .text,
 .VPHomeHero:not(.has-image) .main .tagline {
   max-width: inherit;
+}
+
+.VPLocalNav:not(.has-sidebar):not(.empty) .container {
+  justify-content: flex-end;
 }
 
 ._guide_ div.language->button.copy {

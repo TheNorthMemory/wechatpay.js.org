@@ -25,7 +25,7 @@ Commands:
 <uri>
   -c, --config   The configuration  [required]
   -b, --binary   True for the `arraybuffer` response, two for without-verifier-response, otherwise for showing the origin
-  -m, --method   The request HTTP verb  [choices: "DELETE", "GET", "POST", "PUT", "PATCH", "delete", "get", "post", "put", "patch"] [default: "POST"]
+  -m, --method   The request HTTP verb  [choices: "delete", "get", "post", "put", "patch"] [default: "post"]
   -h, --headers  The request HTTP header(s)
   -d, --data     The request HTTP body
   -p, --params   The request HTTP query parameter(s)
@@ -35,7 +35,7 @@ Options:
       --help     Show help  [boolean]
   -u, --baseURL  The baseURL  [string] [default: "https://api.mch.weixin.qq.com/"]
 
-for more information visit https://github.com/TheNorthMemory/wechatpay-axios-plugin
+for more information visit https://wechatpay.js.org
 ```
 :::
 
@@ -101,14 +101,14 @@ Options:
 >       Accept: 'application/json, text/plain, application/x-gzip, application/pdf, image/png, image/*;q=0.5',
 >       Authorization: 'WECHATPAY2-SHA256-RSA2048 mchid="1900000000"',
 >       'Content-Type': 'application/json; charset=utf-8',
->       'User-Agent': 'wechatpay-axios-plugin/0.8.12 axios/0.28.0 node/20.11.1 darwin/x64'
+>       'User-Agent': 'wechatpay-axios-plugin/0.9.0 axios/1.8.2 node/22.14.0 darwin/x64'
 >     },
 >     baseURL: 'https://api.mch.weixin.qq.com/',
 >     mchid: '1900000000',
 >     serial: '3775B6A45ACD588826D15E583A95F5DD888888888',
->     privateKey: <Buffer 2d 2d 2d 2d 2d ... 1654 more bytes>,
+>     privateKey: PrivateKeyObject { [Symbol(kKeyType)]: 'private' },
 >     certs: {
->       '7132D72A03E93CDDF8C03BBD1F37EEDF888888888': <Buffer 2d 2d 2d 2d 2d ... 1425 more bytes>
+>       '7132D72A03E93CDDF8C03BBD1F37EEDF888888888': [PublicKeyObject],
 >     },
 >     url: 'v3/ecommerce/applyments/2000004250058765',
 >     method: 'get',
@@ -176,7 +176,7 @@ Options:
 
 2. 每个 `segments` 所支持的 `HTTP METHOD`，即作为 请求对象的末尾执行方法，例如: `v3.pay.transactions.native.post({})`;
 
-3. 每个 `segments` 级联对象默认为HTTP`POST`方法，其同时隐式内置`GET/POST/PUT/PATCH/DELETE` 方法链，小写`verb`格式，说明见`变更历史`;
+3. 每个 `segments` 级联对象默认为HTTP`POST`方法，其同时显式内置 `async get/post/put/patch/delete` 方法链;
 
 4. 每个 `segments` 有中线(dash)分隔符的，可以使用驼峰`camelCase`风格书写，例如: `merchant-service`可写成 `merchantService`，或者字面量属性，如 `v3['merchant-service']`;
 

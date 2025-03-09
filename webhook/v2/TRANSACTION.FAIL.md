@@ -149,7 +149,7 @@ const {
   end_time,
   finish_transaction_id,
 } = Transformer.toObject(Aes.AesGcm.decrypt(
-  event_nonce, apiv3Key, event_ciphertext, event_associated_data
+  event_ciphertext, apiv3Key, event_nonce, event_associated_data
 ))
 
 // do your business

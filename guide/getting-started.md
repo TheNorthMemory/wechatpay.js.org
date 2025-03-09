@@ -85,7 +85,9 @@ const wxpay = new Wechatpay({
   serial: merchantCertificateSerial,
   privateKey: merchantPrivateKeyInstance,
   certs: {
+    // 「平台证书」 模式，则 platformCertificate* 行必填，多证书时配多行
     [platformCertificateSerial]: onePlatformPublicKeyInstance,
+    // 「微信支付公钥」 模式，则 platformPublicKey* 必填
     [platformPublicKeyId]: twoPlatformPublicKeyInstance,
   },
   // 使用APIv2(密钥32字节)时，需要至少设置 `secret`字段
