@@ -792,6 +792,7 @@ function openapiSidebar() {
                 ['申请电子回单(商户单号)', '/openapi/v3/fund-app/mch-transfer/elecsign/out-bill-no'],
                 ['查询电子回单(微信单号)', '/openapi/v3/fund-app/mch-transfer/elecsign/transfer-bill-no/{transfer_bill_no}'],
                 ['查询电子回单(商户单号)', '/openapi/v3/fund-app/mch-transfer/elecsign/out-bill-no/{out_bill_no}'],
+                ['下载电子回单文件', '/openapi/v3/transferdownload/elecvoucherfile'],
               ].map(transArrayItem),
             },
           ],
