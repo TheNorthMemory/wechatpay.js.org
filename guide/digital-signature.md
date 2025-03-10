@@ -35,7 +35,7 @@ aside: true
 
 微信支付API接口协议中包含字段**nonce_str**，主要保证签名不可预测。微信支付官方推荐生成随机数算法如下：**调用随机数函数生成，将得到的值转换为字符串**。
 
-以[官方文档](https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=4_3)举的例子，用NodeJS实现：
+以[官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011985891)/[官方文档](https://pay.weixin.qq.com/doc/v2/partner/4011985884)举的例子，用NodeJS实现：
 
 ### 后台数据交换 {#symmetric.backend}
 
@@ -151,7 +151,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 > /** @type {import('crypto').CipherKey} the APIv2 secret key */
 > var apiv2Secret;
 > //---cut---
-> const { Formatter, Hash, Transformer } = require('wechatpay-axios-plugin')
+> const { Formatter, Hash } = require('wechatpay-axios-plugin')
 >
 > const nonceStr = Formatter.nonce();
 > const timeStamp = '' + Formatter.timestamp();
@@ -164,7 +164,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >   paySign: Hash.sign(signType, M, apiv2Secret) // [!code hl]
 > }
 > ```
-> [官方文档](https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=7_7&index=6) [官方文档](https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=7_7&index=5)
+> [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011935213) [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4011936643) [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4011986456)
 
 > [!TIP] APP 唤起微信支付收银台场景
 > ```js twoslash
@@ -174,7 +174,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 > /** @type {import('crypto').CipherKey} the APIv2 secret key */
 > var apiv2Secret;
 > //---cut---
-> const { Formatter, Hash, Transformer } = require('wechatpay-axios-plugin')
+> const { Formatter, Hash } = require('wechatpay-axios-plugin')
 >
 > const noncestr = Formatter.nonce();
 > const timestamp = '' + Formatter.timestamp();
@@ -187,7 +187,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >   sign: Hash.sign(signType, M, apiv2Secret) // [!code hl]
 > }
 > ```
-> [官方文档](https://pay.weixin.qq.com/wiki/doc/api/app/app.php?chapter=9_12&index=2)
+> [官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011937148) [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4011986561)
 
 #### 小程序红包 {#symmetric.frontend.wxaredpack}
 
@@ -197,7 +197,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 > /** @type {import('crypto').CipherKey} the APIv2 secret key */
 > var apiv2Secret;
 > //---cut---
-> const { Formatter, Hash, Transformer } = require('wechatpay-axios-plugin')
+> const { Formatter, Hash } = require('wechatpay-axios-plugin')
 >
 > const nonceStr = Formatter.nonce();
 > const timeStamp = '' + Formatter.timestamp();
@@ -217,7 +217,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >   )
 > }
 > ```
-> [官方文档](https://pay.weixin.qq.com/wiki/doc/api/tools/cash_coupon_xcx.php?chapter=18_3&index=4)
+> [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4011941288)
 
 #### 代金券/商家券 {#symmetric.frontend.favors}
 
@@ -248,7 +248,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 > }, { send_coupon_merchant })
 > const sign = Hash.sign(signType, flat4sign, apiv2Secret) // [!code hl]
 > ```
-> [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter9_3_1.shtml)
+> [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012285674) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012285878)
 
 > [!TIP] 通过Url跳转，由商户H5重定向至指定微信支付H5页面
 > ```js twoslash
@@ -275,7 +275,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >
 > const nextUrl = `${actionUrl}?${new URLSearchParams({...input, sign})}#wechat_redirect`
 > ```
-> [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter9_4_1.shtml)
+> [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012285783) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012285900)
 
 #### 微信支付分 {#symmetric.frontend.payscore}
 
@@ -309,7 +309,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >   extInfo,
 > }
 > ```
-> [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter6_1_24.shtml)
+> [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012596416) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012647439) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4013163589) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012607512) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012625492)
 
 > [!TIP] JSAPI 唤起微信支付分小程序订单详情场景
 > ```js twoslash
@@ -338,7 +338,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >   queryString: Formatter.queryStringLike(input) + '&sign=' + sign,
 > }
 > ```
-> [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter6_1_24.shtml)
+> [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012587945) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012607505) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012625485)
 
 > [!TIP] 微信小程序 唤起微信支付分小程序订单详情场景
 > ```js twoslash
@@ -366,11 +366,11 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >   extraData: { ...input, sign },
 > }
 > ```
-> [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter6_1_25.shtml)
+> [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012587949) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012587984) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012647379) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012647453) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012677915) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4013476108) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012607510) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012607516) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012625490) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012625496)
 
 ## 非对称算法 {#asymmetric}
 
-此种签名方法，[官方文档介绍](https://pay.weixin.qq.com/docs/merchant/development/interface-rules/signature-generation.html) 已经很明晰，这里不再细述规则，仅做实现介绍如下：
+此种签名方法，[官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012365342) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012365870) 已经很明晰，这里不再细述规则，仅做实现介绍如下：
 
 ### 后台数据交换 {#asymmetric.backend}
 
@@ -382,8 +382,8 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 > var uri;
 > /** @type {string} */
 > var body;
-> /** @type {import('crypto').BinaryLike} */
-> var merchantPrivateKeyInstance;
+> /** @type {import('crypto').KeyLike} */
+> var merchantPrivateKey;
 > //---cut---
 > const { Formatter, Rsa } = require('wechatpay-axios-plugin')
 >
@@ -395,7 +395,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >      Formatter.nonce(),
 >      body
 >   ),
->   merchantPrivateKeyInstance
+>   merchantPrivateKey
 > )
 > ```
 
@@ -413,8 +413,8 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 > var signature;
 > /** @type {string} 请求返回的body */
 > var body;
-> /** @type {{[k: string]: import('crypto').BinaryLike}} 微信支付平台证书{序列号:实例}键值对 */
-> var platformCertificates;
+> /** @type {{[k: string]: import('crypto').KeyLike}} 微信支付平台证书{序列号:实例}键值对 */
+> var platformPublicKeys;
 > //---cut---
 > const { Formatter, Rsa } = require('wechatpay-axios-plugin')
 >
@@ -425,7 +425,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >      body
 >   ),
 >   signature,
->   platformCertificates[serial],
+>   platformPublicKeys[serial],
 > )
 > ```
 
@@ -434,8 +434,8 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 > [!TIP] JSAPI 唤起微信支付收银台场景
 > ```js twoslash
 > var appId = '', prepay_id = '';
-> /** @type {import('crypto').BinaryLike} */
-> var merchantPrivateKeyInstance;
+> /** @type {import('crypto').KeyLike} */
+> var merchantPrivateKey;
 > //---cut---
 > const { Formatter, Rsa } = require('wechatpay-axios-plugin')
 >
@@ -450,17 +450,17 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >   signType: 'RSA',
 >   paySign: Rsa.sign( // [!code hl:4]
 >     Formatter.joinedByLineFeed(appId, timeStamp, nonceStr, packageStr),
->     merchantPrivateKeyInstance
+>     merchantPrivateKey
 >   )
 > }
 > ```
-> [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter3_1_4.shtml)
+> [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012365339) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012365867)
 
 > [!TIP] APP 唤起微信支付收银台场景
 > ```js twoslash
 > var appid = '', partnerid = '', prepayid = '';
-> /** @type {import('crypto').BinaryLike} */
-> var merchantPrivateKeyInstance;
+> /** @type {import('crypto').KeyLike} */
+> var merchantPrivateKey;
 > //---cut---
 > const { Formatter, Rsa } = require('wechatpay-axios-plugin')
 >
@@ -475,8 +475,8 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >   noncestr,
 >   sign: Rsa.sign( // [!code hl:4]
 >     Formatter.joinedByLineFeed(appid, timestamp, noncestr, prepayid),
->     merchantPrivateKeyInstance
+>     merchantPrivateKey
 >   )
 > }
 > ```
-> [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter3_2_4.shtml) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter4_2_4.shtml) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter5_1_6.shtml)
+> [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4013070351) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012266043) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012268659) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012265144) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012365340) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4013080233) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012166845) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012167492) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012090168) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012090949) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012365868)
