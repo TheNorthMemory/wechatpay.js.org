@@ -14,15 +14,14 @@ import { AxiosRequestConfig, AxiosPromise, AxiosResponseTransformer } from 'axio
 namespace WeChatPay.OpenAPI.V2.Risk.Getpublickey.PostHttpMethod {
   export interface XmlDataRequest {
     mch_id: string
-    nonce_str: string
-    sign: string
-    sign_type: string
+    nonce_str?: string
+    sign?: string
+    sign_type?: 'HMAC-SHA256' | 'MD5'
   }
   export interface RequestConfig extends AxiosRequestConfig {
     data?: XmlDataRequest
     security: true
     baseURL: 'https://fraud.mch.weixin.qq.com/'
-    transformResponse: AxiosResponseTransformer[]
   }
   export interface WellformedResponse {
     return_code: string
@@ -69,17 +68,15 @@ export var wxpay: Wechatpay
 // @filename: business.js
 import { wxpay } from './virtual'
 // ---cut---
-const { Transformer } = require('wechatpay-axios-plugin')
+const { Rsa } = require('wechatpay-axios-plugin')
 
 wxpay.v2.risk.getpublickey.post({
 //                         ^^^^
   mch_id,
-  nonce_str,
-  sign_type,
-}, { security, baseURL, transformResponse: [Transformer.toObject], })
+}, { security, baseURL, })
 //             ^?
 .then(
-  ({ // [!code hl:19]
+  ({ // [!code hl:22]
     data: {
       return_code,
       return_msg,
@@ -96,7 +93,10 @@ wxpay.v2.risk.getpublickey.post({
     error_code_des,
     result_code,
     mch_id,
-    pub_key,
+    pub_key: Rsa.fromPkcs1(
+      pub_key.trim().split(/\r?\n/).slice(1, -1).join(''),
+      Rsa.KEY_TYPE_PUBLIC
+    ),
   })
 )
 ```
