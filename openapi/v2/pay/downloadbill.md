@@ -27,7 +27,6 @@ namespace WeChatPay.OpenAPI.V2.Pay.Downloadbill.PostHttpMethod {
   export interface RequestConfig extends AxiosRequestConfig {
     data?: XmlDataRequest
     responseType: 'stream'
-    transformResponse: []
   }
   export interface WellformedResponse extends ReadStream {
   }
@@ -79,7 +78,7 @@ wxpay.v2.pay.downloadbill.post({
   bill_type,
   tar_type,
   sign_type,
-}, { responseType, transformResponse, })
+}, { responseType, })
 .then(
   ({ // [!code hl:5]
     data,

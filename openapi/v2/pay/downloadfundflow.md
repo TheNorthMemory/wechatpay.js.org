@@ -28,7 +28,6 @@ namespace WeChatPay.OpenAPI.V2.Pay.Downloadfundflow.PostHttpMethod {
     data?: XmlDataRequest
     security: true
     responseType: 'stream'
-    transformResponse: []
   }
   export interface WellformedResponse extends ReadStream {
   }
@@ -80,7 +79,7 @@ wxpay.v2.pay.downloadfundflow.post({
   bill_date,
   account_type,
   tar_type,
-}, { security, responseType, transformResponse, })
+}, { security, responseType, })
 .then(
   ({ // [!code hl:5]
     data,

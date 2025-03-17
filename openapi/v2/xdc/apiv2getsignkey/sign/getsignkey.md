@@ -18,7 +18,6 @@ namespace WeChatPay.OpenAPI.V2.Xdc.Apiv2getsignkey.Sign.Getsignkey.PostHttpMetho
   }
   export interface RequestConfig extends AxiosRequestConfig {
     data?: XmlDataRequest
-    transformResponse: AxiosResponseTransformer[]
   }
   export interface WellformedResponse {
     return_code: 'SUCCESS' | 'FAIL'
@@ -79,10 +78,7 @@ import { wxpay } from './virtual'
 const { Transformer } = require('wechatpay-axios-plugin')
 
 wxpay.v2.xdc.apiv2getsignkey.sign.getsignkey.post({
-                                           //^^^^
   mch_id,
-}, {
-  transformResponse: [Transformer.toObject]
 })
 .then(
   ({ // [!code hl:8]
@@ -99,6 +95,6 @@ wxpay.v2.xdc.apiv2getsignkey.sign.getsignkey.post({
 > [!IMPORTANT] 重要提示
 > 1. *wxpay* 构造实例化时，需要显式初始化 **secret** 字段，此为正式环境密钥；
 > 2. 此接口请求时，会隐式按照[MD5数据签名算法](https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=4_3)进行签名，填充请求的*sign*字段;
-> 3. 此接口无返回值 **sign** 字段，顾需要显式传递第二参数 *transformResponse* 忽略验签；
+> 3. 此接口无返回值 **sign** 字段，SDK自v0.9起已内置忽略验签；
 > 4. 此接口有QPS限制(官方未公布)，高频请求会被官方重定向到腾讯[公益404](https://wx.gtimg.com/core/404.html)页面；
 > 5. *sandbox_signkey* 具有时效性，时长官方未公布，建议缓存1个小时即可，请按需缓存；

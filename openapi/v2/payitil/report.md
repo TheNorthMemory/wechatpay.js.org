@@ -25,7 +25,6 @@ namespace WeChatPay.OpenAPI.V2.Payitil.Report.PostHttpMethod {
   }
   export interface RequestConfig extends AxiosRequestConfig {
     data?: XmlDataRequest
-    transformResponse: AxiosResponseTransformer[]
   }
   export interface WellformedResponse {
     return_code: string
@@ -80,7 +79,7 @@ wxpay.v2.payitil.report.post({
   interface_url,
   user_ip,
   trades,
-}, { transformResponse: [Transformer.toObject], })
+})
 //   ^?
 .then(
   ({ // [!code hl:11]

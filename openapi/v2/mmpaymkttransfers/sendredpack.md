@@ -33,7 +33,6 @@ namespace WeChatPay.OpenAPI.V2.Mmpaymkttransfers.Sendredpack.PostHttpMethod {
   export interface RequestConfig extends AxiosRequestConfig {
     data?: XmlDataRequest
     security: true
-    transformResponse: AxiosResponseTransformer[]
   }
   export interface WellformedResponse {
     return_code: string
@@ -103,8 +102,7 @@ wxpay.v2.mmpaymkttransfers.sendredpack.post({
   remark,
   scene_id,
   risk_info,
-}, { security, transformResponse: [Transformer.toObject], })
-//             ^?
+}, { security, })
 .then(
   ({ // [!code hl:27]
     data: {

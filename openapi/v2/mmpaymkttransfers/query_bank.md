@@ -20,7 +20,6 @@ namespace WeChatPay.OpenAPI.V2.Mmpaymkttransfers.Query_bank.PostHttpMethod {
   export interface RequestConfig extends AxiosRequestConfig {
     data?: XmlDataRequest
     security: true
-    transformResponse: AxiosResponseTransformer[]
   }
   export interface WellformedResponse {
     return_code: string
@@ -83,8 +82,7 @@ wxpay.v2.mmpaymkttransfers.query_bank.post({
   mch_id,
   partner_trade_no,
   nonce_str,
-}, { security, transformResponse: [Transformer.toObject], })
-//             ^?
+}, { security, })
 .then(
   ({ // [!code hl:37]
     data: {

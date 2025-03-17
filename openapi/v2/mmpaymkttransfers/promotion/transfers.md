@@ -105,8 +105,7 @@ wxpay.v2.mmpaymkttransfers.promotion.transfers.post({
   scene,
   brand_id,
   finder_template_id,
-}, { security, transformResponse: [Transformer.toObject], })
-//             ^?
+}, { security, })
 .then(
   ({ // [!code hl:29]
     data: {

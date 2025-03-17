@@ -22,7 +22,6 @@ namespace WeChatPay.OpenAPI.V2.Mmpaymkttransfers.Gethbinfo.PostHttpMethod {
   export interface RequestConfig extends AxiosRequestConfig {
     data?: XmlDataRequest
     security: true
-    transformResponse: AxiosResponseTransformer[]
   }
   export interface WellformedResponse {
     return_code: string
@@ -97,8 +96,7 @@ wxpay.v2.mmpaymkttransfers.gethbinfo.post({
   mch_id,
   appid,
   bill_type,
-}, { security, transformResponse: [Transformer.toObject], })
-//             ^?
+}, { security, })
 .then(
   ({ // [!code hl:53]
     data: {
