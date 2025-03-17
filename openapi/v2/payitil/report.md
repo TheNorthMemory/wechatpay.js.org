@@ -69,7 +69,6 @@ import { wxpay } from './virtual'
 // ---cut---
 const { Transformer } = require('wechatpay-axios-plugin')
 wxpay.v2.payitil.report.post({
-//                      ^^^^
   appid,
   mch_id,
   sub_appid,
@@ -80,7 +79,6 @@ wxpay.v2.payitil.report.post({
   user_ip,
   trades,
 })
-//   ^?
 .then(
   ({ // [!code hl:11]
     data: {
