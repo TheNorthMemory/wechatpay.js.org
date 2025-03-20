@@ -77,8 +77,8 @@ var json;
 var apiv3Key;
 /** @type {RequestHeader} */
 var headers;
-/** @type {{[k: string]: import('crypto').BinaryLike}} 微信支付平台证书{序列号:实例}键值对 */
-var platformCertificates;
+/** @type {{[k: string]: import('crypto').KeyLike}} 微信支付公钥{微信支付公钥ID:实例}/平台证书{序列号:实例}键值对 */
+var platformPublicKeys;
 /** @type {300} 推荐的时间偏移量 */
 var MAXIMUM_CLOCK_OFFSET = 300;
 // ---cut---
@@ -98,7 +98,7 @@ if (Math.abs(Formatter.timestamp() - wechatpayTimestamp) > MAXIMUM_CLOCK_OFFSET)
   message = 'Over clock offset'
 }
 else
-if (!Object.hasOwn(platformCertificates, wechatpaySerial)) {
+if (!Object.hasOwn(platformPublicKeys, wechatpaySerial)) {
   code = 'FAIL'
   message = 'platform certificate not exists'
 }
@@ -106,7 +106,7 @@ else
 if (!Rsa.verify(
   Formatter.joinedByLineFeed(wechatpayTimestamp, wechatpayNonce, json),
   wechatpaySignature,
-  platformCertificates[wechatpaySerial]
+  platformPublicKeys[wechatpaySerial]
 )) {
   code = 'FAIL'
   message = 'sign mismatched'

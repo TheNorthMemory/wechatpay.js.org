@@ -68,11 +68,11 @@ export interface Wechatpay {
   v3: WeChatPay.OpenAPI.V3
 }
 
-import { BinaryLike } from 'crypto'
+import { KeyLike } from 'crypto'
 export var wxpay: Wechatpay
 export var appid: WeChatPay.OpenAPI.V3.Pay.Transactions.App.PostHttpMethod.JsonDataRequest['appid']
 export var partnerid: WeChatPay.OpenAPI.V3.Pay.Transactions.App.PostHttpMethod.JsonDataRequest['mchid']
-export var merchantPrivateKeyInstance: BinaryLike
+export var merchantPrivateKeyInstance: KeyLike
 
 // @filename: business.js
 import { wxpay, appid, partnerid, merchantPrivateKeyInstance } from './virtual'

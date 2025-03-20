@@ -10,7 +10,7 @@ description: 使用合单支付接口，用户只输入一次密码，即可完�
 ```js twoslash
 // @filename: virtual.ts
 /// <reference types="node" />
-import { BinaryLike } from 'crypto'
+import { KeyLike } from 'crypto'
 import { AxiosRequestConfig, AxiosPromise } from 'axios'
 namespace WeChatPay.OpenAPI.V3.CombineTransactions.App.PostHttpMethod {
   export interface JsonDataRequest {
@@ -100,7 +100,7 @@ export interface Wechatpay {
 export var wxpay: Wechatpay
 export var appid: WeChatPay.OpenAPI.V3.CombineTransactions.App.PostHttpMethod.JsonDataRequest['combine_appid']
 export var partnerid: WeChatPay.OpenAPI.V3.CombineTransactions.App.PostHttpMethod.JsonDataRequest['combine_mchid']
-export var merchantPrivateKeyInstance: BinaryLike
+export var merchantPrivateKeyInstance: KeyLike
 
 // @filename: business.js
 import { wxpay, appid, partnerid, merchantPrivateKeyInstance } from './virtual'

@@ -383,7 +383,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 > /** @type {string} */
 > var body;
 > /** @type {import('crypto').KeyLike} */
-> var merchantPrivateKey;
+> var merchantPrivateKeyInstance;
 > //---cut---
 > const { Formatter, Rsa } = require('wechatpay-axios-plugin')
 >
@@ -395,7 +395,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >      Formatter.nonce(),
 >      body
 >   ),
->   merchantPrivateKey
+>   merchantPrivateKeyInstance
 > )
 > ```
 
@@ -413,7 +413,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 > var signature;
 > /** @type {string} 请求返回的body */
 > var body;
-> /** @type {{[k: string]: import('crypto').KeyLike}} 微信支付平台证书{序列号:实例}键值对 */
+> /** @type {{[k: string]: import('crypto').KeyLike}} 微信支付公钥{微信支付公钥ID:实例}/平台证书{序列号:实例}键值对 */
 > var platformPublicKeys;
 > //---cut---
 > const { Formatter, Rsa } = require('wechatpay-axios-plugin')
@@ -435,7 +435,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 > ```js twoslash
 > var appId = '', prepay_id = '';
 > /** @type {import('crypto').KeyLike} */
-> var merchantPrivateKey;
+> var merchantPrivateKeyInstance;
 > //---cut---
 > const { Formatter, Rsa } = require('wechatpay-axios-plugin')
 >
@@ -450,7 +450,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >   signType: 'RSA',
 >   paySign: Rsa.sign( // [!code hl:4]
 >     Formatter.joinedByLineFeed(appId, timeStamp, nonceStr, packageStr),
->     merchantPrivateKey
+>     merchantPrivateKeyInstance
 >   )
 > }
 > ```
@@ -460,7 +460,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 > ```js twoslash
 > var appid = '', partnerid = '', prepayid = '';
 > /** @type {import('crypto').KeyLike} */
-> var merchantPrivateKey;
+> var merchantPrivateKeyInstance;
 > //---cut---
 > const { Formatter, Rsa } = require('wechatpay-axios-plugin')
 >
@@ -475,7 +475,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >   noncestr,
 >   sign: Rsa.sign( // [!code hl:4]
 >     Formatter.joinedByLineFeed(appid, timestamp, noncestr, prepayid),
->     merchantPrivateKey
+>     merchantPrivateKeyInstance
 >   )
 > }
 > ```
