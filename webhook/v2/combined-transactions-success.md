@@ -70,7 +70,7 @@ const { Transformer, Hash } = require('wechatpay-axios-plugin')
 // ---cut-end---
 const obj = Transformer.toObject(xml)
 
-const sign_type = 64 === obj?.sign?.length ? 'HMAC-SHA256' : 'MD5'
+const sign_type = 64 === obj?.sign?.length ? Hash.ALGO_HMAC_SHA256 : Hash.ALGO_MD5
 
 let return_code = 'SUCCESS', return_msg = 'OK'
 

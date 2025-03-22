@@ -157,7 +157,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 > const timeStamp = '' + Formatter.timestamp();
 > const packageStr = 'prepay_id=' + prepay_id;
 > // previousSignType 即后台调用 unifiedorder 接口时的签名方法
-> const signType = previousSignType || 'MD5';
+> const signType = previousSignType || Hash.ALGO_MD5;
 > const M = { appId, timeStamp, nonceStr, package: packageStr, signType };
 > const data = {
 >   ...M,
@@ -180,7 +180,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 > const timestamp = '' + Formatter.timestamp();
 > const packageStr = 'Sign=WXPay';
 > // previousSignType 即后台调用 unifiedorder 接口时的签名方法
-> const signType = previousSignType || 'MD5';
+> const signType = previousSignType || Hash.ALGO_MD5;
 > const M = { appid, partnerid, prepayid, package: packageStr, timestamp, noncestr };
 > const data = {
 >   ...M,
@@ -202,7 +202,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 > const nonceStr = Formatter.nonce();
 > const timeStamp = '' + Formatter.timestamp();
 > // 签名方法为固定值
-> const signType = 'MD5';
+> const signType = Hash.ALGO_MD5;
 > const data = {
 >   appId,
 >   timeStamp,
@@ -234,7 +234,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 > const { Hash } = require('wechatpay-axios-plugin')
 >
 > // 签名方法为固定值
-> const signType = 'HMAC-SHA256'
+> const signType = Hash.ALGO_HMAC_SHA256
 > const send_coupon_params = [{
 >   stock_id,
 >   out_request_no,
@@ -263,7 +263,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 > const { Hash } = require('wechatpay-axios-plugin')
 >
 > // 签名方法为固定值
-> const signType = 'HMAC-SHA256'
+> const signType = Hash.ALGO_HMAC_SHA256
 > const input = {
 >   stock_id,
 >   out_request_no,
@@ -293,7 +293,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 > const timestamp = '' + Formatter.timestamp()
 > const out_order_no = encodeURIComponent(outOrderNo)
 > // 签名方法为固定值
-> const signType = 'HMAC-SHA256'
+> const signType = Hash.ALGO_HMAC_SHA256
 > const input = {
 >   mch_id,
 >   service_id,
@@ -323,7 +323,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 > const timestamp = '' + Formatter.timestamp()
 > const out_order_no = encodeURIComponent(outOrderNo)
 > // 签名方法为固定值
-> const signType = 'HMAC-SHA256'
+> const signType = Hash.ALGO_HMAC_SHA256
 > const input = {
 >   mch_id,
 >   service_id,
@@ -351,7 +351,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 > const nonce_str = Formatter.nonce()
 > const timestamp = '' + Formatter.timestamp()
 > // 签名方法为固定值
-> const signType = 'HMAC-SHA256'
+> const signType = Hash.ALGO_HMAC_SHA256
 > const input = {
 >   mch_id,
 >   service_id,
