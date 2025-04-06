@@ -1,6 +1,6 @@
 ---
 title: 数据签名
-description: 微信支付目前现行两大类数据签名方法，对称算法基于MD5及HMAC-SHA256数据摘要算法，非对称算法基于RSA-OAEP(模数2048)算法。
+description: 微信支付目前现行两大类数据签名方法，对称密钥算法基于MD5及HMAC-SHA256数据摘要算法，非对称密钥算法基于RSA-OAEP(模数2048)算法。
 aside: true
 ---
 
@@ -8,7 +8,7 @@ aside: true
 
 {{ $frontmatter.description }}
 
-## 对称算法 {#symmetric}
+## 对称密钥算法 {#symmetric}
 
 签名生成的**通用步骤**如下：
 
@@ -91,7 +91,7 @@ sign=HASH_HMAC(stringA, key, "sha256").toUpperCase()
 }
 ```
 
-APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML`文本格式如下:
+APIv2是以`XML`格式作为数据交换方式，最终传输时需需转换上述数据为`XML`文本格式如下:
 
 ```xml
 <xml>
@@ -217,7 +217,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >   )
 > }
 > ```
-> [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4011941288)
+>[官方文档](https://pay.weixin.qq.com/doc/v2/merchant/4011937428) [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4011941288)
 
 #### 代金券/商家券 {#symmetric.frontend.favors}
 
@@ -309,7 +309,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >   extInfo,
 > }
 > ```
-> [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012596416) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012647439) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4013163589) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012607512) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012625492)
+> [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012587909) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012596359)
 
 > [!TIP] JSAPI 唤起微信支付分小程序订单详情场景
 > ```js twoslash
@@ -338,7 +338,7 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >   queryString: Formatter.queryStringLike(input) + '&sign=' + sign,
 > }
 > ```
-> [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012587945) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012607505) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012625485)
+> [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012587980) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012596423)
 
 > [!TIP] 微信小程序 唤起微信支付分小程序订单详情场景
 > ```js twoslash
@@ -366,9 +366,9 @@ APIv2是以`XML`格式作为数据交换方式，则需转换上述数据为`XML
 >   extraData: { ...input, sign },
 > }
 > ```
-> [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012587949) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012587984) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012647379) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012647453) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012677915) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4013476108) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012607510) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012607516) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012625490) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012625496)
+> [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012587945)
 
-## 非对称算法 {#asymmetric}
+## 非对称密钥算法 {#asymmetric}
 
 此种签名方法，[官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012365342) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012365870) 已经很明晰，这里不再细述规则，仅做实现介绍如下：
 
