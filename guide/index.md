@@ -200,7 +200,7 @@ const { Transformer } = require('wechatpay-axios-plugin')
 Transformer.toObject
 ```
 
-然后基于 [对称算法的通用步骤](/guide/digital-signature#symmetric) 计算出签名值，然后对值比对。
+然后基于 [对称密钥算法的通用步骤](/guide/digital-signature#symmetric) 计算出签名值，然后对值比对。
 
 #### 验签 {#server.apiv2.verify}
 
@@ -240,7 +240,7 @@ Transformer.toXml
 
 ### APIv3 JSON规范 {#apiv3}
 
-此类通知数据，是基于 [非对称算法](/guide/digital-signature#asymmetric) 对请求的`载荷`整体做验签，签名值在请求头(`headers`)的`Wechatpay-Signature`字段里。
+此类通知数据，是基于 [非对称密钥算法](/guide/digital-signature#asymmetric) 对请求的`载荷`整体做验签，签名值在请求头(`headers`)的`Wechatpay-Signature`字段里。
 
 #### 验签 {#server.apiv3.verify}
 
