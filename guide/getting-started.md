@@ -54,7 +54,7 @@ You may confirm the above infos again even if this library already did(by Rsa.ve
 ::: code-group
 
 ```js twoslash [APIv3 微信支付公钥 模式]
-const { Wechatpay } = require('wechatpay-axios-plugin');
+const { Wechatpay, Rsa } = require('wechatpay-axios-plugin');
 const { readFileSync } = require('fs');
 
 // 商户号，支持「普通商户/特约商户」或「服务商商户」
@@ -79,15 +79,15 @@ const platformPublicKeyId = 'PUB_KEY_ID_01142321349124100000000000********';
 const wxpay = new Wechatpay({
   mchid: merchantId,
   serial: merchantCertificateSerial,
-  privateKey: merchantPrivateKeyInstance,
+  privateKey: Rsa.from(merchantPrivateKeyInstance, Rsa.KEY_TYPE_PRIVATE),
   certs: {
-    [platformPublicKeyId]: platformPublicKeyInstance,
+    [platformPublicKeyId]: Rsa.from(platformPublicKeyInstance, Rsa.KEY_TYPE_PUBLIC),
   },
 });
 ```
 
 ```js twoslash [APIv3 平台证书 模式]
-const { Wechatpay } = require('wechatpay-axios-plugin');
+const { Wechatpay, Rsa } = require('wechatpay-axios-plugin');
 
 // 商户号，支持「普通商户/特约商户」或「服务商商户」
 const merchantId = '190000****';
@@ -109,9 +109,9 @@ const platformCertificateFilePath = 'file:///path/to/wechatpay/certificate.pem';
 const wxpay = new Wechatpay({
   mchid: merchantId,
   serial: merchantCertificateSerial,
-  privateKey: merchantPrivateKeyFilePath, //v0.9新特性支持file://协议加载
+  privateKey: Rsa.from(merchantPrivateKeyFilePath, Rsa.KEY_TYPE_PRIVATE), //v0.9新特性支持file://协议加载
   certs: {
-    [platformCertificateSerial]: platformCertificateFilePath,
+    [platformCertificateSerial]: Rsa.from(platformCertificateFilePath, Rsa.KEY_TYPE_PUBLIC),
   },
 });
 ```
