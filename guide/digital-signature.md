@@ -395,7 +395,7 @@ APIv2是以`XML`格式作为数据交换方式，最终传输时需需转换上�
 >      Formatter.nonce(),
 >      body
 >   ),
->   merchantPrivateKeyInstance
+>   Rsa.from(merchantPrivateKeyInstance, Rsa.KEY_TYPE_PRIVATE)
 > )
 > ```
 
@@ -425,7 +425,7 @@ APIv2是以`XML`格式作为数据交换方式，最终传输时需需转换上�
 >      body
 >   ),
 >   signature,
->   platformPublicKeys[serial],
+>   Rsa.from(platformPublicKeys[serial], Rsa.KEY_TYPE_PUBLIC),
 > )
 > ```
 
@@ -450,7 +450,7 @@ APIv2是以`XML`格式作为数据交换方式，最终传输时需需转换上�
 >   signType: 'RSA',
 >   paySign: Rsa.sign( // [!code hl:4]
 >     Formatter.joinedByLineFeed(appId, timeStamp, nonceStr, packageStr),
->     merchantPrivateKeyInstance
+>     Rsa.from(merchantPrivateKeyInstance, Rsa.KEY_TYPE_PRIVATE)
 >   )
 > }
 > ```
@@ -475,7 +475,7 @@ APIv2是以`XML`格式作为数据交换方式，最终传输时需需转换上�
 >   noncestr,
 >   sign: Rsa.sign( // [!code hl:4]
 >     Formatter.joinedByLineFeed(appid, timestamp, noncestr, prepayid),
->     merchantPrivateKeyInstance
+>     Rsa.from(merchantPrivateKeyInstance, Rsa.KEY_TYPE_PRIVATE)
 >   )
 > }
 > ```
