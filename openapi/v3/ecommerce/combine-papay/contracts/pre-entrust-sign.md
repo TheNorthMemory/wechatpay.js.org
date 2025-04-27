@@ -5,7 +5,7 @@ description: 电商服务商从外部App拉起微信客户端发起签约前，�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter5_5_1.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -99,3 +99,5 @@ wxpay.v3.ecommerce.combinePapay.contracts.preEntrustSign.post({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012881608)

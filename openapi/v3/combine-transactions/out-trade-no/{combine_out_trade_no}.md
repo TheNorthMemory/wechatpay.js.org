@@ -5,7 +5,7 @@ description: 电商平台通过合单查询订单API查询订单状态，完成�
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/combine/chapter3_3.shtml) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/combine-payment/orders/query-order.html)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -107,3 +107,5 @@ wxpay.v3.combineTransactions.outTradeNo._combine_out_trade_no_.get({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012557006) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4013421126) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4013421222) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4013421316) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4013421401) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012551745) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012761057) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4013462099) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4013462164) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4013462240) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4013462520) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012708988) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012602253) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012761049)

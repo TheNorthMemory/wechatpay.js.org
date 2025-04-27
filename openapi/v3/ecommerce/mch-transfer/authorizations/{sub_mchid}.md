@@ -5,7 +5,7 @@ description: 查询二级商户商家转账授权状态。
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/partner/apis/platsolution-mch-transfer/authorization/get-authorization.html)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -78,3 +78,5 @@ wxpay.v3.ecommerce.mchTransfer.authorizations._sub_mchid_.get({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4013504209)

@@ -5,7 +5,7 @@ description: 电商平台可通过此接口添加分账接收方，建立分账�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/ecommerce/profitsharing/chapter3_7.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -96,3 +96,5 @@ wxpay.v3.ecommerce.profitsharing.receivers.add.post({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012477758)

@@ -5,7 +5,7 @@ description: 服务商可以通过该接口向微信支付提交商户的联系�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter10_1_1.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -226,3 +226,5 @@ wxpay.v3.apply4subject.applyment.get({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012697715)

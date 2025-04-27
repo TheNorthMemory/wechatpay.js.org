@@ -5,7 +5,7 @@ description: 使用合单支付接口，用户只输入一次密码，即可完�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/combine/chapter3_1.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -138,3 +138,5 @@ wxpay.v3.combineTransactions.app.post({
   }
 })
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012556944) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012545465) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012758021) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012707307) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012760622) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012884108)

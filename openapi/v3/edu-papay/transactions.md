@@ -5,7 +5,7 @@ description: 扣款受理接口，支付结果以回调为准，或者超时以�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/education-fee-payment/transactions/create-transaction.html) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/education-fee-payment/transactions/create-transaction.html)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -89,3 +89,5 @@ wxpay.v3.eduPapay.transactions.post({
 })
 .then(({ status, }) => status === 204) // [!code hl]
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012524731) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012465548)

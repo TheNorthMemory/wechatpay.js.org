@@ -5,7 +5,7 @@ description: 普通服务商（银行、支付机构、电商平台不可用）�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter11_1_1.shtml) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/ecommerce-merchant-application/applyment/submit-applyment.html)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -225,3 +225,5 @@ wxpay.v3.applyment4sub.applyment._empty_.post({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012719997) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012722388) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012722249)

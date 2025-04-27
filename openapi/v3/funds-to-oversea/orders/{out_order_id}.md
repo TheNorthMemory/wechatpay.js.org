@@ -5,7 +5,7 @@ description: 根据微信支付单号+商户出境单号，查询出境结果，
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter7_10_3.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -114,3 +114,5 @@ wxpay.v3.fundsToOversea.orders._out_order_id_.get({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012476127)

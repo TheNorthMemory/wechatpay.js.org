@@ -5,7 +5,7 @@ description: 商户可以 指定商户转账单号通过该接口申请 商家�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/mch-trans/elecsign/accept-elecsign-by-out-no.html)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -83,3 +83,5 @@ wxpay.v3.fundApp.mchTransfer.elecsign.outBillNo.post({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012716452)

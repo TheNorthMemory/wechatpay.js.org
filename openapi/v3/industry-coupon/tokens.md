@@ -5,7 +5,7 @@ description: 商户在拉起快捷切卡小程序前，需要先调用本接口�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter9_9_1.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -78,3 +78,5 @@ wxpay.v3.industryCoupon.tokens.post({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012553563) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012715654)

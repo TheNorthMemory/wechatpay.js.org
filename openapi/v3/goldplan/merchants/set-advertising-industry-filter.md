@@ -5,7 +5,7 @@ description: 服务商使用此接口为特约商户配置同业过滤标签，�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/goldplan/chapter3_3.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -68,3 +68,5 @@ wxpay.v3.goldplan.merchants.setAdvertisingIndustryFilter.post({
 })
 .then(({ status }) => status === 204) // [!code hl]
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012473784)

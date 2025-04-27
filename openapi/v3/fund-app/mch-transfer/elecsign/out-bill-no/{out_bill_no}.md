@@ -5,7 +5,7 @@ description: 商户可以通过该接口查看回单申请进度；请务必对�
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/mch-trans/elecsign/query-elecsign-by-out-no.html)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -95,3 +95,5 @@ wxpay.v3.fundApp.mchTransfer.elecsign.outBillNo._out_bill_no_.get({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012716436)

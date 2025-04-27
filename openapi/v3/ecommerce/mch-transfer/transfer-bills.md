@@ -5,7 +5,7 @@ description: 商户可通过此接口申请创建商家转账订单。
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/partner/apis/platsolution-mch-transfer/transfer-bill/transfer-to-user.html)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -112,3 +112,5 @@ wxpay.v3.ecommerce.mchTransfer.transferBills.post({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4013504211)

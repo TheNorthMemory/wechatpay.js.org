@@ -5,7 +5,7 @@ description: 商户可通过该接口查询(GET)已创建的商家券批次详�
 
 # 查询商家券详情 {#get}
 
-商户可通过该接口查询已创建的商家券批次详情信息。 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter9_2_2.shtml)
+商户可通过该接口查询已创建的商家券批次详情信息。
 
 ```js twoslash
 // @filename: virtual.ts
@@ -190,9 +190,11 @@ wxpay.v3.marketing.busifavor.stocks._stock_id_.get({
 )
 ```
 
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012534928) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012693047)
+
 # 修改商家券基本信息 {#patch}
 
-商户可以通过该接口修改商家券基本信息 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter9_2_12.shtml)
+商户可以通过该接口修改商家券基本信息
 
 ```js twoslash
 // @filename: virtual.ts
@@ -296,3 +298,5 @@ wxpay.v3.marketing.busifavor.stocks._stock_id_.patch({
 }, { stock_id, })
 .then(({ status, }) => status === 204) // [!code hl]
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012535020) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012696764)

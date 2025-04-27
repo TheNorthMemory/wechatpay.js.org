@@ -5,7 +5,7 @@ description: 电商平台服务商调用注销申请接口时，需要先调用�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/partner/apis/ecommerce-cancel/media/upload-media.html)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -91,3 +91,5 @@ wxpay.v3.ecommerce.account.cancelApplications.media.post(media)
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012691710)

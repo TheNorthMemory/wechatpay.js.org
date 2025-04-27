@@ -5,7 +5,7 @@ description: 服务商提交申请单后需要修改信息时，或者申请单�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/applysubject/chapter5_2.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -69,3 +69,5 @@ wxpay.v3.apply4subject.applyment._applyment_id_.cancel.post({}, { applyment_id }
 //                                                     ^^^^
 .then(({ status, }) => status === 204)  // [!code hl]
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012697627)

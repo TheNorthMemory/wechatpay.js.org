@@ -5,7 +5,7 @@ description: 申请二级商户商家转账授权。
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/partner/apis/platsolution-mch-transfer/authorization/create-authorization.html)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -91,3 +91,5 @@ wxpay.v3.ecommerce.mchTransfer.authorizations.post({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4013504208)

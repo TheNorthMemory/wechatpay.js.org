@@ -5,7 +5,7 @@ description: 可调用此接口查询订单剩余待分金额
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter8_7_9.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -80,3 +80,5 @@ wxpay.v3.brand.profitsharing.orders._transaction_id_.amounts.get({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012467021)

@@ -5,7 +5,7 @@ description: 将有效态（未核销）的商家券与订单信息关联，用�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter9_2_9.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -86,3 +86,5 @@ wxpay.v3.marketing.busifavor.coupons.associate.post({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012465596) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012465640)

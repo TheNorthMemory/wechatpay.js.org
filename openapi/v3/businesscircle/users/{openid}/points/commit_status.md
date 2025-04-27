@@ -5,7 +5,7 @@ description: 通过此API，商圈商户/服务商可以自行查询已授权“
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/smart-business-circle/points/get-points-commit-status.html) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/smart-business-circle/points/get-points-commit-status.html)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -83,3 +83,5 @@ wxpay.v3.businesscircle.users._openid_.points.commit_status.get({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012534994) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012474129)

@@ -5,7 +5,7 @@ description: 服务商可通过此接口添加分账接收方，建立分账接�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/brand/chapter3_7.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -98,3 +98,5 @@ wxpay.v3.brand.profitsharing.receivers.add.post({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012467100)

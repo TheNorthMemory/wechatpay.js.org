@@ -5,7 +5,7 @@ description: 修改结算帐号API
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/tool/applyment4sub/chapter3_3.shtml) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/ecommerce-merchant-application/get-settlement.html)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -98,3 +98,5 @@ wxpay.v3.apply4sub.sub_merchants._sub_mchid_.modifySettlement.post({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012761138) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012761102) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012721277) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012760618)

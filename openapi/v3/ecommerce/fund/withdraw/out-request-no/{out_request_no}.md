@@ -5,7 +5,7 @@ description: 电商平台通过查询提现状态API查询二级商户提现单�
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter4_1_23.shtml) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/ecommerce/fund/chapter3_3.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -123,3 +123,5 @@ wxpay.v3.ecommerce.fund.withdraw.outRequestNo._out_request_no_.get({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012476656) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012719550) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012720041) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012714699)

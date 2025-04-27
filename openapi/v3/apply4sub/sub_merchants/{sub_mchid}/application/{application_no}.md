@@ -5,7 +5,7 @@ description: 服务商/电商平台（不包括支付机构、银行），可使
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/partner/apis/modify-settlement/sub-merchants/get-application.html)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -103,3 +103,5 @@ wxpay.v3.apply4sub.sub_merchants._sub_mchid_.application._application_no_.get({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012761169) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012761120) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012721475) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012760660)

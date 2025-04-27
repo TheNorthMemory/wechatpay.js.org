@@ -5,7 +5,7 @@ description: 电商平台通过该接口查询其提现结果
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter4_1_23.shtml) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/ecommerce/fund/chapter3_3.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -118,3 +118,5 @@ wxpay.v3.ecommerce.fund.withdraw._withdraw_id_.get({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012476665) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012719970) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012719951) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012714923)

@@ -5,7 +5,7 @@ description: 在用户满足优惠门槛后，商户可通过该接口核销用�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter9_2_3.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -96,3 +96,5 @@ wxpay.v3.marketing.busifavor.coupons.use.post({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012465292) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012465359)

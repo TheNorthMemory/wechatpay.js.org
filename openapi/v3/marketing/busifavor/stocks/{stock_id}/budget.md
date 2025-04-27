@@ -5,7 +5,7 @@ description: 商户可以通过该接口修改批次单天发放上限数量或�
 
 # {{ $frontmatter.title }} {#patch}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter9_2_11.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -92,3 +92,5 @@ wxpay.v3.marketing.busifavor.stocks._stock_id_.budget.patch({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012465739) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012465809)

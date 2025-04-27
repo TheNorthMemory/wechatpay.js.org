@@ -5,7 +5,7 @@ description: 服务商通过此接口可以查询特约商户账户余额信息�
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter4_1_19.shtml) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/ecommerce/amount/chapter3_1.shtml) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/ecommerce-balance/accounts/query-e-commerce-balance.html)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -85,3 +85,5 @@ wxpay.v3.ecommerce.fund.balance._sub_mchid_.get({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012476690) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012719894) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012720892) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012713134)

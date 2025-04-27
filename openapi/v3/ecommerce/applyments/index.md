@@ -5,7 +5,7 @@ description: 电商平台通过提交二级商户资料，完成二级商户入�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter7_1_1.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -189,3 +189,6 @@ wxpay.v3.ecommerce.applyments._empty_.post({
   })
 )
 ```
+
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012479994)

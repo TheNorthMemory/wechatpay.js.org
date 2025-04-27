@@ -5,7 +5,7 @@ description: 查询对私银行卡号对应的开户银行信息（仅支持部�
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter11_2_1.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -87,3 +87,5 @@ wxpay.v3.capital.capitallhh.banks.searchBanksByBankAccount.get({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012697541)

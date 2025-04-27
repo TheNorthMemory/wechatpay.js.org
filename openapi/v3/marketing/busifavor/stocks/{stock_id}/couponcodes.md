@@ -5,7 +5,7 @@ description: 商家券的Code码可由微信后台随机分配，同时支持商
 
 # 上传预存code {#post}
 
-商家券的Code码可由微信后台随机分配，同时支持商户自定义。如商家已有自己的优惠券系统，可直接使用自定义模式。即商家预先向微信支付上传券Code，当券在发放时，微信支付自动从已导入的Code中随机取值（不能指定），派发给用户。 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter9_2_6.shtml)
+商家券的Code码可由微信后台随机分配，同时支持商户自定义。如商家已有自己的优惠券系统，可直接使用自定义模式。即商家预先向微信支付上传券Code，当券在发放时，微信支付自动从已导入的Code中随机取值（不能指定），派发给用户。
 
 ```js twoslash
 // @filename: virtual.ts
@@ -116,6 +116,8 @@ wxpay.v3.marketing.busifavor.stocks._stock_id_.couponcodes.post({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012487038) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012492853)
 
 # 查询预存code列表 {#get}
 

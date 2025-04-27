@@ -5,7 +5,7 @@ description: 根据商户单号查询商家转账订单的详细信息。
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/partner/apis/platsolution-mch-transfer/transfer-bill/get-transfer-bill-by-out-no.html)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -120,3 +120,5 @@ wxpay.v3.ecommerce.mchTransfer.transferBills.outBillNo._out_bill_no_.get({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4013504213)

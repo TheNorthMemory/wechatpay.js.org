@@ -5,7 +5,7 @@ description: 使用此接口为特约商户的点金计划页面关闭广告展�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter8_5_5.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -66,3 +66,5 @@ wxpay.v3.goldplan.merchants.closeAdvertisingShow.post({
 })
 .then(({ status }) => status === 204) // [!code hl]
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012473781)

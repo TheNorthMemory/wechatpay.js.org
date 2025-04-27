@@ -5,7 +5,7 @@ description: 商户通过调用该接口可主动解除与用户的签约关系�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/edu/eduschoolpay/chapter3_3.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -71,3 +71,5 @@ wxpay.v3.eduschoolpay.contracts._contract_id_.terminate.post({}, {
 })
 .then(({ status, }) => status === 204) // [!code hl]
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012469025)

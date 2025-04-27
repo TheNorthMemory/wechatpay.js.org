@@ -5,7 +5,7 @@ description: 商户可以通过该接口为已核销的券申请退券
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter9_2_13.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -84,3 +84,5 @@ wxpay.v3.marketing.busifavor.coupons.return.post({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012465845) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012465865)

@@ -5,7 +5,7 @@ description: 商户根据品牌ID查询爱心餐品牌的捐赠与供餐信息�
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/lovefeast/brands/get-brand.html) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/lovefeast/brands/get-brand.html)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -70,3 +70,5 @@ wxpay.v3.lovefeast.brands._brand_id_.get({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012472863) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012466619)

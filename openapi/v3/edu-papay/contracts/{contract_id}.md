@@ -5,7 +5,7 @@ description: 商户通过调用该接口可主动解除与用户的签约关系�
 
 # {{ $frontmatter.title }} {#delete}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/education-fee-payment/contracts/delete-contract.html) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/education-fee-payment/contracts/delete-contract.html)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -56,3 +56,5 @@ wxpay.v3.eduPapay.contracts._contract_id_.delete({ contract_id })
 //                                        ^^^^^^
 .then(({ status, }) => status === 204) // [!code hl]
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012466882) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012465374)

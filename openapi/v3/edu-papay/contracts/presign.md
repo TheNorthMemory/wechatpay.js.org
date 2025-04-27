@@ -5,7 +5,7 @@ description: 商户通过调用该接口可获取预签约号（“presign_token
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/education-fee-payment/contracts/pre-sign.html) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/education-fee-payment/contracts/pre-sign.html)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -91,3 +91,5 @@ wxpay.v3.eduPapay.contracts.presign.post({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012522560) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012465360)

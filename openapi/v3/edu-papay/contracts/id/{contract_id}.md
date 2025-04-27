@@ -5,7 +5,7 @@ description: 商户通过签约协议号可查询签约信息，如果对应签�
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/education-fee-payment/contracts/query-contract.html) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/education-fee-payment/contracts/query-contract.html)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -103,3 +103,5 @@ wxpay.v3.eduPapay.contracts.id._contract_id_.get({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012522951) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012465367)

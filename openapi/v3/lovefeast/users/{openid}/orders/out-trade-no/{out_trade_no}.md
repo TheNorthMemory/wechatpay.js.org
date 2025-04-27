@@ -5,7 +5,7 @@ description: 商户根据商户订单号与用户标识查询捐赠单详情
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/merchant/products/lovefeast/introduction.html) [官方文档](https://pay.weixin.qq.com/docs/partner/products/lovefeast/introduction.html)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts

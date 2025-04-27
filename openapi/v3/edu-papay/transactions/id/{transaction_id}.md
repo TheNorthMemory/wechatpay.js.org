@@ -5,7 +5,7 @@ description: 通过微信订单号查单
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/education-fee-payment/transactions/query-transaction-by-id.html) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/education-fee-payment/transactions/query-transaction-by-id.html)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -139,3 +139,5 @@ wxpay.v3.eduPapay.transactions.id._transaction_id_.get({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012523468) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012465567)

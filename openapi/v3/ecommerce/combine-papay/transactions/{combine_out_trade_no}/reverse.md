@@ -5,7 +5,7 @@ description: 商户可以通过该接口发起免密的合单撤销
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter5_5_5.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -84,3 +84,5 @@ wxpay.v3.ecommerce.combinePapay.transactions._combine_out_trade_no_.reverse.post
 }, { combine_out_trade_no, })
 .then(({ status, }) => status === 204) // [!code hl]
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012884126)

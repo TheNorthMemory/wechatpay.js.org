@@ -5,7 +5,7 @@ description: 商户通过调用该接口可主动查询微信用户的欠款状�
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/edu/eduschoolpay/chapter4_4.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -84,3 +84,5 @@ wxpay.v3.eduschoolpay.users._openid_.debtState.get({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012469161)

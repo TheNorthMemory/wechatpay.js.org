@@ -5,7 +5,7 @@ description: 通过积分通知回调API，商圈商户/服务商可针对微信
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/smart-business-circle/points/notify-points.html) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/smart-business-circle/points/notify-points.html)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -82,3 +82,5 @@ wxpay.v3.businesscircle.points.notify.post({
 })
 .then(({ status, }) => status === 204) // [!code hl]
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012534698) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012474133)

@@ -5,7 +5,7 @@ description: 通过积分授权查询API，商圈商户可自行查询用户积�
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/smart-business-circle/user-authorizations/query-user-authorization.html) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/smart-business-circle/user-authorizations/query-user-authorization.html)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -81,3 +81,5 @@ wxpay.v3.businesscircle.userAuthorizations._openid_.get({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012534848) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012474135)

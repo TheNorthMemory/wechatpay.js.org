@@ -5,7 +5,7 @@ description: 电商平台通过余额提现API帮助二级商户发起账户余�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter4_1_22.shtml) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/ecommerce/fund/chapter3_2.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -94,3 +94,5 @@ wxpay.v3.ecommerce.fund.withdraw.post({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012476652) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012719526) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012720157) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012714461)

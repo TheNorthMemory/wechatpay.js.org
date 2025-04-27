@@ -5,7 +5,7 @@ description: 商家转账用户确认模式下，根据微信转账单号查询�
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/mch-trans/transfer-bill/get-transfer-bill-by-no.html)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -110,3 +110,5 @@ wxpay.v3.fundApp.mchTransfer.transferBills.transferBillNo._transfer_bill_no_.get
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012716457)

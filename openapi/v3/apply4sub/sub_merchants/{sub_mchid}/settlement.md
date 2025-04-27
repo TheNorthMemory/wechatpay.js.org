@@ -5,7 +5,7 @@ description: 普通服务商（支付机构、银行不可用），可使用本�
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/tool/applyment4sub/chapter3_4.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -93,3 +93,5 @@ wxpay.v3.apply4sub.sub_merchants._sub_mchid_.settlement.get({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012761142) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012761113) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012721295) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012760642)

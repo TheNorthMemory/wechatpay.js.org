@@ -5,7 +5,7 @@ description: 通过本接口可以查询支持对公业务的银行列表
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter11_2_3.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -97,3 +97,5 @@ wxpay.v3.capital.capitallhh.banks.corporateBanking.get({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012697626)

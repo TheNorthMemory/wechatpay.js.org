@@ -5,7 +5,7 @@ description: 根据微信转账单号查询商家转账订单的详细信息。
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/partner/apis/platsolution-mch-transfer/transfer-bill/get-transfer-bill-by-no.html)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -120,3 +120,5 @@ wxpay.v3.ecommerce.mchTransfer.transferBills.transferBillNo._transfer_bill_no_.g
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4013504214)

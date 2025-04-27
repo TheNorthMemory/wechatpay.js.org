@@ -5,7 +5,7 @@ description: 取消商家券与订单信息的关联关系
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter9_2_10.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -86,3 +86,5 @@ wxpay.v3.marketing.busifavor.coupons.disassociate.post({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012465673) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012465703)

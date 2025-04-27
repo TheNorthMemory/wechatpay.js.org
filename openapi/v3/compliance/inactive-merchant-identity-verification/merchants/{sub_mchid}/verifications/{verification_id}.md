@@ -5,7 +5,7 @@ description: 在代特约商户发起不活跃商户身份核实后，服务商�
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/partner/apis/inactive-merchant-identity-verification/inactive-mch-identity-verification/query-inactive-merchant-identity-verification.html)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -99,3 +99,5 @@ wxpay.v3.compliance.inactiveMerchantIdentityVerification.merchants._sub_mchid_.v
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012471359)

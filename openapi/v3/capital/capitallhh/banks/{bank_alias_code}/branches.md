@@ -5,7 +5,7 @@ description: 本接口可以用于根据银行别名编码（仅支持需要填�
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter11_2_6.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -114,3 +114,5 @@ wxpay.v3.capital.capitallhh.banks._bank_alias_code_.branches.get({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012697673)

@@ -5,7 +5,7 @@ description: 用于服务商/服务商使用此接口为特约商户开通或关
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/goldplan/chapter3_2.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -77,3 +77,5 @@ wxpay.v3.goldplan.merchants.changecustompagestatus.post({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012473788)

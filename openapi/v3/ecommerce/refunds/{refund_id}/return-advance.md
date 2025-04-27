@@ -5,7 +5,7 @@ description: 提交垫付退款后，发起退款方可通过该接口发起垫�
 
 # 垫付退款回补(平台收付通) {#post}
 
-提交垫付退款后，发起退款方可通过该接口发起垫付退款资金回补，把退款垫付的资金从二级商户回补到电商平台账户。 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter7_6_4.shtml) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/ecommerce-refund/refunds/create-return-advance.html)
+提交垫付退款后，发起退款方可通过该接口发起垫付退款资金回补，把退款垫付的资金从二级商户回补到电商平台账户。
 
 ```js twoslash
 // @filename: virtual.ts
@@ -106,9 +106,11 @@ wxpay.v3.ecommerce.refunds._refund_id_.returnAdvance.post({
 )
 ```
 
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012476927)
+
 # 查询垫付回补结果(平台收付通) {#get}
 
-提交垫付退款回补后，通过调用该接口查询垫付回补结果。 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter7_6_5.shtml)
+提交垫付退款回补后，通过调用该接口查询垫付回补结果。
 
 ```js twoslash
 // @filename: virtual.ts
@@ -203,3 +205,5 @@ wxpay.v3.ecommerce.refunds._refund_id_.returnAdvance.get({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012476916)

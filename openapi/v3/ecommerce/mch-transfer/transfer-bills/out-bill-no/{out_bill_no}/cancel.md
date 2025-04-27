@@ -5,7 +5,7 @@ description: 商户通过转账接口发起转账后，在 **用户确认收款*
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/partner/apis/platsolution-mch-transfer/transfer-bill/cancel-transfer.html)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -103,3 +103,5 @@ wxpay.v3.ecommerce.mchTransfer.transferBills.outBillNo._out_bill_no_.cancel.post
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4013504212)

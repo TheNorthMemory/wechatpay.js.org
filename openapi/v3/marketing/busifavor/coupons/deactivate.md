@@ -5,7 +5,7 @@ description: 商户可以通过该接口将可用券进行失效处理，券失�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter9_2_14.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -86,3 +86,5 @@ wxpay.v3.marketing.busifavor.coupons.deactivate.post({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012465890) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012465924)

@@ -5,7 +5,7 @@ description: 微信支付按天提供微信支付账户的资金流水账单文�
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }}  [官方文档](https://pay.weixin.qq.com/docs/partner/apis/bill-download/sub-merchant-fund-flow-bill/get-sub-merchant-fund-flow-bill.html) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter7_9_5.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -82,3 +82,5 @@ wxpay.v3.ecommerce.bill.fundflowbill.get({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012760697)

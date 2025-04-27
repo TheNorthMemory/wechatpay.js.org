@@ -5,7 +5,7 @@ description: 当服务商需要确认微信支付子商户号是否完成确认�
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/applysubject/chapter5_4.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -77,3 +77,5 @@ wxpay.v3.apply4subject.applyment.merchants._sub_mchid_.state.get({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012467549)

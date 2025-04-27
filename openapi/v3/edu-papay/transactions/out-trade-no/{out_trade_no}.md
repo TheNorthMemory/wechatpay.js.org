@@ -5,7 +5,7 @@ description: 通过商户订单号查单
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/education-fee-payment/transactions/query-transaction-by-out-trade-no.html) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/education-fee-payment/transactions/query-transaction-by-out-trade-no.html)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -139,3 +139,5 @@ wxpay.v3.eduPapay.transactions.outTradeNo._out_trade_no_.get({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012523591) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012465574)

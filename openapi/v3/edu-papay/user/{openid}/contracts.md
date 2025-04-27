@@ -5,7 +5,7 @@ description: 商户通过用户标识+签约模板号来查询用户签约信息
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/education-fee-payment/contracts/list-user-contracts.html) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/education-fee-payment/contracts/list-user-contracts.html)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -105,3 +105,5 @@ wxpay.v3.eduPapay.user._openid_.contracts.get({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012523265) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012489548)

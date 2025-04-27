@@ -5,7 +5,7 @@ description: 当交易发生之后一段时间内，由于买家或者卖家的�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/ecommerce/refunds/chapter3_1.shtml) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/ecommerce-refund/refunds/create-refund.html)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -134,3 +134,5 @@ wxpay.v3.ecommerce.refunds.apply.post({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012649457) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012476892)

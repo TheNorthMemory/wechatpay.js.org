@@ -5,7 +5,7 @@ description: 服务商可以通过该接口，代特约商户发起不活跃商�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/partner/apis/inactive-merchant-identity-verification/inactive-mch-identity-verification/create-inactive-merchant-identity-verification.html)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -75,3 +75,5 @@ wxpay.v3.compliance.inactiveMerchantIdentityVerification.merchants.post({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012471357)

@@ -5,7 +5,7 @@ description: 提交退款申请后，查询退款确认状态为退款异常，�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/partner/apis/ecommerce-refund/refunds/create-abnormal-refund.html)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -156,3 +156,5 @@ wxpay.v3.ecommerce.refunds._refund_id_.applyAbnormalRefund.post({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012649274)

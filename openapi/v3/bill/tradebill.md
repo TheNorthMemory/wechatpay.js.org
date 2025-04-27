@@ -5,7 +5,7 @@ description: 微信支付按天提供交易账单文件，商户可以通过该�
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/bill-download/trade-bill/get-trade-bill.html) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/bill-download/trade-bill/get-trade-bill.html) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter7_9_1.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -77,3 +77,5 @@ wxpay.v3.bill.tradebill.get({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012791866) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4013070395) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012810606) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012791887) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012791907) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012556692) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4013421176) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4013421277) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4013421361) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4013421450) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4013071227) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012551932) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012739068) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4013080242) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012759683) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012759737) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012760132) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012760228) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4013462129) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4013462197) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4013462343) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4013462604) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4013080595) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012709595) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012760532) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012886283) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012760667)

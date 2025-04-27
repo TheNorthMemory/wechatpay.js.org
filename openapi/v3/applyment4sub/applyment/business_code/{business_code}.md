@@ -5,7 +5,7 @@ description: 通过业务申请编号查询申请状态
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/tool/applyment4sub/chapter3_2.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -94,3 +94,5 @@ wxpay.v3.applyment4sub.applyment.business_code._business_code_.get({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012697168) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012721709)

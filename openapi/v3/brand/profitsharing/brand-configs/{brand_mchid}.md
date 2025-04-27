@@ -5,7 +5,7 @@ description: 可调用此接口查询品牌商户设置的允许服务商分账�
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter8_7_10.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -75,3 +75,5 @@ wxpay.v3.brand.profitsharing.brandConfigs._brand_mchid_.get({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012467022)

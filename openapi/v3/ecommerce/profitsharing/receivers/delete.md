@@ -5,7 +5,7 @@ description: 电商平台发起删除分账接收方请求。删除后，不支�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/ecommerce/profitsharing/chapter3_8.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -87,3 +87,5 @@ wxpay.v3.ecommerce.profitsharing.receivers.Delete.post({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012477759)

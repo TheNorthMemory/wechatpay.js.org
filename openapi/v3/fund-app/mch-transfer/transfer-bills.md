@@ -5,7 +5,7 @@ description: 商家转账用户确认模式下，用户申请收款时，商户�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/mch-trans/transfer-bill/transfer-to-user.html)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -114,3 +114,5 @@ wxpay.v3.fundApp.mchTransfer.transferBills.post({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012716434)

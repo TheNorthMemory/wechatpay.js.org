@@ -5,7 +5,7 @@ description: 通过此API，商圈商户/服务商可将会员的停车状态同
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/smart-business-circle/parkings/update-parkings.html) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/smart-business-circle/parkings/update-parkings.html)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -73,3 +73,5 @@ wxpay.v3.businesscircle.parkings.post({
 })
 .then(({ status, }) => status === 204) // [!code hl]
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012535502) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012474127)

@@ -5,7 +5,7 @@ description: 给用户发送扣款预通知
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/education-fee-payment/user-notifications/send-user-notification.html) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/education-fee-payment/user-notifications/send-user-notification.html)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -76,3 +76,5 @@ wxpay.v3.eduPapay.userNotifications._contract_id_.send.post({
 }, { contract_id })
 .then(({ status, }) => status === 204) // [!code hl]
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012524814) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012855408)

@@ -5,7 +5,7 @@ description: 当点餐订单状态发生变化时，都上传全量的订单明�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/catering.php?chapter=26_1)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -122,3 +122,5 @@ wxpay.v3.catering.orders.syncStatus.post({
 })
 .then(({ status }) => status === 204) // [!code hl]
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v2/partner/4011939936) [官方文档](https://pay.weixin.qq.com/doc/v2/institution/4011941011)

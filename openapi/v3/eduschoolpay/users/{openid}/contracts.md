@@ -5,7 +5,7 @@ description: 商户使用本接口来查询用户签约信息，返回用户在�
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/edu/eduschoolpay/chapter3_4.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -104,3 +104,5 @@ wxpay.v3.eduschoolpay.users._openid_.contracts.get({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012468993)

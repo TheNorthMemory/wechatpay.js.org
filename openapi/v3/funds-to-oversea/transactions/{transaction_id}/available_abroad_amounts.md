@@ -5,7 +5,7 @@ description: 电商收付通中，针对多次请求出境的场景，商家需�
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/apis/chapter7_10_1.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -79,3 +79,5 @@ wxpay.v3.fundsToOversea.transactions._transaction_id_.available_abroad_amounts.g
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012476109)

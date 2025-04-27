@@ -5,7 +5,7 @@ description: 电商服务商可以通过该接口发起签约协议的解约。
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter5_5_3.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -108,3 +108,5 @@ wxpay.v3.ecommerce.combinePapay.contracts.planId._plan_id_.outContractCode._out_
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012884072)

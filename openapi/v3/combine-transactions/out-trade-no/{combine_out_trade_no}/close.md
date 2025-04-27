@@ -5,7 +5,7 @@ description: 合单支付订单只能使用此合单关单api完成关单。
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/pay/combine/chapter3_4.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -80,3 +80,5 @@ wxpay.v3.combineTransactions.outTradeNo._combine_out_trade_no_.close.post({
 }, { combine_out_trade_no })
 .then(({ status, }) => status === 204) // [!code hl]
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012577452) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4013421130) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4013421225) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4013421330) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4013421404) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012551793) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012761079) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4013462102) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4013462171) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4013462247) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4013462566) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012709095) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012602237) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012761093)

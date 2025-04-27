@@ -5,7 +5,7 @@ description: 提交退款申请后，通过调用该接口查询退款状态。
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/ecommerce/refunds/chapter3_2.shtml) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/ecommerce-refund/refunds/query-refund-by-out-refund-no.html)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -128,3 +128,5 @@ wxpay.v3.ecommerce.refunds.outRefundNo._out_refund_no_.get({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012650314) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012476911)

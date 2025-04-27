@@ -5,7 +5,7 @@ description: 通过本接口获取省份列表数据（不包含中国港澳台�
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3_partner/Offline/apis/chapter11_2_4.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -75,3 +75,5 @@ wxpay.v3.capital.capitallhh.areas.provinces.get({})
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012698641)
