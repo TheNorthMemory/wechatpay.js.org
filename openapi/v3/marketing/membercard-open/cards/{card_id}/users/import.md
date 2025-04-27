@@ -5,7 +5,7 @@ description: 对于经营会员生意的商户来说，存量会员的注册渠�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/membercard_open/chapter3_13.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -95,3 +95,5 @@ wxpay.v3.marketing.membercardOpen.cards._card_id_.users.import.post({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012549739) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012727561)

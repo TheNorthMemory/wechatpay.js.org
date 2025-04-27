@@ -5,7 +5,7 @@ description: 通过此接口商家可设置是否在用户的会员卡详情页�
 
 # {{ $frontmatter.title }} {#patch}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/membercard_open/chapter5_2.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -89,3 +89,5 @@ wxpay.v3.marketing.membercardOpen.cards._card_id_.codes._code_.rights.patch({
 }, { card_id, code, })
 .then(({ status }) => status === 204) // [!code hl]
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012551213) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012729622)

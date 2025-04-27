@@ -5,7 +5,7 @@ description: 商户创建活动后，可以通过该接口删除支付有礼的�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/paygiftactivity/chapter3_10.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -96,3 +96,5 @@ wxpay.v3.marketing.paygiftactivity.activities._activity_id_.merchants.Delete.pos
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012466787) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012466827)

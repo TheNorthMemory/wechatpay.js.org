@@ -5,7 +5,7 @@ description: 将活动终止，不会再被曝光
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/membercard_open/chapter8_2.shtml) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/membership-card/member-gift/terminating-activity.html)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -88,3 +88,5 @@ wxpay.v3.marketing.membercardActivity.activities._activity_id_.terminate.post({}
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012553381) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012714466)

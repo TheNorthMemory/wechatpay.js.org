@@ -5,7 +5,7 @@ description: 商户可以通过该接口创建商家券。
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter9_2_1.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -167,3 +167,5 @@ wxpay.v3.marketing.busifavor.stocks.post({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012534855) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012692931)

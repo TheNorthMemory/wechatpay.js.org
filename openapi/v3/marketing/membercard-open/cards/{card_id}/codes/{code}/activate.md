@@ -5,7 +5,7 @@ description: 如果商家选择跳转激活的投放方式，用户跳转至商�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/membercard_open/chapter3_10.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -88,3 +88,5 @@ wxpay.v3.marketing.membercardOpen.cards._card_id_.codes._code_.activate.post({
 }, { card_id, code, })
 .then(({ status }) => status === 204) // [!code hl]
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012550809) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012728123)

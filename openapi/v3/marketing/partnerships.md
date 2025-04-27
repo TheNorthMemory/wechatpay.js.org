@@ -5,7 +5,7 @@ description: 该接口主要为商户提供合作关系列表的查询能力。
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter9_5_3.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -90,3 +90,5 @@ wxpay.v3.marketing.partnerships.get({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012380536) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012381479)

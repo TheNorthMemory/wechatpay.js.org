@@ -5,7 +5,7 @@ description: 商户调此接口，可以给用户每笔订单支付结果页展�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/membercard_open/chapter10_3.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -99,3 +99,5 @@ wxpay.v3.marketing.membercardOpen.cards._card_id_.codes._code_.bonus.prepare.pos
 }, { card_id, code, })
 .then(({ status }) => status === 204) // [!code hl]
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012595808) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012729629)

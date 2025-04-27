@@ -5,7 +5,7 @@ description: 商户可调用此api将微信公众平台创建微信会员卡升�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/membercard_open/chapter3_6.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -79,3 +79,5 @@ wxpay.v3.marketing.membercardOpen.cards._card_id_.upgrade.post({
 }, { card_id, })
 .then(({ status }) => status === 204) // [!code hl]
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012545673) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012708437)

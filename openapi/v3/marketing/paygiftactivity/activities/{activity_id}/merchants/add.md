@@ -5,7 +5,7 @@ description: 商户创建活动后，可以通过该接口增加支付有礼的�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/paygiftactivity/chapter3_8.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -102,3 +102,5 @@ wxpay.v3.marketing.paygiftactivity.activities._activity_id_.merchants.add.post({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012466671) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012466735)

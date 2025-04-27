@@ -5,7 +5,7 @@ description: 通过本接口上传图片后可获得图片url地址。图片url�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/tool/chapter3_1.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -91,3 +91,5 @@ wxpay.v3.marketing.favor.media.imageUpload.post(media)
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012557233) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012557243) [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012557248) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012759802) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012760240) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012760270)

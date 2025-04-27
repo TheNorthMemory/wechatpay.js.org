@@ -5,7 +5,7 @@ description: 通过此接口可查询指定会员卡模板的所有信息
 
 # 查询会员卡模板信息 {#get}
 
-通过此接口可查询指定会员卡模板的所有信息 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/membercard_open/chapter3_2.shtml)
+通过此接口可查询指定会员卡模板的所有信息
 
 ```js twoslash
 // @filename: virtual.ts
@@ -161,9 +161,11 @@ wxpay.v3.marketing.membercardOpen.cards._card_id_.get({
 )
 ```
 
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012547650) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012709168)
+
 # 修改会员卡模板信息 {#patch}
 
-通过此接口可更新会员卡的信息，包括基本信息、储值信息、开卡信息、补充说明 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/membercard_open/chapter3_9.shtml)
+通过此接口可更新会员卡的信息，包括基本信息、储值信息、开卡信息、补充说明
 
 ```js twoslash
 // @filename: virtual.ts
@@ -273,9 +275,11 @@ wxpay.v3.marketing.membercardOpen.cards._card_id_.patch({
 .then(({ status }) => status === 204) // [!code hl]
 ```
 
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012549567) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012709882)
+
 # 删除会员卡模板 {#delete}
 
-商户可调用此api删除会员卡。删除后，商家将无法通过任何渠道再投放该会员卡。 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/membercard_open/chapter3_11.shtml)
+商户可调用此api删除会员卡。删除后，商家将无法通过任何渠道再投放该会员卡。
 
 ```js twoslash
 // @filename: virtual.ts
@@ -331,3 +335,5 @@ wxpay.v3.marketing.membercardOpen.cards._card_id_.delete({}, { card_id, })
 //                                                ^^^^^^
 .then(({ status }) => status === 204) // [!code hl]
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012549682) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012726840)

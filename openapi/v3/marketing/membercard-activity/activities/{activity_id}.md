@@ -5,7 +5,7 @@ description: 查出活动id对应的活动详情
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/membercard_open/chapter8_4.shtml) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/membership-card/member-gift/query-activity-detail.html)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -158,3 +158,5 @@ wxpay.v3.marketing.membercardActivity.activities._activity_id_.get({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012553365) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012714471)

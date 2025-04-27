@@ -5,7 +5,7 @@ description: 用于查询已经设置的接收营销事件通知的URL。
 
 # 设置消息通知地址 {#post}
 
-用于设置接收营销事件通知的URL，可接收营销相关的事件通知，包括核销、发放、退款等。 [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/cash-coupons/call-back-url/set-callback.html)
+用于设置接收营销事件通知的URL，可接收营销相关的事件通知，包括核销、发放、退款等。
 
 ```js twoslash
 // @filename: virtual.ts
@@ -85,9 +85,11 @@ wxpay.v3.marketing.favor.callbacks.post({
 )
 ```
 
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012464070) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012464155)
+
 # 获取已设置的消息通知地址 {#get}
 
-用于查询已经设置的接收营销事件通知的URL。 [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/cash-coupons/call-back-url/query-callback.html)
+用于查询已经设置的接收营销事件通知的URL。
 
 ```js twoslash
 // @filename: virtual.ts
@@ -154,3 +156,5 @@ wxpay.v3.marketing.favor.callbacks.get({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012464198) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012464176)

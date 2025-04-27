@@ -5,7 +5,7 @@ description: 商户可以创建满额送活动，用户支付后送全场券，�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/paygiftactivity/chapter3_2.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -125,3 +125,5 @@ wxpay.v3.marketing.paygiftactivity.uniqueThresholdActivity.post({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012487898) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012492900)

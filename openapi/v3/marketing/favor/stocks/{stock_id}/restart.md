@@ -5,7 +5,7 @@ description: 通过此接口可重启指定代金券批次。重启后，该代�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/convention/chapter3_14.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -89,3 +89,5 @@ wxpay.v3.marketing.favor.stocks._stock_id_.restart.post({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012460411) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012460448)

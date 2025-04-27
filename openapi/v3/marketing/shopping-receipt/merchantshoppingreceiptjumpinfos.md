@@ -5,7 +5,7 @@ description: 接口介绍：可通过该接口给对应的微信支付订单上�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/partner/apis/shopping-receipt/merchant-shopping-receipt-jump-infos/create-merchant-shopping-receipt-jump-info.html)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -101,3 +101,5 @@ wxpay.v3.marketing.shoppingReceipt.merchantshoppingreceiptjumpinfos.post({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012443843) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012443825)

@@ -5,7 +5,7 @@ description: 通过此接口商户可设置回调地址，用于接收会员业�
 
 # 设置回调地址 {#patch}
 
-通过此接口商户可设置回调地址，用于接收会员业务的相关信息营销事件推送：点击开通产品权限。由会员卡创建方登录Pay平台，操作开通。 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/membercard_open/chapter6_1.shtml)
+通过此接口商户可设置回调地址，用于接收会员业务的相关信息营销事件推送：点击开通产品权限。由会员卡创建方登录Pay平台，操作开通。
 
 ```js twoslash
 // @filename: virtual.ts
@@ -74,9 +74,11 @@ wxpay.v3.marketing.membercardOpen.callback.patch({
 )
 ```
 
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012552251) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012714353)
+
 # 查询回调地址 {#get}
 
-通过此接口可查询以前设置的回调地址 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/membercard_open/chapter6_2.shtml)
+通过此接口可查询以前设置的回调地址
 
 ```js twoslash
 // @filename: virtual.ts
@@ -138,3 +140,5 @@ wxpay.v3.marketing.membercardOpen.callback.get({})
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012552275) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012714354)

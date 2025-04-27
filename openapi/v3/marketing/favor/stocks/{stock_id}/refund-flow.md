@@ -5,7 +5,7 @@ description: 可获取到某批次的退款明细数据，包括订单号、单�
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/convention/chapter3_11.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -83,3 +83,5 @@ wxpay.v3.marketing.favor.stocks._stock_id_.refundFlow.get({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012463523) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012463548)

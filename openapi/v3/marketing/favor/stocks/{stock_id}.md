@@ -5,7 +5,7 @@ description: 通过此接口可查询批次信息，包括批次的配置信息�
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/cash-coupons/stock/query-stock.html) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/cash-coupons/stock/query-stock.html) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/convention/chapter3_5.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -146,3 +146,5 @@ wxpay.v3.marketing.favor.stocks._stock_id_.get({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012460564) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012460606)

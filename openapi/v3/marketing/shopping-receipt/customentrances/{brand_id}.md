@@ -5,7 +5,7 @@ description: 该接口为电子小票自定义入口查询或更新接口，商�
 
 # 查询自定义入口 {#get}
 
-该接口为电子小票自定义入口查询接口，商家可以通过该接口查询品牌的自定义入口展示内容。 [官方文档](https://pay.weixin.qq.com/docs/partner/apis/shopping-receipt/custom-entrances/query-custom-entrance.html)
+该接口为电子小票自定义入口查询接口，商家可以通过该接口查询品牌的自定义入口展示内容。
 
 ```js twoslash
 // @filename: virtual.ts
@@ -106,9 +106,11 @@ wxpay.v3.marketing.shoppingReceipt.customentrances._brand_id_.get({
 )
 ```
 
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012526406) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012698331)
+
 # 更新自定义入口 {#patch}
 
-该接口为电子小票自定义入口更新接口，商家可以通过该接口为品牌更新自定义入口展示内容。 [官方文档](https://pay.weixin.qq.com/docs/partner/apis/shopping-receipt/custom-entrances/update-custom-entrance.html)
+该接口为电子小票自定义入口更新接口，商家可以通过该接口为品牌更新自定义入口展示内容。
 
 ```js twoslash
 // @filename: virtual.ts
@@ -250,3 +252,5 @@ wxpay.v3.marketing.shoppingReceipt.customentrances._brand_id_.patch({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012526475) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012697769)

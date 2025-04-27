@@ -228,9 +228,11 @@ wxpay.v3.marketing.membercardActivity.activities.post({
 )
 ```
 
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012553030) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012714463)
+
 # 查询活动列表 {#get}
 
-查询符合条件的多个活动 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/membercard_open/chapter8_3.shtml) [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/membership-card/member-gift/query-activity-list.html)
+查询符合条件的多个活动
 
 ```js twoslash
 // @filename: virtual.ts
@@ -369,3 +371,5 @@ wxpay.v3.marketing.membercardActivity.activities.get({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012553261) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012714468)

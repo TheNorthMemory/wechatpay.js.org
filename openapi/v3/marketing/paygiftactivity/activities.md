@@ -5,7 +5,7 @@ description: 商户根据一定过滤条件，查询已创建的支付有礼活�
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/paygiftactivity/chapter3_9.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -82,3 +82,5 @@ wxpay.v3.marketing.paygiftactivity.activities.get({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012489126) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012493214)

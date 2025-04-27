@@ -5,7 +5,7 @@ description: 服务商可通过该接口查询微信用户卡包中某一张商�
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/busifavor/chapter3_5.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -204,3 +204,5 @@ wxpay.v3.marketing.busifavor.users._openid_.coupons._coupon_code_.appids._appid_
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012535011) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012693103)

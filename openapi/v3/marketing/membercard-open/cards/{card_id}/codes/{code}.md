@@ -5,7 +5,7 @@ description: 通过此接口可查询指定用户会员卡的信息，如会员�
 
 # 查询用户会员卡信息 {#get}
 
-通过此接口可查询指定用户会员卡的信息，如会员积分、储值余额、开卡信息等 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/membercard_open/chapter3_4.shtml)
+通过此接口可查询指定用户会员卡的信息，如会员积分、储值余额、开卡信息等
 
 ```js twoslash
 // @filename: virtual.ts
@@ -216,3 +216,5 @@ wxpay.v3.marketing.membercardOpen.cards._card_id_.codes._code_.patch({
 }, { card_id, code, })
 .then(({ status }) => status === 204) // [!code hl]
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012549292) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012709735)

@@ -127,3 +127,5 @@ wxpay.v3.marketing.shoppingReceipt.customentrances.post({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012526342) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012697703)

@@ -5,7 +5,7 @@ description: 商户创建活动后，可以通过该接口查询支付有礼的�
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/paygiftactivity/chapter3_5.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -99,3 +99,5 @@ wxpay.v3.marketing.paygiftactivity.activities._activity_id_.merchants.get({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012466149) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012466191)

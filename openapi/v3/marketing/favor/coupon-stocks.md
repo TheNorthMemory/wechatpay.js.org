@@ -5,7 +5,7 @@ description: 通过调用此接口可创建代金券批次，包括预充值&免
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/convention/chapter3_1.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -148,3 +148,6 @@ wxpay.v3.marketing.favor.couponStocks.post({
   })
 )
 ```
+
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012534633) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012534537)

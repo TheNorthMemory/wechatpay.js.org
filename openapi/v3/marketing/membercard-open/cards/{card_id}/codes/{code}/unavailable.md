@@ -5,7 +5,7 @@ description: 将用户的会员卡设置为失效状态。
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/membercard_open/chapter3_12.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -88,3 +88,5 @@ wxpay.v3.marketing.membercardOpen.cards._card_id_.codes._code_.unavailable.post(
 }, { card_id, code, })
 .then(({ status }) => status === 204) // [!code hl]
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012549677) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012726955)

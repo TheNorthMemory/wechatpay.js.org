@@ -5,7 +5,7 @@ description: 商户将支付成功回传的参数填入指定字段，可以给�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/partner/apis/shopping-receipt/shopping-receipts/upload-shopping-receipt.html)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -118,3 +118,5 @@ wxpay.v3.marketing.shoppingReceipt.shoppingreceipts.post(media, { headers })
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012553506) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012698614)

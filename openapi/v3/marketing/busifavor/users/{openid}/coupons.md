@@ -5,7 +5,7 @@ description: 服务商自定义筛选条件（如创建商户号、归属商户�
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter9_2_4.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -94,3 +94,5 @@ wxpay.v3.marketing.busifavor.users._openid_.coupons.get({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012534963) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012693087)

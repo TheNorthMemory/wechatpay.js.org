@@ -5,7 +5,7 @@ description: 通过此接口可以创建一张会员卡模板，创建成功将�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/membercard_open/chapter3_1.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -221,9 +221,11 @@ wxpay.v3.marketing.membercardOpen.cards.post({
 )
 ```
 
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012545584) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012708314)
+
 # 查询会员卡模板列表 {#get}
 
-通过此接口可查询指定某品牌的所有会员卡模板列表 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/membercard_open/chapter3_3.shtml)
+通过此接口可查询指定某品牌的所有会员卡模板列表
 
 ```js twoslash
 // @filename: virtual.ts
@@ -347,3 +349,5 @@ wxpay.v3.marketing.membercardOpen.cards.get({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012547108) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012709010)

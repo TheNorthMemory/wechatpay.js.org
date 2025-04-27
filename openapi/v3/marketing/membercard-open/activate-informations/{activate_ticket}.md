@@ -5,7 +5,7 @@ description: 如果商家选择跳转激活的投放方式，用户点击开卡�
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/membercard_open/chapter4_5.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -88,3 +88,5 @@ wxpay.v3.marketing.membercardOpen.activateInformations._activate_ticket_.get({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012550779) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012727881)

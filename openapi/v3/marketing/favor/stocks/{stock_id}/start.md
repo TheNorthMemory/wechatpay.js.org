@@ -5,7 +5,7 @@ description: 制券成功后，通过调用此接口激活批次，如果是预�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/convention/chapter3_3.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -89,3 +89,5 @@ wxpay.v3.marketing.favor.stocks._stock_id_.start.post({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012460137) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012460237)

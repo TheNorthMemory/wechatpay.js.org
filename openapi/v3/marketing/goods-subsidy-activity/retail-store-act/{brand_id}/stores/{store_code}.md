@@ -5,7 +5,7 @@ description: 该接口为服务商或商户给零售小店活动查询门店详�
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/partner/apis/retail-store/retail-store-act/get-store.html)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -87,3 +87,5 @@ wxpay.v3.marketing.goodsSubsidyActivity.retailStoreAct._brand_id_.stores._store_
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012384379) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012384437)

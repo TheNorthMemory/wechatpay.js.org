@@ -5,7 +5,7 @@ description: 商户可通过加密后的用户手机号，将存量会员通过�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/membercard_open/chapter3_14.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -98,3 +98,5 @@ wxpay.v3.marketing.membercardOpen.cards._card_id_.phoneMembercard.import.post({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012550535) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012727629)

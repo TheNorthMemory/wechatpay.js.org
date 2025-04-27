@@ -5,7 +5,7 @@ description: 用于设置接收商家券相关事件通知的URL，可接收商�
 
 # 设置商家券事件通知地址 {#post}
 
-用于设置接收商家券相关事件通知的URL，可接收商家券相关的事件通知、包括发放通知等。需要设置接收通知的URL，并在商户平台开通营销事件推送的能力，即可接收到相关通知。 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter9_2_7.shtml)
+用于设置接收商家券相关事件通知的URL，可接收商家券相关的事件通知、包括发放通知等。需要设置接收通知的URL，并在商户平台开通营销事件推送的能力，即可接收到相关通知。
 
 ```js twoslash
 // @filename: virtual.ts
@@ -84,9 +84,11 @@ wxpay.v3.marketing.busifavor.callbacks.post({
 )
 ```
 
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012465431) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012465425)
+
 # 查询商家券事件通知地址 {#get}
 
-通过调用此接口可查询设置的通知URL。 [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/apis/chapter9_2_8.shtml)
+通过调用此接口可查询设置的通知URL。
 
 ```js twoslash
 // @filename: virtual.ts
@@ -155,3 +157,5 @@ wxpay.v3.marketing.busifavor.callbacks.get({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012465507) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012465557)

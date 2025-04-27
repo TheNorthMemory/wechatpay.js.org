@@ -5,7 +5,7 @@ description: 通过此接口可查询批次的可用商品编码，判断券是�
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/convention/chapter3_8.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -95,3 +95,5 @@ wxpay.v3.marketing.favor.stocks._stock_id_.items.get({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012463442) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012463475)

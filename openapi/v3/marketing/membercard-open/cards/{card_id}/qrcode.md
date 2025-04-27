@@ -5,7 +5,7 @@ description: 商户创建会员卡后，可以调用此api创建二维码，用�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/membercard_open/chapter4_3.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -94,3 +94,5 @@ wxpay.v3.marketing.membercardOpen.cards._card_id_.qrcode.post({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012550605) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012727701)

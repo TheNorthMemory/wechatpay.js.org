@@ -5,7 +5,7 @@ description: 该接口主要为商户提供营销资源的授权能力，可授�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/partnerships/chapter3_1.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -106,3 +106,5 @@ wxpay.v3.marketing.partnerships.build.post({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012380498) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012381469)

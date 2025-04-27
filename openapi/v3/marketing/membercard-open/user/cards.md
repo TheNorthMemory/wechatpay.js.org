@@ -5,7 +5,7 @@ description: 通过此接口可查询用户在当前品牌下领取的所有会�
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/membercard_open/chapter3_5.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -89,3 +89,5 @@ wxpay.v3.marketing.membercardOpen.user.cards.get({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012549255) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012709674)

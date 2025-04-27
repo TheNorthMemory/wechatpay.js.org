@@ -5,7 +5,7 @@ description: 商户可通过该接口停止支付有礼活动。
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/paygiftactivity/chapter3_7.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -88,3 +88,5 @@ wxpay.v3.marketing.paygiftactivity.activities._activity_id_.terminate.post({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012466523) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012466633)

@@ -5,7 +5,7 @@ description: 通过此接口可查询代金券信息，包括代金券的基础�
 
 # {{ $frontmatter.title }} {#get}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/merchant/apis/cash-coupons/coupon/query-coupon.html) [官方文档](https://pay.weixin.qq.com/docs/partner/apis/cash-coupons/coupon/query-coupon.html) [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/marketing/convention/chapter3_6.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
@@ -155,3 +155,5 @@ wxpay.v3.marketing.favor.users._openid_.coupons._coupon_id_.get({
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012486942) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012492796)
