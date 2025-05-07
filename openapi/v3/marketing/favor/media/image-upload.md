@@ -79,7 +79,7 @@ const media = new Multipart()
   }))
   .append('file', stream, basename(localFilePath))
 
-wxpay.v3.marketing.favor.media.imageUpload.post(media)
+wxpay.v3.marketing.favor.media.imageUpload.post(media, { headers: media.getHeaders() })
 //                                         ^^^^
 .then(
   ({ // [!code hl:7]
