@@ -5,15 +5,17 @@ description: 服务商调用插卡接口前，需调用本接口上传出租车�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/docs/partner/apis/taxi-fapiao/taxi-invoice-card/upload-taxi-invoice-card-file.html)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
 /// <reference types="node" />
-import { Multipart } from 'wechatpay-axios-plugin'
+import { ReadStream } from 'fs'
 import { AxiosRequestConfig, AxiosPromise } from 'axios'
 namespace WeChatPay.OpenAPI.V3.TaxiInvoice.Cards.UploadFile.PostHttpMethod {
-  export interface BinaryDataRequest extends Multipart {
+  export interface BinaryDataRequest {
+    meta: string
+    file: ReadStream
   }
   export interface RequestConfig extends AxiosRequestConfig {
     data?: BinaryDataRequest
@@ -62,23 +64,27 @@ export var wxpay: Wechatpay
 import { wxpay } from './virtual'
 var company_mchid = '', region_id = 0;
 // ---cut---
-const { Multipart } = require('wechatpay-axios-plugin')
 const { createReadStream } = require('fs')
 const { basename } = require('path')
 
 const localFilePath = '/path/to/merchant-invoice-file.pdf'
 const stream = createReadStream(localFilePath)
-const media = new Multipart()
-  .append('meta', JSON.stringify({
-    company_mchid,
-    region_id,
-    digest_algorithm: 'DIGEST_ALGORITHM_SM3',
-    digest: 'from upstream or local calculated',
-  }))
-  .append('file', stream, basename(localFilePath))
+const meta = {
+  company_mchid,
+  region_id,
+  digest_algorithm: 'DIGEST_ALGORITHM_SM3',
+  digest: 'from upstream or local calculated',
+}
+const media = {
+  meta: JSON.stringify(meta),
+  file: stream,
+}
 
-wxpay.v3.taxiInvoice.cards.uploadFile.post(media)
+wxpay.v3.taxiInvoice.cards.uploadFile.post(media, {
 //                                    ^^^^
+  meta,
+  headers: { 'Content-Type': 'multipart/form-data' },
+})
 .then(
   ({ // [!code hl:7]
     data: {
@@ -89,3 +95,5 @@ wxpay.v3.taxiInvoice.cards.uploadFile.post(media)
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012692904)

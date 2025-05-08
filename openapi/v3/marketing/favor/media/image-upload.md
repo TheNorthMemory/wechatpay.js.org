@@ -10,10 +10,12 @@ description: 通过本接口上传图片后可获得图片url地址。图片url�
 ```js twoslash
 // @filename: virtual.ts
 /// <reference types="node" />
-import { Multipart } from 'wechatpay-axios-plugin'
+import { ReadStream } from 'fs'
 import { AxiosRequestConfig, AxiosPromise } from 'axios'
 namespace WeChatPay.OpenAPI.V3.Marketing.Favor.Media.ImageUpload.PostHttpMethod {
-  export interface BinaryDataRequest extends Multipart {
+  export interface BinaryDataRequest {
+    meta: string
+    file: ReadStream
   }
   export interface RequestConfig extends AxiosRequestConfig {
     data?: BinaryDataRequest
@@ -66,21 +68,25 @@ export var wxpay: Wechatpay
 // @filename: business.js
 import { wxpay } from './virtual'
 // ---cut---
-const { Multipart } = require('wechatpay-axios-plugin')
 const { createReadStream } = require('fs')
 const { basename } = require('path')
 
 const localFilePath = '/path/to/merchant-image-file.jpg'
 const stream = createReadStream(localFilePath)
-const media = new Multipart()
-  .append('meta', JSON.stringify({
-    filename: basename(localFilePath),
-    sha256: 'from upstream or local calculated',
-  }))
-  .append('file', stream, basename(localFilePath))
+const meta = {
+  filename: basename(localFilePath),
+  sha256: 'from upstream or local calculated',
+}
+const media = {
+  meta: JSON.stringify(meta),
+  file: stream,
+}
 
-wxpay.v3.marketing.favor.media.imageUpload.post(media, { headers: media.getHeaders() })
+wxpay.v3.marketing.favor.media.imageUpload.post(media, {
 //                                         ^^^^
+  meta,
+  headers: { 'Content-Type': 'multipart/form-data' },
+})
 .then(
   ({ // [!code hl:7]
     data: {

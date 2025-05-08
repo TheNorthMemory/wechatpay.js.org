@@ -10,10 +10,12 @@ description: 商户将支付成功回传的参数填入指定字段，可以给�
 ```js twoslash
 // @filename: virtual.ts
 /// <reference types="node" />
-import { Multipart } from 'wechatpay-axios-plugin'
+import { ReadStream } from 'fs'
 import { AxiosRequestConfig, AxiosPromise } from 'axios'
 namespace WeChatPay.OpenAPI.V3.Marketing.ShoppingReceipt.Shoppingreceipts.PostHttpMethod {
-  export interface BinaryDataRequest extends Multipart {
+  export interface BinaryDataRequest {
+    meta: string
+    file: ReadStream
   }
   export interface RequestConfig extends AxiosRequestConfig {
     data?: BinaryDataRequest
@@ -82,32 +84,41 @@ import { wxpay } from './virtual'
 /**
  * @type {import('crypto').BinaryLike}
  */
-var platformCertificateInstance;
+var platformPublicKeyInstance;
+var platformPublicKeyId = '';
 var transaction_id = '', transaction_mchid = '', transaction_sub_mchid = '', out_trade_no = '', openid = '', upload_time = '', phone_number = ''
 // ---cut---
-const { Multipart, Rsa } = require('wechatpay-axios-plugin')
+const { Rsa } = require('wechatpay-axios-plugin')
 const { createReadStream } = require('fs')
 const { basename } = require('path')
 
 const localFilePath = '/path/to/merchant-receipt-file.jpg'
 const stream = createReadStream(localFilePath)
-const media = new Multipart()
-  .append('meta', JSON.stringify({
-    transaction_id,
-    transaction_mchid,
-    transaction_sub_mchid,
-    out_trade_no,
-    openid,
-    upload_time,
-    merchant_contact_information: {
-      consultation_phone_number: Rsa.encrypt(phone_number, platformCertificateInstance),
-    },
-    sha256: 'from upstream or local calculated',
-  }))
-  .append('file', stream, basename(localFilePath))
+const meta = {
+  transaction_id,
+  transaction_mchid,
+  transaction_sub_mchid,
+  out_trade_no,
+  openid,
+  upload_time,
+  merchant_contact_information: {
+    consultation_phone_number: Rsa.encrypt(phone_number, platformPublicKeyInstance),
+  },
+  sha256: 'from upstream or local calculated',
+}
+const media = {
+  meta: JSON.stringify(meta),
+  file: stream,
+}
 
-wxpay.v3.marketing.shoppingReceipt.shoppingreceipts.post(media, { headers })
+wxpay.v3.marketing.shoppingReceipt.shoppingreceipts.post(media, {
 //                                                  ^^^^
+  meta,
+  headers: {
+    'Content-Type': 'multipart/form-data',
+    'Wechatpay-Serial': platformPublicKeyId,
+  },
+})
 .then(
   ({ // [!code hl:7]
     data: {

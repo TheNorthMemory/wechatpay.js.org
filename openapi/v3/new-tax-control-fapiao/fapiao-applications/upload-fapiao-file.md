@@ -5,15 +5,17 @@ description: 调用【将电子发票插入微信用户卡包】接口之前，�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [官方文档](https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/new-tax-control-fapiao/chapter3_10.shtml)
+{{ $frontmatter.description }}
 
 ```js twoslash
 // @filename: virtual.ts
 /// <reference types="node" />
-import { Multipart } from 'wechatpay-axios-plugin'
+import { ReadStream } from 'fs'
 import { AxiosRequestConfig, AxiosPromise } from 'axios'
 namespace WeChatPay.OpenAPI.V3.NewTaxControlFapiao.FapiaoApplications.UploadFapiaoFile.PostHttpMethod {
-  export interface BinaryDataRequest extends Multipart {
+  export interface BinaryDataRequest {
+    meta: string
+    file: ReadStream
   }
   export interface RequestConfig extends AxiosRequestConfig {
     data?: BinaryDataRequest
@@ -62,23 +64,27 @@ export var wxpay: Wechatpay
 import { wxpay } from './virtual'
 var sub_mchid = ''
 // ---cut---
-const { Multipart } = require('wechatpay-axios-plugin')
 const { createReadStream } = require('fs')
 const { basename } = require('path')
 
 const localFilePath = '/path/to/merchant-invoice-file.pdf'
 const stream = createReadStream(localFilePath)
-const media = new Multipart()
-  .append('meta', JSON.stringify({
-    sub_mchid,
-    file_type: 'PDF',
-    digest_alogrithm: 'SM3',
-    digest: 'from upstream or local calculated',
-  }))
-  .append('file', stream, basename(localFilePath))
+const meta = {
+  sub_mchid,
+  file_type: 'PDF',
+  digest_alogrithm: 'SM3',
+  digest: 'from upstream or local calculated',
+}
+const media = {
+  meta: JSON.stringify(meta),
+  file: stream,
+}
 
-wxpay.v3.newTaxControlFapiao.fapiaoApplications.uploadFapiaoFile.post(media)
+wxpay.v3.newTaxControlFapiao.fapiaoApplications.uploadFapiaoFile.post(media, {
 //                                                               ^^^^
+  meta,
+  headers: { 'Content-Type': 'multipart/form-data' },
+})
 .then(
   ({ // [!code hl:7]
     data: {
@@ -89,3 +95,5 @@ wxpay.v3.newTaxControlFapiao.fapiaoApplications.uploadFapiaoFile.post(media)
   })
 )
 ```
+
+参阅 [官方文档](https://pay.weixin.qq.com/doc/v3/merchant/4012556605) [官方文档](https://pay.weixin.qq.com/doc/v3/partner/4012696830)

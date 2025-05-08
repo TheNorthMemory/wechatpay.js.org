@@ -10,10 +10,12 @@ description: 部分微信支付业务指定商户需要使用图片上传API来�
 ```js twoslash
 // @filename: virtual.ts
 /// <reference types="node" />
+import { ReadStream } from 'fs'
 import { AxiosRequestConfig, AxiosPromise } from 'axios'
-import { Multipart } from 'wechatpay-axios-plugin'
 namespace WeChatPay.OpenAPI.V3.Merchant.Media.Upload.PostHttpMethod {
-  export interface BinaryDataRequest extends Multipart {
+  export interface BinaryDataRequest {
+    meta: string
+    file: ReadStream
   }
   export interface RequestConfig extends AxiosRequestConfig {
     data?: BinaryDataRequest
@@ -33,7 +35,7 @@ namespace WeChatPay.OpenAPI.V3.Merchant.Media {
      * 图片上传API
      * @link https://pay.weixin.qq.com/wiki/doc/apiv3/wxpay/tool/chapter3_1.shtml
      */
-    post(data?: Multipart, config?: Upload.PostHttpMethod.RequestConfig): AxiosPromise<Upload.PostHttpMethod.WellformedResponse>
+    post(data?: Upload.PostHttpMethod.BinaryDataRequest, config?: Upload.PostHttpMethod.RequestConfig): AxiosPromise<Upload.PostHttpMethod.WellformedResponse>
   }
 }
 namespace WeChatPay.OpenAPI.V3.Merchant {
@@ -61,21 +63,25 @@ export var wxpay: Wechatpay
 // @filename: business.js
 import { wxpay } from './virtual'
 // ---cut---
-const { Multipart } = require('wechatpay-axios-plugin')
 const { createReadStream } = require('fs')
 const { basename } = require('path');
 
 let localFilePath = '/path/to/merchant-image-file.jpg'
 const stream = createReadStream(localFilePath)
-const media = new Multipart()
-  .append('meta', JSON.stringify({
-    filename: basename(localFilePath),
-    sha256: 'from upstream or local calculated',
-  }))
-  .append('file', stream, basename(localFilePath))
+const meta = {
+  filename: basename(localFilePath),
+  sha256: 'from upstream or local calculated',
+}
+const media = {
+  meta: JSON.stringify(meta),
+  file: stream,
+}
 
-wxpay.v3.merchant.media.upload.post(media, { headers: media.getHeaders() })
+wxpay.v3.merchant.media.upload.post(media, {
 //                             ^^^^
+  meta,
+  headers: { 'Content-Type': 'multipart/form-data' },
+})
 .then(
   ({ // [!code hl:7]
     data: {
