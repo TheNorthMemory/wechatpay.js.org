@@ -44,7 +44,7 @@ namespace WeChatPay.OpenAPI.V3.Brand.Profitsharing.Receivers {
 }
 namespace WeChatPay.OpenAPI.V3.Brand.Profitsharing {
   export interface Receivers {
-    delete: Receivers.Delete
+    Delete: Receivers.Delete
   }
 }
 namespace WeChatPay.OpenAPI.V3.Brand {
@@ -72,7 +72,7 @@ export var wxpay: Wechatpay
 // @filename: business.js
 import { wxpay } from './virtual'
 // ---cut---
-wxpay.v3.brand.profitsharing.receivers.delete.post({
+wxpay.v3.brand.profitsharing.receivers.Delete.post({
 //                                            ^^^^
   brand_mchid,
   appid,
