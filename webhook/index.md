@@ -9,10 +9,10 @@ description: 后台通知交互时，如果微信收到商户的应答不符合�
 | [合单支付通知](/webhook/v2/combined-transactions-success) {colspan=2}
 | [退款结果通知](/webhook/v2/refund-processed) {colspan=2}
 | [车牌状态变更通知](/webhook/v2/vehicle-state-changed-for-parking) {colspan=2}
-| XML {rowspan=4} | [免压租借/速住用户成功确认订单通知](/webhook/v2/CHECK.SUCCESS)
-| [免压租借/速住用户确认订单失败通知](/webhook/v2/CHECK.FAIL)
-| [免压租借/速住用户支付成功订单通知](/webhook/v2/TRANSACTION.SUCCESS)
-| [免压租借/速住用户支付订单失败通知](/webhook/v2/TRANSACTION.FAIL)
+| XML {rowspan=4} | [免押租借/速住用户成功确认订单通知](/webhook/v2/CHECK.SUCCESS)
+| [免押租借/速住用户确认订单失败通知](/webhook/v2/CHECK.FAIL)
+| [免押租借/速住用户支付成功订单通知](/webhook/v2/TRANSACTION.SUCCESS)
+| [免押租借/速住用户支付订单失败通知](/webhook/v2/TRANSACTION.FAIL)
 | JSON {rowspan=3} | [普通支付通知](/webhook/v3/TRANSACTION.SUCCESS#BASIC) {colspan=2}
 | [服务商支付通知](/webhook/v3/TRANSACTION.SUCCESS#PARTNER) {colspan=2}
 | [合单支付通知](/webhook/v3/TRANSACTION.SUCCESS#COMBINE) {colspan=2}

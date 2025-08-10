@@ -5,7 +5,7 @@ description: 用户确认完成后，微信后台会把相关确认结果和订�
 
 # {{ $frontmatter.title }} {#post}
 
-{{ $frontmatter.description }} [免押租借确认订单通知](https://pay.weixin.qq.com/wiki/doc/apiv3/payscore.php?chapter=18_7&index=7) [免压速住确认订单通知](https://pay.weixin.qq.com/wiki/doc/apiv3/payscore.php?chapter=19_7&index=6)
+{{ $frontmatter.description }} [免押租借确认订单通知](https://pay.weixin.qq.com/wiki/doc/apiv3/payscore.php?chapter=18_7&index=7) [免押速住确认订单通知](https://pay.weixin.qq.com/wiki/doc/apiv3/payscore.php?chapter=19_7&index=6)
 
 ## 请求报文 {#req}
 
@@ -43,7 +43,7 @@ description: 用户确认完成后，微信后台会把相关确认结果和订�
 :::
 
 - 免押租借 event_ciphertext 解密后含 **goods_name** 字段
-- 免压速住 event_ciphertext 解密后含 **room** 字段
+- 免押速住 event_ciphertext 解密后含 **room** 字段
 
 ## 处理程序 {#app}
 
