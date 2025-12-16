@@ -28,6 +28,7 @@ export default defineConfig({
   sitemap: {
     hostname: baseUri,
     xslUrl: '/sitemap.xsl',
+    transformItems: items => Promise.resolve(items.filter(item => Boolean(item?.lastmod))),
   },
   head: [
     ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' }],
@@ -89,12 +90,12 @@ export default defineConfig({
         timeStyle: 'short',
         hourCycle: 'h23',
         timeZone: 'Asia/Shanghai',
-        forceLocale: false,
+        forceLocale: true,
       },
     },
     nav: [
       {
-        text: 'v0.9.4',
+        text: 'v0.9.5',
         items: [
           {
             text: '变更历史',
@@ -267,7 +268,7 @@ function openapiSidebar() {
           items: [
             ['获取加密公钥', '/openapi/v2/risk/getpublickey'],
             ['发起付款', '/openapi/v2/mmpaysptrans/pay_bank'],
-            ['查询付款', '/openapi/v2/mmpaymkttransfers/query_bank'],
+            ['查询付款', '/openapi/v2/mmpaysptrans/query_bank'],
           ].map(transArrayItem),
         },
         {

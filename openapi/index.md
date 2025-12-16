@@ -43,7 +43,7 @@ description: 微信支付官方开放的基于XML(APIv2)及JSON(APIv3)协议的O
 | [查询付款](/openapi/v2/mmpaymkttransfers/gettransferinfo)
 | 付款到银行卡v2{rowspan=3} | [获取加密公钥](/openapi/v2/risk/getpublickey)
 | [发起付款](/openapi/v2/mmpaysptrans/pay_bank)
-| [查询付款](/openapi/v2/mmpaymkttransfers/query_bank)
+| [查询付款](/openapi/v2/mmpaysptrans/query_bank)
 | 微信车主服务v2{rowspan=4} | [用户入场通知](/openapi/v2/vehicle/pay/notification) | [用户入场通知](/openapi/v2/vehicle/partnerpay/notification)
 | [用户状态查询](/openapi/v2/vehicle/pay/querystate) | [用户状态查询](/openapi/v2/vehicle/partnerpay/querystate)
 | [申请代扣](/openapi/v2/vehicle/pay/payapply) | [申请代扣](/openapi/v2/vehicle/partnerpay/payapply)
