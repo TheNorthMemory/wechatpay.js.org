@@ -126,6 +126,12 @@ export default defineConfig({
       {
         text: 'PHP版',
         link: 'https://wechatpay.im/',
+        rel: 'opener',
+      },
+      {
+        text: '开发工具箱',
+        link: 'https://www.devtools.cn/',
+        rel: 'opener',
       },
     ],
     socialLinks: [
