@@ -13,6 +13,6 @@
   "devDependencies": {
     "@shikijs/vitepress-twoslash": "^3.20.0",
     "@types/node": "^24",
-    "wechatpay-axios-plugin": "0.9.5"
+    "wechatpay-axios-plugin": "0.9.6"
   }
 }

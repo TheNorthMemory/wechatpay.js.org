@@ -95,7 +95,7 @@ export default defineConfig({
     },
     nav: [
       {
-        text: 'v0.9.5',
+        text: 'v0.9.6',
         items: [
           {
             text: '变更历史',
