@@ -11,8 +11,8 @@
     "vitepress": "^1.6.4"
   },
   "devDependencies": {
-    "@shikijs/vitepress-twoslash": "^3.20.0",
-    "@types/node": "^24",
+    "@shikijs/vitepress-twoslash": "^4.1.0",
+    "@types/node": ">=24",
     "wechatpay-axios-plugin": "0.9.6"
   }
 }
